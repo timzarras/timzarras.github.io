@@ -19,8 +19,8 @@ $(document).ready(function() {
         });
         $('.tire').css({
           left:  e.pageX,
-          "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
-          transform: 'rotateZ(' + e.pageX + 'deg)'
+          "-webkit-transform": 'rotateX(' + e.pageX + 'deg)',
+          transform: 'rotateX(' + e.pageX + 'deg)'
         });
       });
 
@@ -42,7 +42,7 @@ $(document).ready(function() {
   width:100px;
   height:auto;
   position: absolute;
-  top:50%;
+  top:45%;
   left: 50%;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
