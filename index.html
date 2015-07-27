@@ -13,12 +13,12 @@
 
 $(document).ready(function() {
 
-    $(document).on('mousemove', function(e){
-        $('brb').css({
-          left:  e.pageX,
+    $(document).bind('mousemove', function(e){
+        $('.brb').css({
+          left:  e.pageX + 20,
           top:   e.pageY
         });
-    });
+      });
 
 });
 
