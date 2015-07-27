@@ -16,7 +16,7 @@ $(document).ready(function() {
     $(document).on('mousemove', function(e){
         $('.brb').css({
           left:  e.pageX + 50,
-          top:   e.pageY + 50
+          top:   e.pageY + 50,
           "-webkit-transform": 'rotateZ(' + e.pageY + 'deg)',
           transform: 'rotateZ(' + (e.pageY - 60) + 'deg)'
         });
