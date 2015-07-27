@@ -13,15 +13,13 @@
 
 $(document).ready(function() {
 
-    $(document).on('mousemove', function(e){
-        setTimeout(function () {
-        $('.brb').css({
-            left: e.pageX,
-            "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
-            transform: 'rotateZ(' + e.pageX + 'deg)'
+    $(document).mousemove(function (e) {
+    setTimeout(function () {
+        $(".brb").css({
+            left: e.pageX
         });
     }, 90000);
-    });
+});
 
 });
 
@@ -35,6 +33,9 @@ $(document).ready(function() {
   left: 50%;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
+
+  "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
+            transform: 'rotateZ(' + e.pageX + 'deg)'
 }
 
 </style>
