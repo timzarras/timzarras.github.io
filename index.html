@@ -9,6 +9,21 @@
 
 </head>
 
+<script>
+
+$(document).ready(function() {
+
+    $(document).on('mousemove', function(e){
+        $('brb').css({
+          left:  e.pageX,
+          top:   e.pageY
+        });
+    });
+
+});
+
+</script>
+
 <style>
 
 .brb{
@@ -25,10 +40,6 @@
 
     <p class="brb"> be right back! </p>
     
-      
-
   </body>
-
-
 
 </html>
