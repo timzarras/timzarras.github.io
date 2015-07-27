@@ -14,12 +14,14 @@
 $(document).ready(function() {
 
     $(document).on('mousemove', function(e){
-        $('.brb').delay(800).css({
-          left:  e.pageX,
-          "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
-          transform: 'rotateZ(' + e.pageX + 'deg)'
+        setTimeout(function () {
+        $('.brb').css({
+            left: e.pageX,
+            "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
+            transform: 'rotateZ(' + e.pageX + 'deg)'
         });
-      });
+    }, 90000);
+    });
 
 });
 
