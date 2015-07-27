@@ -18,9 +18,9 @@ $(document).ready(function() {
           left:  e.pageX,
         });
         $('.tire').css({
-          left:  e.pageX,
-          "-webkit-transform": 'rotateZ(' + e.pageX ')',
-          transform: 'rotateZ(' + e.pageX ')'
+          left:  e.pageY,
+          "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
+          transform: 'rotateZ(' + e.pageX + 'deg)'
         });
       });
 
