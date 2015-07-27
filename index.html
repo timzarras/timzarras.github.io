@@ -14,7 +14,7 @@
 $(document).ready(function() {
 
     $(document).on('mousemove', function(e){
-        $('.brb').css({
+        $('.brb,.tire').css({
           left:  e.pageX,
           "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
           transform: 'rotateZ(' + e.pageX + 'deg)'
@@ -27,7 +27,7 @@ $(document).ready(function() {
 
 <style>
 
-.brb{
+.brb, .tire{
   position: absolute;
   top:45%;
   left: 50%;
@@ -40,6 +40,7 @@ $(document).ready(function() {
   <body>
 
     <p class="brb"> be right back! </p>
+    <img class="tire" src="tire.png">
     
   </body>
 
