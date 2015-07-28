@@ -16,10 +16,9 @@ $(document).ready(function() {
     $(document).on('mousemove', function(e){
         $('.tire').css({
           left:  e.pageX,
+          top: '45%',
           "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
-          transform: 'rotateZ(' + e.pageX + 'deg)',
-          transform: translate(-50%,-50%),
-          "-webkit-transform": translate(-50%,-50%)
+          transform: 'rotateZ(' + e.pageX + 'deg)'
         });
       });
 
