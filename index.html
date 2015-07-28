@@ -15,7 +15,7 @@ $(document).ready(function() {
 
     $(document).on('mousemove', function(e){
         $('.tire').css({
-          left:  e.pageX,
+          left:  e.pageX-50,
           top: '38%',
           "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
           transform: 'rotateZ(' + e.pageX + 'deg)'
