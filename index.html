@@ -19,6 +19,14 @@ $(document).ready(function() {
           top: '38%'
         });
       });
+    $(document).on('mousemove', function(e){
+        $('.tire').css({
+          left:  e.pageX-125,
+          top: '39.5%',
+          "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
+          transform: 'rotateZ(' + e.pageX + 'deg)'
+        });
+      });
 
 });
 
@@ -48,9 +56,9 @@ $(document).ready(function() {
 
 .tire {
    position: absolute;
-  top:55%;
-  left: 50%;
-  width: 50px;
+  top:43%;
+  left: 41.125%;
+  width: 55px;
   height: auto;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
