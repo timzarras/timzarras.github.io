@@ -14,7 +14,7 @@
 $(document).ready(function() {
 
     $(document).on('mousemove', function(e){
-        $('.tire').css({
+        $('.brb').css({
           left:  e.pageX-50,
           top: '38%',
           "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
@@ -34,9 +34,10 @@ $(document).ready(function() {
   left: 50%;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
+  z-index: 999;
 }
 
-.tire{
+.tire, .car{
   width:100px;
   height:auto;
   position: absolute;
