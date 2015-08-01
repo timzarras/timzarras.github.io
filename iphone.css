@@ -1,0 +1,12 @@
+.brb{
+  position: absolute;
+  top:55%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  z-index: 999;
+}
+
+.car, .Rtire , .Ltire , .tree {
+  display:none;
+}
