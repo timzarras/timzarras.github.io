@@ -20,8 +20,16 @@ $(document).ready(function() {
         });
       });
     $(document).on('mousemove', function(e){
-        $('.tire').css({
+        $('.Ltire').css({
           left:  e.pageX-125,
+          top: '39.5%',
+          "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
+          transform: 'rotateZ(' + e.pageX + 'deg)'
+        });
+      });
+    $(document).on('mousemove', function(e){
+        $('.Rtire').css({
+          left:  e.pageX+73,
           top: '39.5%',
           "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
           transform: 'rotateZ(' + e.pageX + 'deg)'
@@ -54,11 +62,23 @@ $(document).ready(function() {
   z-index: 999;
 }
 
-.tire {
+.Ltire {
    position: absolute;
   top:43%;
   left: 41.125%;
-  width: 55px;
+  width: 54px;
+  height: auto;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  z-index: 999;
+
+}
+
+.Rtire {
+   position: absolute;
+  top:43%;
+  left: 59%;
+  width: 54px;
   height: auto;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
@@ -73,7 +93,8 @@ $(document).ready(function() {
 
     <p class="brb"> be right back! </p>
     <img class="car" src="i3.png">
-    <img class="tire" src="tire.png">
+    <img class="Ltire" src="tire.png">
+    <img class="Rtire" src="tire.png">
     
     
   </body>
