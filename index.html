@@ -21,6 +21,7 @@ $(document).ready(function() {
         });
       });
     $(document).on('mousemove', function(e){
+        $('.Ltire').show();
         $('.Ltire').css({
           left:  e.pageX-125,
           top: '39.5%',
@@ -29,6 +30,7 @@ $(document).ready(function() {
         });
       });
     $(document).on('mousemove', function(e){
+        $('.Rtire').show();
         $('.Rtire').css({
           left:  e.pageX+73,
           top: '39.5%',
@@ -65,25 +67,27 @@ $(document).ready(function() {
 
 .Ltire {
    position: absolute;
-  top:43%;
-  left: 41.125%;
+  top:42%;
+  left: 40%;
   width: 54px;
   height: auto;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
   z-index: 999;
+  display: none;
 
 }
 
 .Rtire {
    position: absolute;
-  top:43%;
+  top:42%;
   left: 59%;
   width: 54px;
   height: auto;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
   z-index: 999;
+  display: none;
 
 }
 .tree {
