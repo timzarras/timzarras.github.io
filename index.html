@@ -38,6 +38,13 @@ $(document).ready(function() {
           transform: 'rotateZ(' + e.pageX + 'deg)'
         });
       });
+    $(document).on('mousemove', function(e){
+        $('.tree').css({
+          left:  -(e.pageX)+1250,
+          top: '7%'
+        });
+      });
+
 
 });
 
@@ -93,7 +100,7 @@ $(document).ready(function() {
 .tree {
    position: absolute;
   top:7%;
-  left: 20%;
+  left: 50%;
   width: auto;
   height: 600px;
   transform:translate(-50%,-50%);
