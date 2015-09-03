@@ -6,7 +6,7 @@ $(document).ready(function() {
    $("ul.nav li:has(.subnav)").hover(function() {
         $("ul.subnav", this).slideDown(500).show();
     }, function() {
-        $("ul.subnav", this).delay(800).slideUp(500);
+        $("ul.subnav", this).delay(600).slideUp(500);
     });
 
   $( ".chair" ).click(function() {
