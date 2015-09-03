@@ -3,7 +3,7 @@ $(document).ready(function() {
     $(".nav").hide().fadeIn(2000);
     $("ul.subnav").hide();
 
-   $("ul.nav li:has(.subnav)").hover(function() {
+   $("ul.nav li:has(.subnav)").hoverIntent(function() {
         $("ul.subnav", this).slideDown(500).show();
     }, function() {
         $("ul.subnav", this).delay(600).slideUp(500);
