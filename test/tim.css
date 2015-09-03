@@ -100,7 +100,9 @@ ul.subnav li a:hover {
 
 .arrow {
 	position: absolute;
-	height: 300px;
+	height: 400px;
 	width: auto;
-	left: 10%;
+	left: 8%;
+	top: 2%;
+	z-index: -999;
 }
