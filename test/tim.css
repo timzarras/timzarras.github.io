@@ -18,6 +18,7 @@ ul {
 	width: auto;
 	top: 40%;
 	left: 46%;
+
 }
 
 ul.nav a.projects {
@@ -25,15 +26,11 @@ ul.nav a.projects {
 	border-width: 1px;
 	border-radius: 2px;
 	padding: 5px;
-	line-height: 3;
+	line-height: 2;
 }
 
 .nav:hover {
 	cursor: pointer;
-}
-
-ul.subnav li a {
-	line-height: 1.5;
 }
 
 ul.subnav li a:hover {
