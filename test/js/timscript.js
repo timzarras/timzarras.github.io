@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $(".nav").hide().fadeIn(2000);
+    $(".nav,.arrow").hide().fadeIn(2000);
     $("ul.subnav").hide();
 
    $("ul.nav li:has(.subnav)").hoverIntent(function() {
@@ -11,17 +11,22 @@ $(document).ready(function() {
 
   $( ".chair" ).click(function() {
     $(".chair,.x").show();
-    $(".nav").hide();
+    $(".nav,.arrow").hide();
   });
   
   $( ".connection" ).click(function() {
     $(".connection,.x").show();
-    $(".nav").hide();
+    $(".nav,.arrow").hide();
+  });
+
+  $( ".about" ).click(function() {
+    $("#aboutme,.x").show();
+    $(".nav,.arrow").hide();
   });
 
   $(".x").click(function() {
-    $("#chair,#connection,.x").hide();
-    $(".nav").fadeIn(1000);
+    $("#chair,#connection,#aboutme,.x").hide();
+    $(".nav,.arrow").fadeIn(1000);
   });
 
 

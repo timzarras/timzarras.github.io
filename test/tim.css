@@ -63,11 +63,21 @@ ul.subnav li a:hover {
 	border-radius: 2px;
 	padding: 2px;
 	margin-bottom: 15px;
-	z-index: 999;
+}
+
+.aboutimage{
+	width: 250px;
+	height: auto;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 2px;
+	padding: 2px;
+	margin-bottom: 15px;
 }
 
 .about {
 	position: absolute;
+	z-index:999;
 }
 
 .about:hover {
@@ -86,4 +96,11 @@ ul.subnav li a:hover {
 
 .x:hover {
 	cursor: pointer;
+}
+
+.arrow {
+	position: absolute;
+	height: 300px;
+	width: auto;
+	left: 10%;
 }
