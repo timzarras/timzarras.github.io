@@ -7,7 +7,7 @@ ul {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
-    line-height: 2;
+    line-height: 2.5;
 }
 
 .nav {
@@ -26,7 +26,7 @@ ul.nav a.projects {
 	border-width: 1px;
 	border-radius: 2px;
 	padding: 5px;
-	line-height: 2;
+	line-height: 2.5;
 }
 
 .nav:hover {
