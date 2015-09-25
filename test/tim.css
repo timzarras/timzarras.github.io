@@ -105,8 +105,14 @@ a:visited {
 
 .me {
 	color: blue;
+}
+
+.me:hover {
+	text-decoration: underline;
 
 }
+
+
 
 .car{
   position: absolute;
