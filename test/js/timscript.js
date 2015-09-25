@@ -23,6 +23,7 @@ $(document).ready(function() {
         } else {
           $('.up').fadeOut(300);
           $('.car,.Ltire,.Rtire').fadeIn(100);
+          $('.link').removeClass('selected');
         }
       });
   
