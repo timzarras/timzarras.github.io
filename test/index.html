@@ -5,57 +5,110 @@
   <title>test</title>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<script src="http://cherne.net/brian/resources/jquery.hoverIntent.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
 <script src="js/timscript.js"></script>
 
 </head>
 
   <body>
+  <ul class="links">
+  <a class="link" href="#gardenchair">Garden Chair<br></a>
+  <a class="link" href="#me">timzarras.me<br></a>
+  <a class="link" href="#connectionstudy">Connection Study<br></a>
+  <a class="link" href="#fan">Fan<br></a>
+  <a class="link" href="#about">About Me<br></a><br>
+  <img class="up" src="images/uparrow.svg">
+  </ul>
   
   <ul class="nav">
     <li class="drop">
-        <a class="projects">Projects</a>
+        <a id="gardenchair"></a>
         <ul class="subnav">
-            <li><a class="chair">Garden Chair</a></li>
-            <li><a class="connection">Connection Study</a></li>
-            <li><a class="me">timzarras.me</a></li>
+          <li>
+            <a> 
+                <div class="textcontainer">
+                  <p> Spring 2015 <br><br>
+                A garden chair that's meant to exist subduedly amongst the lawn / yard landscape.
+                Legs and back are constructed as solid bent laminations.
+                <br><br> Ash and ink.
+                  </p>
+                </div>
+              <img class="projectimage" src="images/gardenchair/gardenchair.png">
+            </a>
+          </li>
         </ul>
     </li>
-    <a class="about"> About Me </a>
+    <li class="drop">
+        <a id="me"></a>
+        <ul class="subnav">
+          <li>
+            
+              <div class="textcontainer">
+                  <p> Spring 2015 <br><br>
+                I set up timzarras.me to act as an online sketchbook for smaller, low stress web projects.<br><br>
+                <a class="me" href="www.timzarras.me">timzarras.me</a>
+                <img class="projectimage" src="images/me.png">
+                  </p>
+                </div>
+          </li>
+        </ul>
+    </li>
+    <li class="drop">
+        <a id="connectionstudy"></a>
+        <ul class="subnav">
+          <li>
+            <a> 
+              <div class="textcontainer">
+                  <p> Fall 2014 <br><br>
+                This project is about being iterative with a discovered connection, as well as an inherent study in gesture and stance from the resulting forms/structures.<br><br>
+
+                Tubular steel and cold rolled steel rod.
+                  </p>
+                </div>
+              <img class="projectimage" src="images/connection/rodassembly.gif">
+              <img class="projectimage" src="images/connection/5.jpeg">
+              <img class="projectimage" src="images/connection/1.jpeg">
+              <img class="projectimage" src="images/connection/6.jpeg">
+            </a>
+          </li>
+        </ul>
+    </li>
+    <li class="drop">
+        <a id="fan"></a>
+        <ul class="subnav">
+          <li>
+            <a> 
+                <div class="textcontainer">
+                  <p>
+                  Fan made for our "container" assignment in Sophomore Studio.
+                  A container for dismembered fan components.<br><br>Spring 2014<br>
+                <br> Hard maple and fan components.
+                  </p>
+                </div>
+              <img class="projectimage" src="images/fan/fan2.png">
+              <img class="projectimage" src="images/fan/fan.jpg">
+            </a>
+          </li>
+        </ul>
+    </li>
+    <li class="drop">
+        <a id="about"></a>
+        <ul class="subnav">
+            <li>
+                <div class="textcontainer">
+                  <p> My name is Tim Zarras.<br>
+                  I'm currently a senior in Furniture Design at the Rhode Island School of Design.<br><br>
+                  </p>
+                </div>
+              <img class="aboutimage" src="images/myface.png">
+            </li>
+        </ul>
+    </li>
   </ul>
 
-<div class="container">
-    <div id="aboutme" class="aboutme" style="display:none;">
-      <img class="aboutimage" src="images/myface.jpg">
-      <p> My name is Tim Zarras.<br><br>
-    I'm currently a senior in Furniture Design at the Rhode Island School of Design.<br><br>
-      </p>
-    </div>
-
-    <div id="chair" class="chair" style="display:none;">
-      <img class="projectimage" src="images/gardenchair/gardenchair.png">
-        <p> Spring 2015<br><br>
-      A garden chair that's meant to exist subduedly amongst the lawn / yard landscape.<br><br>
-      Legs and back are constructed as solid bent laminations.<br><br>
-      Ash and ink.
-        </p>
-    </div>
-    
-    <div id="connection" class="connection" style="display:none;">
-      <img class="projectimage" src="images/connection/assembly.gif">
-      <img class="projectimage" src="images/connection/5.jpeg">
-      <img class="projectimage" src="images/connection/1.jpeg">
-      <img class="projectimage" src="images/connection/3.jpeg">
-      <img class="projectimage" src="images/connection/4.jpeg">
-      <img class="projectimage" src="images/connection/2.jpeg">
-      <img class="projectimage" src="images/connection/8.jpeg">
-      <img class="projectimage" src="images/connection/6.jpeg">
-      <img class="projectimage" src="images/connection/7.jpeg">
-    </div>
-    
-</div>
-
-<img class="x" src="images/x.svg" style="display:none;">
+  <img class="car" src="i3.png">
+  <img class="Ltire" src="tire.png">
+  <img class="Rtire" src="tire.png">
 
   </body>
 

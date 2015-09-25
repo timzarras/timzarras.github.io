@@ -1,78 +1,48 @@
 html {
-	width: 100%;
 	overflow: scroll;
+	font-family: sans-serif;
+}
+
+body {
+	width: 100%;
+	height: 100%;
 }
 
 ul {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
-    line-height: 2.5;
+    line-height: 1.75;
 }
 
 .nav {
-	position: fixed;
-	font-family: sans-serif;
+	position: absolute;
 	font-weight: 100;
 	font-size: 12;
 	width: auto;
-	top: 32%;
-	left: 46%;
-
-}
-
-ul.nav a.projects {
-	border-style:solid;
-	border-width: 1px;
-	border-radius: 2px;
-	padding: 5px;
-	line-height: 2.5;
+	top: 900px;
+	left: 25%;
+	text-align: left;
 }
 
 .nav:hover {
 	cursor: pointer;
 }
 
-ul.subnav li a:hover {
-	border-bottom: solid;
-	border-width: 1px;
-	padding-bottom: 2px;
-
-}
-
-.container {
-	position: absolute;
-	font-family: sans-serif;
-	font-weight: 100;
-	font-size: 14;
-	top: 50px;
-	left:50%;
-	transform:translate(-50%,0%);
-	-webkit-transform:translate(-50%,0%);
-	width:550px;
-	text-align: left;
-	overflow: scroll;
-	z-index: 99;
-}
-
 .projectimage {
-	width:500px;
+	left: 46%;
+	width:650px;
 	height: auto;
-	border-style: solid;
-	border-width: 1px;
-	border-radius: 2px;
-	padding: 2px;
-	margin-bottom: 15px;
+	padding-top: 25px;
+	padding-bottom: 50px;
 }
 
 .aboutimage{
+	left: 46%;
 	width: 250px;
 	height: auto;
-	border-style: solid;
-	border-width: 1px;
-	border-radius: 2px;
-	padding: 2px;
 	margin-bottom: 15px;
+	padding-bottom: 500px;
 }
 
 .about {
@@ -84,25 +54,95 @@ ul.subnav li a:hover {
 	color: #2abf43;
 }
 
-.x {
-	position: relative;
-	width: 20px;
-	height: auto;
-	top: 50px;
-	left: 72%;
-	z-index: 9999;
-	color: blue;
+p {
+	font-size: 12;
 }
 
-.x:hover {
+.textcontainer {
+	width: 250px;
+	line-height: 1.35;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:visited {
+	color: black;
+}
+
+.links {
+	width: 200px;
+	position: fixed;
+	font-weight: 100;
+	font-size: 12;
+	top: 95px;
+	left: 7%;
+	line-height: 1.75;
+	text-align: left;
+}
+
+.links a:hover {
+	font-weight: 400;
+}
+
+.up {
+	width: 13px;
+	height: auto;
+}
+
+.up:hover {
+	width: 13px;
+	height: auto;
 	cursor: pointer;
 }
 
-.arrow {
-	position: absolute;
-	height: 400px;
-	width: auto;
-	left: 8%;
-	top: 2%;
-	z-index: -999;
+.selected {
+    font-weight: 500;
+    font-size: 12;
+    color: blue;
 }
+
+.me {
+	color: blue;
+
+}
+
+.car{
+  position: absolute;
+  top:38%;
+  left: 50%;
+  width: 300px;
+  height: auto;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  z-index: -10;
+}
+
+.Ltire {
+   position: absolute;
+  top:42%;
+  left: 40%;
+  width: 54px;
+  height: auto;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  z-index: -9;
+  display: none;
+
+}
+
+.Rtire {
+   position: absolute;
+  top:42%;
+  left: 59%;
+  width: 54px;
+  height: auto;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  z-index: -9;
+  display: none;
+
+}
+
