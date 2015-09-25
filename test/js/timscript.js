@@ -1,20 +1,23 @@
 $(document).ready(function() {
 
-    $(".nav,.links").hide().fadeIn(2000);
-     $(".up").hide();
+      $(".nav,.links").hide().fadeIn(2000);
+      $(".up").hide();
 
+      // Scroll to selected project //
 
-    $('a[href^="#"]').on('click',function (e) {
+      $('a[href^="#"]').on('click',function (e) {
         e.preventDefault();
         var target = this.hash,
             $target = $(target);
         $('html,body').stop().animate({
-            'scrollTop': $target.offset().top - 100
+            'scrollTop': $target.offset().top - 79
         }, 750, function () {
             window.location.hash = target;
         });
-    });
+      });
     
+      // Hide and show up-arrow and car //
+
       $(window).scroll(function() {
         if ($(this).scrollTop() > 300) {
           $('.up').fadeIn(1000);
@@ -26,18 +29,25 @@ $(document).ready(function() {
           $('.link').removeClass('selected');
         }
       });
+
+      // Auto scroll back to top of page //
   
       $('.up').click(function(event) {
         event.preventDefault();
         $('html, body').animate({scrollTop: 0}, 900);
-        $('.link').removeClass('selected');
       });
+      
+      // Move selected project to top of list //
+      
+      //
+      
+      //$('ul.links a').on('click', function() {
+       // $(this).parent().prepend(this);
+      //});//
 
 
-      $('ul.links a').on('click', function() {
-        $(this).parent().prepend(this);
-      });
-
+      // Make selected project bold //
+      
       var selector = '.link';
 
       $(selector).on('click', function(){
@@ -46,7 +56,7 @@ $(document).ready(function() {
       });
 
 
-      //i3// 
+      // Move i3 // 
 
       $(document).on('mousemove', function(e){
         $('.car').css({
@@ -54,6 +64,9 @@ $(document).ready(function() {
           top: '38%'
         });
       });
+
+      // Wheel Rotation //
+
       $(document).on('mousemove', function(e){
         $('.Ltire').show();
         $('.Ltire').css({
