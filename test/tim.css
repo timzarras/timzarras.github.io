@@ -103,11 +103,11 @@ a:visited {
     font-size: 12;
 }
 
-.me {
+#me {
 	color: blue;
 }
 
-.me:hover {
+#me:hover {
 	text-decoration: underline;
 
 }
