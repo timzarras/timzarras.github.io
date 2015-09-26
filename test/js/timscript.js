@@ -25,7 +25,7 @@ $(document).ready(function() {
 
         } else {
           $('.up').fadeOut(300);
-          $('.car,.Ltire,.Rtire').fadeIn(100);
+          $('.car,.Ltire,.Rtire').fadeIn(500);
           $('.link').removeClass('selected');
         }
       });
