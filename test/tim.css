@@ -105,10 +105,11 @@ a:visited {
 
 .me {
 	color: blue;
+	text-decoration: underline;
 }
 
 .me:hover {
-	text-decoration: underline;
+	font-weight: 500;
 
 }
 
