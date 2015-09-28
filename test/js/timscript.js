@@ -20,7 +20,7 @@ $(document).ready(function() {
 
       $(window).scroll(function() {
         if ($(this).scrollTop() > 300) {
-          $('.up').fadeIn(1000);
+          $('.up').fadeIn(500);
           $('.car,.Ltire,.Rtire').fadeOut(100);
 
         } else {
