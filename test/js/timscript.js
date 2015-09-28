@@ -11,7 +11,7 @@ $(document).ready(function() {
             $target = $(target);
         $('html,body').stop().animate({
             'scrollTop': $target.offset().top - 78
-        }, 750, function () {
+        }, 500, function () {
             window.location.hash = target;
         });
       });
@@ -29,6 +29,23 @@ $(document).ready(function() {
           $('.link').removeClass('selected');
         }
       });
+
+      $(window).scroll(function() {
+        var windscroll = $(window).scrollTop();
+      if (windscroll >= 300) {
+        $('.projectlist img.line').each(function(i) {
+            if ($(this).position().top <= windscroll - 500) {
+                $('.links a.selected').removeClass('selected');
+                $('.links a').eq(i).addClass('selected');
+            }
+        });
+
+      } else {
+        $('.links a.selected').removeClass('selected');
+      }
+
+      });
+
 
       // Auto scroll back to top of page //
   
@@ -84,6 +101,14 @@ $(document).ready(function() {
           "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
           transform: 'rotateZ(' + e.pageX + 'deg)'
         });
+      });
+
+
+      $('.resumelink').click(function() {
+        $('.resume').slideToggle(400);
+        $('.resumelink').text(function(i, text){
+          return text === "Resume" ? "Close" : "Resume";
+        })
       });
       
 });

@@ -31,18 +31,29 @@ ul {
 
 .projectimage {
 	left: 46%;
-	width:575px;
+	width:600px;
 	height: auto;
 	margin-top: 25px;
 	margin-bottom: 25px;
 }
 
-.aboutimage{
+.aboutimage {
 	left: 46%;
 	width: 300px;
 	height: auto;
-	margin-bottom: 15px;
-	margin-bottom: 500px;
+	margin-top: 15px;
+	margin-bottom: 50px;
+}
+
+.resume {
+	left: 46%;
+	width: 500px;
+	height: auto;
+	margin-top: 15px;
+	margin-bottom: 25px;
+	-webkit-box-shadow: 17px 15px 28px 1px rgba(0,0,0,0.53);
+	-moz-box-shadow: 17px 15px 28px 1px rgba(0,0,0,0.53);
+	box-shadow: 17px 15px 28px 1px rgba(0,0,0,0.53);
 }
 
 p {
@@ -99,10 +110,17 @@ a:visited {
 
 .me:hover {
 	text-decoration: underline;
-
 }
 
-.car{
+.resumelink {
+	color: blue !important;
+}
+
+.resumelink:hover {
+	text-decoration: underline;
+}
+
+.car {
   position: absolute;
   top:38%;
   left: 50%;
