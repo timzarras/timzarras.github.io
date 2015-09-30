@@ -42,7 +42,7 @@ ul {
 	width: 300px;
 	height: auto;
 	margin-top: 15px;
-	margin-bottom: 62px;
+	margin-bottom: 200px;
 }
 
 .resume {
@@ -86,6 +86,19 @@ a:visited {
 
 .links a:hover {
 	font-weight: 500;
+}
+
+.projecttitle {
+	position: fixed;
+	font-weight: 100;
+	font-size: 12;
+	top: 35px;
+	left: 7%;
+	line-height: 1.75;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 2px;
+	padding: 2px;
 }
 
 .up {
