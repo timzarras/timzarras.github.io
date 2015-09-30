@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-      $('html').hide().fadeIn(2000);
+      $('html').hide().fadeIn(900);
       $(".up").hide();
 
       // Scroll to selected project //
