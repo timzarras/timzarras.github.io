@@ -30,6 +30,8 @@ $(document).ready(function() {
         }
       });
 
+      // Make project title bold when its top line is reached //
+
       $(window).scroll(function() {
         var windscroll = $(window).scrollTop();
       if (windscroll >= 300) {
