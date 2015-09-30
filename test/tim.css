@@ -89,16 +89,12 @@ a:visited {
 }
 
 .projecttitle {
-	position: fixed;
-	font-weight: 100;
+	position: absolute;
+	font-weight: 500;
 	font-size: 12;
-	top: 35px;
+	top: 47px;
 	left: 7%;
 	line-height: 1.75;
-	border-style: solid;
-	border-width: 1px;
-	border-radius: 2px;
-	padding: 2px;
 }
 
 .up {
