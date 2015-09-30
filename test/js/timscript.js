@@ -74,5 +74,13 @@ $(document).ready(function() {
       $(this).addClass('selected');
       });
 
+      // Resume and text toggle //
+
+      $('.resumelink').click(function() {
+        $('.resume').slideToggle(400);
+        $('.resumelink').text(function(i, text){
+          return text === "Resume" ? "Close" : "Resume";
+        })
+      });
       
 });
