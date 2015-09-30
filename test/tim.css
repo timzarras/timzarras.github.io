@@ -120,43 +120,6 @@ a:visited {
 	text-decoration: underline;
 }
 
-.car {
-  position: absolute;
-  top:38%;
-  left: 50%;
-  width: 300px;
-  height: auto;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-  z-index: -10;
-}
-
-.Ltire {
-  position: absolute;
-  top:42%;
-  left: 40%;
-  width: 54px;
-  height: auto;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-  z-index: -9;
-  display: none;
-
-}
-
-.Rtire {
-  position: absolute;
-  top:42%;
-  left: 59%;
-  width: 54px;
-  height: auto;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-  z-index: -9;
-  display: none;
-
-}
-
 .line {
 	position: relative;
 	left: 0px;

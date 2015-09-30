@@ -74,43 +74,5 @@ $(document).ready(function() {
       $(this).addClass('selected');
       });
 
-
-      // Move i3 // 
-
-      $(document).on('mousemove', function(e){
-        $('.car').css({
-          left:  e.pageX,
-          top: '38%'
-        });
-      });
-
-      // Wheel Rotation //
-
-      $(document).on('mousemove', function(e){
-        $('.Ltire').show();
-        $('.Ltire').css({
-          left:  e.pageX-125,
-          top: '39.5%',
-          "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
-          transform: 'rotateZ(' + e.pageX + 'deg)'
-        });
-      });
-      $(document).on('mousemove', function(e){
-        $('.Rtire').show();
-        $('.Rtire').css({
-          left:  e.pageX+73,
-          top: '39.5%',
-          "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
-          transform: 'rotateZ(' + e.pageX + 'deg)'
-        });
-      });
-
-
-      $('.resumelink').click(function() {
-        $('.resume').slideToggle(400);
-        $('.resumelink').text(function(i, text){
-          return text === "Resume" ? "Close" : "Resume";
-        })
-      });
       
 });
