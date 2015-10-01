@@ -26,7 +26,7 @@ $(document).ready(function() {
         } else {
           $('.up').fadeOut(300);
           $('.link').removeClass('selected');
-          $('.links').css("top","125px");
+          $('.links').css("top","135px");
         }
       });
 
