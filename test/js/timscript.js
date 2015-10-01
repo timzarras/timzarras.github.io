@@ -19,14 +19,14 @@ $(document).ready(function() {
       // Hide and show up-arrow and car //
 
       $(window).scroll(function() {
-        if ($(this).scrollTop() > 300) {
+        if ($(this).scrollTop() > 850) {
           $('.up').fadeIn(300);
-          $('.car,.Ltire,.Rtire').fadeOut(100);
+          $('.links').css("top","76px");
 
         } else {
           $('.up').fadeOut(300);
-          $('.car,.Ltire,.Rtire').fadeIn(500);
           $('.link').removeClass('selected');
+          $('.links').css("top","125px");
         }
       });
 
@@ -62,7 +62,7 @@ $(document).ready(function() {
       
       //$('ul.links a').on('click', function() {
        // $(this).parent().prepend(this);
-      //});//
+      //});
 
 
       // Make selected project bold //
