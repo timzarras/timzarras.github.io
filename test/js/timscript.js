@@ -68,12 +68,6 @@ $(document).ready(function() {
 
       // Make selected project bold //
       
-      var selector = '.link';
-
-      $(selector).on('click', function(){
-      $(selector).removeClass('selected');
-      $(this).addClass('selected');
-      });
 
       // Resume and text toggle //
 
