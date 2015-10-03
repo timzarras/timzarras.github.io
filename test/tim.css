@@ -73,6 +73,7 @@ p {
 }
 
 a {
+	color: black !important;
 	text-decoration: none;
 }
 
@@ -152,3 +153,8 @@ a:visited {
 	margin-bottom: 25px;
 }
 
+.year {
+	font-size: 9;
+	margin-left: 15px;
+	display: none;
+}

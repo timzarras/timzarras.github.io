@@ -3,6 +3,7 @@ $(document).ready(function() {
       $('html').hide().fadeIn(900);
       $(".up").hide();
 
+
       // Scroll to selected project //
 
       $('a[href^="#"]').on('click',function (e) {
@@ -37,13 +38,13 @@ $(document).ready(function() {
       if (windscroll >= 300) {
         $('.projectlist img.line').each(function(i) {
             if ($(this).position().top <= windscroll - 500) {
-                $('.links a.selected').removeClass('selected');
-                $('.links a').eq(i).addClass('selected');
+                $('.links li.selected').removeClass('selected').find('span').hide();
+                $('.links li').eq(i).addClass('selected').find('span').show();
             }
         });
 
       } else {
-        $('.links a.selected').removeClass('selected');
+        $('.links li.selected').removeClass('selected').find('span').hide();
       }
 
       });
@@ -82,5 +83,8 @@ $(document).ready(function() {
           return text === "Resume" ? "Close" : "Resume";
         })
       });
+  
+    
+
       
 });
