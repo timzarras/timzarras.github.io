@@ -64,9 +64,6 @@ $(document).ready(function() {
       //$('ul.links a').on('click', function() {
        // $(this).parent().prepend(this);
       //});
-
-
-      // Make selected project bold //
       
 
       // Resume and text toggle //
