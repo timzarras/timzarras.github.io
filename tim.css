@@ -196,10 +196,6 @@ a:visited {
 		display: none;
 	}
 
-	.textcontainer {
-		font-size: 30px !important;
-	}
-
 	.projectlist {
 	position: absolute;
 	top: 500px;
