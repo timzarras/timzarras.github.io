@@ -216,6 +216,8 @@ a:visited {
 		top: 2%
 		left: 7%;
 		font-weight: 100;
+		font-size: 10;
+		color: red;
 		position: absolute;
 	}
 
