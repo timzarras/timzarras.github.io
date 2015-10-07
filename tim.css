@@ -185,3 +185,9 @@ a:visited {
 #aboutlink {
 	font-weight: 400;
 }
+
+@media only screen and (max-device-width:600px){
+
+	html {
+		font-size: 30px;
+	}
