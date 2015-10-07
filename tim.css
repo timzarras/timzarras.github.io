@@ -188,7 +188,7 @@ a:visited {
 
 @media only screen and (max-device-width:600px){
 
-	html {
+	.textcontainer {
 		font-size: 30px;
 	}
 
