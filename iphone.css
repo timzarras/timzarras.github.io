@@ -1,0 +1,188 @@
+html {
+	overflow: scroll;
+	font-family: sans-serif;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.top {
+	top: 76px;
+}
+
+.projectlist {
+	position: absolute;
+	font-weight: 100;
+	font-size: 12;
+	width: auto;
+	top: 900px;
+	left: 25%;
+	text-align: left;
+}
+
+.projectlist:hover {
+	cursor: default;
+}
+
+.projectimage {
+	width:600px;
+	height: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.tabimage {
+	width:225px;
+	height: auto;
+	margin-top: 25px;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	-webkit-box-shadow: 17px 15px 28px 1px rgba(0,0,0,0.53);
+	-moz-box-shadow: 17px 15px 28px 1px rgba(0,0,0,0.53);
+	box-shadow: 17px 15px 28px 1px rgba(0,0,0,0.53);
+}
+
+.tabimage:hover {
+	cursor: pointer !important;
+}
+
+.ticket {
+	width:425px;
+	height: auto;
+	margin-top: 25px;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	-webkit-box-shadow: 17px 15px 28px 1px rgba(0,0,0,0.53);
+	-moz-box-shadow: 17px 15px 28px 1px rgba(0,0,0,0.53);
+	box-shadow: 17px 15px 28px 1px rgba(0,0,0,0.53);
+}
+
+.aboutimage {
+	width: 300px;
+	height: auto;
+	margin-top: 15px;
+	margin-bottom: 200px;
+}
+
+.resume {
+	left: 46%;
+	width: 500px;
+	height: auto;
+	margin-top: 15px;
+	margin-bottom: 25px;
+	-webkit-box-shadow: 17px 15px 28px 1px rgba(0,0,0,0.53);
+	-moz-box-shadow: 17px 15px 28px 1px rgba(0,0,0,0.53);
+	box-shadow: 17px 15px 28px 1px rgba(0,0,0,0.53);
+}
+
+p {
+	font-size: 12;
+}
+
+.textcontainer {
+	width: 275px;
+	line-height: 1.35;
+	font-size: 20 !important;
+}
+
+a {
+	color: black !important;
+	text-decoration: none;
+}
+
+a:visited {
+	color: black;
+}
+
+.links {
+	width: 600px;
+	position: fixed;
+	font-weight: 100;
+	font-size: 12;
+	top: 123px;
+	left: 7% !important;
+	line-height: 1.75;
+	text-align: left;
+}
+
+.links a:hover {
+	font-weight: 500;
+}
+
+.projecttitle {
+	position: absolute !important;
+	font-weight: 400;
+	font-size: 12;
+	top: 88px;
+	left: 7% !important;
+	text-align: left;
+}
+
+.name {
+	position: absolute !important;
+	font-weight: 100;
+	font-size: 12;
+	top: 65px;
+	left: 7%;
+	text-align: left;
+}
+
+.up {
+	width: 13px;
+	height: auto;
+}
+
+.up:hover {
+	width: 13px;
+	height: auto;
+	cursor: pointer;
+}
+
+.selected {
+    font-weight: 500;
+    font-size: 12;
+}
+
+.me {
+	color: blue !important;
+}
+
+.me:hover {
+	text-decoration: underline;
+}
+
+.resumelink {
+	color: blue !important;
+}
+
+.resumelink:hover {
+	text-decoration: underline;
+	cursor: pointer !important;
+}
+
+.line {
+	position: relative;
+	left: 0px;
+	width: 287px;
+	height: 5px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.year {
+	font-size: 9;
+	margin-left: 20px;
+	display: none;
+}
+
+#aboutlink {
+	font-weight: 400;
+}
