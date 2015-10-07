@@ -188,6 +188,10 @@ a:visited {
 
 @media only screen and (max-device-width:600px){
 
+	.projecttitle , .name {
+		display: none;
+	}
+
 	.textcontainer {
 		font-size: 30px;
 	}
