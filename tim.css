@@ -218,4 +218,8 @@ a:visited {
 		font-weight: 100;
 		position: absolute;
 	}
+
+	.up {
+		display: none;
+	}
 }
