@@ -193,10 +193,15 @@ a:visited {
 	}
 
 	.textcontainer {
-		font-size: 30px;
+		font-size: 30px !important;
 	}
 
 	.projectlist {
 	position: absolute;
 	top: 500px;
+	}
+
+	.links {
+		font-size: 10px !important;
+	}
 }
