@@ -199,11 +199,16 @@ a:visited {
 	.projectlist {
 	position: absolute;
 	top: 500px;
-	left: 30%;
+	left: 40%;
 	}
 
 	.links {
 		font-size: 10px !important;
 		z-index: 999 !important;
+	}
+
+	.projectimage {
+	width:300px;
+	height: auto;
 	}
 }
