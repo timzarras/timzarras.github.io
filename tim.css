@@ -218,5 +218,8 @@ a:visited {
 
 	.mobilemessage {
 		display: inline;
+		left: 7%;
+		font-weight: 100;
+		position: fixed;
 	}
 }
