@@ -186,6 +186,10 @@ a:visited {
 	font-weight: 400;
 }
 
+.mobilemessage {
+	display: none;
+}
+
 @media only screen and (max-device-width:600px){
 
 	.projecttitle , .name {
@@ -210,5 +214,9 @@ a:visited {
 	.projectimage {
 	width:300px;
 	height: auto;
+	}
+
+	.mobilemessage {
+		display: inline;
 	}
 }
