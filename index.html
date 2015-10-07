@@ -1,125 +1,180 @@
+<!-- Made by me, Tim! -->
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-  <link rel="icon" type="image/png" href="!.png">
-  <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="iphone.css" />
-  <title>tim zarras</title>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="!.png">
+<link rel="stylesheet" type="text/css" href="tim.css">
+<title> Tim Zarras </title>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
+<script src="js/timscript.js"></script>
 
 </head>
 
-<script>
-
-$(document).ready(function() {
-
-    $(document).on('mousemove', function(e){
-        $('.car').css({
-          left:  e.pageX,
-          top: '38%'
-        });
-      });
-    $(document).on('mousemove', function(e){
-        $('.Ltire').show();
-        $('.Ltire').css({
-          left:  e.pageX-125,
-          top: '39.5%',
-          "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
-          transform: 'rotateZ(' + e.pageX + 'deg)'
-        });
-      });
-    $(document).on('mousemove', function(e){
-        $('.Rtire').show();
-        $('.Rtire').css({
-          left:  e.pageX+73,
-          top: '39.5%',
-          "-webkit-transform": 'rotateZ(' + e.pageX + 'deg)',
-          transform: 'rotateZ(' + e.pageX + 'deg)'
-        });
-      });
-    $(document).on('mousemove', function(e){
-        $('.tree').css({
-          left:  -(e.pageX)+1250,
-          top: '9%'
-        });
-      });
-});
-
-</script>
-
-<style>
-
-.brb{
-  position: absolute;
-  top:55%;
-  left: 50%;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-  z-index: 999;
-}
-
-.car{
-  position: absolute;
-  top:38%;
-  left: 50%;
-  width: 300px;
-  height: auto;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-  z-index: 999;
-}
-
-.Ltire {
-   position: absolute;
-  top:42%;
-  left: 40%;
-  width: 54px;
-  height: auto;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-  z-index: 999;
-  display: none;
-
-}
-
-.Rtire {
-   position: absolute;
-  top:42%;
-  left: 59%;
-  width: 54px;
-  height: auto;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-  z-index: 999;
-  display: none;
-
-}
-.tree {
-   position: absolute;
-  top:9%;
-  left: 20%;
-  width: auto;
-  height: 600px;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-  z-index: 999;
-
-}
-
-
-</style>
-  
   <body>
+    <a class="name"> Tim Zarras </a>
+    <a class="projecttitle"> Projects </a>
+  <ul class="links">
+    <li><a class="link" href="#gardenchair">Garden Chair</a><span class="year">2015</span></li>
+    <li><a class="link" href="#me">timzarras.me</a><span class="year">2015</span></li>
+    <li><a class="link" href="#takeabreak">RISD Take A Break</a><span class="year">2015</span></li>
+    <li><a class="link" href="#container">Container</a><span class="year">2015</span></li>
+    <li><a class="link" href="#connectionstudy">Connection Study</a><span class="year">2014</span></li>
+    <li><a class="link" href="#fan">Fan</a><span class="year">2014</span><br><br></li>
+    <li><a id="aboutlink" class="link" href="#about">About Me</a></li><br>
+    <img class="up" src="images/uparrow.svg">
+  </ul>
+  
+  <ul class="projectlist">
+      <img class="line" src="images/line.svg">
+    <li>
+        <a id="gardenchair">
+        <ul>
+          <li>
+            <a> 
+                <div class="textcontainer">
+                  <p class="date">
+                A garden chair that's meant to co-exist amongst the lawn / yard landscape.
+                Legs and back are constructed as solid bent laminations.
+                <br><br> Dyed ash.
+                  </p>
+                </div>
+              <img class="projectimage" src="images/gardenchair/gardenchair.png">
+            </a>
+          </li>
+        </ul>
+    </li>
+      <img class="line" src="images/line.svg">
+    <li>
+        <a id="me"></a>
+        <ul>
+          <li>
+            
+              <div class="textcontainer">
+                  <p class="date">
+                I set up <a class="me" href="http://www.timzarras.me">timzarras.me</a> to act as an online sketchbook for web projects.<br><br>
+                <img class="projectimage" src="images/me.png">
+                  </p>
+                </div>
+          </li>
+        </ul>
+    </li>
+      <img class="line" src="images/line.svg">
+    <li>
+        <a id="takeabreak">
+        <ul>
+          <li>
+            <a> 
+                <div class="textcontainer">
+                  <p class="date">
+                  Promotional material for RISD's Take A Break in Spring 2015. Working with <a class="me" href="http://www.robert-oconnell.com/">Robert O'Connell</a> and <a class="me"href="http://www.valerie-nelson.com/">Valerie Nelson</a> as Petrichor.<br><br>
 
-    <p class="brb"> be right back! </p>
-    <img class="car" src="i3.png">
-    <img class="Ltire" src="tire.png">
-    <img class="Rtire" src="tire.png">
-    <img class="tree" src="tree.png">
-    
-    
-    
+                  <i>Click to enlarge</i>
+                  </p>
+                </div>
+              <img class="tabimage" src="images/takeabreak/TAB1.jpg">
+              <img class="tabimage" src="images/takeabreak/TAB2.jpg">
+              <img class="tabimage" src="images/takeabreak/TAB3.jpg">
+              <img class="tabimage" src="images/takeabreak/TAB4.jpg">
+              <img class="tabimage" src="images/takeabreak/TAB5.jpg">
+              <img class="tabimage" src="images/takeabreak/TAB6.jpg">
+              <img class="tabimage" src="images/takeabreak/TAB7.jpg">
+              <img class="tabimage" src="images/takeabreak/TAB8.jpg">
+              <img class="tabimage" src="images/takeabreak/TAB9.jpg">
+              <img class="tabimage" src="images/takeabreak/TAB10.jpg">
+              <div class="textcontainer">
+                  <p class="date">
+                  Even the tickets, 
+                  </p>
+                </div>
+              <img class="ticket" src="images/takeabreak/TAB18.jpg">
+
+            </a>
+          </li>
+        </ul>
+    </li>
+      <img class="line" src="images/line.svg">
+    <li>
+        <a id="container">
+        <ul>
+          <li>
+            <a> 
+                <div class="textcontainer">
+                  <p class="date">
+                  1 week assignment to utilize vacuum forming. I aimed to make something formally characteristic to manufactured plastic containers.<br><br>
+                   Polystyrene and found cap.
+                  </p>
+                </div>
+              <img class="projectimage" src="images/container/container.png">
+            </a>
+          </li>
+        </ul>
+    </li>
+      <img class="line" src="images/line.svg">
+    <li>
+        <a id="connectionstudy"></a>
+        <ul>
+          <li>
+            <a> 
+              <div class="textcontainer">
+                  <p class="date">
+                This project is about being iterative with a discovered connection, as well as an inherent study in gesture and stance from the resulting forms / structures.<br><br>
+
+                Tubular steel and cold rolled steel rod.
+                  </p>
+                </div>
+              <img class="projectimage" src="images/connection/rodassembly.gif">
+              <img class="projectimage" src="images/connection/5.jpeg">
+              <img class="projectimage" src="images/connection/1.jpeg">
+              <img class="projectimage" src="images/connection/2.jpeg">
+              <img class="projectimage" src="images/connection/6.jpg">
+            </a>
+          </li>
+        </ul>
+    </li>
+      <img class="line" src="images/line.svg">
+    <li>
+        <a id="fan"></a>
+        <ul>
+          <li>
+            <a> 
+                <div class="textcontainer">
+                  <p class="date">
+                  Fan made for our "container" assignment in Sophomore Studio.
+                  A container for dismembered fan components.<br><br>
+                 Hard maple and fan components.
+                  </p>
+                </div>
+              <img class="projectimage" src="images/fan/fan2.jpg">
+              <img class="projectimage" src="images/fan/fan.jpg">
+            </a>
+          </li>
+        </ul>
+    </li>
+      <img class="line" src="images/line.svg">
+    <li>
+        <a id="about"></a>
+        <ul>
+            <li>
+                <div class="textcontainer">
+                  <p> 
+                  Hello!<br><br>
+                  I'm Tim. I'm currently a senior in Furniture Design at the Rhode Island School of Design.<br><br>
+                  <a class="me" href="http://instagram.com/timzarras/">Instagram</a><br>
+                  <p class="resumelink">Resume</p>
+                  <img class="resume" src="images/Tim_Zarras_Resume.jpg" style="display:none;">
+                  </p>
+                  <p>
+                  <i>All project photos taken by Tim Zarras</i></p>
+                </div>
+              <img class="aboutimage" src="images/myface.jpg">
+                  <p> © Tim Zarras 2015. All Rights Reserved </p>
+            </li>
+        </ul>
+    </li>
+  </ul>
+
   </body>
 
 </html>
