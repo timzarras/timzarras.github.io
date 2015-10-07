@@ -207,8 +207,9 @@ a:visited {
 	}
 
 	.links {
-		font-size: 10px !important;
-		z-index: 999 !important;
+	font-size: 10px !important;
+	z-index: 999 !important;
+	top: 20px;
 	}
 
 	.projectimage {
