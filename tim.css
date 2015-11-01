@@ -39,6 +39,13 @@ ul {
 	margin-bottom: 25px;
 }
 
+.customimage {
+	width:400px;
+	height: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
 .tabimage {
 	width:225px;
 	height: auto;
