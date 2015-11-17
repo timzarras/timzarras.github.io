@@ -79,7 +79,7 @@ $(document).ready(function() {
 
       $(".tabimage", this).click(function(){
              $(this).css('width', function(_ , cur){
-              return cur === '225px' ? '60%' : '225px'
+              return cur === '225px' ? '45%' : '225px'
             });  
         });
   
