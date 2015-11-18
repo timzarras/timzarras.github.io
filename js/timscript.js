@@ -82,6 +82,9 @@ $(document).ready(function() {
               return cur === '225px' ? '45%' : '225px'
             });  
         });
+
+
+
   
     
 
