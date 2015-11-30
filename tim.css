@@ -57,8 +57,32 @@ ul {
 	box-shadow: 17px 15px 28px 1px rgba(0,0,0,0.53);
 }
 
+
 .tabimage:hover {
 	cursor: pointer !important;
+}
+
+.netikimage {
+	width:245px;
+	height: auto;
+	margin-top: 0px;
+	margin-right: 25px;
+	margin-bottom: 25px;
+}
+
+.sweatimage {
+	width:280px;
+	height: auto;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 25px;
+}
+
+.sportimage {
+	width:500px;
+	height: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 
 .ticket {
