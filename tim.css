@@ -220,17 +220,15 @@ a:visited {
 	height: auto;
 	}
 
-	.mobilemessage {
-		display: inline;
-		top: 2%
-		left: 7%;
-		font-weight: 100;
-		font-size: 20;
-		color: red !important;
-		position: absolute;
-	}
+	.customimage {
+	width:212px;
+	height: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
 
 	.up {
 		display: none;
 	}
-}
+
