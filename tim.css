@@ -208,13 +208,12 @@ a:visited {
 	.projectlist {
 	position: absolute;
 	top: 500px;
-	left: -10%;
+	left: 30% !important;
 	width: 550px;
 	}
 
 	.links {
 	z-index: 999 !important;
-	display: none;
 	}
 
 	.projectimage {
