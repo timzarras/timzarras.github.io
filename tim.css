@@ -227,7 +227,11 @@ a:visited {
 	height: auto;
 	margin-top: 25px;
 	margin-bottom: 25px;
-}
+	}
+
+	p {
+		font-size: 20 !important;
+	}
 
 
 	.up {
