@@ -247,3 +247,9 @@ a:visited {
 		left: 50px;
 	}
 
+	.title {
+		font-weight: 400;
+		font-size: 20 !important;
+		display: inline;
+	}
+
