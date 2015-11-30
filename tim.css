@@ -62,29 +62,6 @@ ul {
 	cursor: pointer !important;
 }
 
-.netikimage {
-	width:245px;
-	height: auto;
-	margin-top: 0px;
-	margin-right: 25px;
-	margin-bottom: 25px;
-}
-
-.sweatimage {
-	width:280px;
-	height: auto;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 25px;
-}
-
-.sportimage {
-	width:500px;
-	height: auto;
-	margin-top: 25px;
-	margin-bottom: 25px;
-}
-
 .ticket {
 	width:425px;
 	height: auto;
