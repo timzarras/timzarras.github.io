@@ -210,11 +210,12 @@ a:visited {
 	top: 500px;
 	left: 30% !important;
 	width: 550px;
+	top: 50px !important;
 	}
 
 	.links {
 	z-index: 999 !important;
-	font-size: 10 !important;
+	display: none;
 	}
 
 	.projectimage {
