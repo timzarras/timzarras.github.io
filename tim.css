@@ -250,6 +250,6 @@ a:visited {
 	.title {
 		font-weight: 400;
 		font-size: 20 !important;
-		display: inline;
+		display: inline !important;
 	}
 
