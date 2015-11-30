@@ -242,5 +242,8 @@ a:visited {
 	.mobilemessage {
 		font-size: 20 !important;
 		display: inline;
+		position: absolute;
+		top: 50px;
+		left: 50px;
 	}
 
