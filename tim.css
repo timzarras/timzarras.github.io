@@ -214,6 +214,7 @@ a:visited {
 
 	.links {
 	z-index: 999 !important;
+	display: none;
 	}
 
 	.projectimage {
