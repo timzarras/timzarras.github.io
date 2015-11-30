@@ -247,6 +247,7 @@ a:visited {
 	}
 
 	.title {
+		position: absolute;
 		font-weight: 500;
 		font-size: 20 !important;
 		display: inline !important;
