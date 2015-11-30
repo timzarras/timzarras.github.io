@@ -234,7 +234,6 @@ a:visited {
 		font-size: 20 !important;
 	}
 
-
 	.up {
 		display: none !important;
 	}
@@ -250,6 +249,10 @@ a:visited {
 	.title {
 		font-weight: 500;
 		font-size: 20 !important;
+		display: inline !important;
+	}
+
+	.year {
 		display: inline !important;
 	}
 
