@@ -239,3 +239,8 @@ a:visited {
 		display: none !important;
 	}
 
+	.mobilemessage {
+		font-size: 20 !important;
+		display: inline;
+	}
+
