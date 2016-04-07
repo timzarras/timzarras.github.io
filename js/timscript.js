@@ -97,6 +97,8 @@ $(document).ready(function() {
 
       //});
 
+      if ( $(window).width() > 414) {
+
       $('.projectimage,.customimage').mouseover(function() {
 
         
@@ -120,6 +122,10 @@ $(document).ready(function() {
       
 
       });
+
+    }
+ 
+
 
       
 

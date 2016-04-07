@@ -9,7 +9,7 @@ html {
     -webkit-transition: background-color .35s ease-in-out;
   	-moz-transition: color .35s ease-in-out;
   	-o-transition: color .35s ease-in-out;
-  	transition: background-color .35s ease-in-out;
+  	transition: background-color .5s ease-in-out;
 
 }
 
@@ -235,6 +235,15 @@ a:visited {
   	transition: opacity .5s ease-in-out;
 	
 
+}
+
+.size{
+	font-size: 20;
+	width: 950px;
+	position: absolute;
+	left: 40%;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
 }
 
 
