@@ -249,7 +249,7 @@ a:visited {
 
 
 
-@media only screen and (max-width: 1010px) and (min-width: 0px) {
+@media only screen and (max-device-width:600px){
 
 	.projecttitle , .name {
 		display: none;
