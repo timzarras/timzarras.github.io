@@ -269,12 +269,12 @@ a:visited {
 	}
 
 	.projectimage {
-	width:70% !important;
+	width:60% !important;
 	height: auto;
 	}
 
 	.customimage {
-	width:400px;
+	width:60% !important;
 	height: auto;
 	margin-top: 25px;
 	margin-bottom: 25px;
