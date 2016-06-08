@@ -258,7 +258,7 @@ a:visited {
 	.projectlist {
 	position: absolute;
 	top: 500px;
-	left: 50% !important;
+	left: 60% !important;
 	width: 100%;
 	top: 50px !important;
 	transform:translate(-50%,0%);
@@ -271,12 +271,12 @@ a:visited {
 	}
 
 	.projectimage {
-	width:60% !important;
+	width:80% !important;
 	height: auto;
 	}
 
 	.customimage {
-	width:60% !important;
+	width:80% !important;
 	height: auto;
 	margin-top: 25px;
 	margin-bottom: 25px;
