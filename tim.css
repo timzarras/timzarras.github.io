@@ -261,6 +261,8 @@ a:visited {
 	left: 15% !important;
 	width: 550px;
 	top: 50px !important;
+	transform:translate(-50%,-50%);
+  	-webkit-transform:translate(-50%,-50%);
 	}
 
 	.links {
