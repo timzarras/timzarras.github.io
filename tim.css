@@ -269,7 +269,7 @@ a:visited {
 	}
 
 	.projectimage {
-	width:500px;
+	width:70% !important;
 	height: auto;
 	}
 
