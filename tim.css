@@ -249,7 +249,7 @@ a:visited {
 
 
 
-@media only screen and (max-device-width:750px) {
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3 {
 
 	html,body {
 		width: 100% !important;
