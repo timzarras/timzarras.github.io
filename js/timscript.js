@@ -97,34 +97,7 @@ $(document).ready(function() {
 
       //});
 
-      if ( $(window).width() > 414) {
-
-      $('.projectimage,.customimage').mouseover(function() {
-
-        
-        
-        $("html").css("background-color","black");
-        $(".links,a,p").addClass("white");
-        
-        $(".projectimage,.customimage,.links,p").not(this).addClass("pad");
-
-    
-
-      })
-      .mouseout(function() {
-
-
-       
-        $("html").css("background-color","white");
-        $(".links,a,p").removeClass("white");
-        $(".projectimage,.customimage,.links,p").not(this).removeClass("pad");
-
       
-
-      });
-
-    }
- 
 
 
       
