@@ -251,8 +251,11 @@ a:visited {
 
 @media only screen and (max-device-width:600px) {
 
-	body {
+	html,body {
 		width: 100% !important;
+		margin: 0px;
+    	padding: 0px;
+    	overflow-x: hidden; 
 	}
 
 	.projecttitle , .name {
