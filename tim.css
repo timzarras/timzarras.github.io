@@ -269,6 +269,9 @@ a:visited {
 	top: 50px !important;
 	transform:translate(-50%,0%);
   	-webkit-transform:translate(-50%,0%);
+  	margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 	}
 
 	.links {
