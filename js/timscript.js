@@ -77,13 +77,7 @@ $(document).ready(function() {
         })
       });
 
-      // Enlarge and shrink poster images //
-
-      $(".tabimage", this).click(function(){
-             $(this).css('width', function(_ , cur){
-              return cur === '225px' ? '45%' : '225px'
-            });  
-        });
+     
 
       //$('.projectimage,.customimage').mouseover(function() {
         //$('.projectimage,.customimage,.links,p').not(this).toggleClass("pad");
