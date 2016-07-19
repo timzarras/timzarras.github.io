@@ -251,6 +251,10 @@ a:visited {
 
 @media only screen and (max-device-width:600px) {
 
+	body {
+		width: 100% !important;
+	}
+
 	.projecttitle , .name {
 		display: none;
 	}
