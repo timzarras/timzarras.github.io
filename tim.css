@@ -264,7 +264,6 @@ a:visited {
 
 	.projectlist {
 	position: absolute;
-	top: 500px;
 	left: 61% !important;
 	width: 100%;
 	top: 50px !important;
@@ -291,7 +290,6 @@ a:visited {
 
 	p {
 		font-size: 12 !important;
-		padding-top: 
 	}
 
 	.up {
