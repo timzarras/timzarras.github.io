@@ -1,0 +1,229 @@
+<!-- Developed by Tim Zarras -->
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Portfolio of Sam Newman">
+<meta name="keywords" content=".">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="icon" type="image/png" href=".">
+<link rel="stylesheet" type="text/css" href="sam.css">
+<title> Sam Newman </title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="http://malsup.github.io/jquery.cycle2.js"></script>
+<script src="js/samscript.js"></script>
+
+</head>
+
+  <body>
+
+  <!-- Nav Links -->
+
+    <div class="navzone">
+      <p class="name">Sam Newman</p>
+        <div class="nav">
+            <p class="info">Information / Contact</p>
+        </div>
+    </div>
+
+    <!-- Archive --> 
+
+    <div class="archivecontainer">
+
+          <ul>
+            <li class="year">2016</li>
+              <a class="title" id="rug" target="6">Rug</a>
+              <a class="title" id="glassware" target="5">Glassware</a>
+              <a class="title" id="book" target="4">Book</a><br>
+            <li class="year">2015</li>
+              <a class="title" id="keys" target="3">Key</a>
+              <a class="title" id="cutlery" target="2">Cutlery</a>
+              <a class="title" id="soap" target="1">Soap</a>
+          </ul>
+
+    </div>
+
+    <!-- Container -->
+
+    <div style="display:none" class="container">
+
+    <!-- Alternate Titles -->
+
+    <p id="rug" class="alternatetitle" style="display:none" rel="div6">Braided Pile Rug</p>
+    <p id="glassware" class="alternatetitle" style="display:none" rel="div5">SMF Glassware</p>
+    <p id="book" class="alternatetitle" style="display:none" rel="div4"><i>Tongs</i> Book</p>
+    <p id="keys" class="alternatetitle" style="display:none" rel="div3">Concave Key</p>
+    <p id="cutlery" class="alternatetitle" style="display:none" rel="div2">Cutlery</p>
+    <p id="soap" class="alternatetitle" style="display:none" rel="div1">Large Soap</p>
+
+    <!-- Image Zone -->  
+        
+        <div class="projectviewer">
+              
+              <!-- Project Slideshow -->
+
+              <div  class="cycle-slideshow"
+                    data-cycle-fx="scrollHorz"
+                    id="nextImage6"
+                    data-cycle-timeout="0"
+                    data-cycle-prev="#previousImage6"
+                    data-cycle-next="#nextImage6"
+                    data-cycle-starting-slide="0"
+                    data-cycle-center-horz=true
+                    data-cycle-center-vert=true
+                    data-cycle-slides="> div"
+                    data-cycle-auto-height="calc"
+                    rel="div6">
+              
+              <!-- Images -->
+
+                <div><img  src="images/rug/rug_solo.png"></div>
+                <div><img  src="images/rug/rug_detail.png"></div>
+                <div><img  src="images/rug/rug_context.png"></div>
+
+              <!-- Summary --> 
+
+                <div class="border"><p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet neque at arcu lobortis suscipit nec eget lacus. Duis volutpat congue lectus a finibus. Phasellus pretium sodales justo, nec convallis augue vehicula et. Mauris elit turpis, pretium vitae tellus aliquet, porta sollicitudin nunc. Aenean pharetra pretium nunc quis tincidunt. Nam rhoncus ante sit amet lorem sollicitudin euismod. Etiam a orci urna. Integer nec dui maximus, venenatis urna vel, efficitur velit. Aliquam dignissim egestas sollicitudin. Donec enim velit, dignissim eget lectus sed, dapibus pulvinar sapien. Donec ac efficitur urna. Fusce lobortis condimentum nulla vitae viverra. Duis eu suscipit nisi.</p></div>
+          
+              </div>
+
+              <!-- Project Slideshow -->
+
+              <div  class="cycle-slideshow"
+                    data-cycle-fx="scrollHorz"
+                    id="nextImage5"
+                    data-cycle-timeout="0"
+                    data-cycle-prev="#previousImage5"
+                    data-cycle-next="#nextImage5"
+                    data-cycle-starting-slide="0"
+                    data-cycle-slides="> div"
+                    rel="div5">
+              
+              <!-- Images -->
+
+                <div><img  src="images/glassware/smf_glassware.png"></div>
+                <div><img  src="images/glassware/smf_glassware_context.png"></div>
+
+              <!-- Summary --> 
+
+                <div class="border"><p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet neque at arcu lobortis suscipit nec eget lacus. Duis volutpat congue lectus a finibus. Phasellus pretium sodales justo, nec convallis augue vehicula et. Mauris elit turpis, pretium vitae tellus aliquet, porta sollicitudin nunc. Aenean pharetra pretium nunc quis tincidunt. Nam rhoncus ante sit amet lorem sollicitudin euismod. Etiam a orci urna. Integer nec dui maximus, venenatis urna vel, efficitur velit. Aliquam dignissim egestas sollicitudin. Donec enim velit, dignissim eget lectus sed, dapibus pulvinar sapien. Donec ac efficitur urna. Fusce lobortis condimentum nulla vitae viverra. Duis eu suscipit nisi.</p></div>
+
+          
+              </div>
+
+              <!-- Project Slideshow -->
+
+              <div  class="cycle-slideshow"
+                    data-cycle-fx="scrollHorz"
+                    id="nextImage4"
+                    data-cycle-timeout="0"
+                    data-cycle-prev="#previousImage4"
+                    data-cycle-next="#nextImage4"
+                    data-cycle-starting-slide="0"
+                    data-cycle-slides="> div"
+                    rel="div4">
+              
+              <!-- Images -->
+
+                <div><img  src="images/tongs/tong_book.png"></div>
+                <div><img  src="images/tongs/tong_context.png"></div>
+
+              <!-- Summary --> 
+
+                <div class="border"><p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet neque at arcu lobortis suscipit nec eget lacus. Duis volutpat congue lectus a finibus. Phasellus pretium sodales justo, nec convallis augue vehicula et. Mauris elit turpis, pretium vitae tellus aliquet, porta sollicitudin nunc. Aenean pharetra pretium nunc quis tincidunt. Nam rhoncus ante sit amet lorem sollicitudin euismod. Etiam a orci urna. Integer nec dui maximus, venenatis urna vel, efficitur velit. Aliquam dignissim egestas sollicitudin. Donec enim velit, dignissim eget lectus sed, dapibus pulvinar sapien. Donec ac efficitur urna. Fusce lobortis condimentum nulla vitae viverra. Duis eu suscipit nisi.</p></div>
+          
+              </div>
+
+              <!-- Project Slideshow -->
+
+              <div  class="cycle-slideshow"
+                    data-cycle-fx="scrollHorz"
+                    id="nextImage3"
+                    data-cycle-timeout="0"
+                    data-cycle-prev="#previousImage3"
+                    data-cycle-next="#nextImage3"
+                    data-cycle-starting-slide="0"
+                    data-cycle-slides="> div"
+                    rel="div3">
+              
+              <!-- Images -->
+
+                <div><img  src="images/key/key_solo.png"></div>
+                <div><img  src="images/key/key_context.png"></div>
+
+              <!-- Summary --> 
+
+                <div class="border"><p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet neque at arcu lobortis suscipit nec eget lacus. Duis volutpat congue lectus a finibus. Phasellus pretium sodales justo, nec convallis augue vehicula et. Mauris elit turpis, pretium vitae tellus aliquet, porta sollicitudin nunc. Aenean pharetra pretium nunc quis tincidunt. Nam rhoncus ante sit amet lorem sollicitudin euismod. Etiam a orci urna. Integer nec dui maximus, venenatis urna vel, efficitur velit. Aliquam dignissim egestas sollicitudin. Donec enim velit, dignissim eget lectus sed, dapibus pulvinar sapien. Donec ac efficitur urna. Fusce lobortis condimentum nulla vitae viverra. Duis eu suscipit nisi.</p></div>
+          
+              </div>
+
+              <!-- Project Slideshow -->
+
+              <div  class="cycle-slideshow"
+                    data-cycle-fx="scrollHorz"
+                    id="nextImage2"
+                    data-cycle-timeout="0"
+                    data-cycle-prev="#previousImage2"
+                    data-cycle-next="#nextImage2"
+                    data-cycle-starting-slide="0"
+                    data-cycle-slides="> div"
+                    rel="div2">
+              
+              <!-- Images -->
+
+                <div><img  src="images/cutlery/cutlery_set.png"></div>
+                <div><img  src="images/cutlery/cutlery_context.png"></div>
+
+              <!-- Summary --> 
+
+                <div class="border"><p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet neque at arcu lobortis suscipit nec eget lacus. Duis volutpat congue lectus a finibus. Phasellus pretium sodales justo, nec convallis augue vehicula et. Mauris elit turpis, pretium vitae tellus aliquet, porta sollicitudin nunc. Aenean pharetra pretium nunc quis tincidunt. Nam rhoncus ante sit amet lorem sollicitudin euismod. Etiam a orci urna. Integer nec dui maximus, venenatis urna vel, efficitur velit. Aliquam dignissim egestas sollicitudin. Donec enim velit, dignissim eget lectus sed, dapibus pulvinar sapien. Donec ac efficitur urna. Fusce lobortis condimentum nulla vitae viverra. Duis eu suscipit nisi.</p></div>
+          
+              </div>
+
+              <!-- Project Slideshow -->
+
+              <div  class="cycle-slideshow"
+                    data-cycle-fx="scrollHorz"
+                    id="nextImage1"
+                    data-cycle-timeout="0"
+                    data-cycle-prev="#previousImage1"
+                    data-cycle-next="#nextImage1"
+                    data-cycle-starting-slide="0"
+                    data-cycle-slides="> div"
+                    rel="div1">
+              
+              <!-- Images -->
+
+                <div><img  src="images/soap/soap_solo.png"></div>
+                <div><img  src="images/soap/soap_context.png"></div>
+
+              <!-- Summary --> 
+
+                <div class="border"><p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet neque at arcu lobortis suscipit nec eget lacus. Duis volutpat congue lectus a finibus. Phasellus pretium sodales justo, nec convallis augue vehicula et. Mauris elit turpis, pretium vitae tellus aliquet, porta sollicitudin nunc. Aenean pharetra pretium nunc quis tincidunt. Nam rhoncus ante sit amet lorem sollicitudin euismod. Etiam a orci urna. Integer nec dui maximus, venenatis urna vel, efficitur velit. Aliquam dignissim egestas sollicitudin. Donec enim velit, dignissim eget lectus sed, dapibus pulvinar sapien. Donec ac efficitur urna. Fusce lobortis condimentum nulla vitae viverra. Duis eu suscipit nisi.</p></div>
+          
+              </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- Bio -->
+
+    <div class="bio" style="display:none">
+    <p class="biotext">
+    Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam.
+    Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam.
+    Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam.
+    Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam.
+    Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam. Sam is Sam.
+    </p>
+    </div>
+
+        <!-- <p class="hide" style="display:none">x</p> -->
+     
+    
+  </body>
+
+</html>
