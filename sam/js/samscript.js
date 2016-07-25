@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
-  $('a').click(function() {
+	$('html').hide().fadeIn(500);
+
+	$('a').click(function() {
 
        	$(".container,.hide,#rug").fadeIn(100); 
         $(".archivecontainer").hide();
@@ -28,8 +30,16 @@ $(document).ready(function() {
 
        	$(".bio").toggle();
        	$(".archivecontainer").toggle();
+       	$(".info").toggleClass("underline");
 		
 		});
+
+  var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
+  if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+		$(".firefox").show();
+		$(".archivecontainer,.container,.navzone").css("opacity", ".1");
+	}
 
      
 

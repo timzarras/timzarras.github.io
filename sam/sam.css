@@ -144,7 +144,7 @@ a {
 
 .border {
 	position: absolute;
-	width: 80%;
+	width: 68%;
 	height: 94%;
 	border: black solid 1px;
 	overflow: scroll;
@@ -173,8 +173,16 @@ a {
 	-webkit-columns: 80px 2; 
     -moz-columns: 80px 2;
     columns: 80px 2;
-
 }
+
+.underline {
+	text-decoration: underline;
+}
+
+.firefox {
+    	color: blue;
+}
+
 
 
 @media screen and (max-width: 736px) and (orientation: portrait){
@@ -206,10 +214,14 @@ a {
 
 	.biotext {
 	position: absolute;
-	width: 50%;
+	width: 80%;
 	-webkit-columns: 100px 1; 
     -moz-columns: 100px 1;
     columns: 100px 1;
+	}
+
+	.archivecontainer {
+		height: 90%;
 	}	
 
 }
