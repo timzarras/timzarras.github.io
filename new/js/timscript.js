@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-    
     $(document).mousemove(function() {
 
         $yo = $("body").width();
