@@ -80,14 +80,10 @@ $(document).ready(function() {
 
     if ($(window).width() < 736) {
 
-      $("li",this).click(function() {
-
         var h3 = $(".info", this).outerHeight();
         var i3 = $("img", this).outerHeight();
         
-          $(this).css("height", h3 + i3);
-       
-        });
+        $(this).css("height", h3 + i3);
 
 
     }
