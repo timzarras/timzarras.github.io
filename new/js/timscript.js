@@ -9,7 +9,7 @@ $(document).ready(function() {
         if (event.pageX < ($yo * .15)) {
 
           $("ul").addClass("left");
-          $(".expand,.close").css("left","1%");
+          $(".expand,.close").css("left","2%");
 
         } else {
 
@@ -78,15 +78,30 @@ $(document).ready(function() {
         next.show();
     });
 
+    $("li",this).mouseover(function() {
+
+        $(".me", this).css("color", "white"); 
+
+    }).mouseout(function() {
+
+      $(".me", this).css("color", "#0078ff");
+
+      });
+
     if ($(window).width() < 736) {
+ 
+      $("li",this).click(function() {
 
         var h3 = $(".info", this).outerHeight();
         var i3 = $("img", this).outerHeight();
         
-        $(this).css("height", h3 + i3);
+          $(this).css("height", h3 + i3);
 
+        });
 
-    }
+    } 
+
+ 
 
 
 
