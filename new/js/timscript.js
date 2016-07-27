@@ -1,12 +1,14 @@
 $(document).ready(function() {
 
+  if ($(window).width() > 736) {
+
     $(document).mousemove(function() {
 
         $yo = $("body").width();
 
         // if cursor is less than 15% from the left, slide list and expand button // 
 
-        if (event.pageX < ($yo * .15)) {
+        if (event.pageX < ($yo * .1)) {
 
           $("ul").addClass("left");
           $(".expand,.close").css("left","2%");
@@ -88,18 +90,27 @@ $(document).ready(function() {
 
       });
 
-    if ($(window).width() < 736) {
+    $(window).resize(function() {
+      $("li:visible").css("height","8%");
+    });
+
+  } 
+
+  else {
+
  
-      $("li",this).click(function() {
+ 
+    $("li",this).click(function() {
 
         var h3 = $(".info", this).outerHeight();
         var i3 = $("img", this).outerHeight();
         
-          $(this).css("height", h3 + i3);
+        $(this).css("height", h3 + i3);
 
-        });
+    });
 
-    } 
+  }
+
 
  
 
