@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+  $("li",this).click(function() {
+
+        var h3 = $(".info", this).outerHeight();
+        var i3 = $("img", this).outerHeight();
+        
+        $(this).css("height", h3 + i3);
+
+    });
+
+
   if ($(window).width() > 736) {
 
     $(document).mousemove(function() {
@@ -95,25 +105,6 @@ $(document).ready(function() {
     });
 
   } 
-
-  else {
-
- 
- 
-    $("li",this).click(function() {
-
-        var h3 = $(".info", this).outerHeight();
-        var i3 = $("img", this).outerHeight();
-        
-        $(this).css("height", h3 + i3);
-
-    });
-
-  }
-
-
- 
-
 
 
 
