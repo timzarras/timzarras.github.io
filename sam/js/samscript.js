@@ -1,8 +1,14 @@
+
 $(document).ready(function() {
 
 	$('html').hide().fadeIn(500);
 
-	$('a').click(function() {
+  var h = $(".projectviewer").height();
+
+  $("#border").height(h);
+
+
+	$('a.title').click(function() {
 
        	$(".container,.hide,#rug").fadeIn(100); 
         $(".archivecontainer").hide();
@@ -15,6 +21,7 @@ $(document).ready(function() {
        	$(".container,.hide,.alternatetitle").hide();
         $(".archivecontainer").show();
         $(".navzone").css("opacity","1");
+        $('.blocker').hide();
 		
 		});
 
@@ -24,6 +31,7 @@ $(document).ready(function() {
               var self = $(this);
               $('.alternatetitle,.cycle-slideshow').hide();
               $('.alternatetitle[rel=div' + self.attr('target') +'],.cycle-slideshow[rel=div' + self.attr('target') +']').show();
+              $('.blocker').show();
         });
 
   $('.info').click(function() {
@@ -33,6 +41,18 @@ $(document).ready(function() {
        	$(".info").toggleClass("underline");
 		
 		});
+
+  // cycle images of the same class //
+
+  $('.slide').click(function () {
+        $(this).hide();
+        var next = $(this).next();
+        console.log(next.length);
+        if (next.length == 0)
+        next = $(this).parent().find('.slide').first();
+        next.show();
+  });
+
 
   var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 
