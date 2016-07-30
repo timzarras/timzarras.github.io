@@ -3,9 +3,9 @@ $(document).ready(function() {
 
 	$('html').hide().fadeIn(500);
 
-  var h = $(".projectviewer").height();
+  //var h = $(".projectviewer").height();
 
-  $("#border").height(h);
+  //$("#border").height(h);
 
 
 	$('a.title').click(function() {

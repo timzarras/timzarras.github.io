@@ -92,17 +92,17 @@ img {
 	width: 50%;
 	height: auto;
 	display: block;
-	padding-bottom: 4%;
+	padding-bottom: 6%;
 }
 
 img.TAB {
 	width: 25% !important;
-	padding-bottom: 4%;
+	padding-bottom: 6%;
 }
 
 #custom {
 	width: 23% !important;
-	padding-bottom: 4%;
+	padding-bottom: 6%;
 }
 
 img.face {
@@ -197,6 +197,10 @@ a:visited,a:active {
 
 @media screen and (max-width: 736px) and (orientation: portrait){
 
+	html {
+		background-color: black;
+	}
+
 	ul {
 		position: absolute;
 		left: 50%;
@@ -205,9 +209,10 @@ a:visited,a:active {
 
 	}
 
-	li:hover {
-		background-color: white;
-		color: black;
+	li {
+		background-color: black;
+		color: white;
+		border-color: white;
 	}
 
 	img {
@@ -230,12 +235,14 @@ a:visited,a:active {
 		width: 88%;
 		padding-bottom: 20%;
 		left: 50%;
+		font-style: 30;
 		transform:translate(-50%,0%);
   		-webkit-transform:translate(-50%,0%);
 	}
 
 	.year {
 		left: 84%;
+		text-align: right;
 	}
 
 	#custom,.chair {
@@ -250,10 +257,14 @@ a:visited,a:active {
 		padding-left: 5%;
 	}
 
-	img.face {
-		width: 40%;
+	img.face,img.TAB {
+		width: 40% !important;
 	}
 
+	#custom {
+	width: 50% !important;
+	padding-bottom: 6%;
+	}
 
 
 
