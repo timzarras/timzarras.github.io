@@ -10,6 +10,7 @@ html {
 	height: 100%;
 	overflow: scroll;
 	font-family: Arial;
+	background-color: white;
 }
 
 body {
@@ -19,12 +20,28 @@ body {
 	overflow: scroll;
 }
 
+.name {
+	top: 0;
+	margin: 0;
+	font-size: 12;
+	position: absolute;
+	background-color: transparent;
+	color: black;
+	width: 50%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 2%;
+	z-index: 99;
+
+}
+
 ul {
+	top: 10%;
 	font-weight: 300;
 	position: relative;
 	list-style: none;
 	padding-left: 0;
-	font-size: 10;
+	font-size: 12;
 	width: 100%;
 	left: 0;
 	-webkit-transition: left .5s ease-in-out;
@@ -39,18 +56,18 @@ li {
 	color: black;
 	position: relative;
 	border-bottom: 1px solid black;
-	padding-bottom: 5%;
+	padding-bottom: 1%;
 	padding-top: 1%;
 	padding-left: 2%;
-	height: 8%;
-	-webkit-transition: background-color .20s ease-in-out;
-  	-moz-transition: background-color .20s ease-in-out;
-  	-o-transition: background-color .20s ease-in-out;
-  	transition: background-color .20s ease-in-out;
-  	-webkit-transition: height .2s ease-in-out;
-  	-moz-transition: height .2s ease-in-out;
-  	-o-transition: height .2s ease-in-out;
-  	transition: height .2s ease-in-out;
+	height: 3%;
+	-webkit-transition: background-color .1s ease-in-out;
+  	-moz-transition: background-color .1s ease-in-out;
+  	-o-transition: background-color .1s ease-in-out;
+  	transition: background-color .1s ease-in-out;
+  	-webkit-transition: height .35s ease-in-out;
+  	-moz-transition: height .35s ease-in-out;
+  	-o-transition: height .35s ease-in-out;
+  	transition: height .35s ease-in-out;
   	overflow: hidden;
   	z-index: 999;
 }
@@ -59,22 +76,22 @@ li {
 
 li:hover {
 	cursor: pointer;
-	background-color: black;
-	color: white;
-
+	background-color: white;
+	color: black;
 }
 
 .height {
 	height: 80%;
-	-webkit-transition: height .3s ease-in-out;
-  	-moz-transition: height .3s ease-in-out;
-  	-o-transition: height .3s ease-in-out;
-  	transition: height .3s ease-in-out;
+	-webkit-transition: height .35s ease-in-out;
+  	-moz-transition: height .35s ease-in-out;
+  	-o-transition: height .35s ease-in-out;
+  	transition: height .35s ease-in-out;
 }
 
 .year {
-	font-size: 10;
+	font-size: 12;
 	position: absolute;
+	text-align: right !important;
 	left: 95%;
 
 }
@@ -82,7 +99,7 @@ li:hover {
 .projectzone {
 	position: absolute;
 	top: 60px;
-	left: 45%;
+	left: 43%;
 	width: 95%;
 	height: auto;
 	overflow: scroll;
@@ -92,17 +109,21 @@ img {
 	width: 50%;
 	height: auto;
 	display: block;
-	padding-bottom: 6%;
+	padding-bottom: 10%;
+}
+
+img.table:hover,img.displayobjects:hover,img.heater:hover,img.t21i:hover,img.chair:hover,img.connection:hover,img.fan:hover {
+	border-top: 1px solid black;
 }
 
 img.TAB {
 	width: 25% !important;
-	padding-bottom: 6%;
+	padding-bottom: 10%;
 }
 
 #custom {
 	width: 23% !important;
-	padding-bottom: 6%;
+	padding-bottom: 10%;
 }
 
 img.face {
@@ -114,14 +135,14 @@ img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.TAB,img.connectio
 }
 
 .info {
-	font-size: 13;
+	font-size: 16;
 	font-weight: 100;
 	position: absolute;
 	width: 25%;
 	left: 8%;
 	top: 45px;
 	text-align: left;
-	padding-bottom: 6%;
+	padding-bottom: 10%;
 }
 
 .chair {
@@ -157,7 +178,7 @@ img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.TAB,img.connectio
 	font-size: 40;
 	position: fixed;
 	margin: 0;
-	top: 5%;
+	top: 20%;
 	left: -100px;
 	display: inline;
 	cursor: pointer;
@@ -185,6 +206,23 @@ img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.TAB,img.connectio
   	transition: color .3s ease-in-out;
 }
 
+.mail {
+	color: black;
+	font-weight: 100;
+	font-size: 18;
+	position: fixed;
+	margin: 0;
+	top: 25%;
+	left: -100px;
+	display: inline;
+	cursor: pointer;
+	-webkit-transition: left .5s ease-in-out;
+  	-moz-transition: left .5s ease-in-out;
+  	-o-transition: left .5s ease-in-out;
+  	transition: left .5s ease-in-out;
+
+}
+
 a:visited,a:active {
 	color: #0078ff;
 }
@@ -203,6 +241,7 @@ a:visited,a:active {
 
 	ul {
 		position: absolute;
+		font-size: 14;
 		left: 50%;
 		transform:translate(-50%,0%);
   		-webkit-transform:translate(-50%,0%);
@@ -210,6 +249,12 @@ a:visited,a:active {
 	}
 
 	li {
+		background-color: black;
+		color: white;
+		border-color: white;
+	}
+
+	li:hover {
 		background-color: black;
 		color: white;
 		border-color: white;
@@ -235,14 +280,13 @@ a:visited,a:active {
 		width: 88%;
 		padding-bottom: 20%;
 		left: 50%;
-		font-style: 30;
+		font-size: 14;
 		transform:translate(-50%,0%);
   		-webkit-transform:translate(-50%,0%);
 	}
 
 	.year {
 		left: 84%;
-		text-align: right;
 	}
 
 	#custom,.chair {
