@@ -250,7 +250,7 @@ a.title {
     columns: 100px 1;
 	}
 
-	.archivecontainer {
+	.archivecontainer, .navzone, .container {
 		position: absolute;
 
 	}
