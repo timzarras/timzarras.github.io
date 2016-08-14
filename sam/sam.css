@@ -217,7 +217,7 @@ a.title {
 @media screen and (max-width: 736px) and (orientation: portrait){
 	
 	.projectviewer img {
-		width: 100%;
+		width: 92%;
 		height: auto;
 	}
 
@@ -254,7 +254,11 @@ a.title {
 	-webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
-}	
+	}
+
+	.underline {
+	text-decoration: underline;
+	}	
 
 }
 
