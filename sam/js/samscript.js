@@ -53,9 +53,9 @@ $(document).ready(function() {
 
   if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
 		
-    $('img','.description').hover(function() {
+    $('img, .description').hover(function() {
 
-      $('img','.description').css('cursor','pointer');
+      $('img, .description').css('cursor','pointer');
 
 	  });
 
