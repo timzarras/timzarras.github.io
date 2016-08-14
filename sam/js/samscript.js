@@ -53,11 +53,13 @@ $(document).ready(function() {
 
   if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
 		
-    $("img").hover(function() {
+    $('img').hover(function() {
 
-      $("img").css("cursor","pointer");
+      $('img').css('cursor','pointer');
 
 	  });
+
+  }
 
      
 
