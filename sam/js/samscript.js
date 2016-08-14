@@ -3,12 +3,7 @@ $(document).ready(function() {
 
 	$('html').hide().fadeIn(500);
 
-  //var h = $(".projectviewer").height();
-
-  //$("#border").height(h);
-
-
-	$('a.title').click(function() {
+  $('a.title').click(function() {
 
        	$(".container,.hide,#rug").fadeIn(100); 
         $(".archivecontainer").hide();
