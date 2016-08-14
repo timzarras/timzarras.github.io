@@ -52,9 +52,12 @@ $(document).ready(function() {
   var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 
   if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
-		$(".firefox").show();
-		$(".archivecontainer,.container,.navzone").css("opacity", ".1");
-	}
+		
+    $("img").hover(function() {
+
+      $("img").css("cursor","pointer");
+
+	  });
 
      
 
