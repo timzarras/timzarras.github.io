@@ -255,6 +255,10 @@ a.title {
 
 	}
 
+	.container {
+		padding-bottom: 5%;
+	}
+
 	.columns {
 	-webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
