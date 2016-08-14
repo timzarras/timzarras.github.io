@@ -215,6 +215,10 @@ a.title {
 /* Mobile */
 
 @media screen and (max-width: 736px) and (orientation: portrait){
+
+	body {
+		height: 200%;
+	}
 	
 	.projectviewer img {
 		width: 92%;
