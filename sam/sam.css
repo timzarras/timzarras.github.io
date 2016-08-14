@@ -234,8 +234,10 @@ a.title {
 	}
 
 	.projectviewer {
+		top: 1%;
 		width: 100%;
 		padding-right: 10%;
+		padding-bottom: 5%;
 	}
 
 	#border {
@@ -255,9 +257,7 @@ a.title {
 
 	}
 
-	.container {
-		padding-bottom: 5%;
-	}
+	
 
 	.columns {
 	-webkit-column-count: 1; /* Chrome, Safari, Opera */
