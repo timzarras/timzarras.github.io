@@ -9,8 +9,12 @@ html {
   	width: 100%;
 	height: 100%;
 	overflow: scroll;
-	font-family: "filson-soft";
+	font-family: Arial;
 	background-color: white;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 body {
@@ -30,7 +34,7 @@ body {
 	width: 50%;
 	padding-top: 2%;
 	padding-bottom: 2%;
-	padding-left: 2%;
+	padding-left: 6%;
 	z-index: 99;
 
 }
@@ -52,13 +56,15 @@ ul {
 }
 
 li {
+	
+	margin-left: 2%;
+	margin-right: 2%;
 	background-color: white;
 	color: black;
 	position: relative;
-	border-bottom: 1px solid black;
 	padding-bottom: 1%;
-	padding-top: 1%;
-	padding-left: 2%;
+	padding-top: 2%;
+	padding-left: 4%;
 	height: 3%;
 	-webkit-transition: background-color .1s ease-in-out;
   	-moz-transition: background-color .1s ease-in-out;
@@ -78,6 +84,7 @@ li:hover {
 	cursor: pointer;
 	background-color: white;
 	color: black;
+	border-bottom: 1px solid black;
 }
 
 .height {
@@ -92,21 +99,21 @@ li:hover {
 	font-size: 12;
 	position: absolute;
 	text-align: right !important;
-	left: 95%;
+	left: 65%;
 
 }
 
 .projectzone {
 	position: absolute;
 	top: 60px;
-	left: 43%;
+	left: 4%;
 	width: 95%;
 	height: auto;
 	overflow: scroll;
 }
 
 img {
-	width: 50%;
+	width: 58%;
 	height: auto;
 	display: block;
 	padding-bottom: 10%;
@@ -139,7 +146,7 @@ img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.TAB,img.connectio
 	font-weight: 100;
 	position: absolute;
 	width: 25%;
-	left: 8%;
+	left: 65%;
 	top: 45px;
 	text-align: left;
 	padding-bottom: 10%;
@@ -236,7 +243,7 @@ a:visited,a:active {
 @media screen and (max-width: 736px) and (orientation: portrait){
 
 	html {
-		background-color: black;
+		background-color: #fbfbfb;
 	}
 
 	ul {
@@ -249,15 +256,14 @@ a:visited,a:active {
 	}
 
 	li {
-		background-color: black;
-		color: white;
-		border-color: white;
+		background-color: white;
+		color: black;
+		margin-bottom: 5%;
 	}
 
 	li:hover {
-		background-color: black;
-		color: white;
-		border-color: white;
+		background-color: white;
+		color: black;
 	}
 
 	img {
@@ -308,6 +314,10 @@ a:visited,a:active {
 	#custom {
 	width: 50% !important;
 	padding-bottom: 6%;
+	}
+
+	.name {
+		display: none;
 	}
 
 

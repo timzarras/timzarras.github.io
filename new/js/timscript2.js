@@ -11,22 +11,22 @@ $(document).ready(function() {
       });
     });
 
-    $(document).mousemove(function() {
-      doStuff(() => {
-        $yo = $("body").width();
+    //$(document).mousemove(function() {
+      //doStuff(() => {
+        //$yo = $("body").width();
 
       // if cursor is less than 15% from the left, slide list and expand button // 
 
-        if (event.pageX < ($yo * .1)) {
-          $("ul").addClass("left");
-          $(".expand,.close,.mail").css("left","2%");
+        //if (event.pageX < ($yo * .1)) {
+          //$("ul").addClass("left");
+          //$(".expand,.close,.mail").css("left","2%");
 
-        } else {
-          $("ul").removeClass("left");
-          $(".expand,.close,.mail").css("left","-30px");
-        }
-      });
-    });
+        //} else {
+          //$("ul").removeClass("left");
+          //$(".expand,.close,.mail").css("left","-30px");
+        //}
+      //});
+    //});
 
     // expand "this" list element //
 
