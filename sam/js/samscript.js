@@ -63,6 +63,11 @@ $(document).ready(function() {
 
   }
 
+    if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv 11/)) || $.browser.msie == 1)
+    {
+    $('img, .description').css('cursor','pointer');
+    }
+
      
 
  });

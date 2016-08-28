@@ -231,7 +231,7 @@ a.title {
 
 /* Mobile */
 
-@media screen and (max-width: 736px) and (orientation: portrait){
+@media screen and (max-width: 1400px) and (orientation: portrait){
 
 	body {
 		height: 120%;
