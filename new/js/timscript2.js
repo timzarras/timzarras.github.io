@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    if ($(window).width() > 1024) {
+
     $(window).resize(function() {
         $("li:visible").css("height","3%");
     });
@@ -55,6 +57,8 @@ $(document).ready(function() {
         next = $(this).parent().find('.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').first();
         next.show();
     });
+
+}
 
 });
 
