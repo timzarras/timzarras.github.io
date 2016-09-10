@@ -1,18 +1,25 @@
 $(document).ready(function() {
 
-  $("li",this).click(function() {
+    var that = this;
 
-        var h3 = $(".info", this).outerHeight();
-        var i3 = $("img", this).outerHeight();
-        
-        $(this).css("height", h3 + i3);
+    doEverything();
 
+    $(window).resize(function() {
+      doEverything();
     });
 
+    function doEverything() {
+      if ($(window).width() > 736) {
+        doBigStuff(that);
+      } else {
+        doSmallStuff(that);
+      }
+    }
 
-  if ($(window).width() > 736) {
+    function doBigStuff(that) {
+      $("li:visible").css("height","8%");
 
-    $(document).mousemove(function() {
+      $(document).mousemove(function() {
 
         $yo = $("body").width();
 
@@ -30,11 +37,11 @@ $(document).ready(function() {
 
         }
 
-    });
+      });
 
-    // expand "this" list element //
+      // expand "this" list element //
 
-    $("li",this).click(function() {
+      $("li", that).click(function() {
 
         var h = $(".info", this).outerHeight();
         var i = $("img", this).outerHeight();
@@ -47,11 +54,11 @@ $(document).ready(function() {
           $(this).css("height", h);
         }
 
-    });
+      });
 
-    // expand all list elements" 
+      // expand all list elements" 
 
-    $(".expand").click(function() {
+      $(".expand").click(function() {
 
       // get list element heights //
       
@@ -67,45 +74,49 @@ $(document).ready(function() {
         $(".close").show();
         $(".expand").hide();
 
-    });
+      });
 
     // reset all list element heights //
 
-    $(".close").click(function() {
+      $(".close").click(function() {
 
         $("li").css("height","8%");
         $(".close").hide();
         $(".expand").show();
 
-    });
+      });
 
     // cycle images of the same class //
 
-    $('.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').click(function () {
+      $('.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').click(function () {
         $(this).hide();
         var next = $(this).next();
         console.log(next.length);
         if (next.length == 0)
         next = $(this).parent().find('.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').first();
         next.show();
-    });
+      });
 
-    $("li",this).mouseover(function() {
+      $("li",this).mouseover(function() {
 
         $(".me", this).css("color", "white"); 
 
-    }).mouseout(function() {
+      }).mouseout(function() {
 
-      $(".me", this).css("color", "#0078ff");
+        $(".me", this).css("color", "#0078ff");
 
       });
+    }
 
-    $(window).resize(function() {
-      $("li:visible").css("height","8%");
-    });
+    function doSmallStuff(that) {
 
-  } 
+        var h3 = $(".info", that).outerHeight();
+        var i3 = $("img", that).outerHeight();
+        
+        $("li", that).css("height", h3 + i3);
 
-
+    }
 
 });
+
+

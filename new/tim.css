@@ -28,7 +28,7 @@ body {
 	top: 0;
 	margin: 0;
 	font-size: 12;
-	position: absolute;
+	position: absolute !important;
 	background-color: transparent;
 	color: black;
 	width: 50%;
@@ -40,7 +40,7 @@ body {
 }
 
 ul {
-	top: 10%;
+	top: 6%;
 	font-weight: 300;
 	position: relative;
 	list-style: none;
@@ -56,43 +56,51 @@ ul {
 }
 
 li {
-	
 	margin-left: 2%;
 	margin-right: 2%;
-	background-color: white;
 	color: black;
 	position: relative;
-	padding-bottom: 1%;
-	padding-top: 2%;
+	margin-bottom: .5%;
 	padding-left: 4%;
 	height: 2%;
-	-webkit-transition: background-color .1s ease-in-out;
-  	-moz-transition: background-color .1s ease-in-out;
-  	-o-transition: background-color .1s ease-in-out;
-  	transition: background-color .1s ease-in-out;
   	-webkit-transition: height .35s ease-in-out;
   	-moz-transition: height .35s ease-in-out;
   	-o-transition: height .35s ease-in-out;
   	transition: height .35s ease-in-out;
-  	overflow: hidden;
-  	z-index: 999;
+  	z-index: 0;
 }
 
 
 
 li:hover {
 	cursor: pointer;
-	background-color: white;
-	color: black;
-	border-bottom: 1px solid black;
+	
 }
 
-.height {
-	height: 80%;
-	-webkit-transition: height .35s ease-in-out;
-  	-moz-transition: height .35s ease-in-out;
-  	-o-transition: height .35s ease-in-out;
-  	transition: height .35s ease-in-out;
+.close {
+	display: none;
+	position: absolute;
+	font-size: 12;
+	margin: 0;
+	top: 7px;
+	left: 2%;
+	transform:translate(-50%,-50%);
+  	-webkit-transform:translate(-50%,-50%);
+  	z-index: 999;
+  	height: auto;
+  	padding: .5%;
+  	border: 1px solid black;
+  	border-radius: 50%;
+  	color: gray;
+  	-webkit-transition: color .35s ease-in-out;
+  	-moz-transition: color .35s ease-in-out;
+  	-o-transition: color .35s ease-in-out;
+  	transition: color .35s ease-in-out;
+
+}
+
+.close:hover {
+	color: white;
 }
 
 .year {
@@ -104,9 +112,10 @@ li:hover {
 }
 
 .projectzone {
+	display: none;
 	position: absolute;
-	top: 60px;
-	left: 4%;
+	top: 30px;
+	left: 4.25%;
 	width: 95%;
 	height: auto;
 	overflow: scroll;
@@ -117,10 +126,6 @@ img {
 	height: auto;
 	display: block;
 	padding-bottom: 10%;
-}
-
-img.table:hover,img.displayobjects:hover,img.heater:hover,img.t21i:hover,img.chair:hover,img.connection:hover,img.fan:hover {
-	border-top: 1px solid black;
 }
 
 img.TAB {
@@ -142,13 +147,14 @@ img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.TAB,img.connectio
 }
 
 .info {
-	font-size: 16;
+	display: none;
+	font-size: 14;
 	font-weight: 100;
 	position: absolute;
-	width: 25%;
+	width: 26%;
 	left: 65%;
-	top: 45px;
-	text-align: left;
+	top: 15px;
+	text-align: justify;
 	padding-bottom: 10%;
 }
 
@@ -179,7 +185,7 @@ img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.TAB,img.connectio
 
 }
 
-.expand,.close {
+.expand {
 	color: black;
 	font-weight: 100;
 	font-size: 40;
@@ -203,14 +209,6 @@ img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.TAB,img.connectio
     transition-property: border-bottom;
     transition-duration: .3s;
     transition-delay: .05s;
-}
-
-.close:hover {
-	color: #0078ff;
-	-webkit-transition: color .3s ease-in-out;
-  	-moz-transition: color .3s ease-in-out;
-  	-o-transition: color .3s ease-in-out;
-  	transition: color .3s ease-in-out;
 }
 
 .mail {

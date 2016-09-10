@@ -3,49 +3,44 @@ $(document).ready(function() {
     if ($(window).width() > 1024) {
 
     $(window).resize(function() {
-        $("li:visible").css("height","3%");
+        $("li:visible").css("height","2%");
+        $(".close").hide();
     });
+
+    // reset this list element height //
+
+    $(".close").click(function() {
+        $("li",this).css("height", "2%");
+        $(".close").hide();
+        $(".info").hide();
+        });
+
 
     // expand "this" list element //
 
     $("li", this).click(function() {
         var h = $(".info", this).outerHeight();
-        var i = $("img", this).outerHeight();
+        var i = $(".projectzone", this).outerHeight();
+        var c = $(".close",this);
+        $(".projectzone",this).show();
+        $(".info",this).show();
           // if paragraph is shorter than image, use image height //
         if (h < i ) {
            $(this).css("height", i);
         } else {
           $(this).css("height", h);
         }
+        setTimeout(function() {
+        $(c).fadeIn();  
+        },900);
     });
 
-    // expand all list elements" 
+    // hey //
 
-    $(".expand").click(function() {      
-        // get list element heights //      
-        $("li").css("height", function() {
-        // compare paragraph to image height again to use larger //
-          var h2 = $(".info", this).outerHeight();
-          var i2 = $("img", this).outerHeight();
-          return h2 > i2 ? h2 : i2;
-        });
-        $(".close").show();
-        $(".expand").hide();      
-    });
-
-  // reset all list element heights //
-
-    $(".close").click(function() {
-        $("li").css("height","3%");
-        $(".close").hide();
-        $(".expand").show(); 
-    });
-
-    $("li",this).mouseover(function() {       
-        $(".me", this).css("color", "black");     
-    }).mouseout(function() {    
-        $(".me", this).css("color", "#0078ff");
-    });
+    //$("li", this).hover(function() {
+        //$(this).css({"opacity":"1","background-color":"white"});
+        //$("li").not(this).css({"opacity":".6","background-color":"#fbfbfb"});
+    //});
 
       // cycle images of the same class //
 
