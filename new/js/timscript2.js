@@ -5,12 +5,12 @@ $(document).ready(function() {
 
     if ($(window).width() > 1024) {
 
-    setTimeout(function() {
-    var i = $(".projectzone:first").outerHeight();
-    $("li:first").css("height",i);
-    $(".projectzone:first,.info:first,.close:first").show();
-    $(".year:first").css("left","60%");
-    },500);
+    //setTimeout(function() {
+    //var i = $(".projectzone:first").outerHeight();
+    //$("li:first").css("height",i);
+    //$(".projectzone:first,.info:first,.close:first").show();
+    //$(".year:first").css("left","60%");
+    //},500);
 
     $(window).resize(function() {
         $("li").css("height","2%");
@@ -18,6 +18,10 @@ $(document).ready(function() {
         $(".close").hide();
         $(".info").hide();
         $(".projectzone").hide();
+        
+        setTimeout(function() {
+            $(".preview").css("left","50%");
+        },350);
     });
 
     // reset this list element height //
@@ -28,6 +32,11 @@ $(document).ready(function() {
         $(".close").hide();
         $(".info").hide();
         $(".projectzone").hide();
+        
+        setTimeout(function() {
+            $(".preview").css("left","50%");
+        },350);
+        
         event.stopPropagation();
         });
 
@@ -41,6 +50,7 @@ $(document).ready(function() {
         var y =  $(".year",this);
         $(".projectzone",this).show();
         $(".info",this).show();
+        $(".preview").css("left","300%");
           // if paragraph is shorter than image, use image height //
         if (h < i ) {
            $(this).css("height", i);
@@ -50,7 +60,7 @@ $(document).ready(function() {
         setTimeout(function() {
         $(c).fadeIn();
         $(y).css("left","60%");
-        },500);
+        },150);
     });
 
     // hey //
