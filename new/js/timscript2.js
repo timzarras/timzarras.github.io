@@ -1,18 +1,30 @@
 $(document).ready(function() {
 
+    // let 'em know who ya are at the core //
+
+    setTimeout(function() {
+    var i = $(".projectzone:first").outerHeight();
+    $("li:first").css("height",i);
+    $(".projectzone:first,.info:first,.close:first").show();
+    },500);
+
     if ($(window).width() > 1024) {
 
     $(window).resize(function() {
-        $("li:visible").css("height","2%");
+        $("li").css("height","2%");
         $(".close").hide();
+        $(".info").hide();
+        $(".projectzone").hide();
     });
 
     // reset this list element height //
 
-    $(".close").click(function() {
-        $("li",this).css("height", "2%");
+    $(".close",this).click(function() {
+        $("li").css("height", "2%");
         $(".close").hide();
         $(".info").hide();
+        $(".projectzone").hide();
+        event.stopPropagation();
         });
 
 
@@ -31,7 +43,7 @@ $(document).ready(function() {
           $(this).css("height", h);
         }
         setTimeout(function() {
-        $(c).fadeIn();  
+        $(c).fadeIn();
         },900);
     });
 

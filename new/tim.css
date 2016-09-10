@@ -40,11 +40,12 @@ body {
 }
 
 ul {
-	top: 6%;
+	top: 4%;
 	font-weight: 300;
 	position: relative;
 	list-style: none;
 	padding-left: 0;
+	padding-bottom: 20%;
 	font-size: 12;
 	width: 100%;
 	left: 0;
@@ -62,11 +63,13 @@ li {
 	position: relative;
 	margin-bottom: .5%;
 	padding-left: 4%;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	height: 2%;
-  	-webkit-transition: height .35s ease-in-out;
-  	-moz-transition: height .35s ease-in-out;
-  	-o-transition: height .35s ease-in-out;
-  	transition: height .35s ease-in-out;
+  	-webkit-transition: height .5s ease-in-out;
+  	-moz-transition: height .5s ease-in-out;
+  	-o-transition: height .5s ease-in-out;
+  	transition: height .5s ease-in-out;
   	z-index: 0;
 }
 
@@ -82,7 +85,7 @@ li:hover {
 	position: absolute;
 	font-size: 12;
 	margin: 0;
-	top: 7px;
+	top: 16px;
 	left: 2%;
 	transform:translate(-50%,-50%);
   	-webkit-transform:translate(-50%,-50%);
@@ -96,6 +99,7 @@ li:hover {
   	-moz-transition: color .35s ease-in-out;
   	-o-transition: color .35s ease-in-out;
   	transition: color .35s ease-in-out;
+  	z-index: 999;
 
 }
 
@@ -107,16 +111,16 @@ li:hover {
 	font-size: 12;
 	position: absolute;
 	text-align: right !important;
-	left: 65%;
+	left: 60%;
 
 }
 
 .projectzone {
 	display: none;
 	position: absolute;
-	top: 30px;
+	top: 60px;
 	left: 4.25%;
-	width: 95%;
+	width: 90%;
 	height: auto;
 	overflow: scroll;
 }
@@ -151,9 +155,9 @@ img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.TAB,img.connectio
 	font-size: 14;
 	font-weight: 100;
 	position: absolute;
-	width: 26%;
-	left: 65%;
-	top: 15px;
+	width: 27%;
+	left: 60%;
+	top: 45px;
 	text-align: justify;
 	padding-bottom: 10%;
 }
