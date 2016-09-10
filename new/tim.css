@@ -21,9 +21,9 @@ html {
 	position: absolute;
 	background-color: black;
 	width: 40%;
-	height: 20%;
+	height: 18%;
 	left: 50%;
-	top: 10%;
+	top: 12%;
 	margin-top: 10px;
 	-webkit-transition: left 1s ease-in-out;
   	-moz-transition: left 1s ease-in-out;
@@ -55,7 +55,7 @@ body {
 }
 
 ul {
-	top: 10%;
+	top: 12%;
 	font-weight: 300;
 	position: relative;
 	list-style: none;

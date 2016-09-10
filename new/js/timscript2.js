@@ -12,6 +12,17 @@ $(document).ready(function() {
     //$(".year:first").css("left","60%");
     //},500);
 
+    $(window).mousemove(function() {
+    var bodywidth = $("body").width();              
+    var y = event.pageY/-10+10;
+    setTimeout(function() {
+    $(".preview").css({
+        transform: 'rotate(' + y + 'deg)'
+    });
+    },350);
+
+    });
+
     $(window).resize(function() {
         $("li").css("height","2%");
         $(".year").css("left","30%");
