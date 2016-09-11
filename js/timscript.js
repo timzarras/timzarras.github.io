@@ -1,108 +1,122 @@
 $(document).ready(function() {
 
-      $('html').hide().fadeIn(900);
-      $(".up").hide();
+    var that = this;
 
+    doEverything();
 
-      // Scroll to selected project //
+    $(window).resize(function() {
+      doEverything();
+    });
 
-      $('a[href^="#"]').on('click',function (e) {
-        e.preventDefault();
-        var target = this.hash,
-            $target = $(target);
-        $('html,body').stop().animate({
-            'scrollTop': $target.offset().top - 76
-        }, 500, function () {
-            window.location.hash = target;
-        });
-      });
-    
-      // Hide and show up-arrow and car //
+    function doEverything() {
+      if ($(window).width() > 736) {
+        doBigStuff(that);
+      } else {
+        doSmallStuff(that);
+      }
+    }
 
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > 850) {
-          $('.up').fadeIn(300);
-          $('.links').css("top","76px");
-          
+    function doBigStuff(that) {
+      $("li:visible").css("height","8%");
+
+      $(document).mousemove(function() {
+
+        $yo = $("body").width();
+
+        // if cursor is less than 15% from the left, slide list and expand button // 
+
+        if (event.pageX < ($yo * .1)) {
+
+          $("ul").addClass("left");
+          $(".expand,.close").css("left","2%");
 
         } else {
-          $('.up').fadeOut(300);
-          $('.link').removeClass('selected');
-          $('.links').css("top","123px");
-          
+
+          $("ul").removeClass("left");
+          $(".expand,.close").css("left","-30px");
+
         }
+
       });
 
-      // Make project title bold when its top line is reached //
+      // expand "this" list element //
 
-      $(window).scroll(function() {
-        var windscroll = $(window).scrollTop();
-      if (windscroll >= 300) {
-        $('.projectlist img.line').each(function(i) {
-            if ($(this).position().top <= windscroll - 500) {
-                $('.links li.selected').removeClass('selected').find('span').hide();
-                $('.links li').eq(i).addClass('selected').find('span').show();
-            }
+      $("li", that).click(function() {
+
+        var h = $(".info", this).outerHeight();
+        var i = $("img", this).outerHeight();
+
+        // if paragraph is shorter than image, use image height //
+        
+        if (h < i ) {
+          $(this).css("height", i);
+        } else {
+          $(this).css("height", h);
+        }
+
+      });
+
+      // expand all list elements" 
+
+      $(".expand").click(function() {
+
+      // get list element heights //
+      
+        $("li").css("height", function() {
+
+          // compare paragraph to image height again to use larger //
+
+          var h2 = $(".info", this).outerHeight();
+          var i2 = $("img", this).outerHeight();
+          return h2 > i2 ? h2 : i2;
         });
 
-      } else {
-        $('.links li.selected').removeClass('selected').find('span').hide();
-      }
+        $(".close").show();
+        $(".expand").hide();
 
       });
 
+    // reset all list element heights //
 
-      // Auto scroll back to top of page //
-  
-      $('.up').click(function(event) {
-        event.preventDefault();
-        $('html, body').animate({scrollTop: 0}, 900);
-      });
-      
-      // Move selected project to top of list //
-      
-      //
-      
-      //$('ul.links a').on('click', function() {
-       // $(this).parent().prepend(this);
-      //});
-      
+      $(".close").click(function() {
 
-      // Resume and text toggle //
+        $("li").css("height","8%");
+        $(".close").hide();
+        $(".expand").show();
 
-      $('.resumelink').click(function() {
-        $('.resume').slideToggle(400);
-        $('.resumelink').text(function(i, text){
-          return text === "Resume" ? "Close" : "Resume";
-        })
       });
 
-     
+    // cycle images of the same class //
 
-      //$('.projectimage,.customimage').mouseover(function() {
-        //$('.projectimage,.customimage,.links,p').not(this).toggleClass("pad");
+      $('.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').click(function () {
+        $(this).hide();
+        var next = $(this).next();
+        console.log(next.length);
+        if (next.length == 0)
+        next = $(this).parent().find('.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').first();
+        next.show();
+      });
+
+      $("li",this).mouseover(function() {
+
+        $(".me", this).css("color", "white"); 
+
+      }).mouseout(function() {
+
+        $(".me", this).css("color", "#0078ff");
+
+      });
+    }
+
+    function doSmallStuff(that) {
+
+        var h3 = $(".info", that).outerHeight();
+        var i3 = $("img", that).outerHeight();
         
-        //setTimeout(function() {
-        //$('html').toggleClass('background');
-       
-       //$('.links,.link,.line,p') .toggleClass('white');
+        $("li", that).css("height", h3 + i3);
 
-        //}, 50);
-
-      //});
-
-      
-
-
-      
-
- 
-   
-
-
-
-
-  
-    
+    }
 
 });
+
+

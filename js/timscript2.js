@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 
-    if ($(window).width() > 1024) {
+    if ($(window).width() > 736) {
 
     // lil oval trick //
 
@@ -26,7 +26,7 @@ $(document).ready(function() {
         $(".projectzone").hide();
         
         setTimeout(function() {
-            $(".preview").css("left","50%");
+            $(".preview").css("left","54%");
         },350);
 
     });
@@ -44,7 +44,7 @@ $(document).ready(function() {
         $(".projectzone").hide();
         
         setTimeout(function() {
-            $(".preview").css("left","50%");
+            $(".preview").css("left","54%");
         },350);
         
         event.stopPropagation();
@@ -93,9 +93,6 @@ $(document).ready(function() {
 
 } else {
 
-    $(".projectzone").show();
-        $(".info").show();
-
 
     setTimeout(function() {
         var h = $(".info", this).outerHeight();
@@ -119,18 +116,6 @@ $(document).ready(function() {
         if (next.length == 0)
         next = $(this).parent().find('.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').first();
         next.show();
-    });
-
-    $(window).resize(function() {
-        $("li").css("height","2%");
-        $(".year").css("left","30%");
-        $(".close").hide();
-        $(".info").hide();
-        $(".projectzone").hide();
-        
-        setTimeout(function() {
-            $(".preview").css("left","50%");
-        },350);
     });
 
 }
