@@ -121,7 +121,7 @@ li:first {
   	z-index: 999;
   	height: auto;
   	padding: .5%;
-  	border: .15em solid black;
+  	border: 1px solid black;
   	border-radius: 50%;
   	color: gray;
   	-webkit-transition: color .35s ease-in-out;
