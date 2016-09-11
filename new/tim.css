@@ -251,6 +251,20 @@ a:visited,a:active {
 	color: #0078ff;
 }
 
+.firefox {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+  	-webkit-transform:translate(-50%,-50%);
+  	width: 15%;
+  	height: auto;
+  	background-color: #006bff;
+  	color: white;
+  	padding: 7%;
+  	border-radius: 50%;
+}
+
 /* mobile */
 
 @media screen and (max-width: 736px) {

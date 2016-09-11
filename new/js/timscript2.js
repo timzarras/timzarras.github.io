@@ -135,6 +135,13 @@ $(document).ready(function() {
 
 }
 
+    var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
+    if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+        $('body > :not(.firefox)').hide(); //hide all nodes directly under the body
+        $('.firefox').appendTo('body').show();
+    }
+
 });
 
 
