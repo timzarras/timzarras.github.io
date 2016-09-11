@@ -134,12 +134,19 @@ $(document).ready(function() {
     });
 
 }
+    // for those pesky browsers, hope to update soon, but maybe not ha! //
 
     var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 
     if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
-        $('body > :not(.firefox)').hide(); //hide all nodes directly under the body
+        $('body > :not(.firefox)').hide();
         $('.firefox').appendTo('body').show();
+    }
+
+    if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv 11/)) || $.browser.msie == 1)
+    {
+    $('body > :not(.ie)').hide();
+        $('.ie').appendTo('body').show();
     }
 
 });
