@@ -1,27 +1,22 @@
 $(document).ready(function() {
 
-    // let 'em know who ya are at the core //
-
 
     if ($(window).width() > 1024) {
 
-    //setTimeout(function() {
-    //var i = $(".projectzone:first").outerHeight();
-    //$("li:first").css("height",i);
-    //$(".projectzone:first,.info:first,.close:first").show();
-    //$(".year:first").css("left","60%");
-    //},500);
+    // lil oval trick //
 
     $(window).mousemove(function() {
-    var bodywidth = $("body").width();              
-    var y = event.pageY/-10+10;
-    setTimeout(function() {
-    $(".preview").css({
-        transform: 'rotate(' + y + 'deg)'
+        var bodywidth = $("body").width();              
+        var y = event.pageY/-10+24;
+    
+        setTimeout(function() {
+            $(".preview").css({
+            transform: 'rotate(' + y + 'deg)'
+            });
+        },500);
     });
-    },500);
 
-    });
+    // reset list heights when window is resized //
 
     $(window).resize(function() {
         $("li").css("height","2%");
@@ -33,12 +28,16 @@ $(document).ready(function() {
         setTimeout(function() {
             $(".preview").css("left","50%");
         },350);
+
     });
 
     // reset this list element height //
 
     $(".close",this).click(function() {
-        $("li").css("height", "2%");
+        
+        var z = $("li");
+        
+        $(z).css("height", "2%");
         $(".year").css("left","30%");
         $(".close").hide();
         $(".info").hide();
@@ -49,7 +48,7 @@ $(document).ready(function() {
         },350);
         
         event.stopPropagation();
-        });
+    });
 
 
     // expand "this" list element //
@@ -94,9 +93,12 @@ $(document).ready(function() {
 
 } else {
 
+    $(".projectzone").show();
+        $(".info").show();
+
 
     setTimeout(function() {
-    var h = $(".info", this).outerHeight();
+        var h = $(".info", this).outerHeight();
         var i = $(".projectzone", this).outerHeight();
         var c = $(".close",this);
         var y =  $(".year",this);
@@ -117,6 +119,18 @@ $(document).ready(function() {
         if (next.length == 0)
         next = $(this).parent().find('.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').first();
         next.show();
+    });
+
+    $(window).resize(function() {
+        $("li").css("height","2%");
+        $(".year").css("left","30%");
+        $(".close").hide();
+        $(".info").hide();
+        $(".projectzone").hide();
+        
+        setTimeout(function() {
+            $(".preview").css("left","50%");
+        },350);
     });
 
 }

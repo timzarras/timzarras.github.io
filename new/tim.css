@@ -13,6 +13,10 @@ html {
 	background-color: white;
 }
 
+.copyright {
+	font-size: 10;
+}
+
 ::-webkit-scrollbar { 
     display: none; 
 }
@@ -20,10 +24,10 @@ html {
 .preview {
 	position: absolute;
 	background-color: black;
-	width: 40%;
-	height: 18%;
-	left: 50%;
-	top: 12%;
+	width: 35%;
+	height: 14%;
+	left: 52%;
+	top: 25%;
 	margin-top: 10px;
 	-webkit-transition: left 1s ease-in-out;
   	-moz-transition: left 1s ease-in-out;
@@ -110,7 +114,7 @@ li:first {
 	position: absolute;
 	font-size: 12;
 	margin: 0;
-	top: 19px;
+	top: 18px;
 	left: 2%;
 	transform:translate(-50%,-50%);
   	-webkit-transform:translate(-50%,-50%);
@@ -249,7 +253,7 @@ a:visited,a:active {
 
 /* mobile */
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 736px) {
 
 	html {
 		background-color: #fbfbfb;
@@ -307,7 +311,7 @@ a:visited,a:active {
 	}
 
 	.year {
-		left: 81%;
+		left: 81% !important;
 	}
 
 	#custom,.chair {
@@ -332,6 +336,14 @@ a:visited,a:active {
 	}
 
 	.name {
+		display: none;
+	}
+
+	.preview{
+		display: none;
+	}
+
+	.close {
 		display: none;
 	}
 
