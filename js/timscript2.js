@@ -26,7 +26,7 @@ $(document).ready(function() {
         $(".projectzone").hide();
         
         setTimeout(function() {
-            $(".preview").css("left","54%");
+            $(".preview").css("left","40%");
         },350);
 
     });
@@ -44,7 +44,7 @@ $(document).ready(function() {
         $(".projectzone").hide();
         
         setTimeout(function() {
-            $(".preview").css("left","54%");
+            $(".preview").css("left","40%");
         },350);
         
         event.stopPropagation();
@@ -61,7 +61,6 @@ $(document).ready(function() {
         $(".projectzone",this).show();
         $(".info",this).show();
         $(".preview").css("left","300%");
-        $(this).css({"background-color":"white","color":"black"});
           // if paragraph is shorter than image, use image height //
         if (h < i ) {
            $(this).css("height", i);
