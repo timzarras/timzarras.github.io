@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     $(window).resize(function() {
         $("li").css("height","2%");
-        $(".year").css("left","30%");
+        $(".year").css("left","80%");
         $(".close").hide();
         $(".info").hide();
         $(".projectzone").hide();
@@ -38,7 +38,7 @@ $(document).ready(function() {
         var z = $("li");
         
         $(z).css("height", "2%");
-        $(".year").css("left","30%");
+        $(".year").css("left","80%");
         $(".close").hide();
         $(".info").hide();
         $(".projectzone").hide();
@@ -61,6 +61,7 @@ $(document).ready(function() {
         $(".projectzone",this).show();
         $(".info",this).show();
         $(".preview").css("left","300%");
+        $(this).css({"background-color":"white","color":"black"});
           // if paragraph is shorter than image, use image height //
         if (h < i ) {
            $(this).css("height", i);
@@ -72,13 +73,6 @@ $(document).ready(function() {
         $(y).css("left","60%");
         },150);
     });
-
-    // hey //
-
-    //$("li", this).hover(function() {
-        //$(this).css({"opacity":"1","background-color":"white"});
-        //$("li").not(this).css({"opacity":".6","background-color":"#fbfbfb"});
-    //});
 
       // cycle images of the same class //
 
