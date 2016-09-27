@@ -321,6 +321,7 @@ a:visited,a:active {
 	}
 
 	body {
+		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
        -overflow-scrolling: touch;
 	}
