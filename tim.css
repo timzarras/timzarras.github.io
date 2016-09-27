@@ -321,9 +321,6 @@ a:visited,a:active {
 	}
 
 	body {
-		overflow: auto;
-		-webkit-overflow-scrolling: touch;
-       -overflow-scrolling: touch;
 	}
 
 	.bigimages {
@@ -338,6 +335,9 @@ a:visited,a:active {
 		left: 50%;
 		transform:translate(-50%,0%);
   		-webkit-transform:translate(-50%,0%);
+  		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+       -overflow-scrolling: touch;
 
 	}
 
