@@ -46,7 +46,7 @@ body {
 	width: 4%;
 	height: 2%;
 	top: 2%;
-	right: 2%;
+	right: 1.5%;
 	border: 1px solid;
 	-webkit-transition: all .5s ease-in-out;
   	-moz-transition: all .5s ease-in-out;
@@ -55,7 +55,7 @@ body {
 }
 
 .big:hover {
-	width: 7%;
+	width: 4%;
 	height: 7%;
 	color: #0078ff;
 	cursor: pointer;
@@ -63,7 +63,7 @@ body {
 }
 
 .bigbig {
-	width: 7%;
+	width: 4%;
 	height: 7%;
 }
 
@@ -91,17 +91,20 @@ ul {
 	padding-bottom: 20%;
 	font-size: 15;
 	width: 100%;
-	left: 0;
+	left: 50%;
 	-webkit-transition: left .5s ease-in-out;
   	-moz-transition: left .5s ease-in-out;
   	-o-transition: left .5s ease-in-out;
   	transition: left .5s ease-in-out;
+  	transform:translate(-50%,0%);
+  		-webkit-transform:translate(-50%,0%);
+  		overflow-x: hidden;
 
 }
 
 li {
-	margin-left: 8%;
-	margin-right: 8%;
+	margin-left: 3%;
+	margin-right: 0%;
 	position: relative;
 	margin-bottom: .5%;
 	padding-left: 4%;
