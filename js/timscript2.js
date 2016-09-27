@@ -24,6 +24,7 @@ $(document).ready(function() {
         $(".close").hide();
         $(".info").hide();
         $(".projectzone").hide();
+        $("img").css("width","58%");
         $(".bigimages").removeClass("big");
         
         setTimeout(function() {
@@ -43,6 +44,7 @@ $(document).ready(function() {
         $(".close").hide();
         $(".info").hide();
         $(".projectzone").hide();
+        $("img").css("width","58%");
         $(".bigimages").removeClass("big");
         
         setTimeout(function() {
@@ -55,7 +57,7 @@ $(document).ready(function() {
 
     // expand "this" list element //
 
-    $("li,img", this).click(function() {
+    $("li", this).click(function() {
         var h = $(".info", this).outerHeight();
         var i = $(".projectzone", this).outerHeight();
         var c = $(".close",this);
