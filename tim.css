@@ -307,6 +307,10 @@ a:visited,a:active {
 		background-color: #fbfbfb;
 	}
 
+	.bigimages {
+		display: none;
+	}
+
 	ul {
 		padding-left: 0;
 		border-color: white;
