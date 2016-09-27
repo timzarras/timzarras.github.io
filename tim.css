@@ -11,6 +11,7 @@ html {
 	overflow: scroll;
 	font-family: Arial;
 	background-color: white;
+	overflow-x:hidden;
 }
 
 .copyright {
@@ -61,7 +62,7 @@ body {
 	cursor: pointer;
 	width: 8%;
 	height: 8%;
-	color: #FF4C4C;
+	color: #1ddd3d;
 }
 
 
@@ -305,6 +306,7 @@ a:visited,a:active {
 
 	html {
 		background-color: #fbfbfb;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	.bigimages {
