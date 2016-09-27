@@ -335,9 +335,6 @@ a:visited,a:active {
 		left: 50%;
 		transform:translate(-50%,0%);
   		-webkit-transform:translate(-50%,0%);
-  		overflow-y: scroll;
-		-webkit-overflow-scrolling: touch;
-       -overflow-scrolling: touch;
 
 	}
 
@@ -345,6 +342,9 @@ a:visited,a:active {
 		background-color: white;
 		color: black;
 		margin-bottom: 5%;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+       -overflow-scrolling: touch;
 	}
 
 	li:hover {
