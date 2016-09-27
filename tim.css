@@ -44,6 +44,32 @@ body {
 	overflow: scroll;
 }
 
+.bigimages{
+	position: absolute;
+	width: 4%;
+	height: 4%;
+	top: 2%;
+	right: 2%;
+	border: 1px solid;
+	-webkit-transition: all .5s ease-in-out;
+  	-moz-transition: all .5s ease-in-out;
+  	-o-transition: all .5s ease-in-out;
+  	transition: all .5s ease-in-out;
+}
+
+.bigimages:hover {
+	cursor: pointer;
+	width: 10%;
+	height: 10%;
+	color: #FF4C4C;
+}
+
+
+.big {
+	width: 10%;
+	height: 10%;
+}
+
 .name {
 	top: 0;
 	margin: 0;
@@ -162,6 +188,10 @@ img {
 	height: auto;
 	display: block;
 	padding-bottom: 10%;
+	-webkit-transition: width .35s ease-in-out;
+  	-moz-transition: width .35s ease-in-out;
+  	-o-transition: width .35s ease-in-out;
+  	transition: width .35s ease-in-out;
 }
 
 img.TAB {
