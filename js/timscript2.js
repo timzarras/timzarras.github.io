@@ -3,29 +3,16 @@ $(document).ready(function() {
 
     if ($(window).width() > 736) {
 
-    // lil oval trick //
-
-    $(window).mousemove(function() {
-        var bodywidth = $("body").width();              
-        var y = event.pageY/-10+24;
-    
-        setTimeout(function() {
-            $(".preview").css({
-            transform: 'rotate(' + y + 'deg)'
-            });
-        },500);
-    });
-
     // reset list heights when window is resized //
 
     $(window).resize(function() {
         $("li").css("height","2%");
-        $(".year").css("left","80%");
+        $(".year").css("left","85%");
         $(".close").hide();
         $(".info").hide();
         $(".projectzone").hide();
         $("img").css("width","58%");
-        $(".bigimages").removeClass("big");
+        $(".big").removeClass("bigbig");
         
         setTimeout(function() {
             $(".preview").css("left","40%");
@@ -40,12 +27,12 @@ $(document).ready(function() {
         var z = $("li");
         
         $(z).css("height", "2%");
-        $(".year").css("left","80%");
+        $(".year").css("left","85%");
         $(".close").hide();
         $(".info").hide();
         $(".projectzone").hide();
         $("img").css("width","58%");
-        $(".bigimages").removeClass("big");
+        $(".big").removeClass("bigbig");
         
         setTimeout(function() {
             $(".preview").css("left","40%");
@@ -66,6 +53,7 @@ $(document).ready(function() {
         $(".info",this).show();
         $(".preview").css("left","300%");
         $("img",this).css("width","58%");
+        $(".year",this).css("left","60%");
         // if paragraph is shorter than image, use image height //
         if (h < i ) {
            $(this).css("height", i);
@@ -74,7 +62,6 @@ $(document).ready(function() {
         }
         setTimeout(function() {
         $(c).fadeIn();
-        $(y).css("left","60%");
         },150);
     });
 
@@ -89,20 +76,21 @@ $(document).ready(function() {
         next.show();
     });
 
-    $(".bigimages").click(function() {
-        $(".bigimages").addClass("big");
+    $(".big").click(function() {
+        $(".big").addClass("bigbig");
         $(".preview").css("left","300%");
-        setTimeout(function() {
-        var i = $("img", this).outerHeight();
-        var l = $("li");
-        $(l).not("li:first").not(".close:first").css("height", "100%");
-        $(".projectzone").not(".projectzone:first").show();
-        $("img").css("width","98%");
-        $(".info").hide();
+      // get list element heights //      
+        $("li").css("height", function() {
+          // compare paragraph to image height again to use larger //
+          var h2 = $(".info", this).outerHeight();
+          var i2 = $(".projectzone", this).outerHeight();
+          return h2 > i2 ? h2 : i2;
+        });
+        $(".projectzone").show();
+        $(".info").show();
         $(".close").show();
-        $(".year").css("left","85%");
-    },200);
-    });
+        $(".year").css("left","60%");
+      });
 
 } else {
 
