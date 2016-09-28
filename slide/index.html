@@ -1,0 +1,165 @@
+<!-- Made by me, Tim! -->
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Website of Tim Zarras<br><br><br><br><br><br>">
+<meta name="keywords" content="Tim Zarras, Creative Direction, Industrial Design, Furniture Design, Web Design, RISD">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="icon" type="image/png" href="!.png">
+<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+<title> Tim Zarras </title>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="jquery.fullPage.js"></script>
+</head>
+
+<style>
+
+@font-face {
+    font-family: ar round;
+    src: url(arial-rounded-mt.ttf);
+}
+
+html {
+  font-family: ar round;
+  font-size: 18;
+  color: black;
+}
+
+img {
+  position: absolute;
+  width: 60%;
+  left: 35%;
+  top: 50%;
+  transform:translate(-50%,-50%);
+      -webkit-transform:translate(-50%,-50%);
+}
+
+.head {
+  position: absolute;
+  width: 90.5%;
+  height: auto;
+  left: 50%;
+  top: 5%;
+  transform:translate(-50%,-50%);
+      -webkit-transform:translate(-50%,-50%);
+}
+
+.title{
+  position: absolute;
+  left: 0%;
+}
+
+.year {
+  position: absolute;
+  right: 0%;
+}
+
+.info {
+  text-align: justify;
+  margin: 0;
+  margin-top: 0;
+  position: absolute;
+  width: 25%;
+  left: 70%;
+  top: 170px;
+
+}
+
+
+
+
+
+</style>
+
+<body>
+
+<div id="fullpage">
+    <div class="section">
+      <div class="head">
+      <a class="title">Bench and a Roof</a>
+      <a class="year"> 2016 </a>
+      </div>
+      <img src="images/rendering/roof.jpg">
+      <p class="info">
+        Image made to illustrate a light-weight aluminum pavillion-like structure. Comprised of a bench and roof. <br><br>
+        Modeled in Solidworks and rendered in Keyshot.<br><br>       
+        </p>
+    </div>
+
+    <div class="section">
+    <div class="head">
+    <a class="title">Watering Can and Cone</a>
+      <a class="year"> 2016 </a>
+    </div>
+      <img src="images/rendering/coneandcan.jpg">
+      <p class="info">
+        Image made to illustrate a watering can concept with a cone for scale.<br><br>
+        Modeled in Solidworks and rendered in Keyshot.<br><br>       
+        </p>
+    </div>
+
+    <div class="section">
+    <div class="head">
+    <a class="title">Poster</a>
+      <a class="year"> 2016 </a>
+    </div>
+      <img src="images/poster/combo.png">
+      <p class="info">
+        For our senior show, I created two promotional posters which were hung next to eachother around campus. The posters aimed to acknowledge and represent the complexity, versatility, and actuality of the Department of Furniture Design in 2016 at RISD. <br><br>
+
+        In one case, people simply know the department for our explorations in materials and making- often tied with a playful nickname "Furn." On the other hand, the work we produce is often involved with much larger ideas and practices. The department name begins to feel like a poor representation of its actual output.<br><br>
+
+        Inkjet on newsprint.
+                
+        </p>
+    </div>
+
+    <div class="section">
+    <div class="head">
+    <a class="title"  id="table">Table</a>
+    <a class="year"> 2016 </a>
+    </div>
+      <img class="table"src="images/table/composition1.png">
+      <img style="display:none" class="table" src="images/table/empty.png">
+      <p class="info">
+        This table was inspired by communal architectural plans and the idea of microcosms that exist in architecture.<br><br>
+
+        Through the architectural framing / cropping of the table plane view, a sense of magnitude is added to the object. A person must physically move around and look through the table to access or view an object that may be hidden. The experience of the object is similar to that of one which is much larger.<br><br>  
+
+        Similar to larger communal architectural spaces, the center space highlights and frames a public work of this scale, which may be a vase of flowers or bowl of fruit. <br><br>
+
+        Constructed in all oaks.<br><br>
+
+        </p> 
+    </div>
+</div>
+
+
+
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            sectionsColor: ['white', 'white', 'white', 'white', 'white'],
+            css3: true,
+            scrollingSpeed: 1000
+        });
+
+        $('#showExamples').click(function(e){
+            e.stopPropagation();
+            e.preventDefault();
+            $('#examplesList').toggle();
+        });
+
+        $('html').click(function(){
+            $('#examplesList').hide();
+        });
+    });
+</script>
+
+ 
+
+</html>
