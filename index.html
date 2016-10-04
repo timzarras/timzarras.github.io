@@ -24,6 +24,21 @@
 
 <style>
 
+::-moz-selection { background-color: none; color: #006bff ; }
+::selection { background-color: none; color: #006bff ; }
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+::-moz-scrollbar { 
+    display: none; 
+}
+
+::-scrollbar { 
+    display: none; 
+}
+
 @font-face {
     font-family: ar round;
     src: url(arial-rounded-mt.ttf);
@@ -46,8 +61,6 @@ html {
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
 }
-
-
 
 img {
   cursor: pointer;
@@ -480,6 +493,7 @@ a:hover {
 </body>
 
 <script type="text/javascript">
+    
     $(document).ready(function() {
 
       // iniate fullpage.js//
@@ -525,11 +539,8 @@ a:hover {
           
         });
 
-
-
     });
-</script>
 
- 
+</script>
 
 </html>
