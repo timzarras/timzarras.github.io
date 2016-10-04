@@ -164,6 +164,23 @@ img.chair{
   z-index: -99;
 }
 
+.up {
+
+   z-index: 0;
+  font-size: 25;
+  background-color: none;
+  color: black;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  position: absolute;
+  top: 45%;
+  left: 96%;
+  margin-top: 0;
+  transform:translate(-50%,-50%);
+      -webkit-transform:translate(-50%,-50%);
+
+}
+
 .down {
   z-index: 0;
   font-size: 25;
@@ -172,7 +189,7 @@ img.chair{
   padding-top: 1%;
   padding-bottom: 1%;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 96%;
   margin-top: 0;
   transform:translate(-50%,-50%);
@@ -196,9 +213,9 @@ img.chair{
     transform: rotate(-90deg);
 }
 
-.down:hover,.showinfo:hover {
+.down:hover,.showinfo:hover,.up:hover {
   cursor: pointer;
-  color: #0078ff;
+  color: #006bff;
   
 }
 
@@ -287,7 +304,7 @@ a:hover {
   -webkit-transform:translate(-50%,0%);
 }
 
-.down {
+.down,.up {
   left: 94%;
 }
 
@@ -452,6 +469,7 @@ a:hover {
 <p class="hide"> Hide Images </p>
 <p class="hide" style="display:none"> Show Images </p>
 <p class="down">&darr;</p>
+<p class="up">&uarr;</p>
 
 
 
@@ -470,6 +488,10 @@ a:hover {
             anchors: ['1', '2','3','4','5','6','7','8'],
             css3: true,
             scrollingSpeed: 800,
+        });
+
+        $('.up').click(function(){
+          $.fn.fullpage.moveSectionUp();
         });
 
         $('.down').click(function(){
@@ -495,7 +517,7 @@ a:hover {
 
     $('.about').click(function(){
           $(".aboutme").toggleClass("center");
-          $(".hide,.down").toggleClass("visible");
+          $(".hide,.down,.up").toggleClass("visible");
           setTimeout(function() {
           $(".about").toggle().toggleClass("hey");
           },800);
