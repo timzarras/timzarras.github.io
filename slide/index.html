@@ -1,4 +1,9 @@
 <!-- Made by me, Tim! -->
+<!--
+.-. .-. .  .   .-. .-. .-. .-. .-. .-. 
+ |   |  |\/|    /  |-| |(  |(  |-| `-. 
+ '  `-' '  `   `-' ` ' ' ' ' ' ` ' `-'
+ -->
 
 <html>
 
@@ -12,6 +17,7 @@
 <title> Tim Zarras </title>
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script src="jquery.fullPage.js"></script>
+<script src="flowtype.js"></script>
 </head>
 
 <style>
@@ -23,25 +29,49 @@
 
 html {
   font-family: ar round;
-  font-size: 18;
+  font-size: 15;
   color: black;
+  background-color: white;
+  margin-bottom: 2%;
 }
+
+.imgbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+}
+
+
 
 img {
   position: absolute;
-  width: 60%;
-  left: 35%;
+  width: 63%;
+  left: 50%;
   top: 50%;
   transform:translate(-50%,-50%);
-      -webkit-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
 }
+
+.info {
+  position: absolute;
+  width: 75%;
+  left: 50%;
+  top: 48%;
+  z-index: -999;
+  text-align: justify;
+  transform:translate(-50%,-50%);
+      -webkit-transform:translate(-50%,-50%);}
 
 .head {
   position: absolute;
   width: 90.5%;
   height: auto;
   left: 50%;
-  top: 5%;
+  top: 2%;
   transform:translate(-50%,-50%);
       -webkit-transform:translate(-50%,-50%);
 }
@@ -56,16 +86,109 @@ img {
   right: 0%;
 }
 
-.info {
-  text-align: justify;
-  margin: 0;
-  margin-top: 0;
+.name {
   position: absolute;
-  width: 25%;
-  left: 70%;
-  top: 170px;
+  left: 4%;
+  top: 3%;
+  margin: none;
+  margin-top: 0;
+}
+
+.about {
+  position: absolute;
+  top: 3%;
+  right: 4%;
+  margin-top: 0;
+}
+
+.about,.name,.project {
+  z-index: -99;
+}
+
+.down {
+  font-size: 25;
+  background-color: none;
+  color: black;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  position: absolute;
+  top: 50%;
+  left: 96%;
+  margin-top: 0;
+  transform:translate(-50%,-50%);
+      -webkit-transform:translate(-50%,-50%);
+}
+
+.showinfo {
+  font-size: 15;
+  margin-top: 0;
+  color: black;
+  position: absolute;
+  padding: 1%;
+  top: 47%;
+  left: .5%;
+   transform:translate(-50%,-50%);
+      -webkit-transform:translate(-50%,-50%);
+  -ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+}
+
+.down:hover,.showinfo:hover {
+  cursor: pointer;
+  color: #0078ff;
+  
+}
+
+.title {
+  position: absolute;
+  top: 3%;
+  left: 12.5%;
+  margin-top: 0;
+  
 
 }
+
+.date {
+  position: absolute;
+  top: 3%;
+  right: 12.5%;
+  margin-top: 0;
+}
+
+.box {
+  z-index: -9999;
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  left: 50%;
+  top: 50%;
+  background-color: none;
+  border: 1px solid #ececec;
+  border-radius: 50%;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+}
+
+#menu {
+  text-decoration: none;
+  list-style: none;
+  position: absolute;
+  left: 10%;
+  top: 2.5%;
+  margin-top: 0;
+  line-height: 2;
+}
+
+a,a:active,a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #ececec;
+}
+
 
 
 
@@ -75,13 +198,26 @@ img {
 
 <body>
 
+
+
 <div id="fullpage">
+<div class="section">
+<ul id="menu">
+  <li data-menuanchor="4"><a href="#4">Renderings</a></li>
+  <li data-menuanchor="5"><a href="#5">Renderings</a></li>
+  <li data-menuanchor="6"><a href="#6">Senior Show Poster</a></li>
+  <li data-menuanchor="7"><a href="#7">Table</a></li>
+  <li data-menuanchor="8"><a href="#8">Display Objects</a></li>
+  <li data-menuanchor="9"><a href="#9">GH 1</a></li>
+</ul>
+    
+    </div>
     <div class="section">
-      <div class="head">
-      <a class="title">Bench and a Roof</a>
-      <a class="year"> 2016 </a>
-      </div>
+    <p class="title">Renderings</p>
+    <p class="date">2016</p>
+    <div class="imgbox">
       <img src="images/rendering/roof.jpg">
+    </div>
       <p class="info">
         Image made to illustrate a light-weight aluminum pavillion-like structure. Comprised of a bench and roof. <br><br>
         Modeled in Solidworks and rendered in Keyshot.<br><br>       
@@ -89,11 +225,11 @@ img {
     </div>
 
     <div class="section">
-    <div class="head">
-    <a class="title">Watering Can and Cone</a>
-      <a class="year"> 2016 </a>
-    </div>
+    <p class="title">Renderings</p>
+    <p class="date">2016</p>
+    <div class="imgbox">
       <img src="images/rendering/coneandcan.jpg">
+    </div>
       <p class="info">
         Image made to illustrate a watering can concept with a cone for scale.<br><br>
         Modeled in Solidworks and rendered in Keyshot.<br><br>       
@@ -101,11 +237,11 @@ img {
     </div>
 
     <div class="section">
-    <div class="head">
-    <a class="title">Poster</a>
-      <a class="year"> 2016 </a>
-    </div>
+    <p class="title"> Department of Furniture Design Senior Show Poster</p>
+    <p class="date">2016</p>
+    <div class="imgbox">
       <img src="images/poster/combo.png">
+    </div>
       <p class="info">
         For our senior show, I created two promotional posters which were hung next to eachother around campus. The posters aimed to acknowledge and represent the complexity, versatility, and actuality of the Department of Furniture Design in 2016 at RISD. <br><br>
 
@@ -117,12 +253,12 @@ img {
     </div>
 
     <div class="section">
-    <div class="head">
-    <a class="title"  id="table">Table</a>
-    <a class="year"> 2016 </a>
-    </div>
+    <p class="title">Table</p>
+    <p class="date">2016</p>
+    <div class="imgbox">
       <img class="table"src="images/table/composition1.png">
       <img style="display:none" class="table" src="images/table/empty.png">
+    </div>
       <p class="info">
         This table was inspired by communal architectural plans and the idea of microcosms that exist in architecture.<br><br>
 
@@ -132,9 +268,56 @@ img {
 
         Constructed in all oaks.<br><br>
 
-        </p> 
+        </p>
+    </div>
+
+    <div class="section">
+    <p class="date">2016</p>
+    <p class="title">Display Objects</p>
+    <div class="imgbox">
+          <img class="displayobjects" src="images/displayobjects/couple1.png">
+          <img class="displayobjects" style="display:none" src="images/displayobjects/couple2.png">
+          <img class="displayobjects" style="display:none" src="images/displayobjects/cupspace2.png">
+          <img class="displayobjects" style="display:none" src="images/displayobjects/toweldisplay1.png">
+        </div>
+      <p class="info">
+        These armatures are for the organization and framing of collections, areas of collection, and objects that inevitably decorate people's homes.<br><br>
+
+        These are advanced concept models. Imagined in nylon - actually made of machined plywood, and PLA.
+        </p>
+    </div>
+
+    <div class="section">
+    <p class="date">2015</p>
+    <p class="title">GH 1</p>
+    <div class="imgbox">
+          <img class="heater" src="images/heater/10.png">
+          <img class="heater" style="display:none" src="images/heater/2.png">
+          <img class="heater" style="display:none" src="images/heater/3.png">
+          <img class="heater" style="display:none" src="images/heater/1.png">
+          <img class="heater" style="display:none" src="images/heater/4.png">
+          <img class="heater" style="display:none" src="images/heater/6.png">
+        </div>
+      <p class="info">
+        A form study / concept for a column heater. The heater is intended for gallery spaces as a supplementary solution to basic climate control issues - that of which are crucial in preserving artworks. Understanding the distant way in which viewers would acknowledge and approach it - when placed in a space, I liked the idea that it may also behave as an artwork. <br><br>
+        The heater can be stored vertically to take up minimal space.
+        <br><br>
+        As the precursor to my Senior Degree Project, this project served as a vehicle to raise questions on the use and perception of objects / products analogous to our experience of artworks. From a user and designer perspective, should objects / products be thought of as artworks? Should designers attempt to address human needs that are beyond utility? Could perceptions and sensibilities towards objects be shifted to a point where the man-made world is regarded as an exhibition space? Similarily, with the rapidly increasing documentation of the man-made world, does this then create a new standard and set of criteria for the practice of three-dimensional design?   
+        <br><br> This is an advanced concept model. Imagined in steel and polypropylene - actually made of machined plywood, and PLA.
+        </p>
     </div>
 </div>
+
+
+
+<p class="name"> Tim Zarras </p>
+<p class="about"> About </p>
+<p class="showinfo"> Hide Images </p>
+<p class="showinfo" style="display:none"> Show Images </p>
+<p class="down">&darr;</p>
+
+
+
 
 
 
@@ -142,21 +325,43 @@ img {
 
 <script type="text/javascript">
     $(document).ready(function() {
+
+      // iniate fullpage.js//
+
         $('#fullpage').fullpage({
-            sectionsColor: ['white', 'white', 'white', 'white', 'white'],
+            sectionsColor: ['none', 'none', 'none', 'none', 'none'],
+            anchors: ['3', '4','5','6','7','8','9'],
             css3: true,
             scrollingSpeed: 1000
         });
 
-        $('#showExamples').click(function(e){
-            e.stopPropagation();
-            e.preventDefault();
-            $('#examplesList').toggle();
+        $(".showinfo",this).click(function(e){
+            $(".imgbox").toggle();
+            $(".showinfo").toggle();
+
         });
 
-        $('html').click(function(){
-            $('#examplesList').hide();
-        });
+    $('.down').click(function(){
+      $.fn.fullpage.moveSectionDown();
+    });
+
+    // cycle images of the same class //
+
+    $('.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').click(function() {
+      $(this).hide();
+        var next = $(this).next();
+        console.log(next.length);
+        if (next.length == 0)
+        next = $(this).parent().find('.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').first();
+        next.show();
+    });
+
+    $('.info').flowtype({
+        minFont   : 15,
+        maxFont   : 100
+    });
+
+
     });
 </script>
 
