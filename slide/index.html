@@ -61,10 +61,59 @@ img {
   width: 75%;
   left: 50%;
   top: 48%;
+  font-size: 20;
   z-index: -999;
   text-align: justify;
   transform:translate(-50%,-50%);
-      -webkit-transform:translate(-50%,-50%);}
+  -webkit-transform:translate(-50%,-50%);
+}
+
+.aboutme {
+  margin: 0;
+  margin-left: 0;
+  font-size: 20;
+  position: absolute;
+  background-color: #006bff;
+  z-index: ;
+  color: white;
+  width: 100%;
+  height: 100%;
+  left: 300%;
+  top: 50%;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  -webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
+}
+
+.aboutme p {
+  position: absolute;
+  width: 60%;
+  top: 48%;
+  left: 50%;
+   transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+}
+
+.center {
+  left: 50%;
+}
+
+.hey {
+  color: white;
+  font-size: 30;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 2%;
+}
+
+.hey:hover {
+  background-color: white;
+  color: #006bff;
+}
+
 
 .head {
   position: absolute;
@@ -88,7 +137,7 @@ img {
 
 .name {
   position: absolute;
-  left: 4%;
+  left: 2%;
   top: 3%;
   margin: none;
   margin-top: 0;
@@ -97,15 +146,18 @@ img {
 .about {
   position: absolute;
   top: 3%;
-  right: 4%;
+  right: 2%;
   margin-top: 0;
+  cursor: pointer;
+  z-index: 999;
 }
 
-.about,.name,.project {
+.name,.project {
   z-index: -99;
 }
 
 .down {
+  z-index: 0;
   font-size: 25;
   background-color: none;
   color: black;
@@ -119,7 +171,8 @@ img {
       -webkit-transform:translate(-50%,-50%);
 }
 
-.showinfo {
+.hide {
+  z-index: 0;
   font-size: 15;
   margin-top: 0;
   color: black;
@@ -174,10 +227,12 @@ img {
   text-decoration: none;
   list-style: none;
   position: absolute;
-  left: 10%;
+  left: 50%;
   top: 2.5%;
   margin-top: 0;
   line-height: 2;
+  transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%);
 }
 
 a,a:active,a:visited {
@@ -189,10 +244,48 @@ a:hover {
   color: #ececec;
 }
 
+.bottombox {
+  background-color: black;
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  bottom:0;
+  border-radius: 50%;
+  z-index: -99;
+}
+
+.visible {
+  z-index: -999;
+}
+
+/* mobile */
+
+@media screen and (max-width: 736px) {
 
 
+.hide {
+  left: -6%;
+}
 
+#menu {
+  left: 50%;
+  transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%);
+}
 
+.down {
+  left: 94%;
+}
+
+.info {
+  font-size: 13;
+}
+
+.aboutme p {
+  font-size: 13;
+}
+
+}
 
 </style>
 
@@ -202,42 +295,36 @@ a:hover {
 
 <div id="fullpage">
 <div class="section">
+<p class="name"> Tim Zarras </p>
+<p class="about"> About </p>
+<p class="about" style="display:none">X</p>
 <ul id="menu">
-  <li data-menuanchor="4"><a href="#4">Renderings</a></li>
-  <li data-menuanchor="5"><a href="#5">Renderings</a></li>
-  <li data-menuanchor="6"><a href="#6">Senior Show Poster</a></li>
-  <li data-menuanchor="7"><a href="#7">Table</a></li>
-  <li data-menuanchor="8"><a href="#8">Display Objects</a></li>
-  <li data-menuanchor="9"><a href="#9">GH 1</a></li>
+  <li data-menuanchor="2"><a href="#2">Poster</a></li>
+  <li data-menuanchor="3"><a href="#3">Table</a></li>
+  <li data-menuanchor="4"><a href="#4">Display Objects</a></li>
+  <li data-menuanchor="5"><a href="#5">GH 1</a></li>
+  <li data-menuanchor="6"><a href="#6">Garden Chair</a></li>
+  <li data-menuanchor="7"><a href="#7">Renderings</a></li>
 </ul>
+  <div class="aboutme">
+  <p> 
+        Recent graduate of the Furniture Design Department at the Rhode Island School of Design.<br><br>
+        Currently in New York.<br><br>
+        Previously worked freelance with <a class="me" href="http://www.vsby.co">Visibility</a>.<br><br>
+        If you would like a copy of my resume or just want to say hello, contact me at <a class="me" href="mailto:tzarras@alumni.risd.edu">tzarras@alumni.risd.edu</a>. <br><br> I have an
+        <a class="me" href="http://www.instagram.com/timzarras/">Instagram</a> as well.<br><br>
+        You can visit the old version of this site at <a class="me" href="/v1">v1</a>, as well as a sketchbook-like site for web projects at <a class="me" href="http://www.timzarras.me">timzarras.me</a>.<br><br>
+        <i class="copyright">All project photos taken by Tim Zarras</i><br><br>
+        <i class="copyright"> Website built by Tim Zarras </i><br><br>
+        <i class="copyright"> © Tim Zarras 2016. All Rights Reserved </i>
+        </p>
+      </div>
+<div class="bottombox"></div>
     
     </div>
-    <div class="section">
-    <p class="title">Renderings</p>
-    <p class="date">2016</p>
-    <div class="imgbox">
-      <img src="images/rendering/roof.jpg">
-    </div>
-      <p class="info">
-        Image made to illustrate a light-weight aluminum pavillion-like structure. Comprised of a bench and roof. <br><br>
-        Modeled in Solidworks and rendered in Keyshot.<br><br>       
-        </p>
-    </div>
 
     <div class="section">
-    <p class="title">Renderings</p>
-    <p class="date">2016</p>
-    <div class="imgbox">
-      <img src="images/rendering/coneandcan.jpg">
-    </div>
-      <p class="info">
-        Image made to illustrate a watering can concept with a cone for scale.<br><br>
-        Modeled in Solidworks and rendered in Keyshot.<br><br>       
-        </p>
-    </div>
-
-    <div class="section">
-    <p class="title"> Department of Furniture Design Senior Show Poster</p>
+    <p class="title">Senior Show Poster</p>
     <p class="date">2016</p>
     <div class="imgbox">
       <img src="images/poster/combo.png">
@@ -306,14 +393,36 @@ a:hover {
         <br><br> This is an advanced concept model. Imagined in steel and polypropylene - actually made of machined plywood, and PLA.
         </p>
     </div>
+    <div class="section">
+    <p class="date">2015</p>
+    <p class="title">Garden Chair</p>
+    <div class="imgbox">
+          <img class="chair" src="images/gardenchair/gardenchair.png">
+          <img class="chair" style="display:none" src="images/gardenchair/scene.jpg">
+        </div>
+      <p class="info">
+        A garden chair that's meant to co-exist amongst the lawn / yard landscape. The reserved form of the chair suggests that it is equally as much a tool for sitting, as it is for any other form of use in this setting.
+        Legs and back are constructed as solid bent laminations.
+        <br><br> Dyed ash.
+        </p>
+    </div>
+    <div class="section">
+    <p class="title">Renderings</p>
+    <p class="date">2016</p>
+    <div class="imgbox">
+      <img class="renderings"src="images/rendering/roof.jpg">
+      <img class="renderings" style="display:none" src="images/rendering/coneandcan.jpg">
+    </div>
+      <p class="info">
+        Assorted concept renderings. <br><br>
+        Modeled in Solidworks and rendered in Keyshot.<br><br>       
+        </p>
+    </div>
 </div>
 
 
-
-<p class="name"> Tim Zarras </p>
-<p class="about"> About </p>
-<p class="showinfo"> Hide Images </p>
-<p class="showinfo" style="display:none"> Show Images </p>
+<p class="hide"> Hide Images </p>
+<p class="hide" style="display:none"> Show Images </p>
 <p class="down">&darr;</p>
 
 
@@ -330,36 +439,41 @@ a:hover {
 
         $('#fullpage').fullpage({
             sectionsColor: ['none', 'none', 'none', 'none', 'none'],
-            anchors: ['3', '4','5','6','7','8','9'],
+            anchors: ['1', '2','3','4','5','6','7','8'],
             css3: true,
-            scrollingSpeed: 1000
+            scrollingSpeed: 800,
         });
 
-        $(".showinfo",this).click(function(e){
+        $('.down').click(function(){
+          $.fn.fullpage.moveSectionDown();
+        });
+
+        $(".hide",this).click(function(e){
             $(".imgbox").toggle();
-            $(".showinfo").toggle();
+            $(".hide").toggle();
 
         });
-
-    $('.down').click(function(){
-      $.fn.fullpage.moveSectionDown();
-    });
 
     // cycle images of the same class //
 
-    $('.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').click(function() {
+    $('.renderings,.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').click(function() {
       $(this).hide();
         var next = $(this).next();
         console.log(next.length);
         if (next.length == 0)
-        next = $(this).parent().find('.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').first();
+        next = $(this).parent().find('.renderings,.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').first();
         next.show();
     });
 
-    $('.info').flowtype({
-        minFont   : 15,
-        maxFont   : 100
-    });
+    $('.about').click(function(){
+          $(".aboutme").toggleClass("center");
+          $(".hide,.down").toggleClass("visible");
+          setTimeout(function() {
+          $(".about").toggle().toggleClass("hey");
+          },600);
+          
+        });
+
 
 
     });
