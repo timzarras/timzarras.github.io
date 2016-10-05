@@ -6,370 +6,56 @@
  '  `-' '  `   `-' ` ' ' ' ' ' ` ' `-'
  -->
 
- <!-- A Compact HTML Version! -->
-
 <html>
+
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="Website of Tim Zarras<br><br><br><br><br><br>">
+<meta name="description" content="Website of Tim Zarras<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>">
 <meta name="keywords" content="Tim Zarras, Creative Direction, Industrial Design, Furniture Design, Web Design, RISD">
 <meta name="viewport" content="width=device-width">
 <link rel="icon" type="image/png" href="!.png">
 <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+<link rel="stylesheet" type="text/css" href="tim3.css">
 <title> Tim Zarras </title>
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script src="jquery.fullPage.js"></script>
-<script src="flowtype.js"></script>
+
 </head>
-
-<style>
-
-::-moz-selection { background-color: none; color: #006bff ; }
-::selection { background-color: none; color: #006bff ; }
-
-::-webkit-scrollbar { 
-    display: none; 
-}
-
-::-moz-scrollbar { 
-    display: none; 
-}
-
-::-scrollbar { 
-    display: none; 
-}
-
-@font-face {
-    font-family: ar round;
-    src: url(arial-rounded-mt.ttf);
-}
-
-html {
-  font-family: ar round;
-  font-size: 15;
-  color: black;
-  background-color: white;
-  margin-bottom: 2%;
-}
-
-.imgbox {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  top: 50%;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-}
-
-img {
-  cursor: pointer;
-  position: absolute;
-  width: 63%;
-  left: 50%;
-  top: 50%;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-}
-
-img.chair{
-  width: 55%;
-}
-
-.info {
-  position: absolute;
-  width: 75%;
-  left: 50%;
-  top: 48%;
-  font-size: 20;
-  z-index: -999;
-  text-align: justify;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-}
-
-.aboutme {
-  margin: 0;
-  margin-left: 0;
-  font-size: 20;
-  position: absolute;
-  background-color: #006bff;
-  z-index: ;
-  color: white;
-  width: 100%;
-  height: 100%;
-  left: 300%;
-  top: 50%;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-  -webkit-transition: all .7s ease-in-out;
-    -moz-transition: all .7s ease-in-out;
-    -o-transition: all .7s ease-in-out;
-    transition: all .7s ease-in-out;
-}
-
-.aboutme p {
-  position: absolute;
-  width: 60%;
-  top: 48%;
-  left: 50%;
-   transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-}
-
-.center {
-  left: 50%;
-}
-
-.hey {
-  color: white;
-  font-size: 30;
-  border: 1px solid white;
-  border-radius: 50%;
-  padding: 2%;
-  font-family: Helvetica;
-  font-weight: 100;
-}
-
-.hey:hover {
-  background-color: white;
-  color: #006bff;
-}
-
-
-.head {
-  position: absolute;
-  width: 90.5%;
-  height: auto;
-  left: 50%;
-  top: 2%;
-  transform:translate(-50%,-50%);
-      -webkit-transform:translate(-50%,-50%);
-}
-
-.title{
-  position: absolute;
-  left: 0%;
-}
-
-.year {
-  position: absolute;
-  right: 0%;
-}
-
-.name {
-  position: absolute;
-  left: 2%;
-  top: 3%;
-  margin: none;
-  margin-top: 0;
-}
-
-.about {
-  position: absolute;
-  top: 3%;
-  right: 2%;
-  margin-top: 0;
-  cursor: pointer;
-  z-index: 999;
-}
-
-.name,.project {
-  z-index: -99;
-}
-
-.up {
-
-   z-index: 0;
-  font-size: 25;
-  background-color: none;
-  color: black;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  position: absolute;
-  top: 45%;
-  left: 96%;
-  margin-top: 0;
-  transform:translate(-50%,-50%);
-      -webkit-transform:translate(-50%,-50%);
-
-}
-
-.down {
-  z-index: 0;
-  font-size: 25;
-  background-color: none;
-  color: black;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  position: absolute;
-  top: 55%;
-  left: 96%;
-  margin-top: 0;
-  transform:translate(-50%,-50%);
-      -webkit-transform:translate(-50%,-50%);
-}
-
-.hide {
-  cursor: pointer;
-  z-index: 0;
-  font-size: 15;
-  margin-top: 0;
-  color: black;
-  position: absolute;
-  padding: 1%;
-  top: 47%;
-  left: .5%;
-   transform:translate(-50%,-50%);
-      -webkit-transform:translate(-50%,-50%);
-  -ms-transform: rotate(-90deg); /* IE 9 */
-    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-    transform: rotate(-90deg);
-}
-
-.down:hover,.showinfo:hover,.up:hover {
-  cursor: pointer;
-  color: #006bff;
-  
-}
-
-.title {
-  position: absolute;
-  top: 3%;
-  left: 12.5%;
-  margin-top: 0;
-  
-
-}
-
-.date {
-  position: absolute;
-  top: 3%;
-  right: 12.5%;
-  margin-top: 0;
-}
-
-.box {
-  z-index: -9999;
-  position: absolute;
-  width: 95%;
-  height: 95%;
-  left: 50%;
-  top: 50%;
-  background-color: none;
-  border: 1px solid #ececec;
-  border-radius: 50%;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-}
-
-#menu {
-  text-decoration: none;
-  list-style: none;
-  position: absolute;
-  left: 50%;
-  top: 2.5%;
-  margin-top: 0;
-  line-height: 2;
-  transform:translate(-50%,0%);
-  -webkit-transform:translate(-50%,0%);
-}
-
-a,a:active,a:visited {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  color: #ececec;
-}
-
-.bottombox {
-  background-color: black;
-  position: absolute;
-  height: 10%;
-  width: 100%;
-  bottom:0;
-  border-radius: 50%;
-  z-index: -99;
-}
-
-.visible {
-  z-index: -999;
-}
-
-#custom {
-  height: 70%;
-  width: auto;
-}
-
-/* mobile */
-
-@media screen and (max-width: 736px) {
-
-
-.hide {
-  left: -6%;
-}
-
-#menu {
-  left: 50%;
-  transform:translate(-50%,0%);
-  -webkit-transform:translate(-50%,0%);
-}
-
-.down,.up {
-  left: 94%;
-}
-
-.info {
-  font-size: 13;
-}
-
-.aboutme p {
-  font-size: 13;
-}
-
-}
-
-</style>
 
 <body>
 
-
-
 <div id="fullpage">
-<div class="section">
-<p class="name"> Tim Zarras </p>
-<p class="about"> About </p>
-<p class="about" style="display:none">X</p>
-<ul id="menu">
-  <li data-menuanchor="2"><a href="#2">Poster</a></li>
-  <li data-menuanchor="3"><a href="#3">Table</a></li>
-  <li data-menuanchor="4"><a href="#4">Display Objects</a></li>
-  <li data-menuanchor="5"><a href="#5">GH 1</a></li>
-  <li data-menuanchor="6"><a href="#6">t 21 i</a></li>
-  <li data-menuanchor="7"><a href="#7">Garden Chair</a></li>
-  <li data-menuanchor="8"><a href="#8">Renderings</a></li>
-</ul>
-  <div class="aboutme">
-  <p> 
-        Recent graduate of the Furniture Design Department at the Rhode Island School of Design.<br><br>
-        Currently in New York.<br><br>
-        Previously worked freelance with <a class="me" href="http://www.vsby.co">Visibility</a>.<br><br>
-        If you would like a copy of my resume or just want to say hello, contact me at <a class="me" href="mailto:tzarras@alumni.risd.edu">tzarras@alumni.risd.edu</a>. <br><br> I have an
-        <a class="me" href="http://www.instagram.com/timzarras/">Instagram</a> as well.<br><br>
-        You can visit older versions of this site at <a class="me" href="/v1">v1</a> and <a class="me" href="/v2">v2</a>, as well as a sketchbook-like site for web projects at <a class="me" href="http://www.timzarras.me">timzarras.me</a>.<br><br>
-        <i class="copyright">All project photos taken by Tim Zarras</i><br><br>
-        <i class="copyright"> Website built by Tim Zarras </i><br><br>
-        <i class="copyright"> © Tim Zarras 2016. All Rights Reserved </i>
-        </p>
-      </div>
-<div class="bottombox"></div>
-    
+  <div class="section">
+    <p class="name"> Tim Zarras </p>
+    <p class="about"> About </p>
+    <p class="about" style="display:none">X</p>
+      <ul id="menu">
+        <li data-menuanchor="2"><a href="#2">Poster</a></li>
+        <li data-menuanchor="3"><a href="#3">Table</a></li>
+        <li data-menuanchor="4"><a href="#4">Display Objects</a></li>
+        <li data-menuanchor="5"><a href="#5">GH 1</a></li>
+        <li data-menuanchor="6"><a href="#6">t 21 i</a></li>
+        <li data-menuanchor="7"><a href="#7">Garden Chair</a></li>
+        <li data-menuanchor="8"><a href="#8">Renderings</a></li>
+      </ul>
+    <div class="aboutme">
+    <div class="hey">X</div>
+      <p> 
+          Recent graduate of the Furniture Design Department at the Rhode Island School of Design.<br><br>
+          Currently in New York.<br><br>
+          Previously worked freelance with <a class="me" href="http://www.vsby.co">Visibility</a>.<br><br>
+          If you would like a copy of my resume or just want to say hello, contact me at <a class="me" href="mailto:tzarras@alumni.risd.edu">tzarras@alumni.risd.edu</a>. <br><br> I have an
+          <a class="me" href="http://www.instagram.com/timzarras/">Instagram</a> as well.<br><br>
+          You can visit older versions of this site at <a class="me" href="/v1">v1</a> and <a class="me" href="/v2">v2</a>, as well as a sketchbook-like site for web projects at <a class="me" href="http://www.timzarras.me">timzarras.me</a>.<br><br>
+          <i class="copyright">All project photos taken by Tim Zarras</i><br><br>
+          <i class="copyright"> Website built by Tim Zarras </i><br><br>
+          <i class="copyright"> © Tim Zarras 2016. All Rights Reserved </i>
+      </p>
     </div>
+      <div class="bottombox"></div>
+  </div>
 
-    <div class="section">
+  <div class="section">
     <p class="title">Senior Show Poster</p>
     <p class="date">2016</p>
     <div class="imgbox">
@@ -380,12 +66,11 @@ a:hover {
 
         In one case, people simply know the department for our explorations in materials and making- often tied with a playful nickname "Furn." On the other hand, the work we produce is often involved with much larger ideas and practices. The department name begins to feel like a poor representation of its actual output.<br><br>
 
-        Inkjet on newsprint.
-                
-        </p>
-    </div>
+        Inkjet on newsprint.         
+      </p>
+  </div>
 
-    <div class="section">
+  <div class="section">
     <p class="title">Table</p>
     <p class="date">2016</p>
     <div class="imgbox">
@@ -400,46 +85,46 @@ a:hover {
         Similar to larger communal architectural spaces, the center space highlights and frames a public work of this scale, which may be a vase of flowers or bowl of fruit. <br><br>
 
         Constructed in all oaks.<br><br>
+      </p>
+  </div>
 
-        </p>
-    </div>
-
-    <div class="section">
+  <div class="section">
     <p class="date">2016</p>
     <p class="title">Display Objects</p>
     <div class="imgbox">
-          <img class="displayobjects" src="images/displayobjects/couple1.png">
-          <img class="displayobjects" style="display:none" src="images/displayobjects/couple2.png">
-          <img class="displayobjects" style="display:none" src="images/displayobjects/cupspace2.png">
-          <img class="displayobjects" style="display:none" src="images/displayobjects/toweldisplay1.png">
-        </div>
+      <img class="displayobjects" src="images/displayobjects/couple1.png">
+      <img class="displayobjects" style="display:none" src="images/displayobjects/couple2.png">
+      <img class="displayobjects" style="display:none" src="images/displayobjects/cupspace2.png">
+      <img class="displayobjects" style="display:none" src="images/displayobjects/toweldisplay1.png">
+    </div>
       <p class="info">
         These armatures are for the organization and framing of collections, areas of collection, and objects that inevitably decorate people's homes.<br><br>
 
         These are advanced concept models. Imagined in nylon - actually made of machined plywood, and PLA.
-        </p>
-    </div>
+      </p>
+  </div>
 
-    <div class="section">
+  <div class="section">
     <p class="date">2015</p>
     <p class="title">GH 1</p>
     <div class="imgbox">
-          <img class="heater" src="images/heater/10.png">
-          <img class="heater" style="display:none" src="images/heater/2.png">
-          <img class="heater" style="display:none" src="images/heater/3.png">
-          <img class="heater" style="display:none" src="images/heater/1.png">
-          <img class="heater" style="display:none" src="images/heater/4.png">
-          <img class="heater" style="display:none" src="images/heater/6.png">
-        </div>
+      <img class="heater" src="images/heater/10.png">
+      <img class="heater" style="display:none" src="images/heater/2.png">
+      <img class="heater" style="display:none" src="images/heater/3.png">
+      <img class="heater" style="display:none" src="images/heater/1.png">
+      <img class="heater" style="display:none" src="images/heater/4.png">
+      <img class="heater" style="display:none" src="images/heater/6.png">
+    </div>
       <p class="info">
         A form study / concept for a column heater. The heater is intended for gallery spaces as a supplementary solution to basic climate control issues - that of which are crucial in preserving artworks. Understanding the distant way in which viewers would acknowledge and approach it - when placed in a space, I liked the idea that it may also behave as an artwork. <br><br>
         The heater can be stored vertically to take up minimal space.
         <br><br>
         As the precursor to my Senior Degree Project, this project served as a vehicle to raise questions on the use and perception of objects / products analogous to our experience of artworks.  
         <br><br> This is an advanced concept model. Imagined in steel and polypropylene - actually made of machined plywood, and PLA.
-        </p>
-    </div>
-    <div class="section">
+      </p>
+  </div>
+
+  <div class="section">
     <p class="title">t 21 i</p>
     <p class="date">2015</p>
     <div class="imgbox">
@@ -450,22 +135,24 @@ a:hover {
       <p class="info">
         t 21 i is an excersise in working with a semi-fictional context in mind and looking elsewhere for furniture forms- in hopes of bringing you elsewhere.
         <br><br> This is an advanced concept model. Imagined in polypropylene, ABS, steel and nylon - actually made of machined poplar, ABS, steel and nylon.
-        </p>
+      </p>
     </div>
-    <div class="section">
+
+  <div class="section">
     <p class="date">2015</p>
     <p class="title">Garden Chair</p>
     <div class="imgbox">
-          <img class="chair" src="images/gardenchair/gardenchair.png">
-          <img class="chair" style="display:none" src="images/gardenchair/scene.jpg">
-        </div>
+      <img class="chair" src="images/gardenchair/gardenchair.png">
+      <img class="chair" style="display:none" src="images/gardenchair/scene.jpg">
+    </div>
       <p class="info">
         A garden chair that's meant to co-exist amongst the lawn / yard landscape. The reserved form of the chair suggests that it is equally as much a tool for sitting, as it is for any other form of use in this setting.
         Legs and back are constructed as solid bent laminations.
         <br><br> Dyed ash.
-        </p>
-    </div>
-    <div class="section">
+      </p>
+  </div>
+
+  <div class="section">
     <p class="title">Renderings</p>
     <p class="date">2016</p>
     <div class="imgbox">
@@ -475,20 +162,15 @@ a:hover {
       <p class="info">
         Assorted concept renderings. <br><br>
         Modeled in Solidworks and rendered in Keyshot.<br><br>       
-        </p>
-    </div>
+      </p>
+  </div>
+
 </div>
 
-
-<p class="hide"> Hide Images </p>
-<p class="hide" style="display:none"> Show Images </p>
-<p class="down">&darr;</p>
-<p class="up">&uarr;</p>
-
-
-
-
-
+    <p class="hide"> Hide Images </p>
+    <p class="hide" style="display:none"> Show Images </p>
+    <p class="down">&darr;</p>
+    <p class="up">&uarr;</p>
 
 </body>
 
@@ -503,7 +185,10 @@ a:hover {
             anchors: ['1', '2','3','4','5','6','7','8'],
             css3: true,
             scrollingSpeed: 800,
+            continuousVertical: true
         });
+
+        // arrows //
 
         $('.up').click(function(){
           $.fn.fullpage.moveSectionUp();
@@ -513,30 +198,29 @@ a:hover {
           $.fn.fullpage.moveSectionDown();
         });
 
-        $(".hide",this).click(function(e){
+        // hide and show images //
+
+        $(".hide").click(function(e){
             $(".imgbox").toggle();
             $(".hide").toggle();
-
         });
 
-    // cycle images of the same class //
+        // cycle images of the same class //
 
-    $('.renderings,.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').click(function() {
-      $(this).hide();
-        var next = $(this).next();
-        console.log(next.length);
-        if (next.length == 0)
-        next = $(this).parent().find('.renderings,.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').first();
-        next.show();
-    });
+        $('.renderings,.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').click(function() {
+          $(this).hide();
+            var next = $(this).next();
+            console.log(next.length);
+            if (next.length == 0)
+            next = $(this).parent().find('.renderings,.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').first();
+            next.show();
+        });
 
-    $('.about').click(function(){
+        // bring in that big page //
+
+        $('.about,.hey').click(function(){
           $(".aboutme").toggleClass("center");
-          $(".hide,.down,.up").toggleClass("visible");
-          setTimeout(function() {
-          $(".about").toggle().toggleClass("hey");
-          },800);
-          
+          $(".hide,.down,.up,.about").toggleClass("visible");  
         });
 
     });
