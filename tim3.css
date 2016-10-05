@@ -265,12 +265,12 @@ li a:hover {
 }
 
 .bottombox {
-  background-color: black;
+  background-color: #006bff;
   position: absolute;
-  height: 9%;
+  height: 1%;
   width: 100%;
   bottom:0;
-  border-radius: 50%;
+  border-radius: 0%;
   z-index: -99;
 }
 
