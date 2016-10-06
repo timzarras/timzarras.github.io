@@ -44,6 +44,10 @@ img {
   top: 50%;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 img.chair{
@@ -166,29 +170,41 @@ img.chair{
   font-size: 25;
   background-color: none;
   color: black;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding: 1%;
   position: absolute;
   top: 45%;
   left: 96%;
   margin-top: 0;
   transform:translate(-50%,-50%);
-      -webkit-transform:translate(-50%,-50%);
-
+  -webkit-transform:translate(-50%,-50%);
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+.up:active{
+  top: 47%;
 }
 
 .down {
   font-size: 25;
   background-color: none;
   color: black;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding: 1%;
   position: absolute;
   top: 55%;
   left: 96%;
   margin-top: 0;
   transform:translate(-50%,-50%);
-      -webkit-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.down:active{
+  top: 57%;
 }
 
 .hide {
@@ -209,8 +225,7 @@ img.chair{
 
 .down:hover,.showinfo:hover,.up:hover {
   cursor: pointer;
-  color: #006bff;
-  
+  color: #006bff; 
 }
 
 .title {
@@ -264,13 +279,21 @@ li a:hover {
   color: #ececec;
 }
 
+.me, .me:active, .me:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.me:hover {
+  color: white;
+}
+
 .bottombox {
   background-color: #006bff;
   position: absolute;
-  height: 1%;
+  height: 2%;
   width: 100%;
   bottom:0;
-  border-radius: 0%;
   z-index: -99;
 }
 
@@ -307,7 +330,7 @@ li a:hover {
 }
 
 .aboutme p {
-  font-size: 14;
+  font-size: 13;
 }
 
 .me, .me:active, .me:visited {
@@ -315,6 +338,13 @@ li a:hover {
   color: black;
 }
 
+.down:active{
+  top: 55%;
+}
+
+.up:active{
+  top: 45%;
+}
 
 
 
