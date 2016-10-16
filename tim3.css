@@ -69,9 +69,9 @@ img.chair{
 .aboutme {
   margin: 0;
   margin-left: 0;
-  font-size: 20;
+  font-size: 25;
   position: absolute;
-  background-color: #006bff;
+  background-color: black;
   z-index: 999;
   color: white;
   width: 100%;
@@ -88,11 +88,16 @@ img.chair{
 
 .aboutme p {
   position: absolute;
-  width: 60%;
+  width: 55%; 
   top: 48%;
   left: 50%;
    transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
+}
+
+.copyright {
+  font-size: 12;
+  line-height: 1.4;
 }
 
 .center {
@@ -107,17 +112,22 @@ img.chair{
   cursor: pointer;
   z-index: 999;
   color: white;
-  font-size: 30;
+  font-size: 15;
   border: 1px solid white;
   border-radius: 50%;
-  padding: 1.5%;
+  padding: 1%;
   font-family: Helvetica;
   font-weight: 100;
+  -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .hey:hover {
   background-color: white;
-  color: #006bff !important;
+  color: black !important;
+  top: 3.5%;
 }
 
 
@@ -156,6 +166,10 @@ img.chair{
   margin-top: 0;
   cursor: pointer;
   z-index: 999;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .about:hover {
@@ -183,7 +197,7 @@ img.chair{
   transition: all .2s ease-in-out;
 }
 .up:active{
-  top: 47%;
+  top: 46%;
 }
 
 .down {
@@ -204,7 +218,7 @@ img.chair{
 }
 
 .down:active{
-  top: 57%;
+  top: 56%;
 }
 
 .hide {
@@ -273,6 +287,10 @@ img.chair{
 li a,li a:active,li a:visited {
   text-decoration: none;
   color: black;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 li a:hover {
@@ -281,7 +299,7 @@ li a:hover {
 
 .me, .me:active, .me:visited {
   text-decoration: none;
-  color: black;
+  color: #006bff;
 }
 
 .me:hover {
@@ -336,7 +354,7 @@ li a:hover {
 
 .me, .me:active, .me:visited {
   text-decoration: none;
-  color: black;
+  color: #006bff;
 }
 
 .down:active{
@@ -346,6 +364,15 @@ li a:hover {
 .up:active{
   top: 45%;
 }
+
+.copyright{
+  font-size: 10;
+}
+
+.hey {
+  padding: 1.3%;
+}
+
 
 
 
