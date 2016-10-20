@@ -26,6 +26,10 @@ html {
   margin-bottom: 2%;
 }
 
+.section {
+  border-bottom: 1px solid black;
+}
+
 .imgbox {
   position: absolute;
   width: 100%;
@@ -185,7 +189,7 @@ img.chair{
   background-color: none;
   color: black;
   padding: 1%;
-  position: absolute;
+  position: fixed;
   top: 45%;
   left: 96%;
   margin-top: 0;
@@ -197,7 +201,7 @@ img.chair{
   transition: all .2s ease-in-out;
 }
 .up:active{
-  top: 46%;
+  top: 45.5%;
 }
 
 .down {
@@ -205,7 +209,7 @@ img.chair{
   background-color: none;
   color: black;
   padding: 1%;
-  position: absolute;
+  position: fixed;
   top: 55%;
   left: 96%;
   margin-top: 0;
@@ -218,7 +222,7 @@ img.chair{
 }
 
 .down:active{
-  top: 56%;
+  top: 55.5%;
 }
 
 .hide {
@@ -226,10 +230,10 @@ img.chair{
   font-size: 15;
   margin-top: 0;
   color: black;
-  position: absolute;
+  position: fixed;
   padding: 1%;
   top: 47%;
-  left: .5%;
+  left: 2%;
    transform:translate(-50%,-50%);
       -webkit-transform:translate(-50%,-50%);
   -ms-transform: rotate(-90deg); /* IE 9 */
@@ -307,9 +311,10 @@ li a:hover {
 }
 
 .bottombox {
-  background-color: #006bff;
+  border-radius: 50%;
+  background-color: black;
   position: absolute;
-  height: 1%;
+  height: 14%;
   width: 100%;
   bottom: 0;
   z-index: -99;
