@@ -20,14 +20,15 @@
 
 html {
   font-family: ar round;
-  font-size: 15;
+  font-size: 12;
   color: black;
   background-color: white;
   margin-bottom: 2%;
 }
 
 .section {
-  border-bottom: 1px solid black;
+  background-color: none;
+  margin: 0;
 }
 
 .imgbox {
@@ -227,7 +228,6 @@ img.chair{
 
 .hide {
   cursor: pointer;
-  font-size: 15;
   margin-top: 0;
   color: black;
   position: fixed;
@@ -276,6 +276,14 @@ img.chair{
   -webkit-transform:translate(-50%,-50%);
 }
 
+.bottombox {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 3%;
+  background-color: black;
+}
+
 #menu {
   text-decoration: none;
   list-style: none;
@@ -310,16 +318,6 @@ li a:hover {
   color: white;
 }
 
-.bottombox {
-  border-radius: 50%;
-  background-color: black;
-  position: absolute;
-  height: 14%;
-  width: 100%;
-  bottom: 0;
-  z-index: -99;
-}
-
 .visible {
   z-index: -999;
 }
@@ -336,7 +334,7 @@ li a:hover {
 
 
 .hide {
-  left: -6%;
+  left: ;
 }
 
 #menu {
