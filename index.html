@@ -243,10 +243,10 @@ Made by me,
 
 		$(window).on("orientationchange",function(){
     	if(window.orientation == 0) {
-      		$(".sorry").hide();
+      		$(".sorry").hide().css("z-index","-999");
       		$(".imgbox,.up,.down,.hide:second,.title,.date,.info").show();
     	} else {
-      		$(".sorry").show();
+      		$(".sorry").show().css("z-index","999");
       		$(".imgbox,.up,.down,.hide:second,.title,.date,.info").hide();
     	}
   		});
