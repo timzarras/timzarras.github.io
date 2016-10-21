@@ -30,6 +30,7 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .section {
@@ -37,7 +38,7 @@ body {
   position: relative;
   background-color: none;
   margin: 0;
-  height: 100%;
+  height: 104%;
   width: 100%;
 }
 
@@ -54,8 +55,8 @@ body {
 
 img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.connection,img.renderings {
   margin: none;
-  cursor: pointer;
   position: absolute;
+  cursor: pointer;
   height: auto;
   width: 60%;
   left: 58%;
@@ -67,6 +68,12 @@ img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.conne
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+}
+
+img.chair:hover, img.table:hover,img.displayobjects:hover,img.heater:hover,img.t21i:hover,img.connection:hover,img.renderings:hover{
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+  box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
 }
 
 img.chair{
@@ -98,6 +105,9 @@ img.chair{
   height: 60%;
   left: 300%;
   top: 50%;
+  -webkit-box-shadow: 57px 42px 21px 1px rgba(0,0,0,1);
+-moz-box-shadow: 57px 42px 21px 1px rgba(0,0,0,1);
+box-shadow: 57px 42px 21px 1px rgba(0,0,0,1);
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
   -webkit-transition: all .7s ease-in-out;
@@ -298,6 +308,10 @@ img.chair{
   line-height: 5;
   transform:translate(0%,0%);
   -webkit-transform:translate(0%,0%);
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 li a,li a:active,li a:visited {
@@ -335,8 +349,27 @@ li a:hover {
   width: auto;
 }
 
+.sorry {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  z-index: 999;
+}
+
+.message  {
+  font-size: 15;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+}
+
 
 /* mobile */
+
+
 
 @media screen and (max-width: 736px) {
 
@@ -356,9 +389,7 @@ li a:hover {
 }
 
 #menu {
-  left: 53%;
-  transform:translate(-50%,0%);
-  -webkit-transform:translate(-50%,0%);
+  display: none;
 }
 
 .down,.up {
@@ -369,7 +400,7 @@ li a:hover {
   text-align: justify;
   top: 50%;
   left: 50%;
-  width: 80%;
+  width: 78%;
   display: inline;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
@@ -378,6 +409,8 @@ li a:hover {
 .aboutme {
   width: 100%;
   height: 100%;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
 }
 
 .aboutme p {
@@ -398,12 +431,12 @@ li a:hover {
 }
 
 .title {
-  left: 12.5%;
+  left: 10%;
 }
 
 .date {
   top: 2%;
-  left: 81% !important;
+  left: 80%;
 }
 
 img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.connection,img.renderings {

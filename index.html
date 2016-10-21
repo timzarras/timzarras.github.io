@@ -27,6 +27,10 @@ Made by me,
 
 <body>
 
+	<!-- sorry -->
+
+     <div class="sorry" style="display:none"><p class="message">Working on it. Sorry.</p></div>
+
 <div id="fullpage">
   <div class="section">
     <p class="name"> Tim Zarras </p>
@@ -164,10 +168,15 @@ Made by me,
 
 </div>
 	
+	<!-- buttons -->
+
 	<p class="hide" style="display:none"> Image </p>
     <p class="hide"> Text </p>
      <img class="down" src="down.svg">
     <img class="up" src="up.svg">
+
+    <!-- menu -->
+
     <ul id="menu">
         <li data-menuanchor="2"><a href="#2">1</a></li>
         <li data-menuanchor="3"><a href="#3">2</a></li>
@@ -176,7 +185,7 @@ Made by me,
         <li data-menuanchor="6"><a href="#6">5</a></li>
         <li data-menuanchor="7"><a href="#7">6</a></li>
         <li data-menuanchor="8"><a href="#8">7</a></li>
-      </ul>
+     </ul>
 
 </body>
 
@@ -229,6 +238,18 @@ Made by me,
           $(".aboutme").toggleClass("center");
           $(".hide,.down,.up,.about").toggleClass("visible");  
         });
+
+        // me stalling on fixing something //
+
+		$(window).on("orientationchange",function(){
+    	if(window.orientation == 0) {
+      		$(".sorry").hide();
+    	} else {
+      		$("img").css({"height":"90%","width":"auto"});
+      		$(".sorry").show();
+    	}
+  		});
+
 
     });
 
