@@ -32,15 +32,6 @@ Made by me,
     <p class="name"> Tim Zarras </p>
     <p class="about"> About </p>
     <p class="about" style="display:none">X</p>
-      <ul id="menu">
-        <li data-menuanchor="2"><a href="#2">Poster</a></li>
-        <li data-menuanchor="3"><a href="#3">Table</a></li>
-        <li data-menuanchor="4"><a href="#4">Display Objects</a></li>
-        <li data-menuanchor="5"><a href="#5">GH 1</a></li>
-        <li data-menuanchor="6"><a href="#6">t 21 i</a></li>
-        <li data-menuanchor="7"><a href="#7">Garden Chair</a></li>
-        <li data-menuanchor="8"><a href="#8">Renderings</a></li>
-      </ul>
     <div class="aboutme">
     <div class="hey">X</div>
       <p> 
@@ -62,7 +53,7 @@ Made by me,
     <p class="title">Senior Show Poster</p>
     <p class="date">2016</p>
     <div class="imgbox">
-      <img src="images/poster/combo.png">
+      <img class="poster" src="images/poster/combo.png">
     </div>
       <p class="info">
         For our senior show, I created two promotional posters which were hung next to eachother around campus. The posters aimed to acknowledge and represent the complexity, versatility, and actuality of the Department of Furniture Design in 2016 at RISD. <br><br>
@@ -175,8 +166,17 @@ Made by me,
 	
 	<p class="hide" style="display:none"> Image </p>
     <p class="hide"> Text </p>
-    <p class="down">&darr;</p>
-    <p class="up">&uarr;</p>
+     <img class="down" src="down.svg">
+    <img class="up" src="up.svg">
+    <ul id="menu">
+        <li data-menuanchor="2"><a href="#2">1</a></li>
+        <li data-menuanchor="3"><a href="#3">2</a></li>
+        <li data-menuanchor="4"><a href="#4">3</a></li>
+        <li data-menuanchor="5"><a href="#5">4</a></li>
+        <li data-menuanchor="6"><a href="#6">5</a></li>
+        <li data-menuanchor="7"><a href="#7">6</a></li>
+        <li data-menuanchor="8"><a href="#8">7</a></li>
+      </ul>
 
 </body>
 
@@ -189,9 +189,11 @@ Made by me,
         $('#fullpage').fullpage({
             sectionsColor: ['none', 'none', 'none', 'none', 'none'],
             anchors: ['1', '2','3','4','5','6','7','8'],
+            menu: '#menu',
             scrollingSpeed: 600,
-            autoScrolling: true,
-            continuousVertical: true
+            autoScrolling: false,
+            continuousVertical: false,
+            scrollOverflow: true
         });
 
         // arrows //
@@ -207,8 +209,8 @@ Made by me,
         // hide and show images //
 
         $(".hide").click(function(e){
-            $(".imgbox").toggle();
-            $(".hide").toggle();
+            $(".hide,.imgbox").toggle();
+
         });
 
         // cycle images of the same class //

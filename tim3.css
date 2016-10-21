@@ -27,11 +27,16 @@ html {
 }
 
 .section {
+  border-bottom: 1px solid black;
+  position: relative;
   background-color: none;
   margin: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .imgbox {
+  z-index: 999;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -41,14 +46,17 @@ html {
   -webkit-transform:translate(-50%,-50%);
 }
 
-img {
+img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.connection,img.renderings {
+  margin: none;
   cursor: pointer;
   position: absolute;
-  width: 63%;
-  left: 50%;
-  top: 50%;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
+  height: auto;
+  width: 60%;
+  left: 58%;
+  top: 14%;
+  z-index: 9999;
+  transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%);
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
@@ -56,31 +64,32 @@ img {
 }
 
 img.chair{
-  width: 55%;
+  width: 50%;
 }
 
 .info {
   position: absolute;
-  width: 75%;
-  left: 50%;
-  top: 48%;
-  font-size: 25;
+  width: 17%;
+  left: 9.5%;
+  top: 12.5%;
+  font-size: 12;
   z-index: -999;
-  text-align: justify;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
+  text-align: left;
+  transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%);
 }
 
 .aboutme {
+  border-radius: 5px;
   margin: 0;
   margin-left: 0;
-  font-size: 25;
+  font-size: 15;
   position: absolute;
   background-color: black;
   z-index: 999;
   color: white;
-  width: 100%;
-  height: 100%;
+  width: 40%;
+  height: 60%;
   left: 300%;
   top: 50%;
   transform:translate(-50%,-50%);
@@ -93,7 +102,7 @@ img.chair{
 
 .aboutme p {
   position: absolute;
-  width: 55%; 
+  width: 80%; 
   top: 48%;
   left: 50%;
    transform:translate(-50%,-50%);
@@ -146,16 +155,6 @@ img.chair{
   -webkit-transform:translate(-50%,-50%);
 }
 
-.title{
-  position: absolute;
-  left: 0%;
-}
-
-.year {
-  position: absolute;
-  right: 0%;
-}
-
 .name {
   position: absolute;
   left: 2%;
@@ -167,7 +166,7 @@ img.chair{
 .about {
   position: absolute;
   top: 3%;
-  right: 2%;
+  right: 3.5%;
   margin-top: 0;
   cursor: pointer;
   z-index: 999;
@@ -186,13 +185,13 @@ img.chair{
 }
 
 .up {
-  font-size: 25;
+  height: 20%;
   background-color: none;
   color: black;
   padding: 1%;
   position: fixed;
-  top: 45%;
-  left: 96%;
+  top: 35%;
+  left: 95%;
   margin-top: 0;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
@@ -202,17 +201,17 @@ img.chair{
   transition: all .2s ease-in-out;
 }
 .up:active{
-  top: 45.5%;
+  top: 35.5%;
 }
 
 .down {
-  font-size: 25;
+  height: 20%;
   background-color: none;
   color: black;
   padding: 1%;
   position: fixed;
-  top: 55%;
-  left: 96%;
+  top: 65%;
+  left: 95%;
   margin-top: 0;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
@@ -223,10 +222,11 @@ img.chair{
 }
 
 .down:active{
-  top: 55.5%;
+  top: 65.5%;
 }
 
 .hide {
+  display: none;
   cursor: pointer;
   margin-top: 0;
   color: black;
@@ -248,17 +248,16 @@ img.chair{
 
 .title {
   position: absolute;
-  top: 3%;
-  left: 12.5%;
+  top: 2%;
+  left: 1%;
   margin-top: 0;
-  
 
 }
 
 .date {
   position: absolute;
-  top: 3%;
-  right: 12.5%;
+  top: 5%;
+  left: 1%;
   margin-top: 0;
 }
 
@@ -276,27 +275,30 @@ img.chair{
   -webkit-transform:translate(-50%,-50%);
 }
 
-.bottombox {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  height: 3%;
-  background-color: black;
-}
-
 #menu {
+  width: 50%;
+  font-size: 17;
+  background-color: none;
+  text-align: left;
+  z-index: 0;
   text-decoration: none;
   list-style: none;
-  position: absolute;
-  left: 50%;
-  top: 2.5%;
+  position: fixed;
+  left: .75%;
+  bottom: 0%;
+  margin: 0;
+  margin-left: 0;
   margin-top: 0;
-  line-height: 2;
-  transform:translate(-50%,0%);
-  -webkit-transform:translate(-50%,0%);
+  line-height: 5;
+  transform:translate(0%,0%);
+  -webkit-transform:translate(0%,0%);
 }
 
 li a,li a:active,li a:visited {
+  padding-right: 4%;
+  display: inline;
+  float: left;
+  list-style-type: none;
   text-decoration: none;
   color: black;
   -webkit-transition: all .1s ease-in-out;
@@ -332,9 +334,14 @@ li a:hover {
 
 @media screen and (max-width: 736px) {
 
+.section {
+  width: 100%;
+}
 
 .hide {
-  left: ;
+  left: .5%;
+  top: 50%;
+  display: inline;
 }
 
 #menu {
@@ -348,7 +355,18 @@ li a:hover {
 }
 
 .info {
-  font-size: 14;
+  text-align: justify;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  display: inline;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+}
+
+.aboutme {
+  width: 100%;
+  height: 100%;
 }
 
 .aboutme p {
@@ -360,20 +378,28 @@ li a:hover {
   color: #006bff;
 }
 
-.down:active{
-  top: 55%;
-}
-
-.up:active{
-  top: 45%;
-}
-
 .copyright{
   font-size: 10;
 }
 
 .hey {
   padding: 1.3%;
+}
+
+.title {
+  left: 12.5%;
+}
+
+.date {
+  top: 2%;
+  left: 81% !important;
+}
+
+img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.connection,img.renderings {
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
 }
 
 
