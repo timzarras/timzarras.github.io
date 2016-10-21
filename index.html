@@ -244,11 +244,10 @@ Made by me,
 		$(window).on("orientationchange",function(){
     	if(window.orientation == 0) {
       		$(".sorry").hide();
-      		$(".imgbox,.up,.down,.hide:first,.title,.date,.info").show();
-      		$(".hide:second").hide();
+      		$(".imgbox,.up,.down,.hide:second,.title,.date,.info").show();
     	} else {
       		$(".sorry").show();
-      		$(".imgbox,.up,.down,.hide:first,.title,.date,.info").hide();
+      		$(".imgbox,.up,.down,.hide:second,.title,.date,.info").hide();
     	}
   		});
 
