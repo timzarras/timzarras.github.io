@@ -23,7 +23,6 @@ html {
   font-size: 12;
   color: black;
   background-color: white;
-  margin-bottom: 2%;
 }
 
 body {
@@ -35,7 +34,6 @@ body {
 
 .section {
   border-bottom: 1px solid black;
-  position: relative;
   background-color: none;
   margin: 0;
   height: 104%;
@@ -58,7 +56,7 @@ img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.conne
   position: absolute;
   cursor: pointer;
   height: auto;
-  width: 60%;
+  width: 56%;
   left: 58%;
   top: 14%;
   z-index: 9999;
@@ -70,10 +68,10 @@ img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.conne
   transition: all .2s ease-in-out;
 }
 
-img.chair:hover, img.table:hover,img.displayobjects:hover,img.heater:hover,img.t21i:hover,img.connection:hover,img.renderings:hover{
-  -webkit-box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
-  -moz-box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
-  box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+img.chair:hover,img.displayobjects:hover,img.heater:hover,img.t21i:hover,img.renderings:hover{
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0,0,0,.9);
+  -moz-box-shadow: 0px 0px 0px 1px rgba(0,0,0,.9);
+  box-shadow: 0px 0px 0px 1px rgba(0,0,0,.9);
 }
 
 img.chair{
@@ -203,18 +201,18 @@ img.chair{
   color: black;
   padding: 1%;
   position: fixed;
-  top: 35%;
+  top: 5%;
   left: 95%;
   margin-top: 0;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%);
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 .up:active{
-  top: 35.5%;
+  top: 5.5%;
 }
 
 .down {
@@ -223,11 +221,11 @@ img.chair{
   color: black;
   padding: 1%;
   position: fixed;
-  top: 65%;
+  bottom: 5%;
   left: 95%;
   margin-top: 0;
-  transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%);
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
@@ -235,7 +233,7 @@ img.chair{
 }
 
 .down:active{
-  top: 65.5%;
+  bottom: 4.5%;
 }
 
 .hide {
@@ -311,6 +309,7 @@ img.chair{
   transition: all .1s ease-in-out;
 }
 
+
 li a,li a:active,li a:visited {
   padding-right: 4%;
   display: inline;
@@ -326,6 +325,7 @@ li a,li a:active,li a:visited {
 
 li a:hover {
   color: #ececec;
+
 }
 
 .me, .me:active, .me:visited {
