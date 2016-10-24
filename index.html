@@ -14,7 +14,7 @@ Made by me,
 
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="Website of Tim Zarras<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>">
+<meta name="description" content="Website of Tim Zarras.">
 <meta name="keywords" content="Tim Zarras, Creative Direction, Industrial Design, Furniture Design, Web Design, RISD">
 <meta name="viewport" content="width=device-width">
 <link rel="icon" type="image/png" href="!.png">
@@ -240,14 +240,14 @@ Made by me,
           $(".hide,.down,.up,.about").toggleClass("visible");  
         });
 
-        // me stalling on fixing something //
+        // hide some stuff in landscap on mobile  //
 
 		$(window).on("orientationchange",function(){
-    	if(window.orientation == 0) {
-      		$(".title,.date,.name").show();
-    	} else {
-      		$(".title,.date,.name").hide().find(".imgbox").show();
-    	}
+	    	if(window.orientation == 0) {
+	      		$(".title,.date,.name").show();
+	    	} else {
+	      		$(".title,.date,.name").hide().find(".imgbox").show();
+	    	}
   		});
 
 
