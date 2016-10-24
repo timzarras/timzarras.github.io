@@ -370,15 +370,6 @@ li a:hover {
 
 @media screen and (max-width: 736px) {
 
-#fullpage {
-  width: 100%;
-}
-
-.section {
-  height: 100% !important;
-  width: 100% !important;
-}
-
 .hide {
   left: .5%;
   top: 50%;
