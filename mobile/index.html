@@ -48,13 +48,11 @@ Made by me,
 }
 
 html {
+  margin: 0;
   font-family: ar round;
   font-size: 20;
   color: black;
   background-color: #fbfbfb;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;
 }
 
 #fullpage {
@@ -65,8 +63,6 @@ html {
   transform:translate(-50%,0%);
   -webkit-transform:translate(-50%,0%);
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;
 }
 
 .imgbox {
@@ -79,13 +75,15 @@ html {
   -webkit-transform:translate(-50%,0%);
   padding-bottom: 15px;
   padding-top: 15px;
+  -webkit-overflow-scrolling: touch;
+  -overflow-scrolling: touch;
 }
 
 img {
   position: relative;
   width: 95%;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin-bottom: 2.5%;
+  margin-top: 2.5%;
   left: 50%;
   transform:translate(-50%,0%);
   -webkit-transform:translate(-50%,0%);
@@ -145,7 +143,7 @@ img {
     <p class="date">2016</p>
     <div class="imgbox">
       <img class="table"src="images/table/composition1.png">
-      <img style="display:none" class="table" src="images/table/empty.png">
+      <img class="table" src="images/table/empty.png">
     </div>
       <p class="info">
         This table was inspired by communal architectural plans and the idea of microcosms that exist in architecture.<br><br>
@@ -213,7 +211,7 @@ img {
     <p class="title">Garden Chair</p>
     <div class="imgbox">
       <img class="chair" src="images/gardenchair/gardenchair.png">
-      <img class="chair" style="display:none" src="images/gardenchair/scene.jpg">
+      <img class="chair" src="images/gardenchair/scene.jpg">
     </div>
       <p class="info">
         A garden chair that's meant to co-exist amongst the lawn / yard landscape. The reserved form of the chair suggests that it is equally as much a tool for sitting, as it is for any other form of use in this setting.
