@@ -52,17 +52,19 @@ html {
   font-size: 20;
   color: black;
   background-color: #fbfbfb;
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
 }
 
 #fullpage {
-  padding-top: 10%;
+  margin: none;
   width: 100%;
   position: absolute;
   left: 50%;
   transform:translate(-50%,0%);
   -webkit-transform:translate(-50%,0%);
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
 }
@@ -75,11 +77,13 @@ html {
   left: 50%;
   transform:translate(-50%,0%);
   -webkit-transform:translate(-50%,0%);
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 img {
   position: relative;
-  width: 90%;
+  width: 95%;
   margin-bottom: 15px;
   margin-top: 15px;
   left: 50%;
