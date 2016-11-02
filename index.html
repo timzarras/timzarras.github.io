@@ -42,8 +42,7 @@ Made by me,
       <p> 
           Tim Zarras is a recent graduate (2016) of the Furniture Design Department at the Rhode Island School of Design
           and is currently in New York. His focus encompasses furniture and objects, web design and development, creative direction, and imagery.<br><br>
-          Lately, he has worked freelance with <a class="me" href="http://www.vsby.co">Visibility</a> developing products, spaces, and objects for a spectrum of clients.<br><br>
-          You can visit older versions of this site at <a class="me" href="/v1">v1</a> and <a class="me" href="/v2">v2</a>, as well as a sketchbook-like site for web projects at <a class="me" href="http://www.timzarras.me">timzarras.me</a>.<br><br>
+          In recent past, he has worked freelance with <a class="me" href="http://www.vsby.co">Visibility</a> developing products, spaces, and objects for a spectrum of clients.<br><br>
           He has an <a class="me" href="http://www.instagram.com/timzarras/">Instagram</a> as well.<br><br>
           Say hello : <a class="me" href="mailto:tzarras@alumni.risd.edu">tzarras@alumni.risd.edu</a><br><br>
           <i class="copyright"> Website built by Tim Zarras </i><br>
@@ -188,22 +187,27 @@ Made by me,
         <li data-menuanchor="8"><a href="#8">7</a></li>
      </ul>
 
+     <p class="click">Click</p>
+
 </body>
 
 <script type="text/javascript">
     
     $(document).ready(function() {
 
+        $("html").hide().fadeIn(900);
+
       // iniate fullpage.js//
 
         $('#fullpage').fullpage({
             sectionsColor: ['none', 'none', 'none', 'none', 'none'],
-            anchors: ['1', '2','3','4','5','6','7','8'],
+            anchors: ['','2','3','4','5','6','7','8'],
             scrollingSpeed: 600,
             autoScrolling: false,
             scrollOverflow: false,
             continuousScrolling: false
         });
+
 
         // arrows //
 
@@ -240,15 +244,34 @@ Made by me,
           $(".hide,.down,.up,.about").toggleClass("visible");  
         });
 
-        // hide some stuff in landscap on mobile  //
+        $(".imgbox > img").mouseover(function() {
+          $(".click").show();
+        }).mouseout(function() {
+          $(".click").hide();
+        });
 
-		$(window).on("orientationchange",function(){
-	    	if(window.orientation == 0) {
-	      		$(".title,.date,.name").show();
-	    	} else {
-	      		$(".title,.date,.name").hide().find(".imgbox").show();
-	    	}
-  		});
+        // just to be sure // 
+
+        if ($(window).width() < 737) {
+          $(".click").remove();
+          $("img").click(function() {
+            $(".click").remove();
+          });
+        }
+
+
+
+
+
+        // hide some stuff in landscape on mobile  //
+
+    		$(window).on("orientationchange",function(){
+    	    	if(window.orientation == 0) {
+    	      		$("img").css("width","80%");
+    	    	} else {
+    	      		$("img").css("width","60%");
+    	    	}
+      		});
 
 
     });
