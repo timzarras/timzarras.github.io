@@ -23,6 +23,7 @@ html {
   font-size: 12;
   color: black;
   background-color: white;
+  overflow-x:hidden;
 }
 
 body {
@@ -100,7 +101,7 @@ img.chair{
   color: white;
   width: 40%;
   height: 60%;
-  left: 300%;
+  left: 50%;
   top: 50%;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
