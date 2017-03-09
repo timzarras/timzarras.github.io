@@ -28,8 +28,6 @@ Made by me,
 
 <body>
 
-	<!-- sorry -->
-
 
 
 <div id="fullpage">
@@ -41,8 +39,8 @@ Made by me,
     <div class="hey">X</div>
       <p> 
           Tim Zarras is a recent graduate (2016) of the Furniture Design Department at the Rhode Island School of Design
-          and is currently in New York. His focus encompasses furniture and objects, web design and development, creative direction, and imagery.<br><br>
-          In recent past, he has worked freelance with <a class="me" href="http://www.vsby.co">Visibility</a> developing products, spaces, and objects for a spectrum of clients.<br><br>
+          and is currently in New York.<br><br> His focus encompasses furniture and objects, web design and development, creative direction, and imagery.<br><br>
+          Currently working as a Junior Designer at ASH NYC.<br><br>
           He has an <a class="me" href="http://www.instagram.com/timzarras/">Instagram</a> as well.<br><br>
           Say hello : <a class="me" href="mailto:tzarras@alumni.risd.edu">tzarras@alumni.risd.edu</a><br><br>
           <i class="copyright"> Website built by Tim Zarras </i><br>
@@ -51,7 +49,23 @@ Made by me,
       </p>
     </div>
   </div>
+  <div class="section">
+    <p class="title">meilenehan.com</p>
+    <p class="date">2017</p>
+    <div class="imgbox">
+    	<img class="mei" src="images/meisite/1.jpg">
+    	<img class="mei" style="display:none" src="images/meisite/2.jpg">
+    	<img class="mei" style="display:none" src="images/meisite/3.jpg">
+    	<img class="mei" style="display:none" src="images/meisite/4.jpg">
+    	<img class="mei" style="display:none" src="images/meisite/5.jpg">
+      <img class="mei" style="display:none" src="images/meisite/mei.gif">
+    </div>
+      <p class="info">
+        I worked with Mei to design and develop a portfolio site. <br><br> 
 
+        <a href="http://www.meilenehan.com">meilenehan.com</a>        
+      </p>
+  </div>
   <div class="section">
     <p class="title">Senior Show Poster</p>
     <p class="date">2016</p>
@@ -186,6 +200,7 @@ Made by me,
         <li data-menuanchor="6"><a href="#6">5</a></li>
         <li data-menuanchor="7"><a href="#7">6</a></li>
         <li data-menuanchor="8"><a href="#8">7</a></li>
+        <li data-menuanchor="8"><a href="#9">8</a></li>
      </ul>
 
 
@@ -230,12 +245,12 @@ Made by me,
 
         // cycle images of the same class //
 
-        $('.renderings,.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').click(function() {
+        $('.renderings,.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB,.mei').click(function() {
           $(this).hide();
             var next = $(this).next();
             console.log(next.length);
             if (next.length == 0)
-            next = $(this).parent().find('.renderings,.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB').first();
+            next = $(this).parent().find('.renderings,.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB,.mei').first();
             next.show();
         });
 

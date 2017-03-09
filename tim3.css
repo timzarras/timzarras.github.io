@@ -50,7 +50,7 @@ body {
   -webkit-transform:translate(-50%,-50%);
 }
 
-img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.connection,img.renderings {
+img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.connection,img.renderings,img.mei {
   margin: none;
   position: absolute;
   cursor: pointer;
@@ -58,7 +58,7 @@ img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.conne
   width: 56%;
   left: 58%;
   top: 14%;
-  z-index: 9999;
+  z-index: 999;
   transform:translate(-50%,0%);
   -webkit-transform:translate(-50%,0%);
   -webkit-transition: all .2s ease-in-out;
@@ -67,15 +67,23 @@ img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.conne
   transition: all .2s ease-in-out;
 }
 
-img.table:hover, img.chair:hover,img.displayobjects:hover,img.heater:hover,img.t21i:hover,img.renderings:hover{
+img.table:hover, img.chair:hover,img.displayobjects:hover,img.heater:hover,img.t21i:hover,img.renderings:hover,img.mei:hover {
   -webkit-box-shadow: 0px 0px 0px 1px rgba(0,0,0,.9);
   -moz-box-shadow: 0px 0px 0px 1px rgba(0,0,0,.9);
   box-shadow: 0px 0px 0px 1px rgba(0,0,0,.9);
 }
 
 img.chair{
+  margin: none;
+  position: absolute;
+  cursor: pointer;
+  height: auto;
+  left: 58%;
+  top: 14%;
   width: 45%;
   max-width: 45%;
+  transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%);
 }
 
 .info {
@@ -451,7 +459,7 @@ li a:hover {
   left: 80%;
 }
 
-img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.connection,img.renderings {
+img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.connection,img.renderings,img.mei {
   top: 50%;
   left: 50%;
   transform:translate(-50%,-50%);
