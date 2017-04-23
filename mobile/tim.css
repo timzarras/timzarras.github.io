@@ -257,7 +257,7 @@ a:visited {
 
 
 
-@media screen and (max-width: 736px) and (orientation: portrait){
+@media screen and (max-width: 900px){
 
 	html,body {
 		width: 100% !important;
@@ -297,15 +297,14 @@ a:visited {
 	top: 3%;
 	left: -25px;
 	margin: 0;
-	font-size: 20;
+	font-size: 16;
 	margin-bottom: 0;
 	padding-bottom: 3%;
 	height: 100%;
-	text-decoration: underline;
 	}
 
 	.year {
-		font-size: 20;
+		font-size: 16;
 		display: inline;
 	}
 
@@ -339,13 +338,9 @@ a:visited {
 
 	.title {
 		font-weight: 500;
-		font-size: 20 !important;
+		font-size: 16 !important;
 		display: inline !important;
 		padding-bottom: 100px !important;
-	}
-
-	.ticket {
-		width: 70%;
 	}
 
 }
