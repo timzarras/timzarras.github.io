@@ -216,7 +216,7 @@ Made by me,
 
         $('#fullpage').fullpage({
             sectionsColor: ['none', 'none', 'none', 'none', 'none'],
-            anchors: ['','2','3','4','5','6','7','8'],
+            anchors: ['1','2','3','4','5','6','7','8'],
             scrollingSpeed: 600,
             autoScrolling: false,
             scrollOverflow: false,
@@ -291,6 +291,12 @@ Made by me,
     	      		$("img").css("width","60%");
     	    	}
       		});
+
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+          var url = "http://www.timzarras.com/mobile";    
+          $(location).attr('href',url);
+
+        }
 
 
     });

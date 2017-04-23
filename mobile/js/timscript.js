@@ -16,25 +16,6 @@ $(document).ready(function() {
             window.location.hash = target;
         });
       });
-    
-
-      // Make project title bold when its top line is reached //
-
-      $(window).scroll(function() {
-        var windscroll = $(window).scrollTop();
-      if (windscroll >= 300) {
-        $('.projectlist img.line').each(function(i) {
-            if ($(this).position().top <= windscroll - 500) {
-                $('.links li.selected').removeClass('selected').find('span').hide();
-                $('.links li').eq(i).addClass('selected').find('span').show();
-            }
-        });
-
-      } else {
-        $('.links li.selected').removeClass('selected').find('span').hide();
-      }
-
-      });
 
 
       // Auto scroll back to top of page //
