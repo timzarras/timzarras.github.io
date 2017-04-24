@@ -315,6 +315,7 @@ a:visited {
 	.projectimage {
 	width:80% !important;
 	height: auto;
+	margin-bottom: -5px;
 	}
 
 	.customimage {
