@@ -39,8 +39,8 @@ html {
   width: 100%;
   height: 100%;
   margin: 0;
-  background-color: black;
-  color: #bfbfbf;
+  background-color: white;
+  color: black;
   overflow: scroll;
   line-height: 1.2;
  }
@@ -54,13 +54,12 @@ html {
   position: fixed;
   left: 1%;
   top: 2%;
-  color: white;
-  font-size: 12;
+  color: black;
+  font-size: 22;
   padding-right: 1%;
   padding-left: 1%;
   padding-top: .5%;
   padding-bottom: .5%;
-  font-size: 16;
  }
 
  .purchase{
@@ -68,13 +67,12 @@ html {
   position: fixed;
   right: 1%;
   bottom: 5%;
-  color: white;
-  font-size: 12;
+  color: black;
+  font-size: 22;
   padding-right: 1%;
   padding-left: 1%;
   padding-top: .5%;
   padding-bottom: .5%;
-  font-size: 16;
  }
 
   .gallery{
@@ -82,13 +80,12 @@ html {
   position: fixed;
   right: 1%;
   bottom: 2%;
-  color: white;
-  font-size: 12;
+  color: black;
+  font-size: 22;
   padding-right: 1%;
   padding-left: 1%;
   padding-top: .5%;
   padding-bottom: .5%;
-  font-size: 16;
  }
 
 .buy{
@@ -98,22 +95,23 @@ html {
   left: 50%;
   width: 48%;
   text-decoration: none;
-  color: #bfbfbf;
+  color: black;
   padding: .75%;
-  border: 1px solid #bfbfbf;
+  border: 1px solid black;
 }
 
 .buy:hover {
-  background-color: #bfbfbf;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
  .material {
   position: relative;
-  font-size: 16;
+  font-size: 18;
   font-weight: 100;
   width: 50%;
   left: 50%;
+  top: 2%;
  }
 
  .info {
@@ -121,6 +119,7 @@ html {
   position: relative;
   left: 50%;
   float: top;
+  font-size: 16;
  }
 
  .specs {
@@ -149,7 +148,7 @@ html {
  .section{
   position: relative;
   float: top;
-  background-color: black;
+  background-color: white;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -159,9 +158,9 @@ html {
  .halfsection {
   position: relative;
   float: top;
-  background-color: black;
+  background-color: white;
   width: 100%;
-  height: 55%;
+  height: 60%;
   margin: 0;
   overflow: hidden;
  }
@@ -169,18 +168,27 @@ html {
  .productsection {
   position: relative;
   float: top;
-  background-color: black;
+  background-color: white;
   width: 100%;
   height: 120%;
-  margin: 0;
   overflow: hidden;
+ }
+
+ .imagesection {
+  position: relative;
+  float: top;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  margin: 0;
  }
 
  .pimage{
   position: absolute;
   top: 0;
+  margin: 0;
   left: 15%;
-  width: 18%;
+  width: 26%;
  }
 
  .test {
@@ -191,15 +199,18 @@ html {
   width: 45%;
   height: 37%;
   margin-right: 1%;
-  margin-left: 1%;
+  margin-left: 0%;
+  font-size: 18;
   transform:translate(0%,0%);
   -webkit-transform:translate(0%,0%);
  }
 
  .splash {
+  background-color: transparent;
   left: 50%;
   top: 50%;
-  width: 60vw;
+
+   
   position: absolute;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
@@ -213,96 +224,37 @@ html {
 
 .hero {
   position: absolute;
-  left: 15%;
+  left: 17%;
   top: 28%;
+  font-size: 18;
 }
 
 .desc {
   position: absolute;
   top: 28%;
   min-width: 30%;
-  width: 38%;
+  width: 30%;
+  left: 54%;
+  font-size: 18;
+}
+
+.bigimage > img{
+  position: relative;
+  float: left;
   left: 50%;
+  width: 68%;
+  margin-right: 3vw;
+  margin-bottom: 3vh;
+  height: auto;
+  transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%);
 }
 
-/* flickity stuff */
-
- .main-carousel{
-  width: 100vw;
- }
-
-.carousel-cell {
-  top: 50%;
-  width: auto;
-  height: 70%;
-  margin-right: 15px;
-  background-color: none;
-  counter-increment: gallery-cell;
-  transform:translate(0%,-50%);
-  -webkit-transform:translate(0%,-50%);
-}
-
-.carousel-cell > img, iframe {
-          position: relative;
-          height: 100%;
-          width: auto;
-          top: 50%;
-          left: 50%;
-          transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-}
-
- .flickity-page-dots {
-  bottom: 2%;
-}
-
-.flickity-page-dots .dot {
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  opacity: 1;
-  background: transparent;
-  border: 1px solid #bfbfbf;
-  margin-right: 20px;
-}
-
-.flickity-page-dots .dot.is-selected {
-  background: #bfbfbf;
-  -webkit-transition: all .1s;
-    -moz-transition: all .1s;
-    -o-transition: all .1s;
-    transition: all .1s;
-}
-
-.flickity-prev-next-button {
-  padding: 6%;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-}
-.flickity-prev-next-button:hover {
-  background: transparent;
-}
-
-.flickity-prev-next-button .arrow {
-  fill: black;
-  display: none;
-}
-
-.flickity-prev-next-button .arrow:active {
-  fill: black;
-}
-
-.flickity-prev-next-button.no-svg {
-  color: black;
-}
-
-.flickity-prev-next-button.no-svg:active {
-  color: black;
-}
-
-.flickity-prev-next-button:disabled {
-  display: none;
+.contain {
+  position: absolute;
+  width: 80vw;
+  left: 10%;
+  height: 100%;
 }
 
 @media screen and (max-width: 736px){
@@ -316,12 +268,12 @@ body {
 }
 
 .halfsection{
-  height: 80%;
+  height: 50%;
 }
 
 .test {
   width: 100%;
-  height: 28%;
+  height: 20% !important;
   float: top;
   left: 40%;
   transform:translate(-50%,0%);
@@ -334,7 +286,7 @@ body {
 }
 
 .productsection{
-  height: 180%;
+  height: 250%;
 }
 
 .hero {
@@ -384,7 +336,7 @@ body {
 <body>
 
 <div class="section">
-<iframe id= "vimeo_player" class="splash" src="https://player.vimeo.com/video/156934833?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe id= "vimeo_player" class="splash" src="https://player.vimeo.com/video/156934833?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="1400" height="1400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <img style="display:none" class="splash" src="images/IMG_8797i.jpg">
 </div>
 <div class="halfsection">
@@ -401,46 +353,47 @@ provides utility while involves you as part of its completion.
 </div>
 
 <div class="productsection">
+  <div class="contain">
         <div class="test">
           <h1 class="material">Copper</h1>
           <p class="info">CNC machined from solid pure copper, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time.</p>
           <p class="details">Weight<br>Dimension</p>
           <p class="dim">105g<br>24 cubic mm</p>
-          <a class="buy" href="https://nihil-artikel.myshopify.com/cart/35068487235:1">Purchase</a>
-          <img class="pimage" src="images/filler.png">
+          <a class="buy" href="http://nihil-artikel.myshopify.com/cart/35068487235:1">Purchase</a>
+          <img class="pimage" src="images/copper-transparent.gif">
         </div>
         <div class="test">
           <h1 class="material">Brass</h1>
           <p class="info">CNC machined from solid pure brass, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time.</p>
           <p class="details">Weight<br>Dimension</p>
           <p class="dim">105g<br>24 cubic mm</p>
-          <img class="pimage" src="images/filler.png">
-          <a class="buy" href="https://nihil-artikel.myshopify.com/cart/35068360067:1">Purchase</a>
+          <img class="pimage" src="images/brass-transparent.gif">
+          <a class="buy" href="http://nihil-artikel.myshopify.com/cart/35068360067:1">Purchase</a>
         </div>
         <div class="test">
           <h1 class="material">Stainless</h1>
           <p class="info">CNC machined from solid pure stainless steel, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time.</p>
           <p class="details">Weight<br>Dimension</p>
           <p class="dim">105g<br>24 cubic mm</p>
-          <img class="pimage" src="images/filler.png">
-          <a class="buy" href="https://nihil-artikel.myshopify.com/cart/35068492547:1">Purchase</a>
+          <img class="pimage" src="images/steel-transparent.gif">
+          <a class="buy" href="http://nihil-artikel.myshopify.com/cart/35068492547:1">Purchase</a>
         </div>
-</div>
-<div class="section">
-    <div class="main-carousel">
-                  <!--<div class="carousel-cell"><iframe src="https://player.vimeo.com/video/156934833?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-                  <!--
-                  <div class="carousel-cell"><img src="images/IMG_0425.jpg"></div>
-                  <div class="carousel-cell"><img src="images/IMG_0428.jpg"></div>-->
-                  <div class="carousel-cell"><img src="images/IMG_8006.jpg"></div>
-                  <div class="carousel-cell"><img src="images/IMG_8669-1500.jpg"></div>
-                  <div class="carousel-cell"><img src="images/IMG_8670 copy2.jpg"></div>
-                  <div class="carousel-cell"><img src="images/IMG_8697-1500.jpg"></div>
-                  <div class="carousel-cell"><img src="images/IMG_8731i.jpg"></div>
-                  <div class="carousel-cell"><img src="images/IMG_8797i.jpg"></div>
-                  <div class="carousel-cell"><img src="images/1.png"></div>
-                  <div class="carousel-cell"><img src="images/steel-glory.jpg"></div>
     </div>
+</div>
+<div class="imagesection">
+                  
+                  
+                 <!--<div class="bigimage"><img src="images/IMG_0425.jpg"></div>
+                  <div class="bigimage"><img src="images/IMG_0428.jpeg"></div>-->
+                  <div class="bigimage"><img src="images/IMG_8006.jpg"></div>
+                  <div class="bigimage"><img src="images/IMG_8669-1500.jpg"></div>
+                  <div class="bigimage"><img src="images/IMG_8670 copy2.jpg"></div>
+                  <div class="bigimage"><img src="images/IMG_8697-1500.jpg"></div>
+                  <div class="bigimage"><img src="images/IMG_8731i.jpg"></div>
+                  <div class="bigimage"><img src="images/IMG_8797i.jpg"></div>
+                  <div class="bigimage"><img src="images/1.png"></div>
+                  <div class="bigimage"><img src="images/steel-glory.jpg"></div>
+
 </div>
 
 <div class="down">Info</div>
@@ -479,7 +432,7 @@ $(document).ready(function(){
 
     $(".down").click(function(){
       var one = $(".halfsection").offset();
-      var two = $(window).height()*.5;
+      var two = $(window).height()*.15;
 
         $("body,html").animate({scrollTop: one.top-two},700);
 
@@ -497,15 +450,23 @@ $(document).ready(function(){
     });
 
     $(".gallery").click(function(){
-      var one = $(".main-carousel").offset();
+      var one = $(".imagesection").offset();
 
-        $("body,html").animate({scrollTop: one.top+80},700);
+        $("body,html").animate({scrollTop: one.top-80},700);
     });
 
     var player = new Vimeo.Player($('#vimeo_player'));
     player.on('play', function() {
         player.setVolume(0)
     });
+
+    //$(window).scroll(function() {
+    //if ($(this).scrollTop() === 1000) { // this refers to window
+        //$(".down").css("color","black");
+    //} else {
+      //$(".down").css("color","white");
+    //}
+//});
 
 
 
