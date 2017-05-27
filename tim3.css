@@ -99,14 +99,15 @@ img.chair{
 }
 
 .aboutme {
-  border-radius: 5px;
+  border: 1px solid black;
+  border-radius: 1px;
   margin: 0;
   margin-left: 0;
   font-size: 15;
   position: absolute;
-  background-color: black;
+  background-color: white;
   z-index: 999;
-  color: white;
+  color: black;
   width: 40%;
   height: 60%;
   left: 50%;
@@ -140,13 +141,13 @@ img.chair{
 .hey {
   position: absolute;
   top: 3%;
-  right: 2%;
+  left: 2%;
   margin-top: 0;
   cursor: pointer;
   z-index: 999;
-  color: white;
+  color: black;
   font-size: 15;
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 50%;
   padding: 1%;
   font-family: Helvetica;
