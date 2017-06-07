@@ -7,6 +7,9 @@
 <meta name="viewport" content="width=device-width">
 <title> Cubic Cable Holder </title>
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="https://unpkg.com/prismic.io/dist/prismic.io.min.js"></script>
+<script src="https://use.typekit.net/cbn2mmn.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 </head>
 
@@ -29,12 +32,12 @@
 
 @font-face {
     font-family: Light;
-    src: url(HelveticaNeue-Light.otf) format("opentype");
+    src: url(CANET.ttf) format("opentype");
 }
 
 
 html {
-  font-family: Light;
+  font-family: "orpheuspro";
   font-weight: 100;
   width: 100%;
   height: 100%;
@@ -131,7 +134,6 @@ html {
 .buyone,.buytwo,.buythree{
   font-size: 20;
   border-radius: 2px;
-  font-family: Light;
   font-weight: 100;
   cursor: pointer;
   text-align: center;
@@ -142,6 +144,7 @@ html {
   color: #bfbfbf;
   text-decoration: none;
   padding: .5%;
+  padding-top: 1.5%;
   border: 1px solid #bfbfbf;
 }
 
@@ -247,12 +250,12 @@ html {
   -webkit-transform:translate(-50%,0%);
 }
 
-.bigimage > img{
+.bigimage{
   position: relative;
   float: top;
   left: 50%;
-  width: 100%;
-  margin-bottom: 3%;
+  width: 100% !important;
+  margin-bottom: 6%;
   height: auto;
   transform:translate(-50%,0%);
   -webkit-transform:translate(-50%,0%);
@@ -300,7 +303,6 @@ html {
 
 .checkout {
   border-radius: 2px;
-  font-family: Light;
   font-weight: 100;
   display: none;
   z-index: 999;
@@ -349,7 +351,6 @@ a {
 .removeone,.removetwo,.removethree {
   border-radius: 2px;
   border: 1px solid #bfbfbf;
-  font-family: Light;
   font-weight: 100;
   margin: none;
   right: 0%;
@@ -377,19 +378,12 @@ a {
   padding-right: 5px;
   font-family: Helvetica;
   font-weight: 100;
-  border: 1px solid #bfbfbf;
   position: absolute;
   margin: 0;
   top: 1%;
   left: 2%;
   font-size: 25;
   cursor: pointer;
-  border-radius: 2px;
-}
-
-.close:hover {
-    color: black;
-  background-color: #bfbfbf;
 }
 
 .phonesplash {
@@ -561,33 +555,10 @@ a {
     <source src="CCH_DEMO_FINAL.mov" type="video/mp4">
     </video>
     <img class="phonesplash"  src="images/IMG_8797i.jpg">
-    <p class="desc">Cubic Cable Holder is designed to accomplish a singular task:
-    anchoring charging cables that will otherwise fall off the table
-    when unplugged. The product is precisely machined from solid
-    metals, followed by a proprietary manual lapping polish process
-    to give the surfaces a lustrous finish.<br><br>
-    We are convinced by things that show internal complexity, that
-    show the traces of an interesting evolution. Daily use of the
-    product imbues it a mysteriously elegant patina over time. It
-    provides utility while involves you as part of its completion.
-    </p>
-
-    <div class="imagegallery">
-        <div class="bigimage"><img src="images/1.jpg"></div>
-        <div class="bigimage"><img src="images/3.jpg"></div>
-        <div class="bigimage"><img src="images/IMG_8006.jpg"></div>
-        <div class="bigimage"><img src="images/IMG_8669-1500.jpg"></div>
-        <div class="bigimage"><img src="images/IMG_8670 copy2.jpg"></div>
-        <div class="bigimage"><img src="images/IMG_8697-1500.jpg"></div>
-        <div class="bigimage"><img src="images/IMG_8731i.jpg"></div>
-        <div class="bigimage"><img src="images/IMG_8797i.jpg"></div>
-        <div class="bigimage"><img src="images/1.png"></div>
-        <div class="bigimage"><img src="images/steel-glory.jpg"></div>
-    </div>
 
     <div class="contain">
         <div class="test">
-            <img class="pimage" src="images/copper-transparent.gif">
+            <img class="pimage" src="images/copper.gif">
             <h1 class="material">Copper</h1>
             <p class="info">CNC machined from solid pure copper, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time.</p>
             <p class="details">Weight<br>Dimension</p>
@@ -595,7 +566,7 @@ a {
             <a class="buyone">Add to cart</a> 
         </div>
         <div class="test">
-            <img class="pimage" src="images/brass-transparent.gif">
+            <img class="pimage" src="images/brass.gif">
             <h1 class="material">Brass</h1>
             <p class="info">CNC machined from solid pure brass, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time.</p>
             <p class="details">Weight<br>Dimension</p>
@@ -603,7 +574,7 @@ a {
             <a class="buytwo">Add to cart</a>
         </div>
         <div class="test">
-            <img class="pimage" src="images/steel-transparent.gif">
+            <img class="pimage" src="images/steel.gif">
             <h1 class="material">Stainless</h1>
             <p class="info">CNC machined from solid pure stainless steel, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time.</p>
             <p class="details">Weight<br>Dimension</p>
@@ -612,14 +583,13 @@ a {
         </div>
     </div>
 
-
     <div class="down">Cubic<br>Cable<br>Holder</div>
     <div class="purchase">Purchase</div>
     <div class="gallery">Gallery</div>
     <div class="cart"> Cart (<p class="cartcount">0</p>) </div>
 
     <div class="cartpage">
-      <p class="close"> X </p>
+      <p class="close"> <!--&#62;-->X </p>
       <p class="empty"> Cart is currently empty.</p>
       <p class="total"> Total:</p> 
       <div class="totalnumber"> $<p>0</p>.00</div>
@@ -631,6 +601,58 @@ a {
 <script> 
 
 $(document).ready(function(){
+
+
+  Prismic.Api('https://cubiccableholder.prismic.io/api', function (err, Api) {
+    Api.form("everything")
+    .ref(Api.master())
+    .query(Prismic.Predicates.at("document.type", "gallery_image"))
+    .submit(function (err, response) {
+      var results = response.results;
+      var body = $("body");
+      var order;
+      var images = $("<div></div>");
+      var image;
+
+      for (var i = 0; i < results.length; i++) {
+        // getting chunks of data from the prismic array
+        image = results[i].getStructuredText("gallery_image.gallery_image").asHtml();
+        
+        images.addClass("imagegallery").insertBefore($(".contain"));
+        images.append(image);
+        //images.append(image);
+      }
+      // add class to all images in the gallery 
+
+      $(".imagegallery img").addClass("bigimage");
+
+
+    });
+  }, "MC5XVGN6bFNnQUFDZ0ExeDI4.Me-_ve-_vS4v77-9YwZ377-977-977-9ZwXvv73vv73vv70C77-977-977-9Iu-_vR1lFu-_vTLvv73vv71H77-9");
+
+  Prismic.Api('https://cubiccableholder.prismic.io/api', function (err, Api) {
+    Api.form("everything")
+    .ref(Api.master())
+    .query(Prismic.Predicates.at("document.type", "description"))
+    .submit(function (err, response) {
+      var results = response.results;
+      var body = $("body");
+      var description;
+
+      for (var i = 0; i < results.length; i++) {
+        // getting chunks of data from the prismic array
+        description = results[i].getStructuredText("description.description").asText();
+      
+        
+        var bodyElem = $("<p></p>");
+        bodyElem.addClass("desc");
+        $(bodyElem).insertBefore($(".imagegallery"));
+        bodyElem.append(description);
+      }
+
+    });
+  }, "MC5XVGN6bFNnQUFDZ0ExeDI4.Me-_ve-_vS4v77-9YwZ377-977-977-9ZwXvv73vv73vv70C77-977-977-9Iu-_vR1lFu-_vTLvv73vv71H77-9");
+
 
     var cartItems = [];
     var shopifyLink = "http://nihil-artikel.myshopify.com/cart/";
@@ -653,7 +675,7 @@ $(document).ready(function(){
     });
 
     $(".gallery").click(function(){
-      var one = $(".bigimage > img").offset();
+      var one = $(".imagegallery").offset();
       var two = $(window).height()*.05;
         $("body,html").animate({scrollTop: one.top-two},700);
     });
