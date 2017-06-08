@@ -268,7 +268,7 @@ html {
   height: 100%;
   top: 0;
   position: fixed;
-  right: -51%;
+  right: -53%;
   background-color: black;
   width: 50%;
   border-left: 1px solid #bfbfbf;
@@ -497,7 +497,7 @@ a {
 
                   .cartpage {
                     width: 100%;
-                    right: -100%;
+                    right: -102%;
                   }
 
                   .out {
