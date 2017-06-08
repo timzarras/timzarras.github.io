@@ -14,14 +14,22 @@
 }
 
 @font-face {
-    font-family: Light;
-    src: url(CANET.ttf) format("opentype");
+font-family: 'Canela Web';
+src: url('Canela-Thin-Web.eot');
+src: url('Canela-Thin-Web.eot?#iefix') format('embedded-opentype'),
+url('Canela-Thin-Web.woff2') format('woff2'),
+url('Canela-Thin-Web.woff') format('woff');
+font-weight: 100;
+font-style: normal;
+font-stretch: normal;
 }
 
 
 html {
-  font-family: Light;
-  font-weight: 300;
+  font-family: 'Canela Web';
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
   width: 100%;
   height: 100%;
   margin: 0;
