@@ -37,7 +37,7 @@
 
 
 html {
-  font-family: Light;
+  font-family: "orpheuspro";
   font-weight: 300;
   width: 100%;
   height: 100%;
@@ -328,7 +328,7 @@ html {
   font-size: 25;
   left: 2.5%;
   top: 8%;
-  height: 10%;
+  height: 70px;
   width: 95%;
   position: relative;
   line-height: 1;
@@ -342,16 +342,18 @@ a {
 
 .producttitle {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 0px;
+  transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%);
 }
 .removeone,.removetwo,.removethree {
   border-radius: 2px;
   border: 1px solid #bfbfbf;
   margin: none;
-  right: 0%;
+  left: 0;
   position: absolute;
-  top: -2px;
+  top: -7px;
   z-index: 999;
   cursor: pointer;
   padding: 1%;
@@ -374,7 +376,7 @@ a {
   height: 30px;
   position: absolute;
   margin: 0;
-  top: 1%;
+  top: 1.5%;
   left: 1.5%;
   font-size: 25;
   cursor: pointer;
@@ -411,6 +413,13 @@ a {
   top: 51%;
 }
 
+.price {
+  top: 0px;
+  right: 0%;
+  position: absolute;
+  display: inline;
+}
+
 
     @media screen and (max-width: 1300px){
 
@@ -421,17 +430,13 @@ a {
       .test {
         width: 100%;
         font-size: 25;
-        height: 400px;
+        height: 420px;
       }
 
       .close {
         width: 20px;
         height: 20px;
       }
-
-
-
-
 
 
 
@@ -443,6 +448,10 @@ a {
         html, body {
           font-size: 16 !important;
         }
+
+        .price {
+        top: 0px;
+      }
 
         .phonesplash,.contain,.imagegallery,.desc {
         width: 60% !important;
@@ -492,7 +501,7 @@ a {
           font-size: 16;
           width: 100%;
           left: 50%;
-          height: 400px !important;
+          height: 410px !important;
           float: top;
           transform:translate(-50%,0%);
           -webkit-transform:translate(-50%,0%);
@@ -559,7 +568,7 @@ a {
         <div class="test">
             <img class="pimage" src="images/copper.gif">
             <h1 class="material">Copper</h1>
-            <p class="info">CNC machined from solid pure copper, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time.</p>
+            <p class="info">CNC machined from solid pure copper, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time. Available for $40.</p>
             <p class="details">Weight<br>Dimension</p>
             <p class="dim">105g<br>24 cubic mm</p>
             <a class="buyone">Add to cart</a> 
@@ -567,7 +576,7 @@ a {
         <div class="test">
             <img class="pimage" src="images/brass.gif">
             <h1 class="material">Brass</h1>
-            <p class="info">CNC machined from solid pure brass, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time.</p>
+            <p class="info">CNC machined from solid pure brass, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time. Available for $40.</p>
             <p class="details">Weight<br>Dimension</p>
             <p class="dim">105g<br>24 cubic mm</p>
             <a class="buytwo">Add to cart</a>
@@ -575,7 +584,7 @@ a {
         <div class="test">
             <img class="pimage" src="images/steel.gif">
             <h1 class="material">Stainless</h1>
-            <p class="info">CNC machined from solid pure stainless steel, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time.</p>
+            <p class="info">CNC machined from solid pure stainless steel, manually surface lapped and tumble polished to mirror finish. Ages gracefully over time. Available for $40.</p>
             <p class="details">Weight<br>Dimension</p>
             <p class="dim">105g<br>24 cubic mm</p>
             <a class="buythree">Add to cart</a>
@@ -691,7 +700,7 @@ $(document).ready(function(){
           return val*1+40 
         });
 
-        $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Copper</p><p class='removeone'>Remove</p></div>");
+        $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Copper</p><p class='price'>$40</p><p class='removeone'>Remove</p></div>");
           //add variant to array//
           cartItems.push('35068487235:1');
 
@@ -707,7 +716,7 @@ $(document).ready(function(){
         return val*1+40 
         });
 
-      $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Brass</p><p class='removetwo'>Remove</p></div>");
+      $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Brass</p><p class='price'>$40</p><p class='removetwo'>Remove</p></div>");
         //add variant to array//
         cartItems.push('35068360067:1');
 
@@ -724,7 +733,7 @@ $(document).ready(function(){
         return val*1+40 
         });
 
-      $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Stainless</p><p class='removethree'>Remove</p></div>");
+      $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Stainless</p><p class='price'>$40</p><p class='removethree'>Remove</p></div>");
         //add variant to array//
         cartItems.push('35068492547:1');
 
