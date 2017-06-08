@@ -15,7 +15,7 @@
 
 @font-face {
 font-family: 'Canela Web';
-/*src: url('Canela-Thin-Web.eot');*/
+src: url('Canela-Thin-Web.eot');
 src: url('Canela-Thin-Web.woff2') format('woff2'),
 url('Canela-Thin-Web.woff') format('woff');
 font-weight: 100;
