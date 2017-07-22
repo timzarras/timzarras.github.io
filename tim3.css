@@ -468,7 +468,6 @@ border: none;
 img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.connection,img.renderings,img.mei {
   top: 50%;
   left: 50%;
-  width: 80% !important;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
 }
