@@ -399,7 +399,9 @@ li a:hover {
 }
 
 .about {
-  display: none;
+  position: absolute;
+  left: 80% !important;
+border: none;
 }
 
 #menu {
@@ -411,6 +413,7 @@ li a:hover {
 }
 
 .info {
+  font-size: 15;
   text-align: justify;
   top: 50%;
   left: 50%;
@@ -421,6 +424,7 @@ li a:hover {
 }
 
 .aboutme {
+  border: none;
   background-color: transparent;
   color: black;
   width: 100%;
@@ -433,6 +437,7 @@ li a:hover {
 }
 
 .aboutme p {
+  border: none;
   text-align: justify;
   font-size: 13;
 }
@@ -463,6 +468,7 @@ li a:hover {
 img.poster, img.table,img.displayobjects,img.heater,img.t21i,img.chair,img.connection,img.renderings,img.mei {
   top: 50%;
   left: 50%;
+  width: 80% !important;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
 }
