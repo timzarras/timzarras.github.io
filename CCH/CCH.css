@@ -238,9 +238,11 @@ html {
 }
 
 .bigimage{
+  background-color: transparent;
   position: relative;
   float: top;
   left: 50%;
+  height: auto;
   width: 100% !important;
   margin-bottom: 6%;
   height: auto;

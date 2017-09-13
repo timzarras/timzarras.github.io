@@ -2,56 +2,55 @@ $(document).ready(function(){
 
   // getting prismic posts //
 
-  Prismic.Api('https://cubiccableholder.prismic.io/api', function (err, Api) {
+  Prismic.Api('https://kebeicch.prismic.io/api', function (err, Api) {
     Api.form("everything")
     .ref(Api.master())
-    .query(Prismic.Predicates.at("document.type", "gallery_image"))
+    .query(Prismic.Predicates.at("document.type", "cch_content"))
     .submit(function (err, response) {
       var results = response.results;
       var body = $("body");
-      var order;
-      var images = $("<div></div>");
-      var image;
+      var desciption;
+      var images;
 
       for (var i = 0; i < results.length; i++) {
         
-        image = results[i].getStructuredText("gallery_image.gallery_image").asHtml();
-        images.addClass("imagegallery").insertBefore($(".contain"));
-        images.append(image);
+        description = results[i].getStructuredText("cch_content.description").asHtml();
+        images = results[i].getGroup("cch_content.images1").asHtml();
+
+        var gallery = $("<div class='imagegallery'></div>");
+        var info = $("<p class='desc'></p>");
+
+        info.append(description);
+        gallery.append(images);
+
+        
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+          
+          $(info).appendTo(body).insertAfter(".phonesplash");
+
+        } else {
+
+          $(info).appendTo(body).insertAfter(".splash");
+
+        }
+        $(gallery).appendTo(body).insertBefore(".contain");
+
+        $(".imagegallery > section > img").addClass("bigimage");
+
+      
+
       }
 
       // add class to all images in the gallery 
-      $(".imagegallery img").addClass("bigimage");
-
-
-    });
-  }, "MC5XVGN6bFNnQUFDZ0ExeDI4.Me-_ve-_vS4v77-9YwZ377-977-977-9ZwXvv73vv73vv70C77-977-977-9Iu-_vR1lFu-_vTLvv73vv71H77-9");
-
-  Prismic.Api('https://cubiccableholder.prismic.io/api', function (err, Api) {
-    Api.form("everything")
-    .ref(Api.master())
-    .query(Prismic.Predicates.at("document.type", "description"))
-    .submit(function (err, response) {
-      var results = response.results;
-      var body = $("body");
-      var description;
-
-      for (var i = 0; i < results.length; i++) {
-        
-        description = results[i].getStructuredText("description.description").asText();
       
-        var bodyElem = $("<p></p>");
-        bodyElem.addClass("desc");
-        $(bodyElem).insertBefore($(".imagegallery"));
-        bodyElem.append(description);
-      }
+
 
     });
-  }, "MC5XVGN6bFNnQUFDZ0ExeDI4.Me-_ve-_vS4v77-9YwZ377-977-977-9ZwXvv73vv73vv70C77-977-977-9Iu-_vR1lFu-_vTLvv73vv71H77-9");
+  }, "MC5XV1pSRUNZQUFDa0EzSkow.X--_vRwYOu-_vU3vv70_Ne-_vSvvv70TSO-_vTnvv73vv73vv73vv71DW--_ve-_ve-_vTIzU--_ve-_vUg");
 
 
-    var cartItems = [];
-    var shopifyLink = "http://nihil-artikel.myshopify.com/cart/";
+
+
 
     $(".down,.arrow").click(function(){
       var one = $(".desc").offset();
@@ -76,6 +75,8 @@ $(document).ready(function(){
       $(".cartpage").toggleClass("out");
     });
 
+    var price = 39;
+
     $(".buyone").click(function(){
 
         $(".cartcount").html(function(i, val) { 
@@ -83,10 +84,10 @@ $(document).ready(function(){
         });
 
         $(".totalnumber > p").html(function(i, val) {
-          return val*1+40 
+          return val*1+price
         });
 
-        $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Copper</p><p class='price'>$40</p><p class='removeone'>Remove</p></div>");
+        $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Copper</p><p class='price'>$39</p><p class='removeone'>Remove</p></div>");
           //add variant to array//
           cartItems.push('35068487235:1');
 
@@ -99,10 +100,10 @@ $(document).ready(function(){
           return val*1+1 });
 
         $(".totalnumber > p").html(function(i, val) {
-          return val*1+40 
+          return val*1+price
           });
 
-        $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Brass</p><p class='price'>$40</p><p class='removetwo'>Remove</p></div>");
+        $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Brass</p><p class='price'>$39</p><p class='removetwo'>Remove</p></div>");
           //add variant to array//
           cartItems.push('35068360067:1');
 
@@ -116,10 +117,10 @@ $(document).ready(function(){
           });
 
         $(".totalnumber > p").html(function(i, val) {
-          return val*1+40 
+          return val*1+price
           });
 
-        $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Stainless</p><p class='price'>$40</p><p class='removethree'>Remove</p></div>");
+        $( ".cartpage" ).append("<div class='cartitem'><p class='producttitle'>Stainless</p><p class='price'>$39</p><p class='removethree'>Remove</p></div>");
           //add variant to array//
           cartItems.push('35068492547:1');
 
@@ -142,7 +143,7 @@ $(document).ready(function(){
         });
         //subtract 40 from total//
         $(".totalnumber > p").html(function(i, val) {
-          return val*1-40 
+          return val*1-price 
         });
 
         var search_term = '35068487235:1';
@@ -168,7 +169,7 @@ $(document).ready(function(){
         });
         //subtract 40 from total//
         $(".totalnumber > p").html(function(i, val) {
-          return val*1-40 
+          return val*1-price 
         });
 
         var search_term = '35068360067:1';
@@ -195,7 +196,7 @@ $(document).ready(function(){
         });
         //subtract 40 from total//
         $(".totalnumber > p").html(function(i, val) {
-          return val*1-40 
+          return val*1-price 
         });
 
         var search_term = '35068492547:1';
@@ -220,6 +221,9 @@ $(document).ready(function(){
         }
 
     });
+
+    var cartItems = [];
+    var shopifyLink = "http://nihil-artikel.myshopify.com/cart/";
 
     // generate final permalink //
 
