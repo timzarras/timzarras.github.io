@@ -1,0 +1,150 @@
+
+@font-face {
+    font-family: u;
+    src: url(Union-Regular.otf) format("opentype");
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-moz-scrollbar {
+    display: none;
+}
+
+::-scrollbar {
+    display: none;
+}
+
+
+html {
+	margin: 0;
+	font-family: u;
+	font-weight: 100 !important;
+}
+
+body {
+	margin: 0;
+  margin-top: 35px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+	width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+}
+
+a,a:visited{
+  color: #007fff;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+
+
+.title,.year,.materials,.type, h1  {
+  font-size: 20 !important;
+  font-weight: 100;
+}
+
+.type {
+  margin: 0;
+  margin-top: 10px !important;
+  margin-bottom: 10px;
+}
+
+section {
+  margin: 0;
+}
+
+[data-field="type"] > h1{
+  position: relative;
+  color: white;
+  background-color: #e2e2e2;
+  width: auto;
+  float: left;
+  padding: 6px;
+  margin-right: 3px;
+  font-size: 15 !important;
+  cursor: pointer;
+}
+
+.bop {
+  color: white;
+  background-color: black;
+}
+
+.type,.materials {
+  position: relative;
+  margin-left: 0 !important;
+}
+
+.title {
+  font-size: 20 !important;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  position: relative;
+  display: inline;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.row {
+  padding: 1%;
+  font-weight: 500;
+  display: inline;
+  top: 0;
+  left: 200px;
+  position: relative;
+  height: auto;
+  width: 25vw;
+  float: left;
+  cursor: pointer;
+  margin: 0;
+  -webkit-transition: background-color .2s ease-in-out;
+  -moz-transition: background-color .2s ease-in-out;
+  -o-transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
+}
+
+.row:hover {
+  background-color: #f9f9f9;
+}
+
+.rowWidth {
+  width: 25%;
+}
+
+.white {
+  pointer-events: none;
+  background-color: white !important;
+}
+
+
+/*.row:hover {
+  color: #4c4c4c;
+}*/
+
+.back {
+  position: fixed;
+  left: 1vw;
+  margin-top: 0;
+  top: 1.25vh;
+  font-size: 20;
+  cursor: pointer;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+img {
+  margin-top: 5vh;
+  display: none;
+  width: 100%;
+}
