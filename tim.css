@@ -34,7 +34,9 @@ body {
 }
 
 a,a:visited{
+  cursor: pointer;
   color: #007fff;
+  pointer-events: auto !important;
 }
 
 a:hover {
@@ -104,7 +106,7 @@ section {
   height: auto;
   width: 25vw;
   float: left;
-  cursor: pointer;
+  cursor: pointer !important;
   margin: 0;
   -webkit-transition: background-color .2s ease-in-out;
   -moz-transition: background-color .2s ease-in-out;
@@ -114,6 +116,7 @@ section {
 
 .row:hover {
   background-color: #f9f9f9;
+  cursor: pointer !important;
 }
 
 .rowWidth {
