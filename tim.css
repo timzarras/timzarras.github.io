@@ -157,3 +157,13 @@ img {
   display: none;
   width: 100%;
 }
+
+@media screen and (max-width: 736px){
+
+
+  .row {
+    left: 7% !important;
+    margin-left: 0 !important;
+  }
+
+}

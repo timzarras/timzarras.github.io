@@ -97,7 +97,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 				} else {
 
 					$("body").css("margin-left","0");
-					$(".row").css({"width":"85%","left":"7.5%","top":"10%","margin-bottom":"60px","padding-bottom":"40px","border-bottom":"2px solid #e2e2e2"});
+					$(".row").css({"width":"85%","left":"7.5% !important","top":"10%","margin-bottom":"60px","padding-bottom":"40px","border-bottom":"2px solid #e2e2e2"});
 					$("img").show();
 				}
 
