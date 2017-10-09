@@ -50,34 +50,31 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
       // append reordered divs to project section //
       $(ordered).appendTo("body");
 
+
 			if ($(window).width()>750) {
-				$("html,body").hide();
-			setTimeout(function(){
-				var $body = $('body').masonry({
-	  		// options
-				columnWidth: 20,
-				percentPosition: true,
-				itemSelector: '.row',
-				horizontalOrder: true,
-				gutter: 10,
-				transitionDuration: '0s',
-				resize: true
-				});
-			},200);
 
-			var $body = $('body').masonry({
-			// options
-			columnWidth: 20,
-			percentPosition: true,
-			itemSelector: '.row',
-			horizontalOrder: true,
-			gutter: 10,
-			transitionDuration: '0s',
-			resize: true
-			});
+      //
+
+              $("html,body").hide();
 
 
-				$("html,body").fadeIn(400);
+      var $body= $('body').imagesLoaded( function() {
+    				$body.masonry({
+    	  		// options
+    				columnWidth: 25,
+    				percentPosition: true,
+    				itemSelector: '.row',
+    				horizontalOrder: true,
+    				gutter: 20,
+    				transitionDuration: '0s',
+    				resize: true
+    				});
+       });
+
+
+				$("html,body").delay(400).fadeIn(400);
+
+        $(".row > .images > section:first-child > p > img").show();
 
 
 
@@ -96,6 +93,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 					$(".back").click(function(){
 						$("body").animate({scrollTop:0},50);
 						$("img,.back").hide();
+            $(".row > .images > section:first-child > p > img").show()
 						$(".row").removeClass("white").css({"position":"relative","top":"auto","left":"auto","width":"25vw"}).show();
 						$(".filters").show();
 							$body.masonry('reloadItems');
@@ -105,7 +103,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 				} else {
 
 					$("body").css("margin-left","0");
-					$(".row").css({"width":"85%","left":"7.5%","top":"10%","margin-bottom":"60px","padding-bottom":"60px","border-bottom": "2px solid #e2e2e2"});
+					$(".row").css({"width":"85%","left":"7.5%","top":"10%","margin-bottom":"60px","padding-bottom":"40px","border-bottom": "2px solid #e2e2e2"});
 					$("img").show();
 				}
     });
@@ -119,8 +117,3 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
 //
 }); // end of document ready //
-
-function activeFilter( id ) {
-    $('.filters > li').css({"background-color":"#e2e2e2","color":"white"});
-    $(id).css({"background-color":"black","color":"white"});
-}

@@ -46,9 +46,14 @@ a:hover {
 
 
 
-.title,.year,.materials,.type, h1  {
-  font-size: 20 !important;
+.title,.materials,.type, h1  {
+  font-size: 18 !important;
   font-weight: 100;
+}
+
+.year {
+  font-size: 22;
+  margin-bottom: 30px;
 }
 
 .type {
@@ -67,9 +72,9 @@ section {
   background-color: #e2e2e2;
   width: auto;
   float: left;
-  padding: 6px;
+  padding: 5px;
   margin-right: 3px;
-  font-size: 15 !important;
+  font-size: 14 !important;
   cursor: pointer;
 }
 
@@ -84,10 +89,10 @@ section {
 }
 
 .title {
-  font-size: 20 !important;
+  font-size: 22 !important;
   font-weight: 500;
   margin-top: 20px;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
   position: relative;
   display: inline;
   top: 0;
@@ -101,17 +106,17 @@ section {
   font-weight: 500;
   display: inline;
   top: 0;
-  left: 200px;
+  /*left: 200px;*/
   position: relative;
   height: auto;
-  width: 25vw;
+  width: 24vw;
   float: left;
   cursor: pointer !important;
+  margin-bottom: 30px !important;
   margin: 0;
   -webkit-transition: background-color .2s ease-in-out;
   -moz-transition: background-color .2s ease-in-out;
   -o-transition: background-color .2s ease-in-out;
-  transition: background-color .2s ease-in-out;
 }
 
 .row:hover {
@@ -138,7 +143,7 @@ section {
   left: 1vw;
   margin-top: 0;
   top: 1.25vh;
-  font-size: 20;
+  font-size: 22;
   cursor: pointer;
 }
 
@@ -147,6 +152,7 @@ section {
 }
 
 img {
+  position: relative;
   margin-top: 5vh;
   display: none;
   width: 100%;
