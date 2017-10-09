@@ -50,14 +50,6 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
       // append reordered divs to project section //
       $(ordered).appendTo("body");
 
-
-			if ($(window).width()>750) {
-
-      //
-
-              $("html,body").hide();
-
-
       var $body= $('body').imagesLoaded( function() {
     				$body.masonry({
     	  		// options
@@ -72,11 +64,13 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
        });
 
 
-				$("html,body").delay(400).fadeIn(400);
+			if ($(window).width()>750) {
+
+      $("html,body").hide();
+
+				$("html,body").fadeIn(400);
 
         $(".row > .images > section:first-child > p > img").show();
-
-
 
 					$(".row").click(function(){
 						var height = $(window).height();
@@ -103,9 +97,11 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 				} else {
 
 					$("body").css("margin-left","0");
-					$(".row").css({"width":"85%","left":"7.5%","top":"10%","margin-bottom":"60px","padding-bottom":"40px","border-bottom": "2px solid #e2e2e2"});
+					$(".row").css({"width":"85%","left":"7.5%","top":"10%","margin-bottom":"60px","padding-bottom":"40px","border-bottom":"2px solid #e2e2e2"});
 					$("img").show();
 				}
+
+
     });
 
 
