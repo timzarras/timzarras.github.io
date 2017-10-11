@@ -50,7 +50,6 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
       // append reordered divs to project section //
       $(ordered).appendTo("body");
 
-      $("html,body").hide();
 
       var $body= $('body').imagesLoaded( function() {
     				$body.masonry({
@@ -59,19 +58,17 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
     				percentPosition: true,
     				itemSelector: '.row',
     				horizontalOrder: true,
-    				gutter: 30,
+    				gutter: 23,
     				transitionDuration: '0s',
     				resize: true
     				});
        });
 
-       $("html,body").fadeIn(400);
-
 			if ($(window).width()>750) {
 
-      // $("html,body").hide();
-      //
-			// 	$("html,body").fadeIn(400);
+        $("html,body").hide();
+
+				$("html,body").fadeIn(400);
 
         $(".row > .images > section:first-child > .block-img > img").show();
         $(".row > .images > section > p").not(".block-img:first-child").hide();
