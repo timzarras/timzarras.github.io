@@ -149,9 +149,12 @@ section {
 }
 
 .images > section > .block-img {
-  font-size: 18;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.images > section > p {
+  font-size: 18 !important;;
 }
 
 img {
