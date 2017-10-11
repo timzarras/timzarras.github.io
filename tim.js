@@ -50,32 +50,37 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
       // append reordered divs to project section //
       $(ordered).appendTo("body");
 
+      $("html,body").hide();
+
       var $body= $('body').imagesLoaded( function() {
     				$body.masonry({
     	  		// options
-    				columnWidth: 25,
+    				columnWidth: 50,
     				percentPosition: true,
     				itemSelector: '.row',
     				horizontalOrder: true,
-    				gutter: 20,
+    				gutter: 30,
     				transitionDuration: '0s',
     				resize: true
     				});
        });
 
+       $("html,body").fadeIn(400);
 
 			if ($(window).width()>750) {
 
-      $("html,body").hide();
+      // $("html,body").hide();
+      //
+			// 	$("html,body").fadeIn(400);
 
-				$("html,body").fadeIn(400);
-
-        $(".row > .images > section:first-child > p > img").show();
+        $(".row > .images > section:first-child > .block-img > img").show();
+        $(".row > .images > section > p").not(".block-img:first-child").hide();
 
 					$(".row").click(function(){
 						var height = $(window).height();
 							$(".row").not(this).hide();
 							$(".back").show();
+              $(".row > .images > section > p").show();
 							$(".filters").hide();
 							$(this).addClass("white").css({"position":"absolute","top":"0","left":"15vw","width":"60vw"});
 							$("body").animate({scrollTop:0},10);
@@ -85,6 +90,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 					});
 
 					$(".back").click(function(){
+            $(".row > .images > section > p").not(".block-img:first-child").hide();
 						$("body").animate({scrollTop:0},50);
 						$("img,.back").hide();
             $(".row > .images > section:first-child > p > img").show()
@@ -95,11 +101,19 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 					});
 
 				} else {
+          $("body").css("margin-left","0");
+					$(".row").css({"width":"85%","left":"7.5% !important","top":"10%","margin-bottom":"60px","padding-bottom":"40px","border-bottom":"2px solid #e2e2e2"});
+					$("img").show();
+        }
+
+        if( /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) ) {
 
 					$("body").css("margin-left","0");
 					$(".row").css({"width":"85%","left":"7.5% !important","top":"10%","margin-bottom":"60px","padding-bottom":"40px","border-bottom":"2px solid #e2e2e2"});
 					$("img").show();
-				}
+				} else {
+
+        }
 
 
     });

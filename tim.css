@@ -125,10 +125,6 @@ section {
   cursor: pointer !important;
 }
 
-.rowWidth {
-  width: 25%;
-}
-
 .white {
   pointer-events: none;
   background-color: white !important;
@@ -150,6 +146,12 @@ section {
 
 .back:hover {
   text-decoration: underline;
+}
+
+.images > section > .block-img {
+  font-size: 18;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 img {
