@@ -219,11 +219,13 @@ section {
 .about {
   color: #444444;
   position: absolute;
-  left: 1vw;
+  left: 50%;
   margin-top: 0;
   top: 1.25vh;
   font-size: 22;
   cursor: pointer;
+  transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%);
 }
 
 .back:hover,.about:hover {
