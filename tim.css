@@ -21,15 +21,13 @@ html {
 	margin: 0;
 	font-family: u;
 	font-weight: 100 !important;
+  /*background-color: #f7f7f7;*/
 }
 
 body {
 	margin: 0;
-  margin-top: 35px;
-  margin-left: 5vw;
-  margin-right: 5vw;
-	width: 100vw;
-  height: 100vh;
+	width: 100%;
+  height: 100%;
   overflow: scroll;
   overflow-x: hidden;
 }
@@ -45,7 +43,64 @@ a:hover {
   text-decoration: underline;
 }
 
+.load {
+  position:fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 999;
+}
 
+
+.upper {
+  color: #444444;
+  background-color: black;
+  margin-top: 0;
+  position: fixed !important;
+  width: 100vw;
+  min-height: 50px;
+  float: bottom;
+  left: 0;
+  bottom: 0 !important;
+  overflow: hidden;
+  cursor: pointer;
+  /*border-bottom: 1px solid black;*/
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+  -o-transition: height .5s;
+}
+
+.name {
+  margin-top: 0;
+  font-size: 18;
+  position: absolute;
+  left: 1vw;
+  top: 10px;
+}
+
+.pro {
+  z-index: 999;
+  margin-top: 0;
+  font-size: 18;
+  position: absolute;
+  left: 1vw;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+.arch {
+  margin-left: 5vw;
+  margin-top: 0 !important;
+  background-color: none;
+  position: relative;
+  width: 100vw;
+  height: auto;
+  left: 0;
+  top: 35px !important;
+  margin-bottom: 10vh !important;
+}
 
 .title,.materials,.type, h1  {
   font-size: 18 !important;
@@ -61,6 +116,10 @@ a:hover {
   margin: 0;
   margin-top: 10px !important;
   margin-bottom: 10px;
+}
+
+.materials {
+  color: #444444;
 }
 
 section {
@@ -102,10 +161,12 @@ section {
   margin-top: 0;
 }
 
-.row {
+.row,.last {
+  /*border-top: 1px solid black;*/
   padding: 1%;
   font-weight: 500;
   display: inline;
+  margin-top: 0;
   top: 0;
   /*left: 200px;*/
   position: relative;
@@ -123,6 +184,17 @@ section {
 .row:hover {
   background-color: #f9f9f9;
   cursor: pointer !important;
+}
+
+.last {
+  position: absolute;
+  left: 4vw;
+  top: 7vh;
+}
+
+.last:hover {
+  pointer-events: none !important;
+  background-color: none !important;
 }
 
 .white {
@@ -144,7 +216,17 @@ section {
   cursor: pointer;
 }
 
-.back:hover {
+.about {
+  color: #444444;
+  position: absolute;
+  left: 1vw;
+  margin-top: 0;
+  top: 1.25vh;
+  font-size: 22;
+  cursor: pointer;
+}
+
+.back:hover,.about:hover {
   text-decoration: underline;
 }
 
