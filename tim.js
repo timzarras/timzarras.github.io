@@ -54,20 +54,19 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
 
 
-
 			if ($(window).width()>750) {
 
         var $body= $('.arch').imagesLoaded( function() {
-      				$body.masonry({
-      	  		// options
-      				columnWidth: 50,
-      				percentPosition: true,
-      				itemSelector: '.row',
-      				horizontalOrder: true,
-      				gutter: 23,
-      				transitionDuration: '0s',
-      				resize: true
-      				});
+              $body.masonry({
+              // options
+              columnWidth: 50,
+              percentPosition: true,
+              itemSelector: '.row',
+              horizontalOrder: true,
+              gutter: 23,
+              transitionDuration: '0s',
+              resize: true
+              });
 
               $(".load").fadeOut(200);
 
@@ -129,16 +128,15 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 					$("img").show();
           $(".upper").click(function(){
             var height = $(window).height();
-            if ($(".upper").height() < height/2){
-              $(".upper").css({"height":"100%","overflow":"scroll"});
-            } else {
+            if ($(".upper").height() > height/2){
               $(".upper").css({"height":"50px","overflow":"hidden"}).scrollTop(0);
+            } else {
+              $(".upper").css({"height":"100%","overflow":"scroll"});
             }
           });
         }
 
         if( /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) ) {
-          $(".load").hide();
           $(".last > .images > section > .block-img > img").css({"display":"inline","position":"relative"});
           $(".last").css({"left":"7.5%","width":"85%","height":"auto !important"});
           $("body").css("margin-left","0");
@@ -148,10 +146,10 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
           $("img").show();
           $(".upper").click(function(){
             var height = $(window).height();
-            if ($(".upper").height() < height/2){
-              $(".upper").css({"height":"100%","overflow":"scroll"});
-            } else {
+            if ($(".upper").height() > height/2){
               $(".upper").css({"height":"50px","overflow":"hidden"}).scrollTop(0);
+            } else {
+              $(".upper").css({"height":"100%","overflow":"scroll"});
             }
           });
 				} else {
