@@ -131,7 +131,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
             if ($(".upper").height() > height/2){
               $(".upper").css({"height":"50px","overflow":"hidden"}).scrollTop(0);
             } else {
-              $(".upper").css({"height":"100vh","overflow":"scroll"});
+              $(".upper").css({"height":"100%","overflow":"scroll"});
             }
           });
         }
@@ -149,7 +149,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
             if ($(".upper").height() > height/2){
               $(".upper").css({"height":"50px","overflow":"hidden"}).scrollTop(0);
             } else {
-              $(".upper").css({"height":"100vh","overflow":"scroll"});
+              $(".upper").css({"height":"100%","overflow":"scroll"});
             }
           });
 				} else {
