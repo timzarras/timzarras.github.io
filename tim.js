@@ -117,6 +117,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 					});
 
 				} else {
+          $(".load").hide();
           $(".last > .images > section > .block-img > img").css({"display":"inline","position":"relative"});
           $(".last").css({"left":"7.5%","width":"85%","height":"auto !important"});
           $("body").css("margin-left","0");
@@ -135,6 +136,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
         }
 
         if( /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) ) {
+          $(".load").hide();
           $(".last > .images > section > .block-img > img").css({"display":"inline","position":"relative"});
           $(".last").css({"left":"7.5%","width":"85%","height":"auto !important"});
           $("body").css("margin-left","0");
