@@ -60,6 +60,7 @@ a:hover {
   margin-top: 0;
   position: fixed !important;
   width: 100vw;
+  height: 50px;
   min-height: 50px;
   float: bottom;
   left: 0;

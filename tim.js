@@ -122,16 +122,16 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
           $(".last > .images > section > .block-img > img").css({"display":"inline","position":"relative"});
           $(".last").css({"left":"7.5%","width":"85%","height":"auto !important"});
           $("body").css("margin-left","0");
-          $(".arch").css({"margin-left":"0","width":"100%"});
+          $(".arch").css({"margin-left":"0","width":"100%","top":"10px"});
           $(".about").css({"top":"10px"});
-					$(".row").css({"width":"85%","left":"7.5%","top":"10%","margin-bottom":"60px","padding-bottom":"40px","border-bottom":"2px solid #e2e2e2","margin-left":"0"});
+					$(".row").css({"width":"85%","left":"7.5%","top":"0","margin-bottom":"60px","padding-bottom":"40px","border-bottom":"2px solid #e2e2e2","margin-left":"0"});
 					$("img").show();
           $(".upper").click(function(){
             var height = $(window).height();
             if ($(".upper").height() > height/2){
               $(".upper").css({"height":"50px","overflow":"hidden"}).scrollTop(0);
             } else {
-              $(".upper").css({"height":"100%","overflow":"scroll"});
+              $(".upper").css({"height":"100vh","overflow":"scroll"});
             }
           });
         }
@@ -140,16 +140,16 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
           $(".last > .images > section > .block-img > img").css({"display":"inline","position":"relative"});
           $(".last").css({"left":"7.5%","width":"85%","height":"auto !important"});
           $("body").css("margin-left","0");
-          $(".arch").css({"margin-left":"0","width":"100%"});
+          $(".arch").css({"margin-left":"0","width":"100%","top":"10px"});
           $(".about").css({"top":"10px"});
-          $(".row").css({"width":"85%","left":"7.5%","top":"10%","margin-bottom":"60px","padding-bottom":"40px","border-bottom":"2px solid #e2e2e2","margin-left":"0"});
+          $(".row").css({"width":"85%","left":"7.5%","top":"0","margin-bottom":"60px","padding-bottom":"40px","border-bottom":"2px solid #e2e2e2","margin-left":"0"});
           $("img").show();
           $(".upper").click(function(){
             var height = $(window).height();
             if ($(".upper").height() > height/2){
               $(".upper").css({"height":"50px","overflow":"hidden"}).scrollTop(0);
             } else {
-              $(".upper").css({"height":"100%","overflow":"scroll"});
+              $(".upper").css({"height":"100vh","overflow":"scroll"});
             }
           });
 				} else {
