@@ -52,24 +52,26 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
       $(".row:last").removeClass("row").addClass("last").css({"width":"40vw","margin-left":"0vw"}).appendTo(".upper");
 
-      var $body= $('.arch').imagesLoaded( function() {
-    				$body.masonry({
-    	  		// options
-    				columnWidth: 50,
-    				percentPosition: true,
-    				itemSelector: '.row',
-    				horizontalOrder: true,
-    				gutter: 23,
-    				transitionDuration: '0s',
-    				resize: true
-    				});
 
-            $(".load").fadeOut(200);
-
-       });
 
 
 			if ($(window).width()>750) {
+
+        var $body= $('.arch').imagesLoaded( function() {
+      				$body.masonry({
+      	  		// options
+      				columnWidth: 50,
+      				percentPosition: true,
+      				itemSelector: '.row',
+      				horizontalOrder: true,
+      				gutter: 23,
+      				transitionDuration: '0s',
+      				resize: true
+      				});
+
+              $(".load").fadeOut(200);
+
+         });
 
         $(".upper").click(function(){
           var height = $(window).height();
@@ -127,10 +129,10 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 					$("img").show();
           $(".upper").click(function(){
             var height = $(window).height();
-            if ($(".upper").height() > height/2){
-              $(".upper").css({"height":"50px","overflow":"hidden"}).scrollTop(0);
-            } else {
+            if ($(".upper").height() < height/2){
               $(".upper").css({"height":"100%","overflow":"scroll"});
+            } else {
+              $(".upper").css({"height":"50px","overflow":"hidden"}).scrollTop(0);
             }
           });
         }
@@ -146,10 +148,10 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
           $("img").show();
           $(".upper").click(function(){
             var height = $(window).height();
-            if ($(".upper").height() > height/2){
-              $(".upper").css({"height":"50px","overflow":"hidden"}).scrollTop(0);
-            } else {
+            if ($(".upper").height() < height/2){
               $(".upper").css({"height":"100%","overflow":"scroll"});
+            } else {
+              $(".upper").css({"height":"50px","overflow":"hidden"}).scrollTop(0);
             }
           });
 				} else {
