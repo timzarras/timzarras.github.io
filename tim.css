@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: u;
-    src: url(Union-Regular.otf) format("opentype");
+    src: url(ge-inspira.ttf);
 }
 
 ::-webkit-scrollbar {
@@ -18,9 +18,10 @@
 
 
 html {
+  letter-spacing: 1.125;
 	margin: 0;
 	font-family: u;
-	font-weight: 100 !important;
+	font-family: sans-serif;
   /*background-color: #f7f7f7;*/
 }
 
@@ -55,8 +56,9 @@ a:hover {
 
 
 .upper {
-  color: #444444;
-  background-color: black;
+  /*border-top: 1px solid black;*/
+  color: black;
+  background-color: white;
   margin-top: 0;
   position: fixed !important;
   width: 100vw;
@@ -104,12 +106,13 @@ a:hover {
 }
 
 .materials,.type, h1  {
-  font-size: 18 !important;
+  font-size: 20 !important;
   font-weight: 100;
 }
 
 .year {
   font-size: 22;
+  font-weight: 100;
   margin-bottom: 30px;
 }
 
@@ -120,7 +123,7 @@ a:hover {
 }
 
 .materials {
-  color: #444444;
+  color: black;
 }
 
 section {
@@ -151,7 +154,7 @@ section {
 
 .title {
   font-size: 22 !important;
-  font-weight: 500;
+  font-weight: 100;
   margin-top: 20px;
   margin-bottom: 100px;
   position: relative;
@@ -160,6 +163,10 @@ section {
   left: 0;
   margin-left: 0;
   margin-top: 0;
+}
+
+.title,.year {
+  font-weight: 300;
 }
 
 .row,.last {
@@ -218,7 +225,7 @@ section {
 }
 
 .about {
-  color: #444444;
+  color: black;
   position: absolute;
   left: 50%;
   margin-top: 0;

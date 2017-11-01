@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 
 
@@ -89,7 +88,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 				$("html,body").fadeIn(400);
 
 
-        $(".row > .images > section:first-child > .block-img > img").show();
+        // $(".row > .images > section:first-child > .block-img > img").show();
         $(".row > .images > section > p").not(".block-img:first-child").hide();
 
 
@@ -99,7 +98,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 							$(".back").show();
               $(".row > .images > section > p").show();
 							$(".upper,.about").hide();
-							$(this).addClass("white").css({"position":"absolute","top":"0","left":"15vw","width":"60vw"});
+							$(this).addClass("white").css({"position":"absolute","top":"0","left":"17.5vw","width":"50vw"});
 							$("body").animate({scrollTop:0},10);
 								setTimeout(function(){
 									$("img").fadeIn(900);
@@ -107,7 +106,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 					});
 
 					$(".back").click(function(){
-            $(".row > .images > section > p").not(".block-img:first-child").hide();
+            $(".row > .images > section > p").hide();
 						$("body").animate({scrollTop:0},50);
 						$("img,.back").hide();
             $(".row > .images > section:first-child > p > img,.last > .images > section > .block-img > img").show()
