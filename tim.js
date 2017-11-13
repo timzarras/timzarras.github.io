@@ -56,6 +56,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 			if ($(window).width()>750) {
 
         var $body= $('.arch').imagesLoaded( function() {
+
               $body.masonry({
               // options
               columnWidth: 50,
@@ -67,9 +68,11 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
               resize: true
               });
 
+              $(".load").fadeOut(200);
+
          });
 
-         $(".load").fadeOut(200);
+
 
         $(".upper").click(function(){
           var height = $(window).height();

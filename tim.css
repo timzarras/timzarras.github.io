@@ -27,6 +27,14 @@ body {
   overflow-x: hidden;
 }
 
+.testtt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+-webkit-transform:translate(-50%,-50%);
+}
+
 a,a:visited{
   cursor: pointer;
   color: #007fff;
