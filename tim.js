@@ -67,9 +67,9 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
               resize: true
               });
 
-              $(".load").fadeOut(200);
-
          });
+
+         $(".load").fadeOut(200);
 
         $(".upper").click(function(){
           var height = $(window).height();
