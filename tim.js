@@ -77,7 +77,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
         $(".upper").click(function(){
           var height = $(window).height();
           if ($(".upper").height() > height/2){
-            $(".upper").css({"height":"44px","overflow":"hidden"}).scrollTop(0);
+            $(".upper").css({"height":"46px","overflow":"hidden"}).scrollTop(0);
           } else {
             $(".upper").css({"height":"100vh","overflow":"scroll"});
           }
@@ -131,7 +131,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
           $(".upper").click(function(){
             var height = $(window).height();
             if ($(".upper").height() > height/2){
-              $(".upper").css({"height":"44px","overflow":"hidden"}).scrollTop(0);
+              $(".upper").css({"height":"46px","overflow":"hidden"}).scrollTop(0);
             } else {
               $(".upper").css({"height":"100%","overflow":"scroll"});
             }
@@ -149,7 +149,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
           $(".upper").click(function(){
             var height = $(window).height();
             if ($(".upper").height() > height/2){
-              $(".upper").css({"height":"44px","overflow":"hidden"}).scrollTop(0);
+              $(".upper").css({"height":"46px","overflow":"hidden"}).scrollTop(0);
             } else {
               $(".upper").css({"height":"100%","overflow":"scroll"});
             }
