@@ -61,11 +61,11 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
       $(".title").clone().appendTo(".moverS");
 
-      $(".moverS > .title").each(function(){
-        var opacity = $(this).index()/83;
-        var ftwo = $(this).index()/.1;
-        $(this).css("background-color","rgba(0,100,"+ftwo+","+opacity+")");
-      });
+      // $(".moverS > .title").each(function(){
+      //   var opacity = $(this).index()/83;
+      //   var ftwo = $(this).index()/.1;
+      //   $(this).css("background-color","rgba(0,100,"+ftwo+","+opacity+")");
+      // });
 
       $(".moverS > .title").click(function(){
         var num = $(this).index();

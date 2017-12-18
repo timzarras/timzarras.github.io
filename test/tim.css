@@ -58,7 +58,8 @@ body {
 }
 
 .moverS {
-  padding: 5px;
+  /* border-bottom: 1px solid black; */
+  padding-top: 10px;
   /* border-bottom: 1px solid black; */
   z-index: 999 !important;
   position: fixed;
@@ -153,7 +154,7 @@ img:hover {
   display: inline;
   float: left;
   cursor: pointer;
-  /* background-color: #eaf2ff; */
+  background-color: #eaf2ff;
 }
 
 .moverS > .title:hover {
