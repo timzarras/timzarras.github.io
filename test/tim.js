@@ -10,17 +10,21 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
       var body = $(".arch");
       var bodys = $("body");
       var table = $("table");
+      var colors = [];
 
 
 
       for (var i = 0; i < results.length; i++) {
 
+        color = results[i].getColor("project.color");
         number = results[i].getNumber("project.number");
         title = results[i].getStructuredText("project.title").asText();
         year = results[i].getStructuredText("project.year").asText();
         materials = results[i].getStructuredText("project.materials").asHtml();
         type = results[i].getGroup("project.type").asHtml();
         image = results[i].getGroup("project.project_images").asHtml();
+
+        colors.push(color);
 
 
         var targ = $("<p class='mover'></p>");
@@ -44,10 +48,10 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
       }
 
+
       var targSpace = $("<div class='moverS'></div>");
 
       $(targSpace).appendTo(".arch");
-      // $(".mover").appendTo(".moverS");
 
       $(".load").hide();
 
@@ -59,30 +63,37 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
       // append reordered divs to project section //
       $(ordered).appendTo(".arch");
 
+
       $(".title").clone().appendTo(".moverS");
+      var all = $("img").length;
+      var random = Math.floor(Math.random()*all);
+      $("img:first").clone().addClass("latest").appendTo(".arch");
 
-      // $(".moverS > .title").each(function(){
-      //   var opacity = $(this).index()/83;
-      //   var ftwo = $(this).index()/.1;
-      //   $(this).css("background-color","rgba(0,100,"+ftwo+","+opacity+")");
-      // });
-
-      $(".moverS > .title").click(function(){
-        var num = $(this).index();
-        var dis = $(".moverS").height();
-        console.log(num);
-        var target = $(".row").eq(num);
-        var yup = $(target).offset();
-        var hello = $(yup).top;
-        console.log(yup);
-        $("html,body").animate({scrollTop: (yup.top-dis)-40},600);
-      });
 
 
 			if ($(window).width()>750) {
 
 
         $(".upper,.load").remove();
+
+        var $window = $(window),
+            $stick = $('.moverS'),
+            elTop = $stick.offset().top;
+
+            $window.scroll(function() {
+              $stick.toggleClass('sticky', $window.scrollTop() > elTop);
+          });
+
+          $(".moverS > .title").click(function(){
+            var num = $(this).index();
+            var dis = $(".moverS").height();
+            console.log(num);
+            var target = $(".row").eq(num);
+            var yup = $(target).offset();
+            var hello = $(yup).top;
+            console.log(yup);
+            $("html,body").animate({scrollTop: (yup.top-dis)-40},600);
+          });
 
 
         $("img").click(function(){
@@ -102,9 +113,22 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
           $(".materials").css("width","90%");
           $("img").css({"width":"90%","height":"auto"});
 
+          $(".moverS > .title").click(function(){
+            var num = $(this).index();
+            var dis = $(".moverS").height();
+            console.log(num);
+            var target = $(".row").eq(num);
+            var yup = $(target).offset();
+            var hello = $(yup).top;
+            console.log(yup);
+            $("html,body").animate({scrollTop: (yup.top-dis)-40},600);
+          });
+
 
 
         }
+
+
 
 
 
