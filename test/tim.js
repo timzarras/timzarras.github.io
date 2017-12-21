@@ -84,14 +84,18 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
                     $(".moverS > .title").click(function(){
                       var num = $(this).index();
                       var dis = $(".moverS").height();
+                      var half = $(window).outerHeight()/2;
                       console.log(num);
                       var target = $(".row").eq(num);
                       var yup = $(target).offset();
                       var hello = $(yup).top;
                       console.log(yup);
-                      setTimeout(function(){
+
+                      if ($(".moverS").hasClass("sticky")){
                         $("html,body").animate({scrollTop: (yup.top-dis)-40},600);
-                      },20);
+                      } else {
+                        $("html,body").animate({scrollTop: (yup.top-dis)+half-107.5},600);
+                      }
 
                     });
 

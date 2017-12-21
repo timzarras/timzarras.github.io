@@ -195,7 +195,7 @@ img:hover {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  /* background-color: #eaf2ff; */
+  background-color: #f7faff;
   /* font-size: 22 !important; */
 
 }
@@ -248,7 +248,12 @@ img:hover {
 @media screen and (max-width: 736px){
 
   .row {
-    top: 28vh !important;
+    top: 30vh !important;
+    width: 70vw;
+  }
+
+  img {
+    width: 70vw !important;
   }
 
   .moverS {
@@ -260,10 +265,11 @@ img:hover {
   }
 
   .moverS {
+    padding: 0;
     z-index: 999 !important;
     padding-top: 15px;
     border-top: none;
-    width: 100vw;
+    width: 100vw !important;
     height: auto;
     top: 0;
     left: 0;
