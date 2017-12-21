@@ -67,7 +67,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
       $(".title").clone().appendTo(".moverS");
       var all = $("img").length;
       var random = Math.floor(Math.random()*all);
-      $("img").eq(11).clone().addClass("latest").appendTo(".arch");
+      $("img").eq(0).clone().addClass("latest").appendTo(".arch");
 
 
 
@@ -128,6 +128,12 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
 
 
+        }
+
+        if( /iPad/i.test(navigator.userAgent) ) {
+         $(".latest").hide();
+        } else {
+          // normal //
         }
 
 
