@@ -50,16 +50,18 @@ body {
 }
 
 .moverS {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(0,0,10,.09);
-  /* border-top: 1px solid white; */
-  padding-top: 10px;
+  /* border-right: 1px solid rgba(0,0,10,.09); */
+  /* padding-right: 2vw; */
+  padding-top: 20px;
+  /* background-color: rgba(10, 10, 100, 0.03); */
+  border-bottom: none;
+  /* border-top: 1px solid rgba(0,0,10,.09); */
   /* border-bottom: 1px solid black; */
-  z-index: 999 !important;
+  z-index: 996 !important;
   position: absolute;
   top: 50vh;
   left: 0;
-  width: 100vw;
+  width: 45vw;
   height: 50vh;
   -webkit-transition: background-color .1s ease-in-out;
   -moz-transition: background-color .1s ease-in-out;
@@ -68,6 +70,7 @@ body {
 }
 
 .tim {
+  z-index: 999;
   position: absolute;
   left: 10px;
   top: 10px;
@@ -75,6 +78,7 @@ body {
 }
 
 .proj {
+  z-index: 999;
   position: absolute;
   left: 10px;
   margin-top: 0;
@@ -82,15 +86,25 @@ body {
 }
 
 .sticky {
+  z-index: 999 !important;
+  padding-top: 15px;
+  border-top: none;
+  width: 100vw;
   height: auto;
   top: 0;
+  left: 0;
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.96);
+  background-color: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid rgba(0,0,10,.09);
   -webkit-transition: background-color .1s ease-in-out;
   -moz-transition: background-color .1s ease-in-out;
   -o-transition: background-color .1s ease-in-out;
   transition: background-color .1s ease-in-out;
 }
+
+/* .sticky:hover {
+  opacity: 1;
+} */
 
 .row {
   /* background-color: red; */
@@ -100,7 +114,7 @@ body {
   position: relative;
   width: 85vw;
   height: auto;
-  padding-bottom: 8vh;
+  padding-bottom: 7vh;
   margin-bottom: 8vh !important;
   margin-right: 5vw;
   float: left;
@@ -137,7 +151,9 @@ img:hover {
 
 }
 
-
+.title {
+  margin-bottom: 40px;
+}
 
 .type {
   display: none;
@@ -152,7 +168,7 @@ img:hover {
 .year {
   width: 20px;
   position: absolute;
-  left: -70px;
+  left: -67.5px;
   top: 0;
   /* top: 50%;
   margin-bottom: 1vh;
@@ -216,11 +232,12 @@ img:hover {
 } */
 
 .latest {
+  z-index: 997;
   position: absolute !important;
   top: 0%;
-  left: 50%;
-  transform:translate(-50%,0%);
-  -webkit-transform:translate(-50%,0%);
+  right: 0;
+  /* transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%); */
   padding: 0;
   margin: 0 !important;
   width: auto;
@@ -236,6 +253,23 @@ img:hover {
 
   .moverS {
     top: 0 !important;
+  }
+
+  .latest,.tim,.proj {
+    display:none;
+  }
+
+  .moverS {
+    z-index: 999 !important;
+    padding-top: 15px;
+    border-top: none;
+    width: 100vw;
+    height: auto;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid rgba(0,0,10,.09);
   }
 
 

@@ -67,46 +67,44 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
       $(".title").clone().appendTo(".moverS");
       var all = $("img").length;
       var random = Math.floor(Math.random()*all);
-      $("img:first").clone().addClass("latest").appendTo(".arch");
+      $("img").eq(11).clone().addClass("latest").appendTo(".arch");
 
 
 
 			if ($(window).width()>750) {
 
+                  var $window = $(window),
+                      $stick = $('.moverS'),
+                      elTop = $stick.offset().top;
 
-        $(".upper,.load").remove();
+                      $window.scroll(function() {
+                        $stick.toggleClass('sticky', $window.scrollTop() > elTop);
+                    });
 
-        var $window = $(window),
-            $stick = $('.moverS'),
-            elTop = $stick.offset().top;
+                    $(".moverS > .title").click(function(){
+                      var num = $(this).index();
+                      var dis = $(".moverS").height();
+                      console.log(num);
+                      var target = $(".row").eq(num);
+                      var yup = $(target).offset();
+                      var hello = $(yup).top;
+                      console.log(yup);
+                      setTimeout(function(){
+                        $("html,body").animate({scrollTop: (yup.top-dis)-40},600);
+                      },20);
 
-            $window.scroll(function() {
-              $stick.toggleClass('sticky', $window.scrollTop() > elTop);
-          });
+                    });
 
-          $(".moverS > .title").click(function(){
-            var num = $(this).index();
-            var dis = $(".moverS").height();
-            console.log(num);
-            var target = $(".row").eq(num);
-            var yup = $(target).offset();
-            var hello = $(yup).top;
-            console.log(yup);
-            $("html,body").animate({scrollTop: (yup.top-dis)-40},600);
-          });
-
-
-        $("img").click(function(){
-          console.log("hello");
-          if ($(this).height() > 100) {
-            console.log("hellno");
-            $(this).css({"height" : "10vh",
-            "width" : "auto","margin-right":"1vw"});
-          } else {
-            $(this).css({"height":"auto","width":"48vw","margin-right":"90vw"});
-          }
-        });
-
+                  $("img").click(function(){
+                    console.log("hello");
+                    if ($(this).height() > 100) {
+                      console.log("hellno");
+                      $(this).css({"height" : "10vh",
+                      "width" : "auto","margin-right":"1vw"});
+                    } else {
+                      $(this).css({"height":"auto","width":"48vw","margin-right":"90vw"});
+                    }
+                  });
 
 				} else {
 
