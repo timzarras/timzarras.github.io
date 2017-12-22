@@ -68,12 +68,6 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
       var random = Math.floor(Math.random()*all);
       $("img").eq(0).clone().addClass("latest").appendTo(".arch");
 
-      $("body,.arch").hide();
-
-      setTimeout(function(){
-        $("body,.arch").fadeIn(1000);
-      },50);
-
 
 
 
