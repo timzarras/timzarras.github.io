@@ -254,6 +254,7 @@ img:hover {
 
   img {
     width: 70vw !important;
+    height: auto;
   }
 
   .moverS {
