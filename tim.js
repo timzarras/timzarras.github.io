@@ -26,7 +26,6 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
         colors.push(color);
 
-
         var targ = $("<p class='mover'></p>");
 				var row = $("<div class='row'></div>");
         var titleD = $("<div class='title'></div>");
@@ -68,6 +67,14 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
       var all = $("img").length;
       var random = Math.floor(Math.random()*all);
       $("img").eq(0).clone().addClass("latest").appendTo(".arch");
+
+      $("body,.arch").hide();
+
+      setTimeout(function(){
+        $("body,.arch").fadeIn(1000);
+      },50);
+
+
 
 
 
