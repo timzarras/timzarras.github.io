@@ -253,8 +253,12 @@ img:hover {
   }
 
   img {
-    width: 70vw !important;
+    width: 90% !important;
     height: auto;
+  }
+
+  .materials {
+    width: 90%;
   }
 
   .moverS {
