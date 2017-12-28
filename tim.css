@@ -12,6 +12,10 @@
     display: none;
 }
 
+em {
+  font-size: 10 !important;
+}
+
 a,a:visited {
   background-color: #f9f2ff;
   color: black !important;
