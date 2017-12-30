@@ -70,9 +70,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
       $(".row:last").addClass("l");
 
-      $(".row > .materials > p > a").each(function(){
-        $(this).not(".l > .materials > p > a").append("&nbsp;&#8599;");
-      });
+
 
 
 
@@ -88,6 +86,13 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
                       $window.scroll(function() {
                         $stick.toggleClass('sticky', $window.scrollTop() > elTop);
+                    });
+
+
+
+                    $(".row > .materials > p > a").each(function(){
+                      // var hello = $("<img class='arrow' src='arrow.svg'>");
+                      $(this).not(".l > .materials > p > a ").append("&nbsp;&nearr;");
                     });
 
                     $(".moverS > .title").click(function(){
@@ -121,7 +126,6 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
 				} else {
 
-
           $(".materials").css("width","90%");
           $("img").css({"width":"90%","height":"auto"});
 
@@ -142,6 +146,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
         if( /iPad/i.test(navigator.userAgent) ) {
          $(".latest").hide();
+
         } else {
           // normal //
         }
