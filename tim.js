@@ -68,6 +68,14 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
       var random = Math.floor(Math.random()*all);
       $("img").eq(0).clone().addClass("latest").appendTo(".arch");
 
+      $(".row:last").addClass("l");
+
+      $(".row > .materials > p > a").each(function(){
+        $(this).not(".l > .materials > p > a").append("&nbsp;&#8599;");
+      });
+
+
+
 
 
 
@@ -112,6 +120,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
                   });
 
 				} else {
+
 
           $(".materials").css("width","90%");
           $("img").css({"width":"90%","height":"auto"});
