@@ -162,7 +162,6 @@ img {
 
 img:hover {
 
-
 }
 
 .title {
@@ -256,10 +255,15 @@ img:hover {
   margin: 0 !important;
   width: auto;
   height: 100vh;
-
 }
 
 @media screen and (max-width: 736px){
+
+  a,a:visited {
+    background-color: #f9f2ff;
+    color: black !important;
+    text-decoration: underline;
+  }
 
   .row {
     top: 33vh !important;
