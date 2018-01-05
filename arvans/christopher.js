@@ -77,7 +77,7 @@ Prismic.Api('https://carvans.prismic.io/api', function (err, Api) {
 
 				} else {
 
-          $(".moverS > .title:last-child").css("margin-top","20px");
+          $(".moverS > .title:last-child").css({"margin-top":"50px"});
 
           $(".moverS > .title").click(function(){
             $(".menu").show();
@@ -88,7 +88,7 @@ Prismic.Api('https://carvans.prismic.io/api', function (err, Api) {
             var yup = $(target).offset();
             var hello = $(yup).top;
 
-            $("html,body").animate({scrollTop: yup.top-60},0);
+            $("html,body").animate({scrollTop: yup.top-50},0);
           });
 
           $(".menu").click(function(){
