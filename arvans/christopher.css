@@ -1,0 +1,163 @@
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-moz-scrollbar {
+    display: none;
+}
+
+::-scrollbar {
+    display: none;
+}
+
+
+html {
+  font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
+	margin: 0;
+  font-weight: 200;
+  font-size: 22 !important;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 22 !important;
+}
+
+.moverS {
+  margin: 0;
+  position: fixed;
+  left: 10px;
+  top: 70px;
+}
+
+.moverS > .title {
+  cursor: pointer;
+}
+
+.desc,.moverS > .title {
+  line-height: .75;
+}
+
+.desc,.project > .title {
+  margin-top: 0;
+  width: 100%;
+  float: left;
+}
+
+.moverS > .title:hover {
+  text-decoration: underline;
+}
+
+.project > .title {
+  margin-bottom: 30px;
+}
+
+.name {
+  z-index: 999;
+  position: fixed;
+  margin: 0;
+  margin-top: 0;
+  top: 10px;
+  left: 10px;
+}
+
+.project {
+  text-align: right;
+  margin: 0;
+  margin-top: 0;
+  margin-left: 0;
+  top: 100vh;
+  position: relative;
+  left: 38vw;
+  width: 59vw;
+  min-width: 59vw;
+  height: 100vh;
+  margin-bottom: 300px !important;
+}
+
+strong {
+  text-decoration: underline;
+  font-weight: 300 !important;
+}
+
+img {
+  position: relative;
+  width: auto;
+  height: 65vh;
+  margin-bottom: 30px;
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 736px){
+
+html {
+    font-size: 15 !important;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 10px;
+    margin: 0;
+    right: 6.5%;
+    z-index: 999;
+}
+
+.name {
+    left: 6.5%;
+}
+
+.project {
+  margin-bottom:40px !important;
+  text-align:center;
+  top:100vh;
+  width:90%;
+  left:5%;
+}
+
+.project > .title,img {
+  margin-bottom: 10px;
+}
+
+img {
+  position: relative;
+  left: 0 !important;
+  width: 100% !important;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.moverS {
+  position: absolute;
+  top: 0;
+  float: bottom;
+  background-color: white !important;
+  top: 60px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.moverS > .title {
+  text-align: center;
+  margin-right: 20px;
+  line-height: 0;
+  margin-bottom: 40px;
+}
+
+.desc {
+  line-height: inherit;
+}
+
+
+}
+
+
+
+}
