@@ -71,7 +71,7 @@ Prismic.Api('https://carvans.prismic.io/api', function (err, Api) {
                       var yup = $(target).offset();
                       var hello = $(yup).top;
 
-                      $("html,body").animate({scrollTop: yup.top-15},0);
+                      $("html,body").animate({scrollTop: yup.top-15},1000);
                     });
 
 

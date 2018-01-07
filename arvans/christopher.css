@@ -35,7 +35,7 @@ h1 {
 }
 
 .desc,.moverS > .title {
-  line-height: .75;
+  line-height: .5;
 }
 
 .desc,.project > .title {
@@ -119,6 +119,7 @@ html {
   width:90%;
   left:5%;
   height: auto !important;
+  background-color: red;
 }
 
 .project > .title,img {
