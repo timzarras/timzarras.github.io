@@ -77,7 +77,10 @@ Prismic.Api('https://carvans.prismic.io/api', function (err, Api) {
 
 				} else {
 
+          $(".project:last").addClass("l");
+
           $(".moverS > .title:last-child").css({"margin-top":"50px"});
+          // $(".desc > p").css("line-height","inherit !important");
 
           $(".moverS > .title").click(function(){
             $(".menu").show();
