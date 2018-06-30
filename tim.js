@@ -115,10 +115,10 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
                   $("img").click(function(){
                     console.log("hello");
-                    if ($(this).height() > 100) {
+                    if ($(this).height() > 200) {
                       console.log("hellno");
-                      $(this).not(".latest").css({"height" : "10vh",
-                      "width" : "auto","margin-right":"1vw"});
+                      $(this).not(".latest").css({"height" : "23vh",
+                      "width" : "auto","margin-right":"3vw"});
                     } else {
                       $(this).not(".latest").css({"height":"auto","width":"48vw","margin-right":"90vw"});
                     }
