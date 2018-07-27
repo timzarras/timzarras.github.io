@@ -1,0 +1,77 @@
+Info: 
+
+----
+
+Title: Flatiron Apartment
+
+----
+
+Text: The corner apartment is defined by two large frameless full heights doors connecting the bedroom and bathroom to the living room to facilitate flexible usage and to allow ample northern light throughout the space. Inspired by the concept of wabi-sabi - the beauty of things imperfect and impermanent, programs are defined through three materially monolithic spaces - living room in natural wood and lime paint, kitchen in brushed aluminum and bathroom in dark natural stone. Rather than meticulously organized boutique perfection, the design seeks pleasure in the quotidian, celebrating the beauty of age and wear.
+
+----
+
+Gallery: 
+
+- cute-baby-animals-17.jpg
+- cute-baby-animals-18.jpg
+
+----
+
+Timeline: 2018
+
+----
+
+Size: 750ft²
+
+----
+
+Status: Under Construction
+
+----
+
+Client: Private
+
+----
+
+Team: X
+
+----
+
+Location: Manhattan, New York
+
+----
+
+Material: X
+
+----
+
+Sponsor: Lorem
+
+----
+
+Typology: Residence
+
+----
+
+Slideshow: 
+
+- p1.jpg
+- 425pas_selects_02.jpg
+- 425pas_selects_03.jpg
+
+----
+
+Detail-gallery: 
+
+- p1.jpg
+- 425pas_selects_03.jpg
+
+----
+
+Detail: 
+
+- 425_pas_material_01.jpg
+- 425_pas_material_02.jpg
+- 425_pas_material_03.jpg
+- 425_pas_material_04.jpg
+- 425_pas_material_05.jpg

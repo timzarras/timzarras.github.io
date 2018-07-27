@@ -1,0 +1,61 @@
+type: group
+fields:
+  timeline:
+    label: Timeline
+    type: text
+    width: 1/4
+    required: false
+    
+  size: 
+    label: Size
+    type: text
+    width: 1/4
+    required: false
+    
+
+  status: 
+    label: Status
+    type: text
+    width: 1/4
+    required: false
+    
+  client:
+    label: Client
+    type: text
+    width: 1/4
+    required: false
+    
+  team:
+    label: Team
+    type: text
+    width: 1/3
+    required: false
+    placeholder: Add team members...
+    
+  location:
+    label: Location
+    type: text
+    width: 1/3
+    required: false
+    
+  material:
+    label: Material 
+    type: text
+    width: 1/3
+    placeholder: Add all materials here...
+    required: false
+
+  sponsor:
+    label: Sponsor 
+    type: text
+    width: 1/2
+    required: false
+
+  typology:
+    label: Typology
+    type: text
+    width: 1/2
+    required: false
+
+
+

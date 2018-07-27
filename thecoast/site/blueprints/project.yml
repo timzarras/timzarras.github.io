@@ -1,0 +1,54 @@
+title: Projects
+
+
+files:
+  sortable: true
+
+//page settings
+
+options:
+  preview: true
+  update: true
+  status: true
+  delete: true
+
+//subpage settings
+pages:
+  template: project
+    label: Project
+    type: template 
+
+fields: 
+  info:
+    label: Info
+    type: info
+    text: >
+      Each project should have a title, description, images, and additional information.
+  
+  slideshow:
+    label: Image Gallery
+    type: images
+    aspectRatio: 4:3
+
+  title:
+    label: Title
+    type: text
+    required: true
+    placeholder: Project title goes here...
+
+  text: 
+    label: Text
+    type: textarea
+    required: true
+    placeholder: Enter project description here...
+
+    
+  metadata:
+    extends: metadata
+
+  detail:
+    label: Detail
+    type: images
+    aspectRatio: 4:3
+
+      

@@ -1,0 +1,18 @@
+title: Site
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  Intro:
+    label: Intro
+    type:  textarea
+
+  More:
+    label: Contact
+    type:  textarea
+    
+  Info:
+    label: Phone
+    type:  textarea
