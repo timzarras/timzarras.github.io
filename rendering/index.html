@@ -1,0 +1,314 @@
+<html>
+
+      <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="The Website of Tim Zarras.">
+        <meta name="keywords" content="Tim Zarras">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/png" href="!.png">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <title> Renderings </title>
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script src="tim.js"></script>
+      </head>
+
+      <style>
+
+      html {
+      	letter-spacing:  1.3 !important;
+		margin: 0;
+		font-family: sans-serif !important;
+  		font-weight: 100;
+      }
+
+      a {
+      	font-size: 14;
+      	position: relative;
+      	display: inline-block;
+      	float: top;
+      	top: 5vh;
+      	left: 5vw;
+      	margin-bottom: 10vh;
+      	color: black;
+      }
+
+      a:visited {
+      	color: black;
+      }
+
+      a:hover {
+      	text-decoration: none;
+      }
+
+      .tim {
+      	margin: 0;
+      	font-size: 14;
+      	margin-top: 5vh;
+      	position: relative;
+      	left: 5vw;
+      	width: 45vw;
+      	float: top;
+      	/*filter: blur(.175rem);*/
+      }
+
+      .arch {
+      	position: relative;
+      	display: inline-block;
+      	width: 90vw;
+      	left: 5vw;
+      	margin-top: 15vh;
+      	margin-bottom: 10vh;
+      	display: flex;
+      	flex-flow: row wrap;
+      	justify-content: space-between;
+      	align-items: center;
+      }
+
+      .unit {
+      	position: relative;
+      	/*background-color: red;*/
+      	float: left;
+      	left: 0;
+      	width: auto;
+      	margin-bottom: 6vh;
+      	margin-right: 3vw;
+      }
+
+      .r {
+      	position: relative;
+      	display: inline;
+      	float: left;
+      	width: auto;
+      	height: 15vh;
+      	margin-right: 2vw;
+      	cursor: pointer;
+      	-webkit-transition: .1s ease-in-out;
+  		-moz-transition: .1s ease-in-out;
+  		-o-transition: .1s ease-in-out;
+  		transition: .1s ease-in-out;
+      }
+
+      /*.r:hover{
+      	height: 30vh;
+      	margin-left: -2.5vw;
+      }*/
+
+      .caption {
+      	display: none;
+      	text-align: left;
+      	float: left;
+      	font-size: 14;
+      	width: 80%;
+      	margin-right: 10px;
+      	margin-bottom: 3%;
+      }
+
+      .focal {
+      	position: absolute;
+      	width: 100vw;
+      	height: 100vh;
+      	left: 0;
+      	top: 0;
+      }
+
+      .f {
+      	position: fixed;
+      	height: 80vh;
+      	top: 5vh;
+      	width: auto;
+      	left: 5vw;
+      	border-radius: 0%;
+      }
+
+      .close {
+      	text-align: right;
+      	background-color: none;
+      	display: none;
+      	position: fixed;
+      	margin: 0;
+      	top: 5vh;
+      	right: 5vw;
+		cursor: pointer !important;
+		z-index: 999 !important;
+      }
+
+      .close:hover {
+      	text-decoration: underline;
+      }
+
+      .no {
+      	pointer-events: none;
+      }
+
+      @media screen and (max-width: 736px){
+
+      	.r {
+      		width: 100%;
+      		height: auto;
+      	}
+
+      	.tim {
+      		width: 80%;
+      	}
+
+
+
+      }
+
+
+  </style>
+
+
+  <script>
+
+  	$(document).ready(function(){
+
+
+  	if ($(window).width() > 736) {
+
+  		$(".unit",this).click(function(){
+  			$(".close").show();
+  			$("img,.tim,.caption").css("opacity",".02");
+  			$(".r").addClass("no");
+  			$("body").css("overflow","hidden")
+  			$("img",this).clone().addClass("f").css("opacity","1").appendTo("body");
+  		});
+
+  		$(".close").click(function(){
+
+  			$("body").css("overflow","scroll");
+  			$(".f").remove();
+  			$(".close").hide();
+  			$("img,.tim,.caption").css("opacity","1");
+  			$(".r").removeClass("no");
+
+
+  		});
+
+  	  	} else {
+
+  	  		//
+  	  	}
+
+
+
+
+
+
+  	});
+  
+
+  </script>
+
+
+
+      <body>
+      	<a href="http://www.timzarras.com">Back to main site</a>
+        <p class="tim">
+        Renderings<br><br><br><br><br>
+		An ongoing series of renderings that are often results of my industrial design process. Modeled in Solidworks, rendered in Keyshot unless noted.<br><br>
+		With each rendering, I aim to explore different aspects of materiality & atmosphere, and its affect on whatever my design might be.
+		</p>
+        <div class="arch">
+        	<div class="unit">
+        	 <div class="caption">Work unit, 2018<br><br>
+        	 A multi-use object for the office or outdoors. Outdoor office?</div>
+        	<img class="r" src="00.jpg"/>
+        	</div>
+        	<div class="unit">
+        	 <div class="caption">Mug, 2018<br><br>
+        	 A platonic mug focusing on the effect of the handles scale.</div>
+        	<img class="r" src="mug_1.jpg"/>
+        	</div>
+        	<div class="unit">
+        	 <div class="caption">Spray, 2018<br><br>
+        	 A spray bottle seen in a doctor's office.</div>
+        	<img class="r" src="spray.jpg"/>
+        	</div>
+        	<div class="unit">
+        	<div class="caption">Scissors, 2018<br><br>
+        	Scissors seen at Portland's upcycled art supply store "Scrap".
+        	</div>
+        	<img class="r" src="scissors.jpg"/>
+        	</div>
+        	<div class="unit">
+        	<div class="caption">Thick basket, 2018<br><br>
+        	An especially thick "woven" basket to be 3D printed.
+        	</div>
+        	<img class="r" src="0.jpg"/>
+        	</div>
+        	<div class="unit">
+        	<div class="caption">Conoid homage, 2018<br><br>
+        	A version of George Nakashima's "Conoid Chair" constructed in plywood.</div>
+        	<img class="r" src="1.jpg"/>
+        </div>
+        <div class="unit">
+        	<div class="caption">4" board chair, 2018<br><br>
+        	A chair constructed using only 4" X 1" boards of white oak. 
+        	</div>
+        	<img class="r" src="2.jpg"/>
+        </div>
+        <div class="unit">
+        	<div class="caption">Ensemble, 2018<br><br>
+        	An ensemble of digital garments and inadvertant exploration of surface modeling in Solidworks.</div>
+        	<img class="r" src="3.jpg"/>
+        </div>
+        <div class="unit">
+        	<div class="caption">Seminar chair stacked, 2018<br><br>
+        		Showcasing the stacking density of the seminar chair.
+        	</div>
+        	<img class="r" src="4.jpg"/>
+        </div>
+        <div class="unit">
+        	<div class="caption">Seminar chair, 2018<br><br>
+        	Exploring how overt geometry may inform how one might organize a chair or product. This chair is meant to be tessellated in a circle, for a discussion.</div>
+        	<img class="r" src="5.jpg"/>
+        </div>
+        <div class="unit">
+        	<div class="caption">Bench frame, 2018<br><br>
+        	I once heard someone describe designing public furniture as saying it has to be nice enough to be in public, but not nice enough that someone won't sit on it. I thought that was a pretty interesting yet conflicting set of criteria. I think people may find some kind of comfort in things that feel a bit arbitrary?</div>
+        	<img class="r" src="6.jpg"/>
+        </div>
+        <div class="unit">
+        	<div class="caption">Hallway through the marsh, 2018</div>
+        	<img class="r" src="8.jpg"/>
+        </div>
+        <div class="unit">
+        	<div class="caption">Hallway through the marsh, 2018</div>
+        	<img class="r" src="9.jpg"/>
+        </div>
+        <div class="unit">
+        	<div class="caption">Interior exterior, 2018</div>
+        	<img class="r" src="10.jpg"/>
+        </div>
+        <div class="unit">
+        	<div class="caption">Fabric, 2018</div>
+        	<img class="r" src="11.jpg"/>
+        </div>
+        <div class="unit">
+        	<img class="r" src="12.jpg"/>
+        </div>
+        <div class="unit">
+        	<img class="r" src="13.jpg"/>
+        </div>
+        <div class="unit">
+        	<img class="r" src="14.jpg"/>
+        </div>
+        <div class="unit">
+        	<img class="r" src="15.jpg"/>
+        </div>
+        <div class="unit">
+        	<img class="r" src="16.jpg"/>
+        </div>
+        <div class="unit">
+        	<img class="r" src="cone.jpg"/>
+        </div>
+        <div class="unit">
+        	<img class="r" src="17.jpg"/>
+        </div>
+        </div>
+        <p class="close">Close</p>
+      </body>
+
+
+</html>
