@@ -1,0 +1,308 @@
+<html>
+
+      <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="The Website of Tim Zarras.">
+        <meta name="keywords" content="Tim Zarras">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/png" href="!.png">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <title> Professional Work </title>
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script src="tim.js"></script>
+      </head>
+
+      <style>
+
+      html {
+      	letter-spacing:  1.3 !important;
+		margin: 0;
+		font-family: sans-serif !important;
+  		font-weight: 100;
+      }
+
+      a {
+      	font-size: 14;
+      	position: relative;
+      	display: inline-block;
+      	float: top;
+      	top: 5vh;
+      	left: 5vw;
+      	margin-bottom: 10vh;
+      	color: black;
+      }
+
+      a:visited {
+      	color: black;
+      }
+
+      a:hover {
+      	text-decoration: none;
+      }
+
+      .tim {
+      	margin: 0;
+      	font-size: 14;
+      	margin-top: 5vh;
+      	margin-bottom: 8vh;
+      	position: relative;
+      	text-align: center;
+      	float: top;
+      	/*filter: blur(.175rem);*/
+      }
+
+      .arch {
+      	position: relative;
+      	display: inline-block;
+      	width: 90vw;
+      	left: 5vw;
+      	margin-top: 6vh;
+      	margin-bottom: 10vh;
+      	display: flex;
+      	flex-flow: row wrap;
+      	justify-content: space-between;
+      	align-items: center;
+      }
+
+      .unit {
+      	position: relative;
+      	/*background-color: red;*/
+      	float: left;
+      	left: 0;
+      	width: auto;
+      	margin-bottom: 10vh;
+      	margin-right: 10vw;
+      }
+
+      .r {
+      	position: relative;
+      	display: inline;
+      	float: left;
+      	width: auto;
+      	height: 16vh;
+      	margin-right: 3vw;
+      	margin-bottom: 30px;
+      	cursor: pointer;
+      	-webkit-transition: .1s ease-in-out;
+  		-moz-transition: .1s ease-in-out;
+  		-o-transition: .1s ease-in-out;
+  		transition: .1s ease-in-out;
+      }
+
+      #h {
+
+      	height: 52vh !important; 
+      	border-color: 4px solid red;
+
+      }
+
+      .intro {
+      	position: relative;
+      	display: inline;
+      	text-align: left;
+      	float: left;
+      	font-size: 14;
+      	width: 45vw;
+      	margin-right: 20vw;
+      	margin-top: 3vh;
+      	left: 0 !important;
+      }
+
+      .caption {
+      	position: relative;
+      	display: inline-block;
+      	text-align: left;
+      	float: left;
+      	font-size: 10;
+      	width: 45vw;
+      	margin-right: 20vw;
+      	margin-top: 10px;
+      }
+
+      .focal {
+      	position: absolute;
+      	width: 100vw;
+      	height: 100vh;
+      	left: 0;
+      	top: 0;
+      }
+
+      .f {
+      	position: fixed;
+      	height: 80vh;
+      	top: 5vh;
+      	width: auto;
+      	left: 5vw;
+      	border-radius: 0%;
+      }
+
+      .close {
+      	text-align: right;
+      	background-color: none;
+      	display: none;
+      	position: fixed;
+      	margin: 0;
+      	top: 5vh;
+      	right: 5vw;
+		cursor: pointer !important;
+		z-index: 999 !important;
+      }
+
+      .close:hover {
+      	text-decoration: underline;
+      }
+
+      .no {
+      	pointer-events: none;
+      }
+
+      #center{
+      	position: relative;
+      	display: inline;
+      	text-align: left;
+      	float: left;
+      	font-size: 14;
+      	margin-top: 6vh;
+      }
+
+      @media screen and (max-width: 736px){
+
+      	.r,#h {
+      		width: 100% !important;
+      		height: auto !important;
+      	}
+
+      	.tim,.intro,.caption {
+      		width: 80%;
+      	}
+
+
+
+      }
+
+
+  </style>
+
+
+  <script>
+
+  	$(document).ready(function(){
+
+
+  	if ($(window).width() > 736) {
+
+  		$("img",this).click(function(){
+  			$(".close").show();
+  			$("img,.tim,.caption,a,.intro").css("opacity",".02");
+  			$(".r").addClass("no");
+  			$("body").css("overflow","hidden")
+  			$(this).clone().addClass("f").css("opacity","1").appendTo("body");
+  		});
+
+  		$(".close").click(function(){
+
+  			$("body").css("overflow","scroll");
+  			$(".f").remove();
+  			$(".close").hide();
+  			$("img,.tim,.caption,a,.intro").css("opacity","1");
+  			$(".r").removeClass("no");
+
+
+  		});
+
+  	  	} else {
+
+  	  		//
+  	  	}
+
+
+  	});
+  
+
+  </script>
+
+
+
+      <body>
+      	<a href="http://www.timzarras.com">Back to main site</a>
+        <p class="tim">
+        Selection of Professional Work
+		</p>
+        <div class="arch">
+        	<div class="unit" >
+        	<div id="center">
+        	ASH NYC, 2016-2017
+        	</div>
+        	</div>
+
+        	<div class="unit" >
+        	<div class="intro">
+        	Sweetgreen FF&E<br><br><br>
+        	The bulk of my work as a Junior Designer at ASH NYC revolved around designing and developing an in-brand suite of furniture and architectural components for Sweetgreen stores nationwide, which ultimately became one concept store in Chicago at Fulton Market.<br><br> Working with only one other designer at ASH, my role included concept sketching, 3D modeling in Solidworks and extensive renderings of CMF options in Keyshot, as well as production drawings that were distributed to various fabricators to get production estimates.<br><br>
+        	 With the initial intent being to produce hundreds of each piece, as well as being aligned with Sweetgreen's brand, the collection was to be economical while still feeling comfortable and welcoming. This resulted in surfaces being treated in wood or stone, with their structures often utilizing powder-coated steel.
+        	 </div>
+        	</div>
+        	
+        	<div class="unit">
+        	<img class="r" id="h" src="ASH/sweetgreen.jpeg"/>
+        	<div class="caption">
+        	 Completed Sweetgreen store located in Chicago at Fulton Market.</div>
+        	</div>
+        	<a style="background-color:#f9f2ff;left:0;font-size:10;margin-bottom:15vh;margin-top:-5vh;"  target="_blank" rel="noopener" href="https://www.are.na/tim-zarras/sweetgreen">See process and research&nbsp;↗</a>
+        	<div class="unit">
+        	<img class="r" src="ASH/1.jpg"/>
+        	<img class="r" src="ASH/7.jpg"/>
+        	<img class="r" src="ASH/3.jpg"/>
+        	<img class="r" src="ASH/4.jpg"/>
+        	<img class="r" src="ASH/5.jpg"/>
+        	<img class="r" src="ASH/6.jpg"/>
+        	<img class="r" src="ASH/8.jpg"/>
+        	<img class="r" src="ASH/comp.jpg"/>
+        	<div class="caption">
+        	Exstensive renderings were created to develop each object and to share with the account.</div>
+        	</div>
+        	
+        	<div class="unit" >
+        	<div class="intro">
+        	PR Firm Office FF&E<br><br><br>
+        	I worked with Nick Ozemba to design the communal desks and other sourced furniture arrangements for a PR firm in Midtown Manhattan. Nick worked to arrange the space, I developed the FF&E within those guidelines.
+        	 </div>
+        	</div>
+        	<div class="unit" >
+        	<img class="r" id="h" src="ASH/m18-office.jpg"/>
+        	<div class="caption"> Completed office in midtown. Photo courtesy of the companies website. </div>
+        	</div>
+        	<div class="unit">
+        	<img class="r" src="ASH/m18.jpg"/>
+        	<div class="caption"> Large table with integrated desk lamps. 5 of these "units" were built for the office. This format of rendering was often used to communicate the "unit" to be duplicated. </div>
+        	</div>
+        	<div class="unit" >
+        	<div class="intro">
+        	ASH X WC<br><br><br>
+        	 </div>
+        	</div>
+        	<div class="unit">
+        	<img class="r" id="h" src="ASH/WC.jpg"/>
+        	<img class="r" id="h" src="ASH/wc6.jpg"/><br>
+        	<div class="caption"> Small modifications were made to an existing ASH chair to improve its ergonomics while maintaing it's overall simple silhouette. A small dish in the seat and a 3 degree cut to the backrest. </div>
+        	</div>
+        	
+        	<div class="unit" style="margin-top: 10vh;">
+        	<div class="intro">
+        	Freelance / consulting work for The Coast, 2017<br><br><br>
+        	 I worked with Paul Chan of The Coast to develop a few renderings showcasing his Either/Or light, which were used as submissions for 2018 NYC X Design. The Either/Or light went on to win the 2018 NYC X DESIGN "Made in the Boroughs" Award.</div>
+        	</div>
+        	<div class="unit">
+        	<img class="r" src="thecoast/3.jpg"/>
+        	<img class="r" src="thecoast/2.jpg"/>
+        	<img class="r" src="thecoast/1.jpg"/>
+        	<img class="r" src="thecoast/4.jpg"/><br><br>
+        	<br>
+        	<div class="caption">
+        	 Either/Or light shown a variety of fictional sets and materials.</div>
+        	</div>
+        <p class="close">Close</p>
+      </body>
+
+
+</html>
