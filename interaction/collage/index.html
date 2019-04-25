@@ -1,0 +1,117 @@
+<html>
+
+      <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="The Website of Tim Zarras.">
+        <meta name="keywords" content="Tim Zarras">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/png" href="!.png">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <title> Collage </title>
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script src="https://web.archive.org/web/20160827092123js_/https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      </head>
+
+
+
+<style type="text/css">
+        
+        @font-face {
+            font-family: "round";
+            src: url("ArialRoundedBold.ttf");
+        }
+
+        html {
+            font-family: "round";
+            font-size: 30px;
+        }
+        
+        .container {
+            z-index: 999 !important;
+            background-color: white;
+            padding: 2%;
+            height:auto;
+            width:30vw;
+            position: absolute;
+            left: 50%;
+            top:10%;
+            transform:translate(-50%,-50%);
+            -webkit-transform:translate(-50%,-50%);
+        }
+       img {
+        cursor: pointer !important;
+            height:auto;
+            width:30%;
+            z-index: 0;
+            position: relative;
+            left: 2%;
+        }
+
+        img:hover {
+            cursor: -webkit-grab !important;
+        }
+
+        img:active {
+            cursor: -webkit-grabbing !important;
+        }
+
+        .top {
+            z-index: 2; 
+        }
+        
+        .bottom {
+            z-index: 1; 
+            
+        }
+
+        .d {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            text-align: center;
+            transform:translate(-50%,0%);
+            -webkit-transform:translate(-50%,0%);
+        }
+
+        
+
+
+
+    </style>
+    
+    <script type="text/javascript">
+        
+        $(document).ready(function() {
+
+                setTimeout(function(){
+                    $(".d").fadeOut(500);
+                },4000);
+
+
+                var a = 3;
+            $('img').draggable({helper: "clone",opacity: 0.92,cursorAt: { top: 100, left: 100 }
+        }).on('dragstart', function (e, ui) {
+                $(ui.helper).css("width", "20vw");
+                $(ui.helper).css("cursor", "-webkit-grabbing");
+                $(ui.helper).css("z-index", a++);;
+            }).on('dragstop', function (e, ui) {
+                $(this).after($(ui.helper).clone().css("cursor", "default"));
+                $(this).addClass('top').removeClass('bottom');
+                $(this).siblings().removeClass('top').addClass('bottom');
+                $(this).css("z-index", a++);
+                });
+            
+        });
+    
+    </script>
+
+    <body>
+        <div class="d">Drag and drop the images to collage.</div>
+         <div class="container">
+                <img id="image" src="1.png" alt="">
+                <img id="image" src="2.png" alt="">
+                <img id="image" src="4.png" alt="">
+        </div>
+    </body>
+
+    </html>

@@ -1,0 +1,199 @@
+<html>
+
+      <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="The Website of Tim Zarras.">
+        <meta name="keywords" content="Tim Zarras">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/png" href="!.png">
+        <title> Interaction </title>
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.js"></script>
+      </head>
+
+      <!-- <audio  class="block" preload="metadata">
+  <source src="block.mp3"></source>
+  <source src="block.ogg"></source>
+  Your browser isn't invited for super fun audio time.
+</audio> -->
+
+      <style>
+
+      html {
+        cursor: pointer !important;
+        letter-spacing: 1.125;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color: #e2cd0b;
+        font-family: sans-serif;
+        font-weight: 100;
+      }
+
+      .tim {
+        margin: 0;
+        background-color: #edda12;
+        color: black;
+        position: absolute;
+        width: 50vw;
+        overflow: hidden;
+        padding: 1.125%;
+        border-radius: 5px;
+        height: auto;
+        overflow: visible;
+        font-size: 18px;
+      }
+
+      a {
+        overflow: hidden;
+        color: black;
+        font-size: 16px;
+        left: 0;
+        text-align: left;
+        text-decoration: none;
+        border-radius: 30px 30px 0px 0px;
+        display: none;
+        float: left;
+        position: relative;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        margin-right: .4vw;
+        margin-bottom: .6vh;
+        background-color: #edda12;
+        border-bottom: none !important;
+        -webkit-transition: all .1s ease-in;
+          -moz-transition: all .1s ease-in;
+          -o-transition: all .1s ease-in;
+          transition: all .1s ease-in;/* Safari 3-8  */  
+      }
+
+      a:hover {
+        /*padding-top: -3%;
+        padding-left: -3%;
+        padding: 3%;*/
+        -webkit-transition: all .2s ease-in;
+          -moz-transition: all .2s ease-in;
+          -o-transition: all .2s ease-in;
+          transition: all .2s ease-in;
+      }
+
+      a, p, .link {
+      }
+
+      .design, .development {
+        display: none;
+        z-index: 999;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 20px;
+        float: left;
+        position: relative;
+        margin-right: 1vw; 
+        padding: 1.25%;
+        font-size: 14px;
+      }
+
+      .design {
+        background-color: #e5e51b;
+      }
+
+      .development {
+        background-color: #fc3c07;
+      }
+
+      .big {
+        cursor: pointer;
+        background-color: #ffed3f;
+      }
+
+      .box {
+        position: relative;
+        top: 20vh;
+        width: 100vw;
+        height: auto;
+      }
+
+      .folder {
+        display: none;
+        position: fixed;
+        left: 10vw;
+        top: 10vh;
+        width: 10vw;
+        height: 10vh;
+        background-color:#ffed3f;
+      }
+
+
+
+      
+
+
+
+    </style>
+
+    <script>
+
+     
+
+      $(document).ready(function(){
+
+        $(document).mousemove(function(e){
+          $(".folder").css({"left":e.pageX,"top":e.pageY});
+        });
+
+        
+        setTimeout(function(){
+        var a =[];
+        $(".link").each( function(index){
+          a[index] = $(this);
+          setTimeout( function () {
+
+          a[index].show().addClass('big').delay(500).queue(function(next) {
+          a[index].removeClass('big');
+          next();
+          });
+          }, index * 600);
+        });
+        },200);
+      
+        $(".link").mouseover(function(){
+          console.log("hi there");
+          $(this).addClass("big");
+        }).mouseout(function(){ 
+          var self = $(this);
+          setTimeout(function(){
+            $(self).removeClass("big");
+          },1000);
+        });
+
+      });
+
+
+    </script>
+
+   
+
+
+
+      <body>
+
+        <div class="folder"></div>
+         
+        <div class="tim">I made this separate mini-site to share websites I've designed & developed, as well as "interaction design" experiments. All built with just HTML, CSS, and jQuery.  <p class="design">Design</p>
+        <p class="development">Development</p></div>
+
+        <div class="box">
+        <a class="link" href="http://www.thecoast.studio"> The Coast (using Kirby CMS), 2018 </a>
+        <a class="link" href="http://cube.nihil-artikel.com/"> Cubic Cable Holder site (using Prismic.io CMS), 2017 </a>
+        <a class="link" href="http://www.timzarras.com/mei"> Portfolio site for Mei, 2017 </a>
+        <a class="link" href="/rectangle"> Rectangle, 2016 </a>
+        <a class="link" href="/collage"> Collage, 2015 </a>
+        </div>
+
+
+      </body>
+
+
+</html>
