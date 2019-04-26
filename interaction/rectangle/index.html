@@ -17,62 +17,55 @@
 <script>
 $(document).ready(function() {
 
-	var the  = ["Hello again! ",
+	var the  = ["Hello again, ",
 				"Hi again, ",
 				"Hi, ",
 				"Hello, ",
-				"Bonjour, "
+				"Hey, "
 				];
 
 	var cat = ["I'll be sure to ",
-				"I'm not sure how to ",
-				"I'll look to  ", 
-				"Let's see to ",
+				"I'm not sure, you can ",
+				"I'll try to  ", 
+				"I'm game to ",
 				"You'll need to ",
-				"You're required to "];
+				"We need to "];
 
 	var went = ["read that over ",
 				"type that up  ",
-				"let that out ",
+				"let them know ",
 				"check that out ",
-				"look about this place "];
+				"see if we can get them ",
+				];
 
 	var there = ["here.",
 				"once we learn more.",
-				"after the weekend!",
+				"after the weekend.",
 				"when you're back.",
-				"once that happens!"];
-
-	var when = ["Yours,",
-				"Best,",
-				"Regards,"];
-
-
-
-	
-
-
-		var $newdiv;
+				"once that happens."];
 
 function reply() {
-		for (var i = 0; i < 16; i++) {
+
+		
+		for (var i = 0; i < 5; i++) {
+
 		var t = the[Math.floor(Math.random()*the.length)];
 		var c = cat[Math.floor(Math.random()*cat.length)];
 		var w = went[Math.floor(Math.random()*went.length)];
 		var h = there[Math.floor(Math.random()*there.length)];
-		var message = $('<a class="title"></a>');
-		var body = $(".container");
-		message.append(t,"<br><br>",c,w,h);
-		body.append(message);
+			var message = $('<a class="title"></a>');
+			message.append(t,"<br><br>",c,w,h);
+			var body = $(".container");
+			body.append(message);
     	}
+		
+    }
 
-    	}
-
-    	reply();
-
-
+    reply();
 
 
+
+    	
 	
 	$(window).mousemove(function() {
 		
@@ -111,14 +104,6 @@ function reply() {
 			reply();
 		});
 
-	//$(".title", this).hover(function() {
-
-		//$(".info", this).show().css({"left": event.pageX, "top" : event.pageY);
-
-	//});
-	
-
-
 });
 </script>
 
@@ -148,7 +133,7 @@ body {
 .container {
 	position: absolute;
 	left: 2%;
-	top: 4%;
+	top: 30%;
 	width: 90%;
 	height: auto;
 	margin-top: 3%;
@@ -219,19 +204,8 @@ body {
 
 <body>
 <p class="q">Not seeing the reply you're looking for?</p>
-<div class="container">
-
-			<!-- <a class="title"> Hello there </a>
-			<a class="title"> Yes, that would be perfect. Great ! </a>
-			<a class="title"> Okay, great ! </a>
-			<a class="title"> No, I will not be available that day. </a>
-			<a class="title"> Is there another day that works? </a>
-			<a class="title"> Goodbye !</a> -->
-	
-
-	</div>
-
-		<div class="box"></div>
-	</body>
+<div class="container"></div>
+<div class="box"></div>
+</body>
 
 </html>
