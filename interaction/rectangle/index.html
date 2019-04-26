@@ -53,7 +53,9 @@ $(document).ready(function() {
 
 
 		var $newdiv;
-		for (var i = 0; i < 18; i++) {
+
+function reply() {
+		for (var i = 0; i < 16; i++) {
 		var t = the[Math.floor(Math.random()*the.length)];
 		var c = cat[Math.floor(Math.random()*cat.length)];
 		var w = went[Math.floor(Math.random()*went.length)];
@@ -64,6 +66,9 @@ $(document).ready(function() {
 		body.append(message);
     	}
 
+    	}
+
+    	reply();
 
 
 
@@ -86,6 +91,23 @@ $(document).ready(function() {
 			$(".box").css({"width": $(this).innerWidth(), "background-color":"fdff31"});
 
 	});
+
+	$(".q", this).mouseover(function() {
+			$(".box").css({"width": $(this).innerWidth(), "height": "10%", "background-color":"#ffd800" , "border":"none" });
+			//var sound = new Howl ({
+			//urls: ['thump.wav' , 'thump.ogg'],
+			//loop: false,
+			//volume: .5,
+			//}).play();//
+		}).mouseout(function() {
+			$(".box").css({"width": $(this).innerWidth(), "background-color":"fdff31"});
+
+	});
+
+		$(".q").click(function(){
+			$(".title").remove();
+			reply();
+		});
 
 	//$(".title", this).hover(function() {
 
@@ -123,12 +145,10 @@ body {
 
 .container {
 	position: absolute;
-	left: 50%;
-	top: 50%;
+	left: 2%;
+	top: 4%;
 	width: 90%;
-	height: 90%;
-	transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
+	height: auto;
 	margin-top: 3%;
 
 }
@@ -185,9 +205,18 @@ body {
   	transition: width .6s ease-in-out;
  }
 
+ .q {
+ 	cursor: pointer;
+ 	position: absolute;
+ 	bottom: 4%;
+ 	left: 2%;
+ 	font-size: 25px;
+ }
+
 </style>
 
 <body>
+<p class="q">Not seeing the reply you're looking for?</p>
 <div class="container">
 
 			<!-- <a class="title"> Hello there </a>
