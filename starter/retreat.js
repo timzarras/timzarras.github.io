@@ -81,11 +81,18 @@ Prismic.Api('https://startertest.prismic.io/api', function (err, Api) {
                       $stick = $('.row:first');
                       elTop = $stick.offset().top;
 
+                     
+
 
                       $window.scroll(function() {
                         $(".moverS > .title").toggleClass('sticky', $window.scrollTop() > elTop)
                         $(".moverS").toggleClass('background', $window.scrollTop() > elTop);
+
+                  
                     });
+
+
+              
 
 
 
@@ -118,15 +125,14 @@ Prismic.Api('https://startertest.prismic.io/api', function (err, Api) {
 
                     });
 
-                   $(".next").on("click", function(e) {
-                      $(document).scrollTop($("p").parent().next().offset().top);
-                      return false;
-                    });
 
 
-                    
-
+            
                     $(window).scroll(function(){
+
+                      var image = $("img").offset();
+                      var top = image.top;
+                      console.log(top);
 
                       $(".moverS").css("top","-15vh");
 
@@ -137,10 +143,11 @@ Prismic.Api('https://startertest.prismic.io/api', function (err, Api) {
                       console.log("Haven't scrolled in 250ms!");
                       }, 100));
 
+
                       if ($(window).scrollTop() > 500) {
                         $(".tim").css({"width":"4.5%","padding-top":".5%"});
                       } else {
-                        $(".tim").css({"width":"8%","padding-top":"0%"});
+                        $(".tim").css({"width":"12vw","padding-top":"0%"});
                         $(".moverS > .title").css("color","rgba(255, 255, 255, 1)");
                       }
 

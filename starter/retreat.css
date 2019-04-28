@@ -26,10 +26,14 @@ a:hover {
   src: url(avenir.ttc);
 }
 
+.animate {
+  margin-left: 1000px;
+}
+
 
 html {
   color: white;
-  background-color: #c9ddff;
+  background-color: #a1bbed;
   letter-spacing:  1.3 !important;
 	margin: 0 !important;
 	font-family: Avenir !important;
@@ -63,12 +67,13 @@ body {
   font-family: Avenir !important;
   z-index: 996 !important;
   position: fixed;
-  /*background-color: #c9ddff;*/
+  /*background-color: #a1bbed;*/
   top: 0;
   left: 0vw;
   width: 100vw;
   color: white;
   cursor: pointer;
+
   -webkit-transition: top .3s ease-in-out;
   -moz-transition: top .3s ease-in-out;
   -o-transition: top .3s ease-in-out;
@@ -80,7 +85,7 @@ body {
   position: fixed;
   left: 1vw !important;
   top: 2.825vh ;
-  width: 8%;
+  width: 12vw;
   height: auto;
   margin-top: 0;
   -webkit-transition: width .3s ease-in-out;
@@ -98,7 +103,7 @@ body {
 }
 
 .background {
-  background-color: #c9ddff;
+  background-color: #a1bbed;
 }
 
 .stuck {
@@ -151,9 +156,10 @@ body {
   float: left;
 }
 
-img {
+.row img {
+  display: inline-block;
   /*background-color: rgba(255,255,255,.25);*/
-  margin-top: 5vh;
+  margin-top: 1vh;
   margin-left: 0;
   cursor: pointer;
   position: relative;
@@ -162,15 +168,39 @@ img {
   height: auto;
   left: -20vw !important;
   margin-bottom: 10vh;
+  z-index: -99;
 }
 
 img:hover {
 
 }
 
+.ani {
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
+
+}
+
+  @-webkit-keyframes example {
+  from {width: 100vw;}
+  to {width: 50vw;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  from {width: 100vw;}
+  to {width: 50vw;}
+}
+
+.hey {
+  width: 3vw;
+}
+
 .row > .title {
   font-family: Avenir;
-  color: #99aac6;
+  color: #e0ecff;
   padding: .5%;
   width: auto;
   border-radius: 5px;
@@ -219,10 +249,10 @@ img:hover {
   font-weight: medium;
   border-radius: 4px;
  /*background-color: black;*/
-  text-align: justify;
+  text-align: right;
   padding: 2%;
   /*text-transform: lowercase;*/
-  left: 38vw;
+  right: -39vw;
   margin-bottom: .25vh;
   margin-right: 2.5vw;
   position: relative;
@@ -246,12 +276,14 @@ img:hover {
 .latest {
   z-index: -997;
   position: absolute !important;
-  top: -5vh;
-  left: -10vw !important;
+  bottom: 0;
+  left: 50% !important;
   padding: 0;
   margin: 0 !important;
-  width: 120vw !important;
-  height: auto;
+  width: auto;
+  height: 105vh;
+  transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%); */
   -webkit-transition: opacity .4s ease-in-out;
   -moz-transition: opacity .4s ease-in-out;
   -o-transition: opacity .4s ease-in-out;
