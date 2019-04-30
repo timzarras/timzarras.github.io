@@ -31,24 +31,24 @@ $(document).ready(function() {
 				"You'll need to ",
 				"We need to "];
 
-	var went = ["read that over ",
-				"type that up  ",
+	var went = ["read that ",
+				"write that  ",
 				"let them know ",
 				"check that out ",
 				"see if we can get them ",
 				];
 
-	var there = ["here.",
+	var there = ["over here.",
 				"once we learn more.",
 				"after the weekend.",
 				"when you're back.",
-				"once that happens."];
+				"once that happens.",
+				"with everyone.",
+				"when you have a chance."];
 
 function reply() {
 
-		
 		for (var i = 0; i < 5; i++) {
-
 		var t = the[Math.floor(Math.random()*the.length)];
 		var c = cat[Math.floor(Math.random()*cat.length)];
 		var w = went[Math.floor(Math.random()*went.length)];
@@ -60,6 +60,8 @@ function reply() {
     	}
 		
     }
+
+
 
     reply();
 

@@ -25,14 +25,14 @@
         width: 100%;
         height: 100%;
         margin: 0;
-        background-color: #e2cd0b;
+    /*    background-color: #edda12;*/
         font-family: sans-serif;
         font-weight: 100;
       }
 
       .tim {
         margin: 0;
-        background-color: #edda12;
+        /*background-color: #edda12;*/
         color: black;
         position: absolute;
         width: 50vw;
@@ -45,42 +45,53 @@
       }
 
       a {
-        overflow: hidden;
+
+        opacity: 0;
+        display: inline-block;
+        background-color: #f7f7f7;
         color: black;
         font-size: 16px;
-        left: 0;
         text-align: left;
         text-decoration: none;
-        border-radius: 30px 30px 0px 0px;
-        display: none;
-        float: left;
         position: relative;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-top: 2%;
-        padding-bottom: 2%;
-        margin-right: .4vw;
-        margin-bottom: .6vh;
-        background-color: #edda12;
-        border-bottom: none !important;
-        -webkit-transition: all .1s ease-in;
-          -moz-transition: all .1s ease-in;
-          -o-transition: all .1s ease-in;
-          transition: all .1s ease-in;/* Safari 3-8  */  
+        float: top;
+        padding: .5%;
+        /*padding-bottom: 2vh;*/
+        margin-right: 60vw;
+        margin-bottom: 3vh;
+        margin-top: 5%;
+        background-color: none;
+        height: auto;
+        /*border-top: 1px solid black;*/
+        -webkit-transition: all .6s ease-in;
+          -moz-transition: all .6s ease-in;
+          -o-transition: all .6s ease-in;
+          transition: all .6s ease-in;
+      }
+
+      .short {
+        margin-top: 0;
       }
 
       a:hover {
-        /*padding-top: -3%;
-        padding-left: -3%;
-        padding: 3%;*/
-        -webkit-transition: all .2s ease-in;
-          -moz-transition: all .2s ease-in;
-          -o-transition: all .2s ease-in;
-          transition: all .2s ease-in;
+        background-color: white;
+        color: black;
+        cursor: pointer;   
       }
 
-      a, p, .link {
+      a:nth-child(odd) {
+        left: 3vw !important;
       }
+
+      a:nth-child(even) {
+        margin-left: 3vw;
+      }
+
+      a:last-child {
+        margin-bottom: 10vh;
+      }
+
+
 
       .design, .development {
         display: none;
@@ -105,12 +116,12 @@
 
       .big {
         cursor: pointer;
-        background-color: #ffed3f;
+        padding-top: 10%;
       }
 
       .box {
         position: relative;
-        top: 20vh;
+        top: 30vh;
         width: 100vw;
         height: auto;
       }
@@ -125,7 +136,35 @@
         background-color:#ffed3f;
       }
 
+      img {
+        position: relative;
+        display: inline-block;
+        width: auto;
+        height: 42vh;
+        margin-top: 2vh;
+        margin-right: 2vw;
+        margin-bottom: 1vh;
+        -webkit-transition: all .25s ease-in;
+          -moz-transition: all .25s ease-in;
+          -o-transition: all .25s ease-in;
+          transition: all .25s ease-in;/
+      }
 
+      .eye {
+        margin-top:20vh;
+        margin-bottom: 20vh;
+      }
+
+
+      .see {
+        height: 65vh;
+      }
+
+      footer {
+        position: relative;
+        background-color: red;
+        height: 5vh;
+      }
 
       
 
@@ -139,34 +178,66 @@
 
       $(document).ready(function(){
 
+
+        var link;
+        var ws = [];
+        $(".link").each(function(){
+            var link = $(this).width();
+            ws.push(link);
+            var index = $(".link").index(this);
+          console.log(index);
+          $(this).css("left", ws[index-1]);
+            
+        });
+
+        // $(".link").each(function(){
+
+        // });
+
+        // $
+
+
         $(document).mousemove(function(e){
           $(".folder").css({"left":e.pageX,"top":e.pageY});
         });
 
-        
+        $(".link").click(function(){
+          var attr = $(this).attr('href');
+          // For some browsers, `attr` is undefined; for others, `attr` is false. Check for both.
+          if (typeof attr !== typeof undefined && attr !== false) {
+            
+          } else {
+                  var yes = $(this).offset();
+                  var thispart = yes.top;
+                  $("body").animate({scrollTop: thispart-10},400);
+                  $("img").not(this).removeClass("see");
+                  $("img",this).addClass("see");
+                  
+          }  
+        });
+
         setTimeout(function(){
         var a =[];
         $(".link").each( function(index){
           a[index] = $(this);
           setTimeout( function () {
-
-          a[index].show().addClass('big').delay(500).queue(function(next) {
-          a[index].removeClass('big');
+          a[index].css("opacity","1").delay(300).queue(function(next) {
+          a[index].addClass('short');
           next();
           });
-          }, index * 600);
+          }, index * 100);
         });
-        },200);
+        },100);
       
-        $(".link").mouseover(function(){
-          console.log("hi there");
-          $(this).addClass("big");
-        }).mouseout(function(){ 
-          var self = $(this);
-          setTimeout(function(){
-            $(self).removeClass("big");
-          },1000);
-        });
+        // $(".link").mouseover(function(){
+        //   console.log("hi there");
+        //   $(this).addClass("big");
+        // }).mouseout(function(){ 
+        //   var self = $(this);
+        //   setTimeout(function(){
+        //     $(self).removeClass("big");
+        //   },1000);
+        // });
 
       });
 
@@ -181,19 +252,21 @@
 
         <div class="folder"></div>
          
-        <div class="tim">I made this separate mini-site to share websites I've designed & developed, as well as "interaction design" experiments. All built with just HTML, CSS, and jQuery.  <p class="design">Design</p>
-        <p class="development">Development</p></div>
+        <div class="tim">I made this separate mini-site to share websites I've designed & developed, graphic design work, and "interaction design" experiments. All websites and interactions were built with just HTML, CSS, and jQuery.  </div>
 
         <div class="box">
-        <a class="link" href="http://www.thecoast.studio"> The Coast (using Kirby CMS), 2018 </a>
-        <a class="link" href="http://cube.nihil-artikel.com/"> Cubic Cable Holder site (using Prismic.io CMS), 2017 </a>
-        <a class="link" href="http://www.timzarras.com/mei"> Portfolio site for Mei, 2017 </a>
-        <a class="link" href="http://timzarras.com/interaction/rectangle"> Rectangle animation and auto reply generator, 2016 </a>
-        <a class="link" href="http://timzarras.com/interaction/collage"> Collage, 2015 </a>
+        <a class="link"  href="http://www.thecoast.studio"> The Coast (using Kirby CMS), 2018 </a>
+        <a class="link"  href="http://cube.nihil-artikel.com/"> Cubic Cable Holder site (using Prismic.io CMS), 2017 </a>
+        <a class="link"  href="http://www.timzarras.com/mei"> Portfolio site for Mei, 2017 </a>
+        <a class="link"  href="http://timzarras.com/interaction/rectangle"> Rectangle animation and auto reply generator, 2016<br><br>A basic site mimicing "auto-replies" by building phrases from mulitple arrays of phrases. I like that they all vaguely make sense.</a>
+        <a class="link" >RISD Department of Furniture Design Senior Show poster, 2016<br><img src="combo.png"/></a>
+        <a class="link"  href="http://timzarras.com/interaction/collage"> Collage, 2015<br><br>A basic site in which you can drag and drop images to collage.</a>
+        <a class="link" >Album artwork for Wilmington, NC based band Waul, 2014<br><img src="WaulCover.jpg"/><img src="WaulBack.jpg"/></a>
+
         </div>
 
-
       </body>
+      
 
 
 </html>
