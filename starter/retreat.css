@@ -67,7 +67,7 @@ body {
   font-family: Avenir !important;
   z-index: 996 !important;
   position: fixed;
-  /*background-color: #a1bbed;*/
+  /*background-color: rgba(0,0,0,.1);*/
   top: 0;
   left: 0vw;
   width: 100vw;
@@ -85,7 +85,7 @@ body {
   position: fixed;
   left: 1vw !important;
   top: 2.825vh ;
-  width: 12vw;
+  width: 9vw;
   height: auto;
   margin-top: 0;
   -webkit-transition: width .3s ease-in-out;
@@ -152,6 +152,7 @@ body {
   text-align: center;
   left: 20vw;
   width: 100%;
+  /*margin-bottom: 12vh;*/
   position: relative;
   float: left;
 }
@@ -167,7 +168,7 @@ body {
   width: 100vw;
   height: auto;
   left: -20vw !important;
-  margin-bottom: 10vh;
+  margin-bottom: -2vh;
   z-index: -99;
 }
 
@@ -251,8 +252,7 @@ img:hover {
  /*background-color: black;*/
   text-align: right;
   padding: 2%;
-  /*text-transform: lowercase;*/
-  right: -39vw;
+  left: 40vw;
   margin-bottom: .25vh;
   margin-right: 2.5vw;
   position: relative;
@@ -280,8 +280,8 @@ img:hover {
   left: 50% !important;
   padding: 0;
   margin: 0 !important;
-  width: auto;
-  height: 114vh;
+  width: 100vw;
+  height: auto;
   transform:translate(-50%,0%);
   -webkit-transform:translate(-50%,0%); */
   -webkit-transition: opacity .4s ease-in-out;
@@ -353,11 +353,11 @@ button:hover {
 @media screen and (max-width: 736px){
 
   html {
-    font-size: 12;
+    font-size: 10 !important;
   }
 
   .moverS > .title,.row > .title {
-    left: 4vw;
+    left: 3vw;
   }
   a,a:visited {
     background-color: #f9f2ff;
@@ -370,15 +370,11 @@ button:hover {
     width: 70vw;
   }
 
-  img {
+  .row > img {
     position: relative;
     width: 100% !important;
     height: auto;
-    left: 40vw;
-  }
-
-  .materials {
-    width: 90%;
+    left: 0;
   }
 
   .latest,.tim,.proj {
@@ -398,26 +394,63 @@ button:hover {
   }
 
   .images {
-    width: 80vw;
-    left: -10vw;
+    font-size: 20px !important;
+    width: 100%;
+    left: -5vw;
   }
 
- 
+  .title {
+    font-size: 30px;
+  }
+
 
   .moverS {
     font-size: 8px;
     padding: 0;
     z-index: 998 !important;
-    padding-top: 8vh;
+    padding-top: 10vh;
     padding-bottom: 15px;
     border-top: none;
     width: 100vw !important;
     height: auto;
-    top: 0;
+    top: 0px;
     left: 0;
     position: fixed;
     background-color: #8ab1e0;
   }
+
+   input, button{
+  border-radius: 5px;
+  position: relative;
+  
+  padding-right: 4%;
+  border: none;
+  font-family: Avenir !important;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, .5);
+  margin-bottom: 12px;
+  margin-top: 12px;
+  left: 50%;
+  transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%); 
+}
+
+input:focus {
+  outline: none !important;
+  /*border: 2px black solid;*/
+}
+
+button {
+  cursor: pointer;
+  background-color: white;
+  width: 180px;
+  padding: 5% !important;
+  overflow: hidden;
+}
+
+button:hover {
+  color: gray;
+}
 
 
 }

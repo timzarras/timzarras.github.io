@@ -145,9 +145,9 @@ Prismic.Api('https://startertest.prismic.io/api', function (err, Api) {
 
 
                       if ($(window).scrollTop() > 500) {
-                        $(".tim").css({"width":"4.5%","padding-top":".5%"});
+                        $(".tim").css({"width":"4.5%","padding-top":".65%"});
                       } else {
-                        $(".tim").css({"width":"12vw","padding-top":"0%"});
+                        $(".tim").css({"width":"9vw","padding-top":"0%"});
                         $(".moverS > .title").css("color","rgba(255, 255, 255, 1)");
                       }
 
