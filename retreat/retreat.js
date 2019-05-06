@@ -178,7 +178,7 @@ Prismic.Api('https://startertest.prismic.io/api', function (err, Api) {
             var yup = $(target).offset();
             var hello = $(yup).top;
             console.log(yup);
-            $("html,body").animate({scrollTop: (yup.top)-300},600);
+            $("html,body").animate({scrollTop: (yup.top)-220},600);
           });
 
 
