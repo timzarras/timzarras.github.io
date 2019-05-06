@@ -201,7 +201,7 @@ img:hover {
 
 .row > .title {
   font-family: Avenir;
-  color: #ccddf1;
+  color: white;
   padding: .5%;
   width: auto;
   border-radius: 5px;
@@ -357,7 +357,9 @@ button:hover {
   }
 
   .moverS > .title,.row > .title {
+    text-align: left;
     left: 3vw;
+    margin-right: 40vw;
   }
   a,a:visited {
     background-color: #f9f2ff;
@@ -370,15 +372,16 @@ button:hover {
     width: 70vw;
   }
 
-  .row > img {
-    position: relative;
-    width: 100% !important;
-    height: auto;
-    left: 0;
+  .latest {
+    position: absolute;
+    bottom: 0 !important;
+    width: 120vw !important;
   }
 
-  .latest,.tim,.proj {
-    /*display:none;*/
+  .row img {
+    width: 110vw !important;
+    height: auto;
+    left: 0;
   }
 
   /*.latest {
@@ -396,10 +399,10 @@ button:hover {
   .images {
     font-size: 20px !important;
     width: 100%;
-    left: -5vw;
   }
 
-  .title {
+  .row > .title {
+    width: 50vw;
     font-size: 30px;
   }
 
@@ -411,7 +414,7 @@ button:hover {
     padding-top: 10vh;
     padding-bottom: 15px;
     border-top: none;
-    width: 100vw !important;
+    width: 110vw !important;
     height: auto;
     top: 0px;
     left: 0;
@@ -419,20 +422,20 @@ button:hover {
     background-color: #8ab1e0;
   }
 
-   input, button{
+  input, button{
   border-radius: 5px;
   position: relative;
   
-  padding-right: 4%;
+  padding: 4%;
   border: none;
   font-family: Avenir !important;
   font-size: 20px;
   background-color: rgba(255, 255, 255, .5);
   margin-bottom: 12px;
   margin-top: 12px;
-  left: 50%;
-  transform:translate(-50%,0%);
-  -webkit-transform:translate(-50%,0%); 
+  left: 40.5vw;
+  transform:translate(-50vw,0vh);
+  -webkit-transform:translate(-50vw,0vh); 
 }
 
 input:focus {
@@ -446,6 +449,8 @@ button {
   width: 180px;
   padding: 5% !important;
   overflow: hidden;
+  transform:translate(-50vw,0vh);
+  -webkit-transform:translate(-50vw,0vh); 
 }
 
 button:hover {

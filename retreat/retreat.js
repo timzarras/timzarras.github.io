@@ -169,8 +169,6 @@ Prismic.Api('https://startertest.prismic.io/api', function (err, Api) {
 
 				} else {
 
-          $(".materials").css("width","90%");
-          $("img").css({"width":"90%","height":"auto"});
 
           $(".moverS > .title").click(function(){
             var num = $(this).index();
@@ -180,19 +178,13 @@ Prismic.Api('https://startertest.prismic.io/api', function (err, Api) {
             var yup = $(target).offset();
             var hello = $(yup).top;
             console.log(yup);
-            $("html,body").animate({scrollTop: (yup.top-dis)-80},600);
+            $("html,body").animate({scrollTop: (yup.top)-300},600);
           });
 
 
 
         }
 
-        if( /iPad/i.test(navigator.userAgent) ) {
-         $(".latest").hide();
-
-        } else {
-          // normal //
-        }
 
 
 
