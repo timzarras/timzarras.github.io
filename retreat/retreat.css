@@ -378,12 +378,13 @@ button:hover {
   }
 
   .latest {
-    position: absolute;
+    position: fixed !important;
     bottom: 0 !important;
     width: 120vw !important;
   }
 
   .row img {
+    z-index: 999 !important;
     width: 110vw !important;
     height: auto;
     left: 0;
@@ -411,7 +412,6 @@ button:hover {
     width: 50vw;
     font-size: 30px;
   }
-
 
   .moverS {
     font-size: 8px;
