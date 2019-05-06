@@ -373,18 +373,19 @@ button:hover {
   }
 
   .row {
+    z-index: 997 !important;
     top: 120vh !important;
     width: 70vw;
   }
 
   .latest {
-    position: fixed !important;
-    bottom: 0 !important;
+    position: absolute !important;
+    bottom: -10.5vh !important;
     width: 120vw !important;
+    z-index: 0 !important;
   }
 
   .row img {
-    z-index: 999 !important;
     width: 110vw !important;
     height: auto;
     left: 0;
