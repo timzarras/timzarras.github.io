@@ -424,15 +424,15 @@ button {
   input, button{
   border-radius: 5px;
   position: relative;
-  
   padding: 4%;
   border: none;
   font-family: Avenir !important;
   font-size: 20px;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .1);
   margin-bottom: 12px;
   margin-top: 12px;
   left: 40.5vw;
+  margin-left: 9%;
   transform:translate(-50vw,0vh);
   -webkit-transform:translate(-50vw,0vh); 
 }
@@ -443,8 +443,9 @@ input:focus {
 }
 
 button {
+  margin-left:18%;
+  background-color: transparent;
   cursor: pointer;
-  background-color: white;
   width: 180px;
   padding: 5% !important;
   overflow: hidden;
