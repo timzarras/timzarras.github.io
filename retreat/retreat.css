@@ -242,7 +242,7 @@ img:hover {
   width: 60vw;
   height: auto;
   position: relative;
-  font-size: 32;
+  font-size: 30;
 }
 
 .moverS > .title {
@@ -266,13 +266,6 @@ img:hover {
   color: white !important;
 }
 
-
-/* .images > section:first-child > .block-img > img {
-  width: 40vw !important;
-  height: auto;
-  margin-right: 100vw;
-} */
-
 .latest {
   z-index: -997;
   position: absolute !important;
@@ -290,7 +283,7 @@ img:hover {
   transition: opacity .4s ease-in-out;
 }
 
-.sign:last-child {
+.sign {
   position: relative;
   display: inline-block;
   float: left;
@@ -300,6 +293,11 @@ img:hover {
   background-color: none;
   border-radius: 5px;
   padding: 1%;
+  color: white !important;
+}
+
+form {
+  color: white !important;
 }
 
  input, button{
@@ -310,12 +308,17 @@ img:hover {
   border: none;
   font-family: Avenir !important;
   font-size: 20px;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255,255,255,.3);
   margin-bottom: 12px;
   margin-top: 12px;
   left: 50%;
   transform:translate(-50%,0%);
-  -webkit-transform:translate(-50%,0%); 
+  -webkit-transform:translate(-50%,0%);
+  color: white !important; 
+}
+
+::placeholder {
+  color: white !important;
 }
 
 input:focus {
@@ -325,13 +328,10 @@ input:focus {
 
 button {
   cursor: pointer;
-  background-color: white;
+  background-color: transparent;
+  color: white !important;
   width: 180px;
   overflow: hidden;
-}
-
-button:hover {
-  color: gray;
 }
 
 .font {
@@ -340,14 +340,6 @@ button:hover {
 
 .row:first > .images > .block-img:first > img{
   display: none !important;
-}
-
-.next {
-  position: fixed;
-  right: 5vw;
-  bottom: 5vh;
-  z-index: 999 !important;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 736px){
