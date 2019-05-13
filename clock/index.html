@@ -92,7 +92,8 @@
         }
 
         .seconds {
-          bottom: 0 !important;
+          position: absolute;
+          bottom: -23vh !important;
           max-width: 4vw;
         }
       }
@@ -133,15 +134,6 @@
           $(".hours").animate({"left":(hours*8.33333333333)+"%"});
           
         }
-
-        
-
-          
-
-          
-          
-          
-
 
           update();
           window.setInterval(update, 1000);
