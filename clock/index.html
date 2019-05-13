@@ -1,0 +1,169 @@
+<html>
+
+      <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Website description">
+        <meta name="keywords" content="Search keywords">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="table.css">
+        <title> Moving ball </title>
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script src="table.js"></script>
+      </head>
+
+      <style> 
+
+      body {
+        margin: 0;
+       /* background-color: black;*/
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .hours,.minutes,.seconds {
+        height: 33vh;
+        text-align: center;
+        padding: 2%;
+        position: relative;
+        margin: 0;
+        width: auto;
+        max-width: 3vw;/*
+        */left: 10px;
+        opacity: 1;
+        font-family: sans-serif;
+        font-size: 30px;
+        font-weight: 100;
+      }
+
+      .hours {
+        max-width: 6.75vw;
+        min-width: 6.75vw;
+        max-height: 18vh;
+        font-size: 100px;
+        background-color: black;
+        color: white;
+        border-radius: 50vw 50vw 50vw 50vw;
+      }
+
+      .minutes {
+        
+        font-size: 200px;
+        max-width: 6.5vw;
+        padding-right: 3.75vw;
+      }
+
+      .seconds {
+        background-color: #eef202;
+        padding-left: 1vw;
+        padding-right: 1.5vw;
+        max-width: 1vw;
+        min-width: 1vw;
+        font-size: 15px;
+        max-height: 14.5vh;
+        position: absolute;
+        bottom: 0 !important;
+        border-radius: 50vw 50vw 50vw 50vw;
+      }
+
+      .small {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 25px;
+      }
+
+      .line {
+            height: 3px;
+            background-color: #aaa;
+            transform-origin: left center;
+            position: absolute;
+            z-index: 1;
+        }
+
+      /*@media screen and (max-width: 736px) {
+        .hours,.minutes,.seconds {
+          max-width: 50px;
+          height: 50px;
+        }
+
+        .minutes {
+          padding-right: 10px;
+          padding-top:12.5px;
+          max-width: 90px;
+          height: 75px;
+        }
+      }*/
+
+    </style>
+
+    <script> 
+
+      $(document).ready(function(){
+
+        function update(){
+            var date = new Date();
+
+          var $hOut = $('.hours'),
+              $mOut = $('.minutes'),
+              $sOut = $('.seconds');
+
+          var hours = date.getHours() == 0
+              ? 12
+              : date.getHours() > 12
+                ? date.getHours() - 12
+                : date.getHours();
+  
+          var minutes = date.getMinutes() < 10 
+                        ? '0' + date.getMinutes() 
+                        : date.getMinutes();
+          
+          var seconds = date.getSeconds() < 10 
+                        ? '0' + date.getSeconds() 
+                        : date.getSeconds();
+          $hOut.text(hours);
+          $mOut.text(minutes);
+          $sOut.text(seconds);
+          var left = Math.floor(Math.random() * 70) + 1;
+          var top = Math.floor(Math.random() * 70) + 1;
+          $(".seconds").animate({"left":(seconds*1.67)+"vw"});
+          $(".minutes").animate({"left":(minutes*1.67)+"vw"});
+          $(".hours").animate({"left":(hours*8.33333333333)+"vw"});
+          
+        }
+
+        
+
+          
+
+          
+          
+          
+
+
+          update();
+          window.setInterval(update, 1000);
+          
+
+
+        
+
+
+
+
+      });
+
+
+    </script>
+
+
+      <body>
+      <div class="hours"></div>
+      <div class="minutes"></div>
+      <div class="seconds"></div>
+      <div class="timer"/>
+
+
+      </body>
+
+
+</html>
