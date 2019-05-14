@@ -38,8 +38,10 @@
       }
 
       .hours {
+        position: absolute;
+        top: 0;
         padding: 3%;
-        max-height: 4%;
+        height: 20vh;
         font-size: 3vh;
         background-color: black;
         color: #2d2d2d;
@@ -47,11 +49,12 @@
       }
 
       .minutes {
+        position: absolute;
+        top: 30.5vh;
         padding-left: 4.5%;
         padding-right: 5.5%;
         padding-top: 4%;
-        max-height: 13%;
-        top: 20vh;
+        height: 57vh;
         font-size: 6vh;
         background-color: #4a5600;
         color: #759900;
@@ -138,12 +141,6 @@
           $(".hours").animate({"left":(hours*8.33333333333)+"%"});
           
         }
-
-        $(".s").each(function(){
-          var m = $(this).index()-2.5;
-          var mLeft = m * 3.67;
-          $(this).css({"left":mLeft+"%","margin-right":mLeft+"%"});
-        });
 
           update();
           window.setInterval(update, 1000);

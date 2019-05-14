@@ -20,6 +20,7 @@
       <style>
 
       html {
+        letter-spacing:  1.3 !important;
         cursor: pointer !important;
         letter-spacing: 1.125;
         width: 100%;
@@ -30,21 +31,7 @@
         font-weight: 100;
       }
 
-      .tim {
-        margin: 0;
-        /*background-color: #edda12;*/
-        color: black;
-        position: absolute;
-        width: 50vw;
-        overflow: hidden;
-        padding: 1.125%;
-        border-radius: 5px;
-        height: auto;
-        overflow: visible;
-        font-size: 18px;
-      }
-
-      a {
+      .link{
 
         opacity: 0;
         display: inline-block;
@@ -60,6 +47,7 @@
         margin-right: 60vw;
         margin-bottom: 3vh;
         margin-top: 5%;
+        margin-left: 2vw;
         background-color: none;
         height: auto;
         /*border-top: 1px solid black;*/
@@ -91,7 +79,28 @@
         margin-bottom: 10vh;
       }
 
+      .back {
+        font-size: 14 !important;
+        position: relative;
+        display: inline-block;
+        float: top;
+        top: 5vh !important;
+        left: 5vw !important;
+        margin-left: 2vw !important;
+        margin-bottom: 10vh;
+        color: black;
+      }
 
+      .tim {
+        margin: 0;
+        font-size: 14;
+        margin-top: 5vh;
+        position: relative;
+        left: 5vw;
+        width: 45vw;
+        float: top;
+        /*filter: blur(.175rem);*/
+      }
 
       .design, .development {
         display: none;
@@ -106,14 +115,6 @@
         font-size: 14px;
       }
 
-      .design {
-        background-color: #e5e51b;
-      }
-
-      .development {
-        background-color: #fc3c07;
-      }
-
       .big {
         cursor: pointer;
         padding-top: 10%;
@@ -121,7 +122,7 @@
 
       .box {
         position: relative;
-        top: 30vh;
+        margin-top: 10vh;
         width: 100vw;
         height: auto;
       }
@@ -164,6 +165,14 @@
         position: relative;
         background-color: red;
         height: 5vh;
+      }
+
+      .back {
+        top: 1vh;
+        left: 1vw;
+        z-index: 999;
+        font-size: 18;
+        color: back !important;
       }
 
       
@@ -250,18 +259,28 @@
 
       <body>
 
-        <div class="folder"></div>
+
+        
          
-        <div class="tim">I made this separate mini-site to share websites I've designed & developed, graphic design work, and "interaction design" experiments. All websites and interactions were built with just HTML, CSS, and jQuery.  </div>
+        <!-- <div class="tim">
+        <a href="http://www.timzarras.com" class="back">Back to main site</a><br><br>
+        I made this separate mini-site to share websites I've designed & developed, and "interaction design" experiments. All websites and interactions were built with just HTML, CSS, and jQuery.  </div> -->
+
+        <a class="back" href="http://www.timzarras.com">Back to main site</a>
+        <p class="tim">
+        Web and Interaction Design<br><br><br><br><br>
+        I made this separate mini-site to share websites I've designed & developed, and "interaction design" experiments. All websites and interactions were built with just HTML, CSS, and jQuery.
+    </p>
 
         <div class="box">
+          <a class="link"  href="http://www.retreatapp.info"> Retreat, 2019 </a>
+        <a class="link"  href="http://www.timzarras.com/web/clock"> Clock (WIP), 2019 </a>
         <a class="link"  href="http://www.thecoast.studio"> The Coast (using Kirby CMS), 2018 </a>
+        <a class="link"  href="http://www.timzarras.com/bigtable"> Big Table, 2017<br><br>This site is an animation showing a top view of a table in which people keep walking up to it. I wanted to play with randomizing intervals to create a seemingly spontaneous scene.</a>
         <a class="link"  href="http://cube.nihil-artikel.com/"> Cubic Cable Holder site (using Prismic.io CMS), 2017 </a>
         <a class="link"  href="http://www.timzarras.com/mei"> Portfolio site for Mei, 2017 </a>
-        <a class="link"  href="http://timzarras.com/interaction/rectangle"> Rectangle animation and auto reply generator, 2016<br><br>A basic site mimicing "auto-replies" by building phrases from mulitple arrays of phrases. I like that they all vaguely make sense.</a>
-        <a class="link" >RISD Department of Furniture Design Senior Show poster, 2016<br><img src="combo.png"/></a>
-        <a class="link"  href="http://timzarras.com/interaction/collage"> Collage, 2015<br><br>A basic site in which you can drag and drop images to collage.</a>
-        <a class="link" >Album artwork for Wilmington, NC based band Waul, 2014<br><img src="WaulCover.jpg"/><img src="WaulBack.jpg"/></a>
+        <a class="link"  href="http://timzarras.com/web/rectangle"> Rectangle animation and auto reply generator, 2016<br><br>A basic site mimicing "auto-replies" by building phrases from mulitple arrays of phrases. I like that they all vaguely make sense.</a>
+        <a class="link"  href="http://timzarras.com/web/collage"> Collage, 2015<br><br>A basic site in which you can drag and drop images to collage.</a>
 
         </div>
 
