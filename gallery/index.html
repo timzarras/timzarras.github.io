@@ -65,6 +65,17 @@
         height: auto;
       }
 
+      .aView {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 2vw;
+        max-width: 15vw;
+        height: auto;
+        transform:translate(0%,-50%);
+        -webkit-transform:translate(0%,-50%);
+      }
+
       .focus {
         margin: 0;
         position: absolute;
@@ -164,12 +175,13 @@
           $(".floor,.q").hide();
           $(this).addClass("big", show());
           $(".view[name="+self+"]").addClass("focus");
+          $(".aView[name="+self+"]").show();
         });
 
         $(".back").click(function(){
           $(".marker").removeClass("big");
           $(".view").removeClass("focus");
-          $(".back,.walltag").hide();
+          $(".back,.walltag,.aView").hide();
           $(".floor,.q,.marker").show();
         });
 
@@ -207,6 +219,7 @@
         <img class="marker" id="b" src="marker2.svg"/>
         <img class="view" name="a" src="view.svg"/>
         <img class="view" name="b" src="view2.svg"/>
+        <img class="aView" name="b" src="view2_1.svg"/>
         <p class="back">Back to plan view</p>
         <p class="walltag">Piece title, year<br><br>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula sollicitudin diam eu fringilla. Proin fringilla dignissim rhoncus. Cras tristique odio semper pretium auctor. Ut nec nunc at nulla viverra vestibulum. Sed sit amet justo erat. Pellentesque mattis urna sit amet dictum elementum. Curabitur sem nulla, maximus nec neque ut, facilisis viverra mi. Maecenas vehicula mattis mi nec posuere. Nullam rhoncus ligula quis mattis finibus. Cras ultrices augue ac lacinia feugiat. Mauris pretium interdum tincidunt. Fusce dapibus dui lectus, ac tempus sapien varius et.</p>
