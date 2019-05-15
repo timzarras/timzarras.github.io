@@ -17,7 +17,9 @@
       <style>
 
       html {
+        background-color: #e8e8e8;
         font-family: sans-serif;
+        overflow: hidden;
       }
 
       .floor {
@@ -41,6 +43,19 @@
         transition: all .4s ease-in-out;
       }
 
+      #b {
+        cursor: pointer;
+        position: absolute;
+        top: 50vh;
+        left: 3vw;
+        width: 20px;
+        height: 20px;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+      }
+
       .view {
         position: absolute;
         display: none;
@@ -49,9 +64,10 @@
       }
 
       .focus {
+        margin: 0;
         position: absolute;
         display: inline;
-        left: 50%;
+        left: 52%;
         top: 5vh;
         width: auto;
         height: 90vh;
@@ -70,7 +86,7 @@
         display: none;
         text-align: center;
         position: absolute;
-        left: 48%;
+        left: 50%;
         top: 1.5vh;
         font-size: 15px;
         font-family: sans-serif;
@@ -79,10 +95,10 @@
       }
 
       .big {
-        left: 2vw;
-        top: 6vh;
-        width: 40px;
-        height: 40px;
+        left: 2vw !important;
+        top: 6vh !important;
+        width: 40px !important;
+        height: 40px !important;
       }
       .walltag {
         display: none;
@@ -100,6 +116,16 @@
         font-size: 15px;
         width: 5vw;
       }
+
+      .lPerson {
+        border-radius: 50vw;
+        top: -10vh;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        right: 5vh;
+        background-color: black;
+      }
     </style>
 
     <script>
@@ -107,18 +133,38 @@
       $(document).ready(function(){
 
         $(".marker").click(function(){
-          $(".view").addClass("focus");
+          var self = $(this).attr("id");
+          $(".marker").not(this).hide();
           $(".floor,.q").hide();
           $(".back,.walltag").show();
-          $(this).addClass("big")
+          $(this).addClass("big");
+          $(".view[name="+self+"]").addClass("focus");
         });
 
         $(".back").click(function(){
           $(".marker").removeClass("big");
           $(".view").removeClass("focus");
           $(".back,.walltag").hide();
-          $(".floor,.q").show();
-        })
+          $(".floor,.q,.marker").show();
+        });
+
+      //   setInterval(function(){
+      //   // var x = Math.floor(Math.random() * 4) + 1;
+      //   // var color = colors[x];
+      //   $(".lPerson").each(function(){
+      //     var tone = ["#fff2cc","#f7d894","#845c05","#7c6b2b","#fff9e2","#3d3101"];
+      //     var x = Math.floor(Math.random() * 3) + 1;
+      //     var time = Math.floor(Math.random() * 10000) + 9000;
+      //     var dtime = Math.floor(Math.random() * 100000) + 400;
+      //   var right = Math.floor(Math.random() * 15) + 1;
+      //   var top = Math.floor(Math.random() * 50) + 25;
+      //   var eLeft = Math.floor(Math.random() * 15) + 13;
+      //   var eTop = Math.floor(Math.random() * 90) + 10;
+      //   var lastRan = Math.floor(Math.random() * 90) + 10;
+      //   $(this).css("background-color",tone[x]).animate({"right":right+"vw","top":"105vh"},time).delay(dtime).animate({"right":right+"vw","top":"-10vh"},time).delay(dtime);
+      //   });
+        
+      // },9000);
 
 
       });
@@ -126,13 +172,20 @@
     </script>
 
       <body>
+        <div class="lPerson"></div>
+        <div class="lPerson"></div>
+        <div class="lPerson"></div>
+        <div class="lPerson"></div>
+        <div class="lPerson"></div>
         <img class="floor" src="floorplan.svg"/>
-        <img class="marker" src="marker.svg"/>
-        <img class="view" src="view.svg"/>
+        <img class="marker" id="a" src="marker.svg"/>
+        <img class="marker" id="b" src="marker2.svg"/>
+        <img class="view" name="a" src="view.svg"/>
+        <img class="view" name="b" src="view2.svg"/>
         <p class="back">Back to plan view</p>
         <p class="walltag">Piece title, year<br><br>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula sollicitudin diam eu fringilla. Proin fringilla dignissim rhoncus. Cras tristique odio semper pretium auctor. Ut nec nunc at nulla viverra vestibulum. Sed sit amet justo erat. Pellentesque mattis urna sit amet dictum elementum. Curabitur sem nulla, maximus nec neque ut, facilisis viverra mi. Maecenas vehicula mattis mi nec posuere. Nullam rhoncus ligula quis mattis finibus. Cras ultrices augue ac lacinia feugiat. Mauris pretium interdum tincidunt. Fusce dapibus dui lectus, ac tempus sapien varius et.</p>
-        <p class="q">There are <span class="count">6</span> people currently in the gallery.</p>
+        <p class="q">There are currently <span class="count">6</span> people in the gallery.</p>
 
       </body>
 
