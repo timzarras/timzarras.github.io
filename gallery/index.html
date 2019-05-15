@@ -71,7 +71,8 @@
       }
 
       .big {
-        left: 7vw;
+        left: 2vw;
+        top: 6vh;
         width: 40px;
         height: 40px;
       }
@@ -80,7 +81,16 @@
         position: absolute;
         left: 2vw;
         top: 20vh;
-        max-width: 15vw;
+        max-width: 16vw;
+      }
+
+      .q {
+        text-align: right;
+        position: absolute;
+        right: 2vw;
+        top: 0;
+        font-size: 15px;
+        width: 5vw;
       }
     </style>
 
@@ -90,7 +100,7 @@
 
         $(".marker").click(function(){
           $(".view").addClass("focus");
-          $(".floor").hide();
+          $(".floor,.q").hide();
           $(".back,.walltag").show();
           $(this).addClass("big")
         });
@@ -99,7 +109,7 @@
           $(".marker").removeClass("big");
           $(".view").removeClass("focus");
           $(".back,.walltag").hide();
-          $(".floor").show();
+          $(".floor,.q").show();
         })
 
 
@@ -114,6 +124,7 @@
         <p class="back">Back to plan view</p>
         <p class="walltag">Piece title, year<br><br>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula sollicitudin diam eu fringilla. Proin fringilla dignissim rhoncus. Cras tristique odio semper pretium auctor. Ut nec nunc at nulla viverra vestibulum. Sed sit amet justo erat. Pellentesque mattis urna sit amet dictum elementum. Curabitur sem nulla, maximus nec neque ut, facilisis viverra mi. Maecenas vehicula mattis mi nec posuere. Nullam rhoncus ligula quis mattis finibus. Cras ultrices augue ac lacinia feugiat. Mauris pretium interdum tincidunt. Fusce dapibus dui lectus, ac tempus sapien varius et.</p>
+        <p class="q">There are <span class="count">6</span> people currently in the gallery.</p>
 
       </body>
 
