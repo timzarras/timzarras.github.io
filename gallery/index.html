@@ -83,7 +83,7 @@
         position: absolute;
         top: 6vh;
         right: 2vw;
-        max-width: 15vw;
+        width: 15vw;
         height: auto;
       }
 
@@ -193,6 +193,10 @@
           $(".view").removeClass("focus");
           $(".back,.walltag,.aView").hide();
           $(".floor,.q,.marker").show();
+        });
+
+        $(".aView").click(function(){
+          $(this).toggleClass("focus");
         });
 
       //   setInterval(function(){
