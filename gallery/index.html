@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="tim.css">
         <title> Gallery </title>
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
         <script src="https://unpkg.com/prismic.io/dist/prismic.io.min.js"></script>
         <script src="tim.js"></script>
       </head>
@@ -37,10 +38,11 @@
         left: 8vw;
         width: 20px;
         height: 20px;
-        -webkit-transition: all .4s ease-in-out;
-        -moz-transition: all .4s ease-in-out;
-        -o-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;
+        -webkit-transition: all .4s cubic-bezier(0,.94,.44,1);
+        -moz-transition: all .4s cubic-bezier(0,.94,.44,1);
+        -o-transition: all .4s cubic-bezier(0,.94,.44,1);
+        transition: all .4s cubic-bezier(0,.94,.44,1);
+
       }
 
       #b {
@@ -50,10 +52,10 @@
         left: 3vw;
         width: 20px;
         height: 20px;
-        -webkit-transition: all .4s ease-in-out;
-        -moz-transition: all .4s ease-in-out;
-        -o-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;
+        -webkit-transition: all .4s cubic-bezier(0,.94,.44,1);
+        -moz-transition: all .4s cubic-bezier(0,.94,.44,1);
+        -o-transition: all .4s cubic-bezier(0,.94,.44,1);
+        transition: all .4s cubic-bezier(0,.94,.44,1);
       }
 
       .view {
@@ -73,10 +75,10 @@
         height: 90vh;
         transform:translate(-50%,0%);
         -webkit-transform:translate(-50%,0%);
-        -webkit-transition: all .4s ease-in-out;
-        -moz-transition: all .4s ease-in-out;
-        -o-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;
+        -webkit-transition: all .4s cubic-bezier(0,.94,.44,1);
+        -moz-transition: all .4s cubic-bezier(0,.94,.44,1);
+        -o-transition: all .4s cubic-bezier(0,.94,.44,1);
+        transition: all .4s cubic-bezier(0,.94,.44,1);
       }
 
       .back {
@@ -99,6 +101,10 @@
         top: 6vh !important;
         width: 40px !important;
         height: 40px !important;
+        -webkit-transition: all .4s cubic-bezier(0,.94,.44,1);
+        -moz-transition: all .4s cubic-bezier(0,.94,.44,1);
+        -o-transition: all .4s cubic-bezier(0,.94,.44,1);
+        transition: all .4s cubic-bezier(0,.94,.44,1);
       }
       .walltag {
         display: none;
@@ -131,13 +137,32 @@
     <script>
 
       $(document).ready(function(){
+        ;(function ($) {
+            var oAddClass = $.fn.addClass;
+            $.fn.addClass = function () {
+                for (var i in arguments) {
+                    var arg = arguments[i];
+                    if ( !! (arg && arg.constructor && arg.call && arg.apply)) {
+                        setTimeout(arg.bind(this));
+                        delete arguments[i];
+                    }
+                }
+                return oAddClass.apply(this, arguments);
+            }
+
+        })(jQuery);
+
+        function show() {
+          setTimeout(function(){
+            $(".back,.walltag").fadeIn(300);
+          },100);
+        }
 
         $(".marker").click(function(){
           var self = $(this).attr("id");
           $(".marker").not(this).hide();
           $(".floor,.q").hide();
-          $(".back,.walltag").show();
-          $(this).addClass("big");
+          $(this).addClass("big", show());
           $(".view[name="+self+"]").addClass("focus");
         });
 
