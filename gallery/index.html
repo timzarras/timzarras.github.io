@@ -293,6 +293,7 @@ Prismic.Api('https://proximity.prismic.io/api', function (err, Api) {
       }
 
       $(".marker").click(function(){
+        $(".marker").not(this).hide();
         $(".back").show();
         $(".floor").hide();
         $(this).addClass("big");
@@ -304,7 +305,7 @@ Prismic.Api('https://proximity.prismic.io/api', function (err, Api) {
       $(".back").click(function(){
         $(".back,.walltag").hide();
         $(".view").removeClass("focus");
-        $(".floor").show();
+        $(".floor,.marker").show();
         $(".marker").removeClass("big");
       });
 
