@@ -38,6 +38,7 @@
         left: 80%;
         width: 20px;
         height: 20px;
+        border-radius: 50vw;
         -webkit-transition: all .4s cubic-bezier(0,.94,.44,1);
         -moz-transition: all .4s cubic-bezier(0,.94,.44,1);
         -o-transition: all .4s cubic-bezier(0,.94,.44,1);
@@ -187,6 +188,7 @@
         }
 
         .marker {
+
           margin: 0;
           transform:translate(50%,50%);
         -webkit-transform:translate(50%,50%);
@@ -245,81 +247,92 @@
     <script>
 
       $(document).ready(function(){
-        ;(function ($) {
-            var oAddClass = $.fn.addClass;
-            $.fn.addClass = function () {
-                for (var i in arguments) {
-                    var arg = arguments[i];
-                    if ( !! (arg && arg.constructor && arg.call && arg.apply)) {
-                        setTimeout(arg.bind(this));
-                        delete arguments[i];
-                    }
-                }
-                return oAddClass.apply(this, arguments);
-            }
-
-        })(jQuery);
-
-        function show() {
-          setTimeout(function(){
-            $(".back,.walltag").fadeIn(300);
-          },100);
-        }
-
-        $(".marker").click(function(){
-          var self = $(this).attr("id");
-          $(".marker").not(this).hide();
-          $(".floor,.q").hide();
-          $(this).addClass("big", show());
-          $(".view[name="+self+"]").addClass("focus");
-          $(".aView[name="+self+"]").show();
-          $(".walltag[name="+self+"]").show();
-        });
-
-        $(".back").click(function(){
-          $(".marker").removeClass("big");
-          $(".view").removeClass("focus");
-          $(".back,.walltag,.aView").hide();
-          $(".floor,.q,.marker").show();
-        });
-
-        $(".aView").click(function(){
-          $(this).toggleClass("focus");
-        });
-
-      //   setInterval(function(){
-      //   // var x = Math.floor(Math.random() * 4) + 1;
-      //   // var color = colors[x];
-      //   $(".lPerson").each(function(){
-      //     var tone = ["#fff2cc","#f7d894","#845c05","#7c6b2b","#fff9e2","#3d3101"];
-      //     var x = Math.floor(Math.random() * 3) + 1;
-      //     var time = Math.floor(Math.random() * 10000) + 9000;
-      //     var dtime = Math.floor(Math.random() * 100000) + 400;
-      //   var right = Math.floor(Math.random() * 15) + 1;
-      //   var top = Math.floor(Math.random() * 50) + 25;
-      //   var eLeft = Math.floor(Math.random() * 15) + 13;
-      //   var eTop = Math.floor(Math.random() * 90) + 10;
-      //   var lastRan = Math.floor(Math.random() * 90) + 10;
-      //   $(this).css("background-color",tone[x]).animate({"right":right+"vw","top":"105vh"},time).delay(dtime).animate({"right":right+"vw","top":"-10vh"},time).delay(dtime);
-      //   });
-        
-      // },9000);
 
 
+  
+
+
+Prismic.Api('https://proximity.prismic.io/api', function (err, Api) {
+    Api.form("everything")
+    .ref(Api.master())
+    .query(Prismic.Predicates.at("document.type", "marker"))
+    .submit(function (err, response) {
+      var results = response.results;
+      var body = $("body");
+
+
+
+      for (var i = 0; i < results.length; i++) {
+
+        color = results[i].getColor("marker.color");
+        left = results[i].getNumber("marker.number");
+        top = results[i].getNumber("marker.number");
+        title = results[i].getStructuredText("marker.title").asText();
+        u = results[i].getStructuredText("marker.uni").asText();
+        desc = results[i].getStructuredText("marker.desc").asHtml();
+        image = results[i].getImage("marker.view").asHtml();
+
+        var tag = $("<div class='walltag'></div>");
+        var src = $(image).attr("src");
+        console.log(src);
+        var view = $("<img class='view'/>").attr("src",src);
+        var marker = $("<div class='marker'/>");
+        //create and position marker//
+        marker.attr("id", u).css({"top":top+"%","left":left+"%","background-color":color});
+        //give each post its unique identifier//
+        tag.attr("name",u);
+        view.attr("name",u);
+        //append content to elements//
+        tag.append(title,desc);
+        //append everything to the body//
+        body.append(tag,marker,view);
+
+
+      }
+
+      $(".marker").click(function(){
+        $(".back").show();
+        $(".floor").hide();
+        $(this).addClass("big");
+        var self = $(this).attr("id");
+        $(".walltag[name="+self+"]").show();
+        $(".view[name="+self+"]").addClass("focus");
       });
+
+      $(".back").click(function(){
+        $(".back,.walltag").hide();
+        $(".view").removeClass("focus");
+        $(".floor").show();
+        $(".marker").removeClass("big");
+      });
+
+
+
+
+
+  
+
+
+
+
+
+
+    });
+
+});
+
+
+
+  }, "MC5YTjgyeFJBQUFMWEFOSXpR.dGd9Civvv71Ee--_vSrvv70iEw3vv70t77-9Pj9cfu-_vTbvv73vv73vv73vv73vv70sH--_ve-_vQ");
+
+  
 
     </script>
 
       <body>
-        <img class="floor" src="floorplan.svg"/>
-        <img class="marker" id="a" src="marker.svg"/>
-        <img class="view" name="a" src="gallery.jpg"/>
-
+        <img src="floorplan.svg" class="floor"/>
         <p class="back">Back to plan view</p>
-        <p class="walltag" name="a">Gallery, Est. 2019<br><br>
-        Welcome to the space. Our first show will be open on June 7th, 2019. Hope to see you there.</p>
-        <!-- <p class="q">There are currently <span class="count">6</span> people in the gallery.</p> -->
-
+        
       </body>
 
 
