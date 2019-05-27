@@ -1,0 +1,335 @@
+<html>
+
+      <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="DIY">
+        <meta name="keywords" content="proximity,risd,gallery,art,design,3d,rendering,images">
+        <meta name="viewport" content="width=device-width">
+        <link href="https://fonts.googleapis.com/css?family=Gentium+Basic&display=swap" rel="stylesheet">
+        <title> DIY </title>
+        <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+      </head>
+
+      <style>
+
+      html {
+        width: 100%;
+        height: 100%;
+        color: black !important;
+        font-family: sans-serif;
+        font-size: 30;
+        font-weight: 100;
+        margin: 0;
+        overflow: scroll;
+      }
+
+
+      #data {
+        position: absolute;
+        top: 5% !important;
+        left: 5%;
+        width: 95%;
+        /*background-color: black;*/
+        min-height: 100%;
+      }
+
+      tr > td {
+        /*background-color: red;*/
+        width: 25%;
+        font-size: 20;
+        padding: .25%;
+        color: #999999;
+        padding-bottom: 3%;
+        padding-top: 3%;
+        padding-right: 5%;
+        vertical-align: top;
+        /*margin-right: -3%;*/
+      }
+
+      tr:first-child > td {
+        font-family: sans-serif !important; 
+        text-align: left;
+        /*background-color: #eaeaea;*/
+        padding: none !important;
+        padding-bottom: 1%;
+        padding-top: 1%;
+        /*padding-left: 1%;*/
+        position: relative;
+        color: #4f4f4f;
+        font-size: 30;
+        margin-bottom: 2%;
+        width: 33.3vw !important;
+      }
+
+      .sort {
+        display: none;
+        position: relative;
+        top: 2%;
+        font-size: 30;
+        font-weight: 500;
+      }
+
+      .menu {
+        display: none;
+        margin: 0;
+        position: fixed;
+        width: 8%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        padding: 5%;
+        background-color: white;
+        z-index: 999;
+      }
+
+      .title {
+        margin: 0;
+        left: 0;
+        top: 0;
+        position: relative;
+        display: inline-block;
+        margin-right: 5%;
+        margin-bottom: 2%;
+      }
+
+      .new {
+        padding-left: 2%;
+        background-color: #b7b7b7;
+        color: white !important;
+        position: fixed;
+        top: 90%;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        padding-top: 2%;
+        font-size: 20;
+        -webkit-transition: top .3s ease-in-out;
+      -moz-transition: top .3s ease-in-out;
+      -o-transition: top .3s ease-in-out;
+      transition: top .3s ease-in-out;
+      }
+
+        input[type=text],input[type=file] {
+            position: relative;
+            left: 2%;
+          width: 40%;
+          margin: 8px 0;
+          display: inline-block;
+          border: none;
+          font-size: 20;
+          outline:0;
+          border-radius: 2px;
+          padding: 1%;
+        }
+
+        textarea[name="Directions"] {
+            /*padding-bottom: 20%;*/
+            width: 35%; 
+            height: 20%;
+            font-weight: 300;
+            resize: both;
+            vertical-align: top;
+            border: none;
+            outline: none;
+            font-size: 20;
+            padding: 1%;
+            margin-left: 3%;
+            border-radius: 2px;
+        }
+
+        textarea[name="Estimated Cost"] {
+            white-space: wrap;
+            width: 35%;
+            font-weight: 300;
+            vertical-align: top;
+            border: none;
+            outline: none;
+            font-size: 20;
+            padding: 1%;
+            margin-left: 3%;
+            border-radius: 2px;
+        }
+
+        select, input[type=file] {
+            border-radius: none;
+            width: auto;
+            /*-webkit-appearance: none;
+            -moz-appearance: none;*/
+            padding: 300px;
+            display: inline-block;
+            border: none;
+            font-size: 20;
+            font-weight: 300;
+            background-color: white;
+            color: black;
+
+        }
+
+        option:focus {
+            background: none;
+            background-color: white !important;
+        }
+
+        select-css:focus {
+            border-color: #aaa;
+            box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+            box-shadow: 0 0 0 3px -moz-mac-focusring;
+            color: #222; 
+            outline: none;
+        }
+
+        input[type=submit],input[type=submit]:focus,input[type=submit]:active {
+        position: relative;
+          background-color: #b2b710;
+          color: white;
+          padding: 1%;
+          border: none;
+          border-radius: 2px;
+          cursor: pointer;
+          font-size: 20;
+          font-weight: 300;
+          position: absolute;
+          right: 4%;
+          bottom: 5%;
+          outline: none;
+        }
+
+        input[type=submit]:active {
+            background-color: black !important;
+            -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+        }
+
+        .open {
+            cursor: pointer;
+            position: relative;
+            margin: 0;
+            font-size: 20;
+            top: 0;
+        }
+
+        .big {
+            top: 0;
+        }
+
+        span {
+            position: relative;
+            display: inline-block;
+            float: left;
+            color: black;
+        }
+
+        .close {
+            position: absolute;
+            top: 2.5%;
+            right: 3.5%;
+            width: 40px;
+            height: 40px;
+        }
+
+        .thx {
+            position: absolute;
+            bottom: 4%;
+            right: 12%;
+            font-size: 20;
+            color: black;
+        }
+
+        
+
+        </style>
+
+        <script type="text/javascript">
+          var spData = null;
+          function doData(json) {
+              spData = json.feed.entry;
+          }
+          
+          function drawCell(tr, val) {
+              var td = $("<td/>");
+              tr.append(td);
+              td.append(val);
+              return td;
+          }
+          function drawRow(table, rowData) {
+              if (rowData == null) return null;
+              if (rowData.length == 0) return null;
+              var tr = $("<tr/>");
+              table.append(tr);
+              for(var c=0; c<rowData.length; c++) {
+                  drawCell(tr, rowData[c]);
+              }
+              return tr;
+          }
+          
+          function drawTable(parent) {
+              var table = $("<table/>");
+              parent.append(table);
+              return table;
+          }
+          
+          function readData(parent) {
+              var data = spData;
+              var table = drawTable(parent);
+              var rowData = [];
+              
+              for(var r=0; r<data.length; r++) {
+                  var cell = data[r]["gs$cell"];
+                  var val = cell["$t"];
+                  if (cell.col == 1) {
+                      drawRow(table, rowData);
+                      rowData = [];
+                  }
+                  rowData.push(val);
+              }
+              drawRow(table, rowData);
+          }
+
+          $(document).ready(function(){
+              readData($("#data"));
+
+              $(".open").click(function(){
+                $(".new").toggleClass("big");
+                $(".open,.close").toggle();
+
+              });
+
+
+            $("input[value='Submit']").click(function(){
+                $("#formID").submit();
+                $(".thx").show().delay(6000).fadeOut(300);
+                $(this).css("background-color","black");
+                $(".new").css("color","black !important");
+            });
+
+          });
+
+          </script>   
+        <script src="https://spreadsheets.google.com/feeds/cells/1EkyeTEhUBfL4ho5KdqewXLFpkeXkuhsc51M_jxgD4A8/1/public/values?alt=json-in-script&callback=doData"></script>
+
+
+      <body>
+        <p class="sort">Sort by...</p>
+        <div id="data"></div>
+        <div class="menu"></div>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+        <form class="new" id="formID" method="post" action="https://script.google.com/macros/s/AKfycbz0brLvJpg48qPPdbPAi8Jn-5y9V1HyYN-yKWwjOYlrtP8l-qA/exec" target="hidden_iframe"><img id="a" class="close" src="up.svg"/><img id="b" style="display:none" class="close" src="close.svg"/><p class="open">Want to add an object?</p><p style="display:none" class="open">Please fill out the form below.</p><br><br>
+            Type:   <select name="Type">
+                    <option value="Furniture">Furniture</option>
+                    <option value="Lighting">Lighting</option>
+                    <option value="Other">Object</option>
+                    <option value="Other">Other</option>
+                  </select><br><br>
+          Directions:<textarea type="text" name="Directions" wrap="hard" placeholder="Enter text..."></textarea><br><br>
+          Est. Cost:<textarea type="text" name="Estimated Cost" placeholder="Enter a number ($4.00)..."></textarea><br>
+          <!-- <input type="file" name="Image" value="fileupload" id="fileupload"> --><p style="display:none" class="thx">Thanks for your object. Refresh the site to see your post.</p>
+          <!-- <input type="file" name="Image" accept="image/*"> -->
+          <input type="submit" value="Submit" >
+        </form>
+        </body>
+
+
+      </html>

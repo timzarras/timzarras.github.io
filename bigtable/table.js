@@ -9,12 +9,13 @@ $(document).ready(function(){
 	$(".tPerson").css("left",left+"vw");
 	$(".bPerson").css("right",right+"vw");
 
-	// var colors = [ "#edddb4", "#fcdf97", "#634a0d", "#ad8c3c"];
+		var max = 2;
+	for (var i=0; i<max; i++) {
+    $(".lPerson").clone().appendTo("body");
+	}
 
 
 	setInterval(function(){
-		// var x = Math.floor(Math.random() * 4) + 1;
-		// var color = colors[x];
 		var time = Math.floor(Math.random() * 6000) + 4000;
 		var left = Math.floor(Math.random() * 7) + 7;
 		var top = Math.floor(Math.random() * 50) + 25;
@@ -23,11 +24,9 @@ $(document).ready(function(){
 		var lastRan = Math.floor(Math.random() * 90) + 10;
 		$(".lPerson").animate({"left":"12vw","top":top+"vh"},time)
 		.delay(time).animate({"left": "-110px","top": eTop+"vh"},4000).animate({"left": "-110px","top": lastRan+"vh"},10);
-	},24000);
+	},2400);
 
 	setInterval(function(){
-		// var x = Math.floor(Math.random() * 4) + 1;
-		// var color = colors[x];
 		var time = Math.floor(Math.random() * 6000) + 4000;
 		var left = Math.floor(Math.random() * 7) + 7;
 		var top = Math.floor(Math.random() * 50) + 25;
@@ -36,11 +35,9 @@ $(document).ready(function(){
 		var lastRan = Math.floor(Math.random() * 90) + 10;
 		$(".rPerson").animate({"right":"12vw","bottom":top+"vh"},time)
 		.delay(time).animate({"right": "-110px","bottom": eTop+"vh"},4000).animate({"right": "-110px","bottom": lastRan+"vh"},10);
-	},25000);
+	},2500);
 
 	setInterval(function(){
-		// var x = Math.floor(Math.random() * 4) + 1;
-		// var color = colors[x];
 		var time = Math.floor(Math.random() * 6000) + 4000;
 		var left = Math.floor(Math.random() * 7) + 7;
 		var top = Math.floor(Math.random() * 50) + 25;
@@ -49,11 +46,9 @@ $(document).ready(function(){
 		var lastRan = Math.floor(Math.random() * 80) + 20;
 		$(".tPerson").animate({"left":top+"vw","top":"12vh"},time)
 		.delay(time).animate({"top": "-110px","left": eTop+"vw"},4000).animate({"top": "-110px","left": lastRan+"vw"},10);
-	},20000);
+	},2000);
 
 	setInterval(function(){
-		// var x = Math.floor(Math.random() * 4) + 1;
-		// var color = colors[x];
 		var time = Math.floor(Math.random() * 6000) + 4000;
 		var left = Math.floor(Math.random() * 7) + 7;
 		var top = Math.floor(Math.random() * 50) + 25;
@@ -62,7 +57,7 @@ $(document).ready(function(){
 		var lastRan = Math.floor(Math.random() * 50) + 25;
 		$(".bPerson").animate({"right":top+"vw","bottom":"12vh"},time)
 		.delay(time).animate({"bottom": "-110px","right": eTop+"vw"},4000).animate({"bottom": "-110px","right": lastRan+"vw"},10);
-	},23000);
+	},2300);
 
 
 
