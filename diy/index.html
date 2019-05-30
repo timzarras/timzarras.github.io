@@ -5,7 +5,6 @@
         <meta name="description" content="DIY">
         <meta name="keywords" content="proximity,risd,gallery,art,design,3d,rendering,images">
         <meta name="viewport" content="width=device-width">
-        <link href="https://fonts.googleapis.com/css?family=Gentium+Basic&display=swap" rel="stylesheet">
         <title> DIY </title>
         <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
       </head>
@@ -69,7 +68,7 @@
         padding-left: 1%;
         vertical-align: top;
         background-color: #f1f1f1;
-        border-bottom: 5px solid white;
+        border-bottom: 5px solid black;
         /*border-bottom: 2px solid black;*/
         /*margin-right: -3%;*/
       }
@@ -305,13 +304,11 @@
             overflow: visible;
         }
 
-        
-
         </style>
 
         <script type="text/javascript">
 
-          var spData = null;
+          // var spData = null;
           function doData(json) {
               spData = json.feed.entry;
           }
@@ -377,16 +374,13 @@
           });
 
           </script>   
-        <script src="https://spreadsheets.google.com/feeds/cells/1EkyeTEhUBfL4ho5KdqewXLFpkeXkuhsc51M_jxgD4A8/1/public/values?alt=json-in-script&callback=doData"></script>
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://spreadsheets.google.com/feeds/cells/1OaWQdRGDy7rUEkiP_I2RGvQLqAbgga0kipreLb2NJHs/1/public/values?alt=json-in-script&callback=doData"></script>
 
 
       <body id="body">
-        <p class="sort">Sort by...</p>
         <div id="data"></div>
         <div class="menu"></div>
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-        <div class="new"><p class="open">Want to add an object?</p><p style="display:none" class="open">Please fill out the Google Form below.</p><img class="close" src="up.svg"/><img style="display:none" class="close" src="close.svg"/><iframe src="https://forms.gle/kZ9CPvaWMAAt1cLz9"/><img class="close" style="display:none" src="close.svg"/>
+        <div class="new"><p class="open">Want to add an object?</p><p style="display:none" class="open">Please fill out the Google Form below.</p><img class="close" src="up.svg"/><img style="display:none" class="close" src="close.svg"/><iframe src='https://script.google.com/macros/s/AKfycbyK15PkVqG1ZtgY9n6Y4D_Lgdn7K719cO6Qhb6dijUnrkGmjwE/exec'></iframe><img class="close" style="display:none" src="close.svg"/>
         </div>
  
       
@@ -395,3 +389,4 @@
 
 
       </html>
+
