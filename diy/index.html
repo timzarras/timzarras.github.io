@@ -52,12 +52,10 @@
         border-collapse: collapse;
       }
       
-
       tr > td {
         /*background-color: red;*/
         /*position: relative;
         top: 10% !important;*/
-        width: 10%;
         max-width: 12%;
         font-size: 20;
         padding: .25%;
@@ -72,10 +70,6 @@
         /*border-bottom: 2px solid black;*/
         /*margin-right: -3%;*/
       }
-
-      /*tr:first-child {
-        position: fixed;
-      }*/
       
       tr:first-child > td {
         border-bottom: none;
@@ -92,9 +86,8 @@
         position: relative;
         color: black;
         font-size: 20;
-        margin-bottom: 2%;
         /*margin-right: 30%;*/
-        width: 33.3vw !important;
+        width: 20% !important;
       }
 
       /*tr {
@@ -138,7 +131,7 @@
         position: fixed;
         top: 90%;
         left: 0;
-        z-index: 9999;
+        z-index: 999 !important;
         width: 100%;
         height: 100%;
         padding-top: 2%;
@@ -360,16 +353,18 @@
               drawRow(table, rowData);
           }
 
+          
+          
+
           $(document).ready(function(){
               readData($("#data"));
 
               $(".open,.close").click(function(){
                 $(".new").toggleClass("big");
                 $(".open,.close").toggle();
-
               });
 
-
+              
             $("input[value='Submit']").click(function(){
                 $("#formID").submit();
                 $(".thx").show().delay(6000).fadeOut(300);
