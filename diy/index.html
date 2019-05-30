@@ -308,6 +308,7 @@
         img {
             max-height: 8%;
             height: auto;
+            padding-bottom: none;
         }
 
         </style>
@@ -389,8 +390,8 @@
                 links.push(url);
                 self.prepend(a);
                 $("tr:first > td:nth-child(5) > img").remove();
-                $("tr > td:nth-child(5)").not("tr:first-child").css("font-size","10");
-                $("tr:first > td:nth-child(5)").css("font-size","20");
+                $("tr > td:nth-child(5)").not("tr:first-child").css({"color":"transparent","font-size":"1"});
+                $("tr:first > td:nth-child(5)").css({"font-size":"20","color":"black"});
             });
 
             console.log(links);
