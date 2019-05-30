@@ -305,6 +305,11 @@
             overflow: visible;
         }
 
+        img {
+            max-height: 8%;
+            height: auto;
+        }
+
         </style>
 
         <script type="text/javascript">
@@ -315,7 +320,7 @@
           }
           
           function drawCell(tr, val) {
-              var td = $("<td/>");
+              var td = $("<td><p>");
               tr.append(td);
               td.append(val);
               return td;
@@ -377,12 +382,15 @@
 
             var links = [];
 
-            $("tr > td:nth-child(5)").not("tr:first").each(function(){
+            $("tr > td:nth-child(5)").each(function(){
                 var url = $(this).text();
                 var self = $(this);
-                var a =  $("<a>Link</a>").attr("href","https://googledrive.com/host/1T16Cuv61OUkb9_xTETBAQLB38052XdQ7/" + url);
+                var a =  $("<img class='t' target='_blank'>").attr("src", url);
                 links.push(url);
-                self.append(a).remove(url);
+                self.prepend(a);
+                $("tr:first > td:nth-child(5) > img").remove();
+                $("tr > td:nth-child(5)").not("tr:first-child").css("font-size","10");
+                $("tr:first > td:nth-child(5)").css("font-size","20");
             });
 
             console.log(links);
