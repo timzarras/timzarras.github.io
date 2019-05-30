@@ -299,9 +299,37 @@
         }
 
         img {
-            max-height: 8%;
+            max-width: 100%;
             height: auto;
             padding-bottom: none;
+        }
+
+        @media screen and (max-width: 736px){ 
+
+            img {
+               max-width: 100px !important;
+               height: auto !important;
+            }
+
+            .new {
+                top: 95%;
+                font-size: 25px !important;
+            }
+
+            iframe {
+                top: 5%;
+            }
+
+            .close {
+                top: .25%;
+            }
+
+            .big {
+                top: 0%;
+            }
+
+
+
         }
 
         </style>
