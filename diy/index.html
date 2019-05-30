@@ -372,20 +372,20 @@
             });
 
             $("tr").each(function() {
-                $("td:nth-child(6),td:nth-child(7),td:nth-child(8)").hide();
+                $("td:nth-child(6),td:nth-child(7),td:nth-child(8)").remove();
             });
 
-            var links = [];
+            // var links = [];
 
-            $("tr > td:nth-child(5)").not("tr:first").each(function(){
-                var url = $(this).text();
-                var self = $(this);
-                var a =  $("<img/>").attr("src",url);
-                links.push(url);
-                self.append(a).remove(url);
-            });
+            // $("tr > td:nth-child(5)").not("tr:first").each(function(){
+            //     var url = $(this).text();
+            //     var self = $(this);
+            //     var a =  $("<img/>").attr("src",url);
+            //     links.push(url);
+            //     self.append(a).remove(url);
+            // });
 
-            console.log(links);
+            // console.log(links);
 
 
           });
