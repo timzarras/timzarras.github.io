@@ -134,7 +134,7 @@
         background-color: #cddc38;
         color: white !important;
         position: fixed;
-        top: 92.5%;
+        top: 91.5%;
         left: 0;
         z-index: 999 !important;
         width: 100%;
@@ -414,11 +414,11 @@
             $("tr > td:nth-child(5)").each(function(){
                 var url = $(this).text();
                 var self = $(this);
-                var a =  $("<img class='t' target='_blank'>").attr("src", url);
+                var a =  $("<img class='t''>").attr("src", url);
                 links.push(url);
-                self.prepend(a);
+                self.append(a);
                 $("tr:first > td:nth-child(5) > img").remove();
-                $("tr > td:nth-child(5)").not("tr:first-child").css({"color":"transparent","font-size":"1"});
+                $("tr > td:nth-child(5)").not("tr:first-child").css({"color":"transparent","font-size":".5"});
                 $("tr:first > td:nth-child(5)").css({"font-size":"20","color":"black"});
             });
 
