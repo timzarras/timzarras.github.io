@@ -296,9 +296,11 @@
         }
 
         img {
+          position: 0;
             max-width: 100%;
             height: auto;
             padding-bottom: none;
+            left: 0;
         }
 
         tr > td:first-child {
@@ -306,14 +308,21 @@
             }
 
         @media screen and (max-width: 736px){ 
+
+          html,body {
+            width: 100% !important;
+            overflow-x: hidden;
+          }
+
             .intro > p {
               font-size: 18;
             }
 
             #data {
+              left: 0 !important;
               position: absolute;
               top: 100% !important;
-              width: 100% !important;
+              width: 105% !important;
             }
 
             img {
@@ -332,6 +341,12 @@
             tr > td {
               font-size: 16;
               vertical-align: top;
+              /*width: 30% !important;*/
+            }
+
+            tr:first-child > td {
+              /*width: 25px !important;*/
+              padding-right: 8% !important;
             }
 
             .open {
@@ -343,10 +358,6 @@
                 font-size: 25px !important;
             }
 
-            iframe {
-                top: 5%;
-            }
-
             button[type="submit"] {
               left: 0 !important;
               position: absolute;
@@ -355,6 +366,10 @@
               padding-right: 5% !important;
               bottom: -9% !important;
               font-size: 18;
+            }
+
+            .i {
+              width: 100%;
             }
 
             .thx {
@@ -377,7 +392,7 @@
             }
 
             .close {
-                top: .25%;
+                top: .75%;
             }
 
             .big {
@@ -463,10 +478,23 @@
               var height = $(window).height();
               $("html,body").animate({scrollTop: height},500);
               $("html").css("overflow","scroll");
-            })
+            });
 
+            $("tr > td:nth-child(5)").each(function(){
+              var text = $(this).text();
+              var img = $("<img class='i' />").attr("src",text);
+              console.log(text);
+              // $(text).hide();
+              $(img).appendTo(this);
+              $("tr:first-child > td:nth-child(5) > img").remove();
+              $("tr > td:nth-child(5)").not("tr:first-child > td:nth-child(5)").css({"font-size":".5","color":"transparent"});
+              // $(this).text().css({"opacity":"0","font-size":"1"});
+            });
 
           });
+
+
+
 
 
 
