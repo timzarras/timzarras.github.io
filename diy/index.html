@@ -388,7 +388,7 @@
             }
 
             input[type="textarea"],input[type="textarea"]:focus {
-              padding: 4%;
+              padding: 3%;
               width: 70% !important;
               font-size: 18;
               display: inline;
@@ -484,11 +484,13 @@
               if ($("#data").hasClass("yes")) {
                 $("#data").css("top","100%").removeClass("yes");
                 $(".hi").hide();
+                $(".go").css("text-decoration","underline");
               } else {
                 $("#data").css("top","10%").addClass("yes");
                 $(".hi").show();
+                $(".go").css("text-decoration","none");
               }
-            });
+              });
 
             } else {
 
@@ -497,9 +499,11 @@
               if ($("#data").hasClass("yes")) {
                 $("#data").css("top","100%").removeClass("yes");
                 $(".hi").hide();
+                $(".go").css("text-decoration","underline");
               } else {
                 $("#data").css("top","8%").addClass("yes");
                 $(".hi").show();
+                $(".go").css("text-decoration","none");
               }
               });
 
