@@ -42,7 +42,7 @@
         .intro > p {
           margin-top: 6vh;
           width: 70vw;
-          font-size: 30;
+          font-size: 28;
         }
 
         .go {
@@ -218,11 +218,10 @@
         }
 
         .thx {
-          display: inline;
-          z-index: 999;
+          z-index: 999 !important;
             position: absolute;
-            bottom: 4%;
-            left: 2%;
+            bottom: 2%;
+            left: 14%;
             font-size: 20;
             color: black;
         }
@@ -494,7 +493,9 @@
 
               
 
-            $('#formID').submit(function(e){
+            if ($(window).width() > 736) {
+
+              $('#formID').submit(function(e){
                 e.preventDefault();
                 $(".thx").show().delay(2000).fadeOut(400);
                 $.ajax({
@@ -506,8 +507,6 @@
                     }
                 });
               });
-
-            if ($(window).width() > 736) {
 
               $(".open,.close").click(function(){
                 $(".new").toggleClass("big");
@@ -601,10 +600,10 @@ Image Link:
 2. Upload your image (no tags or resizing), and once uploaded, get the "Direct Link for Layouts".<br><br>
 3. Paste that link into the "Image Link" field. </p>
 <p class="oop">Please use the desktop version of this site to submit your object.</p>
-<img class="close" style="display:none" src="close.svg"/>
-<p style="display:none" class="thx">Thanks for your object. Refresh the page to see your post.</p>
+
         </div>
  
+ <p style="display:none" class="thx">Thanks for your object. Refresh the page to see your post.</p>
       
         
 
