@@ -309,10 +309,20 @@
 
         .dir {
           position: absolute;
-          top: 10%;
+          top: 8%;
           left: 50%;
           width: 38%;
+          color: darkgray;
           font-size: 25;
+        }
+
+        .dir > a,.dir > a:visited {
+          color: green;
+          text-decoration: underline;
+        }
+
+        .oop {
+          display: none;
         }
 
         @media screen and (max-width: 736px){ 
@@ -394,7 +404,8 @@
               left: 2%;
             }
 
-            form {
+            form , .dir{
+              display: none;
               font-size: 18;
               width: 90%;
             }
@@ -412,6 +423,16 @@
 
             .big {
                 top: 8%;
+            }
+
+            .oop {
+              display: inline;
+              position: absolute;
+            top: 8%;
+            left: 2%;
+            width: 60%;
+            color: darkgray;
+            font-size: 25;
             }
 
 
@@ -471,10 +492,7 @@
           $(document).ready(function(){
               readData($("#data"));
 
-              $(".open,.close").click(function(){
-                $(".new").toggleClass("big");
-                $(".open,.close").toggle();
-              });
+              
 
             $('#formID').submit(function(e){
                 e.preventDefault();
@@ -491,6 +509,11 @@
 
             if ($(window).width() > 736) {
 
+              $(".open,.close").click(function(){
+                $(".new").toggleClass("big");
+                $(".open,.close").toggle();
+              });
+
             $(".go").click(function(){
               // console.log("click");
               if ($("#data").hasClass("yes")) {
@@ -505,6 +528,10 @@
               });
 
             } else {
+
+              $(".open,.close").click(function(){
+                $(".new").toggleClass("big");
+              });
 
                 $(".go").click(function(){
               // console.log("click");
@@ -573,6 +600,7 @@ Image Link:
 1. Go to <a target="_blank" href="http://tinypic.com/">tinypic</a>.<br><br>
 2. Upload your image (no tags or resizing), and once uploaded, get the "Direct Link for Layouts".<br><br>
 3. Paste that link into the "Image Link" field. </p>
+<p class="oop">Please use the desktop version of this site to submit your object.</p>
 <img class="close" style="display:none" src="close.svg"/>
 <p style="display:none" class="thx">Thanks for your object. Refresh the page to see your post.</p>
         </div>
