@@ -33,7 +33,7 @@
         font-weight: 100;
         margin: 0;
         overflow: scroll;
-        background-color: #f1f1f1;
+        background-color: #f9f9f9;
       }
 
 
@@ -41,13 +41,14 @@
         position: absolute;
         top: 0% !important;
         left: 0%;
-        width: 100%;
+        width: 100vw !important;
         /*background-color: black;*/
         min-height: 100%;
         padding-bottom: 20%;
       }
 
       table {
+        width: 100vw !important;
         border: none;
         border-collapse: collapse;
       }
@@ -65,8 +66,9 @@
         padding-right: 5%;
         padding-left: 1%;
         vertical-align: top;
-        background-color: #f1f1f1;
-        border-bottom: 5px solid white;
+        background-color: #f9f9f9;
+        border-bottom: 3px solid white;
+        font-weight: 100;
         /*border-bottom: 2px solid black;*/
         /*margin-right: -3%;*/
       }
@@ -131,8 +133,8 @@
 
       .new {
         padding-left: 2%;
-        background-color: #cddc38;
-        color: white !important;
+        background-color: white;
+        color: black !important;
         position: fixed;
         top: 91.5%;
         left: 0;
@@ -146,107 +148,6 @@
       -o-transition: top .3s ease-in-out;
       transition: top .3s ease-in-out;
       }
-
-        input[type=text],input[type=file] {
-            position: relative;
-            left: 2%;
-          width: 40%;
-          margin: 8px 0;
-          display: inline-block;
-          border: none;
-          font-size: 20;
-          outline:0;
-          border-radius: 2px;
-          padding: 1%;
-        }
-
-        textarea[name="Directions"] {
-            /*padding-bottom: 20%;*/
-            width: 35%; 
-            height: 20%;
-            font-weight: 300;
-            resize: both;
-            vertical-align: top;
-            border: none;
-            outline: none;
-            font-size: 20;
-            padding: 1%;
-            margin-left: 3%;
-            border-radius: 3px;
-        }
-
-        textarea[name="Estimated Cost"],textarea[name="Title"] {
-            white-space: wrap;
-            width: 35%;
-            font-weight: 300;
-            vertical-align: top;
-            border: none;
-            outline: none;
-            font-size: 20;
-            padding: 1%;
-            margin-left: 3%;
-            border-radius: 3px;
-        }
-
-        textarea[name="title"] {
-            height: 5%;
-        }
-
-        select, input[type=file] {
-            margin-top: 3%;
-            border-radius: 3px;
-            width: auto;
-            /*-webkit-appearance: none;
-            -moz-appearance: none;*/
-            padding: 1%;
-            display: inline-block;
-            font-size: 20;
-            font-weight: 300;
-            background-color: white;
-            color: black;
-            border: none;
-            /*border: 1px solid gray;*/
-
-        }
-
-        option:focus {
-            background: none;
-            background-color: white !important;
-        }
-
-        select-css:focus {
-            border-color: #aaa;
-            box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
-            box-shadow: 0 0 0 3px -moz-mac-focusring;
-            color: #222; 
-            outline: none;
-        }
-
-        input[type=submit],input[type=submit]:focus,input[type=submit]:active {
-        position: relative;
-          background-color: #b2b710;
-          color: white;
-          padding: .5%;
-          padding-left: 1%;
-          padding-right: 1%;
-          border: none;
-          border-radius: 3px;
-          cursor: pointer;
-          font-size: 20;
-          font-weight: 300;
-          position: absolute;
-          left: 2%;
-          bottom: 7%;
-          outline: none;
-        }
-
-        input[type=submit]:active {
-            background-color: black !important;
-            -webkit-transition: all .3s ease-in-out;
-      -moz-transition: all .3s ease-in-out;
-      -o-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out;
-        }
 
         .open {
             cursor: pointer;
@@ -279,6 +180,8 @@
         }
 
         .thx {
+          display: inline;
+          z-index: 999;
             position: absolute;
             bottom: 4%;
             right: 12%;
@@ -290,6 +193,62 @@
             position: relative;
             width: 70%;
             height: auto;
+        }
+
+        form {
+          position: relative;
+          top: 1vh;
+          width: 30vw;
+        }
+
+        input[type="textarea"] {
+          position: relative;
+          width: 100%;
+          margin: 8px 0;
+          display: inline;
+          border: none;
+          font-size: 20;
+          outline:0;
+          border-radius: 2px;
+          padding: 2%;
+          background-color: lightgray;
+          margin-right: 20vw;
+          margin-bottom: 5vh;
+          font-size: 20;
+          color: gray;
+          font-weight: 300;
+        }
+
+        button[type=submit],button[type=submit]:focus {
+        position: relative;
+          background-color: #b2b710;
+          color: white;
+          padding: 2%;
+          padding-top: 1%;
+          padding-bottom: 1%;
+          margin-top: 20%;
+          border: none;
+          border-radius: 3px;
+          cursor: pointer;
+          font-size: 20;
+          font-weight: 300;
+          position: absolute;
+          outline: none;
+        }
+
+        button[type=submit]:active {
+            background-color: black !important;
+            -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+        }
+
+        form {
+          position: relative;
+          margin-top: 5vh;
+          margin-bottom: 5vh;
+          width: 30vw;
         }
 
         iframe {
@@ -395,47 +354,57 @@
                 $(".open,.close").toggle();
               });
 
+
               
-            $("input[value='Submit']").click(function(){
-                $("#formID").submit();
-                $(".thx").show().delay(6000).fadeOut(300);
-                $(this).css("background-color","black");
-                $(".new").css("color","black !important");
+            $('#formID').submit(function(e){
+                e.preventDefault();
+                $.ajax({
+                    url:'http://script.google.com/macros/s/AKfycbz0brLvJpg48qPPdbPAi8Jn-5y9V1HyYN-yKWwjOYlrtP8l-qA/exec',
+                    type:'post',
+                    data:$('#formID').serialize(),
+                    success:function(){
+                         $(".thx").show().delay(600).fadeOut(400);
+                    }
+                });
             });
-
-            $("tr").each(function() {
-                $("td:nth-child(6),td:nth-child(7),td:nth-child(8)").remove();
-            });
-
-            var links = [];
-
-            $("tr > td:nth-child(5)").each(function(){
-                var url = $(this).text();
-                var self = $(this);
-                var a =  $("<img class='t''>").attr("src", url);
-                links.push(url);
-                self.append(a);
-                $("tr:first > td:nth-child(5) > img").remove();
-                $("tr > td:nth-child(5)").not("tr:first-child").css({"color":"transparent","font-size":".5"});
-                $("tr:first > td:nth-child(5)").css({"font-size":"20","color":"black"});
-            });
-
-            console.log(links);
 
 
           });
 
+
+
+
           </script>   
-        <script src="https://spreadsheets.google.com/feeds/cells/1OaWQdRGDy7rUEkiP_I2RGvQLqAbgga0kipreLb2NJHs/1/public/values?alt=json-in-script&callback=doData"></script>
+          
+        <script src="http://spreadsheets.google.com/feeds/cells/1EkyeTEhUBfL4ho5KdqewXLFpkeXkuhsc51M_jxgD4A8/1/public/values?alt=json-in-script&callback=doData"></script>
 
 
       <body id="body">
         <div id="data"></div>
         <div class="menu"></div>
-        <div class="new"><p class="open">Want to add an object?</p><p style="display:none" class="open">Please fill out the Google Form below.</p><img class="close" src="up.svg"/><img style="display:none" class="close" src="close.svg"/><iframe src='https://script.google.com/macros/s/AKfycbyK15PkVqG1ZtgY9n6Y4D_Lgdn7K719cO6Qhb6dijUnrkGmjwE/exec'></iframe><img class="close" style="display:none" src="close.svg"/>
+        <div class="new"><p class="open">Want to add an object?</p><p style="display:none" class="open">Please fill out the form below.</p><img class="close" src="up.svg"/><img style="display:none" class="close" src="close.svg"/>
+<form id="formID">
+
+Title:
+    <input  type="textarea" name="Title" placeholder="Title" value></input>
+
+Materials:
+    <input  type="textarea" name="Materials" placeholder="Materials" value></input>
+
+ Estimated Cost:
+    <input  type="textarea" name="Estimated Cost" placeholder="Estimated Cost" value></input>
+  
+Image Link:
+    <input type="textarea" name="Image Link" placeholder="Image Link" value></input>
+<button type="submit">Submit</button>
+</form>
+
+<img class="close" style="display:none" src="close.svg"/>
+<p style="display:none" class="thx">Thanks for your object. Refresh the page to see your post.</p>
         </div>
  
       
+        
 
         </body>
 
