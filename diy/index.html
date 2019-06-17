@@ -306,13 +306,28 @@
               font-size: 18;
             }
 
+            #data {
+              position: absolute;
+              top: 100% !important;
+              width: 100% !important;
+            }
+
             img {
                max-width: 100px !important;
                height: auto !important;
             }
 
-            table, #data, .open, .new {
+            table, #data, .open, .new, tr:first-child > td {
               font-size: 18 !important;
+            }
+
+            tr > td:first-child {
+              display: none;
+            }
+
+            tr > td {
+              font-size: 16;
+              vertical-align: top;
             }
 
             .open {
@@ -334,8 +349,15 @@
               padding: 3%;
               padding-left: 5% !important;
               padding-right: 5% !important;
-              bottom: -15% !important;
+              bottom: -9% !important;
               font-size: 18;
+            }
+
+            .thx {
+              position: absolute;
+              font-size: 13;
+              bottom: 1.75%;
+              left: 2%;
             }
 
             form {
@@ -422,7 +444,7 @@
 
             $('#formID').submit(function(e){
                 e.preventDefault();
-                $(".thx").show().delay(1000).fadeOut(400);
+                $(".thx").show().delay(2000).fadeOut(400);
                 $.ajax({
                     url:'http://script.google.com/macros/s/AKfycbz0brLvJpg48qPPdbPAi8Jn-5y9V1HyYN-yKWwjOYlrtP8l-qA/exec',
                     type:'post',
