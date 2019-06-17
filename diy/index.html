@@ -24,6 +24,38 @@
             display: none;
         }
 
+        h1 {
+          margin: 0;
+          font-weight: 100;
+          font-size: 25;
+        }
+
+        .intro {
+          margin: 2%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+        }
+
+        .intro > p {
+          margin-top: 6vh;
+          width: 70vw;
+          font-size: 25;
+        }
+
+        .go {
+          cursor: pointer;
+          margin-top: 0;
+          margin: 0;
+          text-decoration: underline;
+        }
+
+        .go:hover {
+          text-decoration: none;
+        }
+
       html {
         width: 100%;
         height: 100%;
@@ -32,19 +64,20 @@
         font-size: 30;
         font-weight: 100;
         margin: 0;
-        overflow: scroll;
-        background-color: #f9f9f9;
+        overflow: hidden;
+        background-color: #f2f7ff;
       }
 
 
       #data {
         position: absolute;
-        top: 0% !important;
+        top: 100vh !important;
         left: 0%;
         width: 100vw !important;
         /*background-color: black;*/
         min-height: 100%;
         padding-bottom: 20%;
+        overflow: scroll;
       }
 
       table {
@@ -65,8 +98,8 @@
         padding-top: 2.25%;
         padding-right: 5%;
         padding-left: 1%;
-        vertical-align: top;
-        background-color: #f9f9f9;
+        vertical-align: center;
+        background-color: #f2f7ff;
         border-bottom: 3px solid white;
         font-weight: 100;
         /*border-bottom: 2px solid black;*/
@@ -92,7 +125,7 @@
         /*background-color: black;*/
         position: relative;
         color: black;
-        font-size: 20;
+        font-size: 25;
         /*margin-right: 30%;*/
         width: 20% !important;
       }
@@ -142,7 +175,7 @@
         width: 100%;
         height: 100%;
         padding-top: 1.5%;
-        font-size: 20;
+        font-size: 25;
         -webkit-transition: top .3s ease-in-out;
       -moz-transition: top .3s ease-in-out;
       -o-transition: top .3s ease-in-out;
@@ -153,8 +186,8 @@
             cursor: pointer;
             position: relative;
             margin: 0;
-            font-size: 20;
-            top: 0;
+            font-size: 25;
+            top: -3px;
             left: 0;
         }
 
@@ -184,7 +217,7 @@
           z-index: 999;
             position: absolute;
             bottom: 4%;
-            right: 12%;
+            left: 2%;
             font-size: 20;
             color: black;
         }
@@ -201,17 +234,17 @@
           width: 30vw;
         }
 
-        input[type="textarea"] {
+        input[type="textarea"],input[type="textarea"]:focus {
           position: relative;
           width: 100%;
           margin: 8px 0;
           display: inline;
           border: none;
-          font-size: 20;
+          font-size: 25;
           outline:0;
           border-radius: 2px;
           padding: 2%;
-          background-color: lightgray;
+          background-color: #f2f7ff;
           margin-right: 20vw;
           margin-bottom: 5vh;
           font-size: 20;
@@ -220,17 +253,17 @@
         }
 
         button[type=submit],button[type=submit]:focus {
-        position: relative;
+          position: absolute;
           background-color: #b2b710;
           color: white;
-          padding: 2%;
+          padding: 3%;
           padding-top: 1%;
           padding-bottom: 1%;
-          margin-top: 20%;
+          bottom: -25%;
           border: none;
           border-radius: 3px;
           cursor: pointer;
-          font-size: 20;
+          font-size: 25;
           font-weight: 300;
           position: absolute;
           outline: none;
@@ -269,19 +302,52 @@
         }
 
         @media screen and (max-width: 736px){ 
+            .intro > p {
+              font-size: 18;
+            }
 
             img {
                max-width: 100px !important;
                height: auto !important;
             }
 
+            table, #data, .open, .new {
+              font-size: 18 !important;
+            }
+
+            .open {
+              top: 1%;
+            }
+
             .new {
-                top: 95%;
+                top: 93%;
                 font-size: 25px !important;
             }
 
             iframe {
                 top: 5%;
+            }
+
+            button[type="submit"] {
+              left: 0 !important;
+              position: absolute;
+              padding: 3%;
+              padding-left: 5% !important;
+              padding-right: 5% !important;
+              bottom: -15% !important;
+              font-size: 18;
+            }
+
+            form {
+              font-size: 18;
+              width: 90%;
+            }
+
+            input[type="textarea"],input[type="textarea"]:focus {
+              padding: 4%;
+              width: 70% !important;
+              font-size: 18;
+              display: inline;
             }
 
             .close {
@@ -354,19 +420,24 @@
                 $(".open,.close").toggle();
               });
 
-
-              
             $('#formID').submit(function(e){
                 e.preventDefault();
+                $(".thx").show().delay(1000).fadeOut(400);
                 $.ajax({
                     url:'http://script.google.com/macros/s/AKfycbz0brLvJpg48qPPdbPAi8Jn-5y9V1HyYN-yKWwjOYlrtP8l-qA/exec',
                     type:'post',
                     data:$('#formID').serialize(),
                     success:function(){
-                         $(".thx").show().delay(600).fadeOut(400);
+  
                     }
                 });
-            });
+              });
+
+            $(".go").click(function(){
+              var height = $(window).height();
+              $("html,body").animate({scrollTop: height},500);
+              $("html").css("overflow","scroll");
+            })
 
 
           });
@@ -380,6 +451,11 @@
 
 
       <body id="body">
+        <div class="intro">
+          <h1>DIY Resource</h1>
+          <p>"...one thing that the chefs have to disseminate their work is technique and recipe sharing. A chef will document what tools, ingredients, techniques, etc. are required to make a dish, and then everyone else can try to do that; do designers have an equivalent? Should we be writing design "cook books" to help inspire other designers and the general populace?"<br><br>- David Rudnick</p>
+          <p class="go">See archive.</p>
+        </div>
         <div id="data"></div>
         <div class="menu"></div>
         <div class="new"><p class="open">Want to add an object?</p><p style="display:none" class="open">Please fill out the form below.</p><img class="close" src="up.svg"/><img style="display:none" class="close" src="close.svg"/>
