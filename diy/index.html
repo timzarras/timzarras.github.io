@@ -42,7 +42,7 @@
         .intro > p {
           margin-top: 6vh;
           width: 70vw;
-          font-size: 25;
+          font-size: 30;
         }
 
         .go {
@@ -137,6 +137,10 @@
         /*margin-right: 30%;*/
         width: 20% !important;
       }
+
+     /* tr:first-child {
+        position: fixed;
+      }*/
 
       /*tr {
         top: 10% !important;
@@ -301,6 +305,14 @@
           padding-left: 15px;
           top: -5px;
           margin: 0;
+        }
+
+        .dir {
+          position: absolute;
+          top: 10%;
+          left: 50%;
+          width: 38%;
+          font-size: 25;
         }
 
         @media screen and (max-width: 736px){ 
@@ -557,7 +569,10 @@ Image Link:
     <input type="textarea" name="Image" placeholder="Image Link" value></input>
 <button type="submit">Submit</button>
 </form>
-
+<p class="dir">In the spirit of DIY, this site currently uses Google Sheets as its back-end. To submit an image you will need to create a shareable link to the image hosted somewhere online.<br><br> Here's an easy way to do that.<br><br>
+1. Go to <a target="_blank" href="http://tinypic.com/">tinypic</a>.<br><br>
+2. Upload your image (no tags or resizing), and once uploaded, get the "Direct Link for Layouts".<br><br>
+3. Paste that link into the "Image Link" field. </p>
 <img class="close" style="display:none" src="close.svg"/>
 <p style="display:none" class="thx">Thanks for your object. Refresh the page to see your post.</p>
         </div>
