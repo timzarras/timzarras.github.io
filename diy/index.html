@@ -327,10 +327,12 @@
 
         @media screen and (max-width: 736px){ 
 
-          html,body {
+          html, body {
+            margin: 0;
+            position: relative;
             width: 100% !important;
             overflow-x: hidden;
-            overflow:hidden;
+            overflow: hidden !important;
           }
 
           .go {
@@ -370,8 +372,8 @@
             }
 
             tr:first-child > td {
-              /*width: 25px !important;*/
-              padding-right: 4% !important;
+              width: 25% !important;
+              padding-right: 0;
             }
 
             .open {
@@ -531,6 +533,7 @@
 
               $(".open,.close").click(function(){
                 $(".new").toggleClass("big");
+                 $(".close").toggle();
               });
 
                 $(".go").click(function(){
