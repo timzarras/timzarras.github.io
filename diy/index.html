@@ -46,6 +46,10 @@
         }
 
         .go {
+          position: absolute;
+          display: inline;
+          top: 0 !important;
+          left: 25%;
           cursor: pointer;
           margin-top: 0;
           margin: 0;
@@ -64,20 +68,24 @@
         font-size: 30;
         font-weight: 100;
         margin: 0;
-        overflow: scroll;
+        overflow: hidden;
         background-color: #f2f7ff;
       }
 
 
       #data {
         position: absolute;
-        top: 100vh !important;
+        top: 100vh;
         left: 0%;
         width: 100vw !important;
         /*background-color: black;*/
-        min-height: 100%;
+        height: 90%;
         padding-bottom: 20%;
         overflow: scroll;
+        -webkit-transition: top .3s ease-in-out;
+      -moz-transition: top .3s ease-in-out;
+      -o-transition: top .3s ease-in-out;
+      transition: top .3s ease-in-out;
       }
 
       table {
@@ -191,15 +199,8 @@
             left: 0;
         }
 
-        .big {
-            top: 0;
-        }
-
-        span {
-            position: relative;
-            display: inline-block;
-            float: left;
-            color: black;
+        .big,.aBig {
+            top: 10%;
         }
 
         .close {
@@ -290,6 +291,17 @@
         tr > td:first-child {
               display: none;
             }
+
+        .hi {
+          width: 40px;
+          height: 40px;
+          position: relative;
+          float: right;
+          display: inline;
+          padding-left: 15px;
+          top: -5px;
+          margin: 0;
+        }
 
         @media screen and (max-width: 736px){ 
 
@@ -459,9 +471,14 @@
               });
 
             $(".go").click(function(){
-              var height = $(window).height();
-              $("html,body").animate({scrollTop: height},500);
-              $("html").css("overflow","scroll");
+              // console.log("click");
+              if ($("#data").hasClass("yes")) {
+                $("#data").css("top","100%").removeClass("yes");
+                $(".hi").hide();
+              } else {
+                $("#data").css("top","10%").addClass("yes");
+                $(".hi").show();
+              }
             });
 
             $("tr > td:nth-child(5)").each(function(){
@@ -491,10 +508,10 @@
       <body id="body">
         <div class="intro">
           <h1>DIY Resource</h1>
+          <h1 class="go">Archive<img class="hi" src="close.svg" style="display:none"/></h1>
           <p>"...one thing that the chefs have to disseminate their work is technique and recipe sharing. A chef will document what tools, ingredients, techniques, etc. are required to make a dish, and then everyone else can try to do that; do designers have an equivalent? Should we be writing design "cook books" to help inspire other designers and the general populace?"<br><br>- David Rudnick</p>
-          <p class="go">See archive.</p>
         </div>
-        <div id="data"></div>
+        <div class="d" id="data"></div>
         <div class="menu"></div>
         <div class="new"><p class="open">Want to add an object?</p><p style="display:none" class="open">Please fill out the form below.</p><img class="close" src="up.svg"/><img style="display:none" class="close" src="close.svg"/>
 <form id="formID" data-ajax="false">
