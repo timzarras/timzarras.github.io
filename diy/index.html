@@ -301,6 +301,10 @@
             padding-bottom: none;
         }
 
+        tr > td:first-child {
+              display: none;
+            }
+
         @media screen and (max-width: 736px){ 
             .intro > p {
               font-size: 18;
@@ -481,7 +485,7 @@
         <div id="data"></div>
         <div class="menu"></div>
         <div class="new"><p class="open">Want to add an object?</p><p style="display:none" class="open">Please fill out the form below.</p><img class="close" src="up.svg"/><img style="display:none" class="close" src="close.svg"/>
-<form id="formID">
+<form id="formID" data-ajax="false">
 
 Title:
     <input  type="textarea" name="Title" placeholder="Title" value></input>
