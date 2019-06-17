@@ -98,7 +98,7 @@
         padding-top: 2.25%;
         padding-right: 5%;
         padding-left: 2%;
-        vertical-align: center;
+        vertical-align: top;
         background-color: #f2f7ff;
         border-bottom: 3px solid white;
         font-weight: 100;
@@ -223,15 +223,12 @@
         }
 
         .i {
+            margin-left: -2vw;
+            margin: 0;
+            left: 0;
             position: relative;
             width: 70%;
             height: auto;
-        }
-
-        form {
-          position: relative;
-          top: 1vh;
-          width: 30vw;
         }
 
         input[type="textarea"],input[type="textarea"]:focus {
@@ -284,23 +281,10 @@
           width: 30vw;
         }
 
-        iframe {
-            outline: none;
-            border: none;
-            position: absolute;
-            top: 10%;;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: visible;
-        }
-
         img {
-          position: 0;
             max-width: 100%;
             height: auto;
             padding-bottom: none;
-            left: 0;
         }
 
         tr > td:first-child {
@@ -487,7 +471,7 @@
               // $(text).hide();
               $(img).appendTo(this);
               $("tr:first-child > td:nth-child(5) > img").remove();
-              $("tr > td:nth-child(5)").not("tr:first-child > td:nth-child(5)").css({"font-size":".5","color":"transparent"});
+              $("tr > td:nth-child(5)").not("tr:first-child > td:nth-child(5)").css({"font-size":"0","color":"transparent"});
               // $(this).text().css({"opacity":"0","font-size":"1"});
             });
 
@@ -525,7 +509,7 @@ Materials:
     <input  type="textarea" name="Estimated Cost" placeholder="Estimated Cost" value></input>
   
 Image Link:
-    <input type="textarea" name="Image Link" placeholder="Image Link" value></input>
+    <input type="textarea" name="Image" placeholder="Image Link" value></input>
 <button type="submit">Submit</button>
 </form>
 
