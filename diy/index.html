@@ -99,10 +99,10 @@
       
       tr > td {
         margin-top: 10% !important;
-        font-size: 20;
+        font-size: 23;
         color: black;
         padding-bottom: 1%;
-        padding-top: 1%;
+        padding-top: 1.5%;
         padding-left: 2%;
         vertical-align: top;
         background-color: #f2f7ff;
@@ -314,6 +314,7 @@
           left: 2%;
           top: 50%;
           height: 38%;
+          z-index: -100;
         }
 
         .carousel-cell {
@@ -321,7 +322,7 @@
           background-color: black;
           float: left;
           height: 100% !important;
-          margin-right: 40%;
+          margin-right: 100%;
           
         }
 
@@ -340,7 +341,15 @@
         @media screen and (max-width: 736px){ 
 
           .main-carousel {
-            display: none;
+            top: 65%;
+            height: 40%;
+            /*display: none;*/
+          }
+
+          .carousel-cell {
+            top: 50%;
+            transform:translate(0%,-50%);
+            -webkit-transform:translate(0%,-50%);
           }
 
           html, body {
@@ -353,6 +362,7 @@
 
           .go {
             left: 60%;
+            z-index: 999 !important;
           }
 
             .intro > p {
@@ -360,6 +370,8 @@
             }
 
             #data {
+              /*display: none;*/
+              z-index: 999 !important;
               background-color: #f2f7ff;
               left: 0 !important;
               position: absolute;
@@ -375,15 +387,11 @@
 
             table, #data, .open, .new, tr:first-child > td {
               font-size: 18 !important;
+              z-index: 999;
             }
 
             tr > td:first-child {
               display: none;
-            }
-
-            tr:first-child > td {
-              padding-bottom: 1vh;
-              padding-top: 1vh;
             }
 
             tr > td {
@@ -462,13 +470,20 @@
             }
 
             tr:first-child{
+              display: inline !important;
               z-index: 999 !important;
-              position: fixed;
+              position: absolute; !important;
               width: 100% !important;
             }
 
             tr:first-child > td {
+              padding-top: 1vh;
+              padding-bottom: 1vh;
               z-index: 999 !important;
+            }
+
+            .intro {
+              z-index: 5;
             }
 
 
@@ -571,7 +586,6 @@
               });
 
             $(".go").click(function(){
-              // console.log("click");
               if ($("#data").hasClass("yes")) {
                 $("#data").css("top","100%").removeClass("yes");
                 $(".hi").hide();
@@ -588,8 +602,18 @@
 
             } else {
 
-              $("<div class='spacer'/>" ).insertAfter( "tr:first-child" );
-            $("<div class='spacer'/><div class='spacer'/>" ).insertAfter( "tr:last-child" );
+              $("tr > td:nth-child(5) > img").not("tr:nth-child(2) > td:nth-child(5) > img").clone().addClass("carousel-cell").appendTo(".main-carousel");
+
+            $('.main-carousel').flickity({
+                // options
+                cellAlign: 'left',
+                wrapAround: true,
+                autoPlay: 5000
+              });
+
+            // $(".go,.new").hide();
+
+            
 
               $(".open,.close").click(function(){
                 $(".new").toggleClass("big");
@@ -597,7 +621,6 @@
               });
 
                 $(".go").click(function(){
-              // console.log("click");
               if ($("#data").hasClass("yes")) {
                 $("#data").css("top","100%").removeClass("yes");
                 $(".hi").hide();
@@ -608,6 +631,9 @@
                 $(".go").css("text-decoration","none");
               }
               });
+
+                 $("<div class='spacer'/>" ).insertAfter( "tr:first-child" );
+            $("<div class='spacer'/><div class='spacer'/>" ).insertAfter( "tr:last-child" );
 
              }
 
@@ -632,7 +658,7 @@
 
       <body id="body">
         <div class="intro">
-          <h1>DIY</h1>
+          <h1>DIY Resource</h1>
           <h1 class="go">Archive<img class="hi" src="close.svg" style="display:none"/></h1>
           <p>"...one thing that the chefs have to disseminate their work is technique and recipe sharing. A chef will document what tools, ingredients, techniques, etc. are required to make a dish, and then everyone else can try to do that; do designers have an equivalent? Should we be writing design "cook books" to help inspire other designers and the general populace?"<br><br>- David Rudnick</p>
         </div>
