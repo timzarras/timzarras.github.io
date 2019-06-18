@@ -82,9 +82,8 @@
         top: 100vh;
         left: 0%;
         width: 100vw !important;
-        /*background-color: black;*/
         height: 90%;
-        padding-bottom: 500px;
+        /*padding-bottom: 50%;*/
         overflow: scroll !important;
         -webkit-transition: top .3s ease-in-out;
       -moz-transition: top .3s ease-in-out;
@@ -99,31 +98,23 @@
       }
       
       tr > td {
-        /*background-color: red;*/
-        /*position: relative;
-        top: 10% !important;*/
-        max-width: 12%;
+        margin-top: 10% !important;
         font-size: 20;
-        padding: .25%;
         color: black;
         padding-bottom: 1%;
         padding-top: 1%;
-        padding-right: 5%;
         padding-left: 2%;
         vertical-align: top;
         background-color: #f2f7ff;
         border-bottom: 3px solid white;
         font-weight: 100;
+         width: 25vw !important;
         /*border-bottom: 2px solid black;*/
         /*margin-right: -3%;*/
       }
-
-      /*tr:first-child {
-        position: fixed;
-        width: 100% !important;
-      }*/
       
       tr:first-child > td {
+        /*border-left: 1px solid black;*/
         border-bottom: none;
         /*border: 10px solid #edca07;*/
         font-family: sans-serif !important; 
@@ -131,43 +122,37 @@
         /*border-radius: 1vh;*/
         background-color: white;
         padding: none !important;
-        padding-bottom: 1.75%;
-        padding-top: 1.75%;
+        padding-bottom: 3vh;
+        padding-top: 3vh;
         padding-left: 2%;
         /*background-color: black;*/
         position: relative;
         color: black;
         font-size: 25;
-        /*margin-right: 30%;*/
-        width: 20% !important;
+        width: 25vw !important;
+        z-index: 999 !important;
       }
 
-     /* tr:first-child {
+      tr:first-child {
+        z-index: 999 !important;
         position: fixed;
-      }*/
+        width: 100% !important;
+      }
 
-      /*tr {
-        top: 10% !important;
-      }*/
+      .spacer {
+          background-color: #f2f7ff !important;
+          position: relative;
+          width: 400% !important;
+          left: 0 !important;
+          height: 9.35vh;
+        }
+
       .sort {
         display: none;
         position: relative;
         top: 2%;
         font-size: 30;
         font-weight: 500;
-      }
-
-      .menu {
-        display: none;
-        margin: 0;
-        position: fixed;
-        width: 8%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        padding: 5%;
-        background-color: white;
-        z-index: 999;
       }
 
       .title {
@@ -237,6 +222,7 @@
             position: relative;
             width: auto;
             height: 200px !important;
+            z-index: 10;
         }
 
         input[type="textarea"],input[type="textarea"]:focus {
@@ -395,10 +381,20 @@
               display: none;
             }
 
+            tr:first-child > td {
+              padding-bottom: 1vh;
+              padding-top: 1vh;
+            }
+
             tr > td {
               font-size: 12;
               vertical-align: top;
               width: 25% !important;
+            }
+
+            .spacer {
+              z-index: -1 !important;
+              height: 8vh !important;
             }
 
             .open {
@@ -465,6 +461,16 @@
             font-size: 25;
             }
 
+            tr:first-child{
+              z-index: 999 !important;
+              position: fixed;
+              width: 100% !important;
+            }
+
+            tr:first-child > td {
+              z-index: 999 !important;
+            }
+
 
 
         }
@@ -479,7 +485,7 @@
           }
           
           function drawCell(tr, val) {
-              var td = $("<td><p>");
+              var td = $("<td>");
               tr.append(td);
               td.append(val);
               return td;
@@ -522,9 +528,29 @@
           $(document).ready(function(){
               readData($("#data"));
 
+              $("tr > td:nth-child(5)").each(function(){
+              var text = $(this).text();
+              var img = $("<img class='i' />").attr("src",text);
+              console.log(text);
+              // $(text).hide();
+              $(img).appendTo(this);
+              $("tr:first-child > td:nth-child(5) > img").remove();
+              $("tr > td:nth-child(5)").not("tr:first-child > td:nth-child(5)").css({"font-size":"0","color":"transparent"});
+              // $(this).text().css({"opacity":"0","font-size":"1"});
+            });
+
               
 
             if ($(window).width() > 736) {
+
+              $("tr > td:nth-child(5) > img").not("tr:nth-child(2) > td:nth-child(5) > img").clone().addClass("carousel-cell").appendTo(".main-carousel");
+
+            $('.main-carousel').flickity({
+                // options
+                cellAlign: 'left',
+                wrapAround: true,
+                autoPlay: 5000
+              });
 
               $('#formID').submit(function(e){
                 e.preventDefault();
@@ -557,7 +583,13 @@
               }
               });
 
+            $("<div class='spacer'/>" ).insertAfter( "tr:first-child" );
+            $("<div class='spacer'/><div class='spacer'/>" ).insertAfter( "tr:last-child" );
+
             } else {
+
+              $("<div class='spacer'/>" ).insertAfter( "tr:first-child" );
+            $("<div class='spacer'/><div class='spacer'/>" ).insertAfter( "tr:last-child" );
 
               $(".open,.close").click(function(){
                 $(".new").toggleClass("big");
@@ -579,27 +611,11 @@
 
              }
 
-            $("tr > td:nth-child(5)").each(function(){
-              var text = $(this).text();
-              var img = $("<img class='i' />").attr("src",text);
-              console.log(text);
-              // $(text).hide();
-              $(img).appendTo(this);
-              $("tr:first-child > td:nth-child(5) > img").remove();
-              $("tr > td:nth-child(5)").not("tr:first-child > td:nth-child(5)").css({"font-size":"0","color":"transparent"});
-              // $(this).text().css({"opacity":"0","font-size":"1"});
-            });
 
 
-            $("tr > td:nth-child(5) > img").clone().addClass("carousel-cell").appendTo(".main-carousel");
 
-            $('.main-carousel').flickity({
-                // options
-                cellAlign: 'left',
-                contain: false,
-                wrapAround: true,
-                autoPlay: 5000
-              });
+
+
 
           });
 
