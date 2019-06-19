@@ -27,7 +27,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
         colors.push(color);
 
         var targ = $("<p class='mover'></p>");
-				var row = $("<div class='row'></div>");
+        var row = $("<div class='row'></div>");
         var titleD = $("<div class='title'></div>");
         var yearD = $("<div class='year'></div>");
         var materialsD = $("<div class='materials'></div>");
@@ -78,7 +78,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
 
 
-			if ($(window).width()>750) {
+      if ($(window).width()>750) {
 
                   var $window = $(window),
                       $stick = $('.moverS'),
@@ -124,7 +124,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
                     }
                   });
 
-				} else {
+        } else {
 
           $(".materials").css("width","90%");
           $("img").css({"width":"90%","height":"auto"});

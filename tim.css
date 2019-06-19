@@ -29,8 +29,8 @@ a:hover {
 
 html {
   letter-spacing:  1.3 !important;
-	margin: 0;
-	font-family: sans-serif !important;
+  margin: 0;
+  font-family: sans-serif !important;
   font-weight: 100;
   font-size: 14 !important;
 }
@@ -46,8 +46,8 @@ html {
 }
 
 body {
-	margin: 0;
-	width: 100%;
+  margin: 0;
+  width: 100%;
   height: 100%;
   overflow: scroll;
   overflow-x: hidden;
@@ -245,6 +245,7 @@ img:hover {
 } */
 
 .latest {
+  display: none;
   z-index: 997;
   position: absolute !important;
   top: 0%;
