@@ -89,6 +89,20 @@ Prismic.Api('https://robertoconnell.prismic.io/api', function (err, Api) {
                       $(this).hide();
                     });
 
+                    $(window).scroll(function(){
+                      var height = $(window).height()/2;
+                      var scroll = $(window).scrollTop();
+                      console.log(scroll);
+                      if ( scroll > height ) {
+                        $(".up").show();
+                        console.log("greater");
+                      } else {
+                        $(".up").hide();
+                        console.log("less");
+                      }
+
+                    });
+
 
         }
 
