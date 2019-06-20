@@ -269,6 +269,7 @@ h1 {
   text-align: left;
  left: 20px;
  width: 100%;
+ z-index: 997 !important;
 }
 
 .proj {
@@ -304,7 +305,7 @@ h1 {
 }
 
 .i,.text {
-z-index: 999 !important;
+z-index: 997 !important;
 }
 
 .i {
@@ -312,7 +313,7 @@ z-index: 999 !important;
 }
 
 .rob {
-  z-index: 999 !important;
+  z-index: 998 !important;
 }
 
 img {
@@ -324,11 +325,17 @@ img {
     display: none;
     position: fixed;
     margin: 0;
-    top: .5% !important;
+    top: .3% !important;
     left: 88vw !important;
     width: 42px !important;
     height: 42px !important;
   }
+
+  .rob {
+    width: 100vw;
+    background-color: white;
+  z-index: 999 !important;
+}
 
 
 
