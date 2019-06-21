@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
 
+
+
 Prismic.Api('https://robertoconnell.prismic.io/api', function (err, Api) {
     Api.form("everything")
     .ref(Api.master())
@@ -42,7 +44,6 @@ Prismic.Api('https://robertoconnell.prismic.io/api', function (err, Api) {
 
       }
 
-
       var targSpace = $("<div class='moverS'><p class='proj'>Projects</p><p class='pr'>Press</p></div>");
 
       $(targSpace).appendTo(".arch");
@@ -62,6 +63,9 @@ Prismic.Api('https://robertoconnell.prismic.io/api', function (err, Api) {
 
 
       if ($(window).width()>737) {
+
+        
+        $("html").fadeIn(500);
 
                     $(".moverS > .title").click(function(){
                       var self = $(this);
