@@ -99,7 +99,7 @@ body {
   display: none;
   cursor: pointer;
   margin-bottom: 10%;
-  top: 11vh !important;
+  top: 10vh !important;
 }
 
 .moverS > .title:hover {
@@ -129,7 +129,7 @@ body {
 
 .row {
   display: none;
-  top: 80px;
+  top: 10vh;
   left: 20px;
   position: relative;
   width: 50vw;
@@ -296,6 +296,7 @@ h1 {
 .moverS > .title {
   position: relative;
   text-decoration: underline;
+  top: 10vh;
   left: 0px !important;
   margin-left: 0;
   width: 100% !important;
@@ -323,7 +324,7 @@ h1 {
 }
 
 .title {
-  width: 100% !important;
+  width: 95% !important;
 }
 
 .row {
