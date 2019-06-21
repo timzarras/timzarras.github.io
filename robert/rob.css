@@ -13,11 +13,16 @@
 }
 
 em {
-  font-size: 10 !important;
+  position: relative;
+  display: inline-block;
+  padding-top: 3vh !important;
+  padding-bottom: 3vh !important;
+  font-style: normal !important;
+  color: black !important;
 }
 
 a,a:visited {
-  color: blue !important;
+  color: lightgray !important;
   text-decoration: underline;
 }
 
