@@ -92,15 +92,21 @@ body {
   text-align: right !important;
   display: none;
   cursor: pointer;
-  margin-bottom: 5%;
-  top: 9vh !important;
+  margin-bottom: 10%;
+  top: 11vh !important;
 }
 
 .moverS > .title:hover {
   text-decoration: underline;
 }
 
+.moverS > .title:last-child {
+  text-decoration: underline;
+  display: inline !important;
+}
+
 .rob {
+  cursor: pointer;
   z-index: 999 !important;
   font-size: 18;
   text-transform: uppercase;
@@ -116,7 +122,6 @@ body {
 }
 
 .row {
-  background-color: white;
   display: none;
   top: 80px;
   left: 20px;
@@ -256,7 +261,12 @@ h1 {
   display: none;
 }
 
+.pr {
+  display: none;
+}
+
 @media screen and (max-width: 736px){
+  
 
   html,body {
     width: 100vw;
@@ -278,10 +288,28 @@ h1 {
 }
 
 .moverS > .title {
+  position: relative;
   text-decoration: underline;
-  left: 0px;
+  left: 0px !important;
+  margin-left: 0;
   text-align: left !important;
 }
+
+/*.pr {
+  float: left;
+    display: inline-block;
+    font-size: 18;
+  text-transform: uppercase;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  margin-top:30vh;
+  left: 0px !important;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left !important;
+  text-decoration: underline;
+  }*/
 
 .row {
   width: 100%;
@@ -335,6 +363,17 @@ img {
     width: 100vw;
     background-color: white;
   z-index: 999 !important;
+}
+
+
+.moverS > .title:last-child { 
+  margin: 0 !important;
+  width: 100% !important;
+  position: relative !important;
+  display: inline-block !important;
+  text-align: left !important;
+  left: 0 !important;
+  margin-left: 0 !important;
 }
 
 

@@ -43,7 +43,7 @@ Prismic.Api('https://robertoconnell.prismic.io/api', function (err, Api) {
       }
 
 
-      var targSpace = $("<div class='moverS'><p class='proj'>Projects</p></div>");
+      var targSpace = $("<div class='moverS'><p class='proj'>Projects</p><p class='pr'>Press</p></div>");
 
       $(targSpace).appendTo(".arch");
 
@@ -69,6 +69,12 @@ Prismic.Api('https://robertoconnell.prismic.io/api', function (err, Api) {
                       $(".row[name=" + self.attr("name") + "]").show();
                     });
 
+                    $(".rob").click(function(){
+                      $(".row").hide();
+                      $(".proj").removeClass("no");
+                      $(".moverS > .title").hide();
+                    });
+
 
         } else {
 
@@ -76,7 +82,7 @@ Prismic.Api('https://robertoconnell.prismic.io/api', function (err, Api) {
                     $(".moverS > .title").click(function(){
                       var self = $(this);
                       var arch = $(window).height();
-                      $("html,body").animate({scrollTop:arch},500);
+                      $("html,body").animate({scrollTop:arch},400);
                       setTimeout(function(){
                         $(".up").show();
                       },450);
@@ -85,7 +91,7 @@ Prismic.Api('https://robertoconnell.prismic.io/api', function (err, Api) {
                     });
 
                     $(".up").click(function(){
-                      $("html,body").animate({scrollTop:0},300);
+                      $("html,body").animate({scrollTop:0},200);
                       $(this).hide();
                     });
 
