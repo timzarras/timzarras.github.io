@@ -135,7 +135,7 @@ body {
   width: 50vw;
   min-height: 100vh;
   padding-bottom: 6vh;
-  margin-bottom: 8vh !important;
+  margin-bottom: 60vh !important;
   margin-right: 5vw;
   float: left;
 }
@@ -196,9 +196,9 @@ h1 {
   float: top;
   left: 0;
   margin-left: 0;
-   display: none; 
+   position: relative;
   width: 70%;
- top: 60px;
+ top: 0px;
   margin-bottom: 3vh;
   font-size: 18;
 }

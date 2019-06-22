@@ -31,7 +31,7 @@ Prismic.Api('https://robertoconnell.prismic.io/api', function (err, Api) {
         var typeD = $("<div class='type'></div>");
         var imageD = $("<div class='images'></div>");
         var numberD = $("<td class='number' style='display:none'></td>");
-        var span = $("<span class='text'>Text</>");
+        var span = $("<span class='text'>Text</>").attr("name",i+1);
         var spans = $("<span class='i'>Images</>");
 
         titleD.append(title,year);
@@ -39,12 +39,12 @@ Prismic.Api('https://robertoconnell.prismic.io/api', function (err, Api) {
         imageD.append(image);
         numberD.append(number);
 
-        row.append(titleD,spans,span,imageD,materialsD,numberD);
+        row.append(titleD,span,imageD,materialsD,numberD);
         body.append(row);
 
       }
 
-      var targSpace = $("<div class='moverS'><p class='proj'>Projects</p><p class='pr'>Press</p></div>");
+      var targSpace = $("<div class='moverS'><p class='proj'>Projects</p></div>");
 
       $(targSpace).appendTo(".arch");
 
@@ -69,6 +69,7 @@ Prismic.Api('https://robertoconnell.prismic.io/api', function (err, Api) {
 
                     $(".moverS > .title").click(function(){
                       var self = $(this);
+                      $("html,body").animate({scrollTop:0},400);
                       $('.row').hide();
                       $(".row[name=" + self.attr("name") + "]").show();
                     });
@@ -116,18 +117,13 @@ Prismic.Api('https://robertoconnell.prismic.io/api', function (err, Api) {
 
         }
 
-                  $(".i").click(function(){
-                    $(".images").show();
-                    $(".materials").hide();
-                    $(".text").css("text-decoration","underline");
-                    $(".i").css("text-decoration","none");
-                    });
 
                   $(".text").click(function(){
-                    $(".materials").show();
-                    $(".images").hide();
-                    $(".i").css("text-decoration","underline");
-                    $(".text").css("text-decoration","none");
+                    var self = $(this);
+                    var top = $(".row[name=" + self.attr("name") + "] > .materials").offset();
+                    var T = top.top;
+                    console.log(T);
+                    $("html,body").animate({scrollTop:T-75},500);
                   });
 
                   $(".proj").click(function(){
