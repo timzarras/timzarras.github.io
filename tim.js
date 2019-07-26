@@ -49,8 +49,10 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
 
       var targSpace = $("<div class='moverS'></div>");
+      var typeSpace = $("<div class='typeS'></div>");
 
       $(targSpace).appendTo(".arch");
+      $(typeSpace).appendTo(".arch");
 
       $(".load").hide();
 
@@ -64,6 +66,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
 
 
       $(".title").clone().appendTo(".moverS");
+      $(".type").clone().appendTo(".typeS");
       var all = $("img").length;
       var random = Math.floor(Math.random()*all);
       $("img").eq(0).clone().addClass("latest").appendTo(".arch");

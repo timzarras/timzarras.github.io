@@ -1,5 +1,4 @@
 
-
 ::-webkit-scrollbar {
     display: none;
 }
@@ -128,8 +127,8 @@ body {
   position: relative;
   width: 85vw;
   height: auto;
-  padding-bottom: 7vh;
-  margin-bottom: 8vh !important;
+  padding-bottom: 5vh;
+  margin-bottom: 6vh !important;
   margin-right: 5vw;
   float: left;
 }
@@ -169,13 +168,49 @@ img:hover {
 }
 
 .type {
-  display: none;
+  margin-top: 3vh;
+  position: relative;
+  display: inline-block;
+  float: left;
 }
 
 .materials {
-  /* display: none; */
   width: 35vw;
   margin-bottom: 3vh;
+}
+
+.type > section {
+  display: inline;
+}
+
+.type > section > h1 {
+  top: 0;
+  position: relative;
+  font-weight: 100;
+  display: inline;
+  float: left;
+  margin-right: 1vw;
+  background-color: #ff681c;
+  color: white;
+  font-size: 8px !important;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.typeS {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40vw;
+  background-color: white;
+}
+
+.typeS > .type > h1 {
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0 !important;
+  display: inline;
 }
 
 .year {
@@ -183,13 +218,11 @@ img:hover {
   position: absolute;
   left: -67.5px;
   top: 0;
-  /* top: 50%;
-  margin-bottom: 1vh;
-  transform:translate(0%,-50%);
-  -webkit-transform:translate(0%,-50%); */
 }
 
 .images {
+  display: inline-block;
+  margin-right: 30vw;
   margin-top: 4vh;
   width: 85%;
   height: auto;
