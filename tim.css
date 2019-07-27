@@ -190,8 +190,9 @@ img:hover {
   display: inline;
   float: left;
   margin-right: 1vw;
-  background-color: #ff681c;
-  color: white;
+  background-color: transparent;
+  color: black;
+  border: 1px solid gray;
   font-size: 8px !important;
   padding: 3px;
   border-radius: 3px;
