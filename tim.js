@@ -111,7 +111,7 @@ Prismic.Api('https://timzarras.prismic.io/api', function (err, Api) {
                       if ($(".moverS").hasClass("sticky")){
                         $("html,body").animate({scrollTop: (yup.top-dis)-40},600);
                       } else {
-                        $("html,body").animate({scrollTop: (yup.top-dis)+half-107.5},600);
+                        $("html,body").animate({scrollTop: (yup.top-dis)+half-140},600);
                       }
 
                     });
